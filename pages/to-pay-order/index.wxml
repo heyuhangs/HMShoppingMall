@@ -1,0 +1,94 @@
+<view class="container iphone">
+    <view class="header-container">
+        <navigator open-type="navigateBack" delta="1" hover-class="navigator-hover">
+            <image class="goback" src="../../images/goback.png"/>
+        </navigator>
+        <view class="header-name">确认订单</view>
+    </view>
+    <form bindsubmit="createOrder" report-submit="true">
+        <view class="address-box">
+            <view class="add-address" wx:if="{{!isAddress}}">
+                <view class="title" bindtap="addAddress">新增收货地址</view>
+            </view>
+            <view class="show-address" bindtap="selectAddress" wx:else>
+                <view class="name-tel">{{addressList.NAME}} {{addressList.TEL}}</view>
+                <view class="addr-text">
+                    {{addressList.PROVINCE}}{{addressList.PROVINCE}}{{addressList.DISTRICT}}{{addressList.ADDRESS}}
+                </view>
+            </view>
+        </view>
+        <view class="goods-list">
+            <view class="list-title">商品列表</view>
+            <view class="a-goods" wx:for-items="{{goodsList}}" wx:key="{{index}}">
+                <view class="img-box">
+<!--                    VIDEO_PATH-->
+                    <image wx:if="{{item.VIDEO_PATH != ''}}" src="{{item.goodsDetail.IMAGES_LIST[1].PATH}}" class="img"/>
+                    <image wx:else src="{{item.goodsDetail.IMAGES_LIST[0].PATH}}" class="img"/>
+                </view>
+                <view class="text-box">
+                    <view class="arow arow01">
+                        <view class="goods-name">{{item.goodsDetail.NAME}}</view>
+                        <view class="goods-price">¥ {{item.goodsDetail.PRICE}}</view>
+                    </view>
+                    <view class="arow">
+                        <view class="goods-label">{{item.goodsDetail.DETAIL}}</view>
+                        <view class="goods-num">x {{item.buyNumber}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="peisong-way">
+            <!--        <view class="row-box">-->
+            <!--            <view class="row-label">配送方式</view>-->
+            <!--            <view class="right-text">快递</view>-->
+            <!--&lt;!&ndash;            <view class="right-text" wx:if="{{yunPrice == 0}}">包邮</view>&ndash;&gt;-->
+            <!--        </view>-->
+            <view class="row-box">
+                <!--            <view class="row-label">备注</view>-->
+                <!--            <view class="right-text">-->
+                <!--                <input name="remark" type="text" class="liuyan" placeholder="如需备注请输入" />-->
+                <!--            </view>-->
+                <i-panel i-class="dd">
+                    <i-radio-group current="{{zffs}}" bindchange="handleFruitChange">
+                        <i-radio wx:key="1" value="在线支付"></i-radio>
+                        <i-radio wx:key="2" value="奖金积分支付"></i-radio>
+                        <i-radio wx:key="3" value="积分奖金混合支付"></i-radio>
+                    </i-radio-group>
+                </i-panel>
+            </view>
+        </view>
+        <!--     <view class="peisong-way" hidden="{{hasNoCoupons}}">-->
+        <!--        <view class="row-box" style="border-bottom:none;">-->
+        <!--            <view class="row-label">选择使用优惠券</view>-->
+        <!--        </view>-->
+        <!--        <view class="row-box" style="border-bottom:none;">-->
+        <!--          <picker-view indicator-style="height: 50rpx;" style="width: 100%; height: 150rpx;" value="0" bindchange="bindChangeCoupon">-->
+        <!--            <picker-view-column>-->
+        <!--              <view style="line-height: 50px">不使用优惠券</view>-->
+        <!--              <view wx:for="{{coupons}}" wx:key="id" style="line-height: 50px">{{item.money}}元 {{item.name}}</view>-->
+        <!--            </picker-view-column>-->
+        <!--          </picker-view>-->
+        <!--        </view>-->
+        <!--     </view>-->
+        <view class="goods-info">
+            <view class="row-box">
+                <view class="row-label">商品金额</view>
+                <view class="right-text">¥ {{countPay}}</view>
+            </view>
+            <!--        <view class="row-box">-->
+            <!--            <view class="row-label">运费</view>-->
+            <!--            <view class="right-text">+ ¥ 12</view>-->
+            <!--        </view>-->
+            <!--        <view class="row-box" wx:if="{{!hasNoCoupons}}">-->
+            <!--            <view class="row-label">优惠券</view>-->
+            <!--            <view class="right-text">- ¥ {{youhuijine}}</view>-->
+            <!--        </view>-->
+        </view>
+        <view class="jiesuan-box">
+            <view class="left-price">
+                <view class="total">合计：¥ {{countPay}}</view>
+            </view>
+            <button class="to-pay-btn" formType="submit">提交订单</button>
+        </view>
+    </form>
+</view>

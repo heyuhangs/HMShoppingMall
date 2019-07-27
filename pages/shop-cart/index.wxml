@@ -1,0 +1,29 @@
+<!--index.wxml-->
+<import src="../template-cart/template-cart.wxml" />
+<view class="container iphone">
+  <view class="header-container">
+    <view class="header-name">购物车</view>
+  </view>
+  <template is="{{goodsList.length > 0 ? 'cart-goods-list' : 'no-goods'}}" data="{{allSelect:allSelect,countPay:countPay,goodsList:goodsList}}"></template>
+  <view class="sales-goods" wx:if="{{hostGoodsList}}">
+    <view class="sales-title">人气推荐</view>
+    <view class="goods-list">
+      <view class="goods-box" wx:for="{{hostGoodsList}}" wx:key="{{index}}" bindtap="toDetailsTap" data-id="{{item.USER_ID}}">
+        <view class="img-box">
+          <image src="{{item.PATH}}" class="image" />
+          <view class="goods-characteristic">
+            <text>{{item.DETAIL}}</text>
+          </view>
+        </view>
+        <view class="goods-title">{{item.NAME}}</view>
+        <view style='display:flex;'>
+          <view class="goods-price">Ұ{{item.PRICE}}</view>
+          <view class="goods-price-naver">已售{{item.SUM_SALES}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <i-modal title="操作" visible="{{ isDel }}" bind:ok="handleDel" bind:cancel="handleNoDel" ok-text="删除" color="red">
+    <view>是否从购物车中移出次商品?</view>
+  </i-modal>
+</view>

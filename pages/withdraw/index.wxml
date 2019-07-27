@@ -1,0 +1,36 @@
+<view class="container iphone">
+  <view class="header-container">
+    <navigator open-type="navigateBack" delta="1" hover-class="navigator-hover">
+      <image class="goback" src="../../images/goback.png" />
+    </navigator>
+  </view>
+  <view class="tixian-bg">
+    <image class="tixian-img" src="../../images/withdraw.png"></image>
+    <view class="tixian-name">
+      奖金积分
+      <text class="money">{{user.JJB || 0}}</text>
+<!--      <text class="tips">付款时优先选择余额进行支付</text>-->
+    </view>
+    <view class="tixian-name tixian-names">
+      购物积分
+      <text class="money">{{user.GWB || 0}}</text>
+<!--      <text class="tips">付款时优先选择余额进行支付</text>-->
+    </view>
+  </view>
+<!--  <view class="tixian-bg">-->
+<!--    <image class="tixian-img" src="../../images/withdraw.png"></image>-->
+<!--    <view class="tixian-name">-->
+<!--      我的余额-->
+<!--      <text class="money">¥{{balance}}</text>-->
+<!--      <text class="tips">付款时优先选择余额进行支付</text>-->
+<!--    </view>-->
+<!--  </view>-->
+  <i-cell-group>
+    <i-cell title="提现" is-link url="/pages/cashWithdrawal/cashWithdrawal">
+      <view slot="icon"><i-icon type="barrage_fill" size="30" color="#B22222"/></view>
+    </i-cell>
+    <i-cell title="转账" is-link url="/pages/recharge/recharge">
+      <view slot="icon"><i-icon type="transaction_fill" size="30" color="#B22222"/></view>
+    </i-cell>
+  </i-cell-group>
+</view>

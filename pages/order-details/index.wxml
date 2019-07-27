@@ -1,0 +1,94 @@
+<view class="container iphone">
+    <view class="header-container">
+        <navigator open-type="switchTab" url="/pages/index/index" hover-class="navigator-hover">
+            <image class="goback" src="../../images/gohome.png"/>
+        </navigator>
+        <navigator open-type="navigateBack" delta="1" hover-class="navigator-hover">
+            <image class="goback" src="../../images/goback.png"/>
+        </navigator>
+        <view class="header-name">订单详情</view>
+    </view>
+    <view class="goods-list">
+        <view class="list-title">商品信息</view>
+        <form bindsubmit="submitReputation" report-submit="true">
+            <block wx:for-items="{{orderInfo.orderMiddleList}}" wx:key="{{index}}">
+                <view class="a-goods">
+                    <view class="img-box">
+                        <image src="{{item.PATH}}" class="img"/>
+                    </view>
+                    <view class="text-box">
+                        <view class="arow arow01">
+                            <view class="goods-name">{{item.NAME}}</view>
+                            <view class="goods-price">¥ {{item.PRICE}}</view>
+                        </view>
+                        <view class="arow">
+                            <!--              <view class="goods-label">{{item.NUM}}</view>-->
+                            <view class="goods-num">x {{item.NUM}}</view>
+                            <view wx:if="{{currentType == '2' && item.COMMENT_STATUS != '0'}}" class="btn topay-btn" bindtap="toPingjia"
+                                  data-id="{{item}}">立即评价
+                            </view>
+                            <view class="wenziBtn" wx:if="{{item.COMMENT_STATUS == '0'}}">已评价</view>
+                        </view>
+                    </view>
+                </view>
+                <!--        <view class="btn-row" wx:if="{{orderDetail.orderInfo.status==3}}">-->
+
+                <!--          <view class="section section_gap">-->
+                <!--            <view style="margin-top:35rpx;margin-bottom:35rpx;">评价：</view>-->
+                <!--            <radio-group name="goodReputation{{index}}">-->
+                <!--              <label style="margin-right:35rpx;">-->
+                <!--                <radio value="2" checked/>好评</label>-->
+                <!--              <label style="margin-right:35rpx;">-->
+                <!--                <radio value="1" />中评</label>-->
+                <!--              <label style="margin-right:35rpx;">-->
+                <!--                <radio value="0" />差评</label>-->
+                <!--            </radio-group>-->
+                <!--          </view>-->
+                <!--          <view class="row-box" style="margin-top:35rpx">-->
+                <!--            <view class="row-label">备注</view>-->
+                <!--            <input name="orderGoodsId{{index}}" value="{{item.id}}" style="display:none;" />-->
+                <!--            <textarea name="goodReputationRemark{{index}}" style="margin-top:35rpx;width:100%;" value="非常愉快的一次购物！" />-->
+                <!--          </view>-->
+                <!--        </view>-->
+            </block>
+            <!--      <view class="btn-row">-->
+            <!--        <button class="confirm-btn" formType="submit">提交评价</button>-->
+            <!--      </view>-->
+        </form>
+        <!--    <form bindsubmit="confirmBtnTap" report-submit="true">-->
+        <!--      <view class="btn-row">-->
+        <!--        <button class="confirm-btn" formType="submit">确认收货</button>-->
+        <!--      </view>-->
+        <!--    </form>-->
+    </view>
+    <!--  <view class="peisong-way" hidden="true">-->
+    <!--    <view class="row-box">-->
+    <!--      <view class="row-label">配送方式</view>-->
+    <!--      <view class="right-text">顺丰快递</view>-->
+    <!--    </view>-->
+    <!--    <view class="row-box">-->
+    <!--      <view class="row-label">留言</view>-->
+    <!--      <view class="right-text">-->
+    <!--        <input name="remark" type="text" class="liuyan" placeholder="如需留言请输入" />-->
+    <!--      </view>-->
+    <!--    </view>-->
+    <!--  </view>-->
+    <view class="goods-info">
+        <view class="row-box">
+            <view class="row-label">订单编号</view>
+            <view class="right-text">{{orderInfo.ORDER_CODE}}</view>
+        </view>
+        <view class="row-box">
+            <view class="row-label">创建时间</view>
+            <view class="right-text">{{orderInfo.START_TIME}}</view>
+        </view>
+        <view class="row-box">
+            <view class="row-label">商品总金额</view>
+            <view class="right-text">¥ {{orderInfo.TOTAL}}</view>
+        </view>
+        <view class="row-box">
+            <view class="row-label">应付总额</view>
+            <view class="right-text">¥ {{orderInfo.TOTAL}}</view>
+        </view>
+    </view>
+</view>

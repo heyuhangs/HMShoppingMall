@@ -1,0 +1,188 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.91",
+	"appid": "wx5f1fa4d28d27a39b",
+	"projectname": "%E5%BE%AE%E5%95%86%E5%9F%8E",
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 0,
+			"list": [
+				{
+					"id": 0,
+					"name": "提现",
+					"pathName": "pages/cashWithdrawal/cashWithdrawal",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "注册",
+					"pathName": "pages/register/register",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "分类",
+					"pathName": "pages/menu/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "商品详情",
+					"pathName": "pages/goods-details/index",
+					"query": "id=4",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "首页",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "购物车",
+					"pathName": "pages/shop-cart/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "新增地址",
+					"pathName": "pages/address-add/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "确认订单",
+					"pathName": "pages/order-details/index",
+					"query": "id=c62a066bf708493d96559ba993967683",
+					"scene": null
+				},
+				{
+					"id": 8,
+					"name": "评价页面",
+					"pathName": "pages/wuliu/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 9,
+					"name": "订单",
+					"pathName": "pages/order-list/index",
+					"query": "currentType=0",
+					"scene": null
+				},
+				{
+					"id": 10,
+					"name": "注册",
+					"pathName": "pages/register/register",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的地址",
+					"pathName": "pages/select-address/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的地址",
+					"pathName": "pages/select-address/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "提交订单",
+					"pathName": "pages/to-pay-order/success/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 14,
+					"name": "订单",
+					"pathName": "pages/order-list/index",
+					"query": "currentType=0",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的地址",
+					"pathName": "pages/select-address/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 16,
+					"name": "邀请进入",
+					"pathName": "pages/start/start",
+					"query": "PAR_ID=26",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的资金",
+					"pathName": "pages/my-kanjia/index",
+					"query": "PAR_ID=26",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "个人",
+					"pathName": "pages/withdraw/index",
+					"query": "currentType=0",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "团队管理",
+					"pathName": "pages/fav-list/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 20,
+					"name": "邀请进入",
+					"pathName": "pages/start/start",
+					"query": "PAR_ID=26",
+					"scene": null
+				}
+			]
+		}
+	}
+}

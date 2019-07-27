@@ -1,0 +1,30 @@
+<view class="container iphone">
+    <view class="header-container">
+        <navigator open-type="navigateBack" delta="1" hover-class="navigator-hover">
+            <image class="goback" src="../../images/goback.png"/>
+        </navigator>
+        <view class="header-name">发表评价</view>
+    </view>
+    <view class="top-sec">
+        <view class="a-row">
+            <image class="shImg" src="{{img}}"></image>
+            <view class="label">评分</view>
+            <view class="text">
+                <i-cell title="自定义星星大小">
+                    <i-rate
+                            bind:change="onChange"
+                            value="{{starIndex}}"
+                            size="30">
+                    </i-rate>
+                </i-cell>
+            </view>
+        </view>
+    </view>
+    <view class="botom-inp">
+        <i-input i-class="texts" value="{{ val }}" bind:change="changeVal" type="textarea" autofocus placeholder="宝贝满足你的期待吗？说说你的使用心得。"
+                 maxlength="100"/>
+    </view>
+    <view class="btn">
+        <i-button i-class="btnOnSub" bind:click="handleClick" type="error">发布</i-button>
+    </view>
+</view>

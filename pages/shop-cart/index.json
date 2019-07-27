@@ -1,0 +1,7 @@
+{
+   "navigationBarTitleText": "购物车",
+   "usingComponents": {
+      "i-modal": "../../dist/modal/index",
+      "i-toast": "../../dist/toast/index"
+   }
+}
