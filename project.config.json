@@ -10,8 +10,8 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "1.9.91",
-	"appid": "wx5f1fa4d28d27a39b",
-	"projectname": "%E5%BE%AE%E5%95%86%E5%9F%8E",
+	"appid": "wxd0a2e404e3436c55",
+	"projectname": "%E5%8D%8E%E5%A6%99%E5%81%A5%E5%BA%B7",
 	"isGameTourist": false,
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 7,
 			"list": [
 				{
 					"id": 0,
@@ -86,9 +86,9 @@
 				},
 				{
 					"id": 7,
-					"name": "确认订单",
-					"pathName": "pages/order-details/index",
-					"query": "id=c62a066bf708493d96559ba993967683",
+					"name": "卡卷",
+					"pathName": "pages/newcoupons/index",
+					"query": "",
 					"scene": null
 				},
 				{

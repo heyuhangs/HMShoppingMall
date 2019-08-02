@@ -21,7 +21,8 @@ Page({
         'freeze': 0x0,
         'score': 0x0,
         'score_sign_continuous': 0x0,
-        'tabClass': ['', '', '', '', '']
+        'tabClass': ['', '', '', '', ''],
+        user: {}
     },
     isMembership: function () {
         const self = this;
@@ -42,10 +43,8 @@ Page({
         });
     },
     onLoad: function () {
-        this.isMembership().then(res => {
-            if (res == 200) {
-                return false;
-            }
+        this.setData({
+            user: app.globalData.userInfo
         })
     },
     'goorderlist' (_0x4ed87b) {
@@ -58,6 +57,11 @@ Page({
         wx[wanzikun_0x42d0('0x3')]({
             'url': _0x1f5978[wanzikun_0x42d0('0x4')](wanzikun_0x42d0('0x5'), _0x2956a7)
         });
+    },
+    clickVip(){
+        wx.navigateTo({
+            url: '/pages/newcoupons/index'
+        })
     },
     'getUserApiInfo': function() {
         var _0x83412c = {

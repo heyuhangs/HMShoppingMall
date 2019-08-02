@@ -474,17 +474,18 @@ Page({
         // wx.redirectTo({
         //     url: '/pages/register/register',
         // });
-        if (!app.globalData.wxUser.openid || app.globalData.wxUser.openid == '') {
-            wx.showToast({
-                title: '后台取OpenID失败，无法登陆，请联系管理员!',
-                icon: 'none',
-                duration: 2000
-            });
-            wx.navigateBack({
-                delta: -1
-            });
-            return false;
-        }
+
+        // if (!app.globalData.wxUser.openid || app.globalData.wxUser.openid == '') {
+        //     wx.showToast({
+        //         title: '后台取OpenID失败，无法登陆，请联系管理员!',
+        //         icon: 'none',
+        //         duration: 2000
+        //     });
+        //     wx.navigateBack({
+        //         delta: -1
+        //     });
+        //     return false;
+        // }
         if (!app.globalData.userInfo || app.globalData.userInfo == '') {
             self.setData({
                 wxlogin: true

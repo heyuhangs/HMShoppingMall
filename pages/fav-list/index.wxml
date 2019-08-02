@@ -19,8 +19,9 @@
     </view>
 <!--    <view class="title-opacity">查看详细</view>-->
   </view>
-  <view hidden="{{loadingMoreHidden ? true : false}}" class="no-more-goods">
-    <image src="/images/empty_collection.png" class="no-order-img"></image>
+  <view hidden="{{childList.length}}" class="no-more-goods">
+<!--    <image src="/images/empty_collection.png" class="no-order-img"></image>-->
+      <image src="/images/team.png" class="no-order-img"></image>
     <view class="text">还没有团队呢</view>
   </view>
 </view>

@@ -53,13 +53,21 @@ page {
 
 .userinfo-nickname {
   color: #fff;
-  display: block;
-  font-size: 32rpx;
+  display: inline-block;
+  font-size: 36rpx;
   margin-bottom: 12rpx;
+  vert-align: middle;
+}
+
+.userinfo-vipTar{
+  display: inline-block;
+  vert-align: middle;
+  margin-left: 3.5%;
+  font-size: 38rpx;
 }
 
 .userinfo-score {
-  font-size: 24rpx;
+  font-size: 26rpx;
   margin-top: 5px;
   background-color: #b3a078;
   color: #fff;
@@ -68,10 +76,10 @@ page {
 }
 
 .userinfo-score-day {
-  font-size: 24rpx;
+  font-size: 26rpx;
   margin-top: 5px;
   color: #fff;
-  margin-left: 20rpx;
+  /*margin-left: 20rpx;*/
 }
 
 .userinfo-item {
