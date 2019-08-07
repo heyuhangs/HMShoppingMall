@@ -13,11 +13,11 @@
         <swiper class="swiper_box" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"
                 bindchange="swiperchange">
             <block wx:for="{{goodsDetail.IMAGES_LIST}}" wx:for-index="idx" wx:key="PICTURES_ID">
-                <swiper-item wx:if="{{item.isVideo}}" class="videoImg" bindtap="videorequestFullScreen">
-                    <image class="icon" src="../../images/videoicon.png"></image>
-                    <image src="{{item.PATH}}" class="slide-image" lazy-load="true"/>
-                </swiper-item>
-                <swiper-item wx:else>
+                <!--                <swiper-item wx:if="{{item.isVideo}}" class="videoImg" bindtap="videorequestFullScreen">-->
+                <!--                    <image class="icon" src="../../images/videoicon.png"></image>-->
+                <!--                    <image src="{{item.PATH}}" class="slide-image" lazy-load="true"/>-->
+                <!--                </swiper-item>-->
+                <swiper-item>
                     <image src="{{item.PATH}}" class="slide-image" lazy-load="true"/>
                 </swiper-item>
             </block>
@@ -86,7 +86,7 @@
                     <view class="goods-mark">{{item.PL_CONTENT}}</view>
                     <view class="goods-mark-day">
                         {{item.INSERT_DATE}}
-<!--                        <text>444</text>-->
+                        <!--                        <text>444</text>-->
                     </view>
                 </view>
                 <view class="hf" wx:if="{{item.ADMIN_BACK != '' && item.ADMIN_BACK}}">

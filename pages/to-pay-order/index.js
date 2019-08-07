@@ -145,11 +145,8 @@ Page({
         switch (this.data.zffs) {
             case "在线支付":
                 break;
-            case "奖金积分支付":
+            case "奖金币支付":
                 status = 2;
-                break;
-            case "积分奖金混合支付":
-                status = 3;
                 break;
         }
         const orderGoodsList = [];

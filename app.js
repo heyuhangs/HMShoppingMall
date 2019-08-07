@@ -17,70 +17,94 @@ App({
         var _0x4b3d7f = this;
         _0x4b3d7f[wanzikun_0x1f1d('0x9')]();
     },
-    getUserInfo(){
+    relUserInfo() {
+        // const userKey = wx.getStorageSync('userKey');
+        const userKey = 2
+        if (userKey) {
+            wx.request({
+                url: app.globalData.url + `userImpl/userInfo?USER_ID=${userKey}`,
+                method: "get",
+                success: function (res) {
+                    if (res.statusCode == 200) {
+                        app.globalData.userInfo = res.data.user;
+                        app.globalData.wxUser = {
+                            WX_IMG: res.data.user.WX_IMG,
+                            WX_NICKNAME: res.data.user.WX_NICKNAME,
+                            openid: res.data.user.OPEN_ID
+                        }
+                    }
+                }
+            });
+        } else {
+            this.getUserInfo().then(res => {
+
+            });
+        }
+    },
+    getUserInfo() {
         const self = this;
-      return new Promise(function (resolve, reject) {
-          wx.login({
-              success: function (res) {
-                  // wx.showToast({
-                  //     title: JSON.stringify(res),
-                  //     icon: 'none',
-                  //     duration: 200000
-                  // })
-                  if (res.code) {
-                      wx.request({
-                          url: self.globalData.url + `userImpl/getWxInfo?code=${res.code}`,
-                          method: "get",
-                          success: function (res) {
-                              if (res.statusCode == 200) {
-                                  self.globalData.wxUser = res.data.wxInfo;
-                                  self.globalData.userInfo = res.data.userInfo;
-                                  if(res.data.userInfo != ''){
-                                      wx.setStorage({
-                                          key: 'userKey',
-                                          data: res.data.userInfo.USER_ID,
-                                          success: function (res) {
-                                          }
-                                      });
-                                  }
-                                  resolve(res.data);
-                              } else {
-                                  wx.showToast({
-                                      title: 'openId获取失败无法登陆，请联系管理员!',
-                                      icon: 'none',
-                                      duration: 2000
-                                  })
-                                  reject('后台取OpenID失败，无法登陆，请联系管理员!')
-                              }
-                          },
-                          fail: function () {
-                              wx.showToast({
-                                  title: 'openId获取失败无法登陆，请联系管理员!',
-                                  icon: 'none',
-                                  duration: 2000
-                              })
-                              reject('后台取OpenID失败，无法登陆，请联系管理员!')
-                          }
-                      })
-                  } else {
-                      wx.showToast({
-                          title: '后台取OpenID失败，无法登陆，请联系管理员!',
-                          icon: 'none',
-                          duration: 2000
-                      })
-                      reject('后台取OpenID失败，无法登陆，请联系管理员!')
-                  }
-              },
-              fail: function () {
-                  wx.showToast({
-                      title: '后台取OpenID失败，无法登陆，请联系管理员!',
-                      icon: 'none',
-                      duration: 2000
-                  })
-                  reject('后台取OpenID失败，无法登陆，请联系管理员!')
-              }
-          })
-      })
+        return new Promise(function (resolve, reject) {
+            wx.login({
+                success: function (res) {
+                    // wx.showToast({
+                    //     title: JSON.stringify(res),
+                    //     icon: 'none',
+                    //     duration: 200000
+                    // })
+                    if (res.code) {
+                        wx.request({
+                            url: self.globalData.url + `userImpl/getWxInfo?code=${res.code}`,
+                            method: "get",
+                            success: function (res) {
+                                if (res.statusCode == 200) {
+                                    self.globalData.wxUser = res.data.wxInfo;
+                                    self.globalData.userInfo = res.data.userInfo;
+                                    if (res.data.userInfo != '') {
+                                        wx.setStorage({
+                                            key: 'userKey',
+                                            data: res.data.userInfo.USER_ID,
+                                            success: function (res) {
+                                            }
+                                        });
+                                    }
+                                    resolve(res.data);
+                                } else {
+                                    wx.showToast({
+                                        title: 'openId获取失败无法登陆，请联系管理员!',
+                                        icon: 'none',
+                                        duration: 2000
+                                    })
+                                    reject('后台取OpenID失败，无法登陆，请联系管理员!')
+                                }
+                            },
+                            fail: function () {
+                                wx.showToast({
+                                    title: 'openId获取失败无法登陆，请联系管理员!',
+                                    icon: 'none',
+                                    duration: 2000
+                                })
+                                reject('后台取OpenID失败，无法登陆，请联系管理员!')
+                            }
+                        })
+                    } else {
+                        wx.showToast({
+                            title: '后台取OpenID失败，无法登陆，请联系管理员!',
+                            icon: 'none',
+                            duration: 2000
+                        })
+                        reject('后台取OpenID失败，无法登陆，请联系管理员!')
+                    }
+                },
+                fail: function () {
+                    wx.showToast({
+                        title: '后台取OpenID失败，无法登陆，请联系管理员!',
+                        icon: 'none',
+                        duration: 2000
+                    })
+                    reject('后台取OpenID失败，无法登陆，请联系管理员!')
+                }
+            })
+        })
     },
     'siteInfo': require(wanzikun_0x1f1d('0x2e')),
     'urls': function () {

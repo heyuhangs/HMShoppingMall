@@ -1,4 +1,7 @@
 {
   "navigationBarTitleText": "礼券领取中心",
-  "navigationBarTextStyle": "white"
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "i-modal": "../../dist/modal/index"
+  }
 }

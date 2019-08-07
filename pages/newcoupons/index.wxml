@@ -12,7 +12,7 @@
 
   </view>
   <view class="coupons-list">
-    <view class="coupons-item" wx:for-items="{{coupons}}" wx:key="{{index}}" bindtap="gitCoupon" data-id="{{item.status}}">
+    <view class="coupons-item" wx:for-items="{{coupons}}" wx:key="{{index}}">
       <view class="coupons-item-box">
         <view class="money-left">{{item.moneyMax}}
           <text>元</text>
@@ -21,7 +21,7 @@
           <view class="money-name">{{item.name}}</view>
           <view class="money-hold">{{item.moneyHreshold}}</view>
         </view>
-        <view class="money-home">立即购买</view>
+        <view class="money-home" bindtap="topPay" data-id="{{item.status}}">立即购买</view>
       </view>
       <view class="money-line"></view>
       <view class="money-fooder" wx:if="{{item.dateEndType == 0}}"></view>
@@ -29,3 +29,6 @@
     </view>
   </view>
 </view>
+<i-modal title="支付" visible="{{ visible3 }}" actions="{{ actions3 }}" bind:click="handleClick3">
+  <view>请选择支付方式</view>
+</i-modal>

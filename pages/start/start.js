@@ -129,7 +129,7 @@ Page({
                 url: app.globalData.url + `userImpl/userInfo?USER_ID=${userKey}`,
                 method: "get",
                 success: function (res) {
-                    if(res.statusCode == 200){
+                    if (res.statusCode == 200) {
                         app.globalData.userInfo = res.data.user;
                         app.globalData.wxUser = {
                             WX_IMG: res.data.user.WX_IMG,

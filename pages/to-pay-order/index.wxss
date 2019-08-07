@@ -29,7 +29,8 @@
   display: inline-block;
   width: 100%;
 }
-.row-box .i-panel{
+.row-box i-panel{
+  display: block;
   width: 100%;
 }
 .add-address .title {
@@ -230,4 +231,8 @@ form {
 .jiesuan-box .total {
   color: #b5272d;
   text-align: right;
+}
+.dd{
+  display: block;
+  width: 100%;
 }

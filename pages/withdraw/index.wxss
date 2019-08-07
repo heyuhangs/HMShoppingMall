@@ -12,7 +12,7 @@ page{
 .tixian-name{
   position:absolute;
   text-align:center;
-  width:50%;
+  width:100%;
   top:210rpx;
   color:#fff;
   font-size:30rpx;

@@ -21,8 +21,9 @@
             <view class="list-title">商品列表</view>
             <view class="a-goods" wx:for-items="{{goodsList}}" wx:key="{{index}}">
                 <view class="img-box">
-<!--                    VIDEO_PATH-->
-                    <image wx:if="{{item.VIDEO_PATH != ''}}" src="{{item.goodsDetail.IMAGES_LIST[1].PATH}}" class="img"/>
+                    <!--                    VIDEO_PATH-->
+                    <image wx:if="{{item.VIDEO_PATH != ''}}" src="{{item.goodsDetail.IMAGES_LIST[1].PATH}}"
+                           class="img"/>
                     <image wx:else src="{{item.goodsDetail.IMAGES_LIST[0].PATH}}" class="img"/>
                 </view>
                 <view class="text-box">
@@ -52,7 +53,7 @@
                     <i-radio-group current="{{zffs}}" bindchange="handleFruitChange">
                         <i-radio wx:key="1" value="在线支付"></i-radio>
                         <i-radio wx:key="2" value="奖金积分支付"></i-radio>
-                        <i-radio wx:key="3" value="积分奖金混合支付"></i-radio>
+                        <!--                        <i-radio wx:key="3" value="积分奖金混合支付"></i-radio>-->
                     </i-radio-group>
                 </i-panel>
             </view>
