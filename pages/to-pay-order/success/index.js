@@ -20,33 +20,50 @@ Page({
     onLoad: function (options) {
         const self = this;
         wx.showLoading({});
-        wx.request({
-            url: app.globalData.url + `/userImpl/getAddressList?USER_ID=${app.globalData.userInfo.USER_ID}&ADDRESS_ID=${options.addressId}`,
-            method: "GET",
-            success: function (res) {
-                if (res.statusCode == 200) {
-                    self.setData({
-                        addressObj: res.data.addList[0],
-                        orderCode: options.orderCode,
-                        countPay: options.count,
-                        status: options.status
-                    })
-                    wx.hideLoading();
+        if (options.isPayVip) {
+            self.setData({
+                orderCode: options.orderCode,
+                countPay: options.count,
+                status: options.status
+            })
+            wx.hideLoading();
+        } else {
+            wx.request({
+                url: app.globalData.url + `/userImpl/getAddressList?USER_ID=${app.globalData.userInfo.USER_ID}&ADDRESS_ID=${options.addressId}`,
+                method: "GET",
+                success: function (res) {
+                    if (res.statusCode == 200) {
+                        self.setData({
+                            addressObj: res.data.addList[0],
+                            orderCode: options.orderCode,
+                            countPay: options.count,
+                            status: options.status
+                        })
+                        wx.hideLoading();
+                    }
                 }
-            }
-        })
+            })
+        }
     },
     toPayTap: function () {
-        //
         const self = this;
         wx.showLoading({});
+        debugger
         wx.request({
             url: app.globalData.url + `/orderImpl/orderPay?USER_ID=${app.globalData.userInfo.USER_ID}&ORDER_CODE=${this.data.orderCode}&PAY_TYPE=${this.data.status}`,
             method: "GET",
             success: function (res) {
+                debugger
                 if (res.data.clear == 'yes' || res.statusCode == 200) {
                     wx.reLaunch({
                         url: '/pages/order-list/index?currentType=2&status=1'
+                    })
+                }else{
+                    wx.showToast({
+                        title:res.data.msg,
+                        icon: 'none',
+                        duration: 1000,
+                        mask: true
                     })
                 }
                 wx.hideLoading({});

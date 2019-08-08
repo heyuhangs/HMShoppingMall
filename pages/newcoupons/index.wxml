@@ -29,6 +29,6 @@
     </view>
   </view>
 </view>
-<i-modal title="支付" visible="{{ visible3 }}" actions="{{ actions3 }}" bind:click="handleClick3">
-  <view>请选择支付方式</view>
-</i-modal>
+<!--<i-modal title="支付" visible="{{ visible3 }}" actions="{{ actions3 }}" bind:click="handleClick3">-->
+<!--  <view>请选择支付方式</view>-->
+<!--</i-modal>-->

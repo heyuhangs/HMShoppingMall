@@ -22,9 +22,14 @@
             <view class="a-goods" wx:for-items="{{goodsList}}" wx:key="{{index}}">
                 <view class="img-box">
                     <!--                    VIDEO_PATH-->
-                    <image wx:if="{{item.VIDEO_PATH != ''}}" src="{{item.goodsDetail.IMAGES_LIST[1].PATH}}"
-                           class="img"/>
-                    <image wx:else src="{{item.goodsDetail.IMAGES_LIST[0].PATH}}" class="img"/>
+                    <view wx:if="{{isPayVip}}">
+                        <image class="img" src="../../images/gm.jpg"></image>
+                    </view>
+                    <view wx:else>
+                        <image wx:if="{{item.VIDEO_PATH != ''}}" src="{{item.goodsDetail.IMAGES_LIST[1].PATH}}"
+                               class="img"/>
+                        <image wx:else src="{{item.goodsDetail.IMAGES_LIST[0].PATH}}" class="img"/>
+                    </view>
                 </view>
                 <view class="text-box">
                     <view class="arow arow01">
@@ -39,51 +44,20 @@
             </view>
         </view>
         <view class="peisong-way">
-            <!--        <view class="row-box">-->
-            <!--            <view class="row-label">配送方式</view>-->
-            <!--            <view class="right-text">快递</view>-->
-            <!--&lt;!&ndash;            <view class="right-text" wx:if="{{yunPrice == 0}}">包邮</view>&ndash;&gt;-->
-            <!--        </view>-->
             <view class="row-box">
-                <!--            <view class="row-label">备注</view>-->
-                <!--            <view class="right-text">-->
-                <!--                <input name="remark" type="text" class="liuyan" placeholder="如需备注请输入" />-->
-                <!--            </view>-->
                 <i-panel i-class="dd">
                     <i-radio-group current="{{zffs}}" bindchange="handleFruitChange">
                         <i-radio wx:key="1" value="在线支付"></i-radio>
                         <i-radio wx:key="2" value="奖金积分支付"></i-radio>
-                        <!--                        <i-radio wx:key="3" value="积分奖金混合支付"></i-radio>-->
                     </i-radio-group>
                 </i-panel>
             </view>
         </view>
-        <!--     <view class="peisong-way" hidden="{{hasNoCoupons}}">-->
-        <!--        <view class="row-box" style="border-bottom:none;">-->
-        <!--            <view class="row-label">选择使用优惠券</view>-->
-        <!--        </view>-->
-        <!--        <view class="row-box" style="border-bottom:none;">-->
-        <!--          <picker-view indicator-style="height: 50rpx;" style="width: 100%; height: 150rpx;" value="0" bindchange="bindChangeCoupon">-->
-        <!--            <picker-view-column>-->
-        <!--              <view style="line-height: 50px">不使用优惠券</view>-->
-        <!--              <view wx:for="{{coupons}}" wx:key="id" style="line-height: 50px">{{item.money}}元 {{item.name}}</view>-->
-        <!--            </picker-view-column>-->
-        <!--          </picker-view>-->
-        <!--        </view>-->
-        <!--     </view>-->
         <view class="goods-info">
             <view class="row-box">
                 <view class="row-label">商品金额</view>
                 <view class="right-text">¥ {{countPay}}</view>
             </view>
-            <!--        <view class="row-box">-->
-            <!--            <view class="row-label">运费</view>-->
-            <!--            <view class="right-text">+ ¥ 12</view>-->
-            <!--        </view>-->
-            <!--        <view class="row-box" wx:if="{{!hasNoCoupons}}">-->
-            <!--            <view class="row-label">优惠券</view>-->
-            <!--            <view class="right-text">- ¥ {{youhuijine}}</view>-->
-            <!--        </view>-->
         </view>
         <view class="jiesuan-box">
             <view class="left-price">

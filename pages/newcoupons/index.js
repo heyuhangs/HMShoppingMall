@@ -36,7 +36,7 @@ Page({
                 "numberTotle": 327,
                 "numberUsed": 23,
                 "refId": 30164,
-                "status": 1,
+                "status": 10000,
                 "statusStr": "正常",
                 "type": "shop"
             },
@@ -59,7 +59,7 @@ Page({
                 "numberPersonMax": 2,
                 "numberTotle": 1000,
                 "numberUsed": 51,
-                "status": 2,
+                "status": 9999,
                 "statusStr": "正常",
                 "type": "shop"
             },
@@ -98,6 +98,11 @@ Page({
         //     }
         // ],
         "hasNoCoupons": false
+    },
+    topPay: function (e) {
+        wx.navigateTo({
+            url: '/pages/to-pay-order/index?payVip=' + e.target.dataset.id
+        })
     },
     'listenerCouponsInput': function (_0x26cef0) {
         this[wanzikun_0x4a33('0x0')]['coupons'] = _0x26cef0[wanzikun_0x4a33('0x1')]['value'];
@@ -298,43 +303,37 @@ Page({
             }
         });
     },
-    topPay: function (e) {
-        this.setData({
-            visible3: true,
-            vipObj: e.currentTarget.dataset.id
-        })
-    },
-    handleClick3: function (e) {
-        this.setData({
-            status: ++e.detail.index,
-            visible3: false
-        })
-        this.getCoupon();
-    },
-    getCoupon: function () {
-        //状态
-        console.log(this.data.vipObj);
-        const self = this;
-        wx.request({
-            url: app.globalData.url + `/userImpl/purchaseVIP?USER_ID=2&VIP_TYPE=${self.data.vipObj}`,
-            method: "GET",
-            success: function (res) {
-                if (res.statusCode == 200) {
-                    app.relUserInfo();
-                    wx.showToast({
-                        title: '购买成功!',
-                        icon: 'success',
-                        duration: 2000
-                    });
-                    setTimeout(() => {
-                        wx.reLaunch({
-                            url: '/pages/my/index'
-                        })
-                    }, 1000)
-                }
-            }
-        })
-    }
+    // handleClick3: function (e) {
+    //     this.setData({
+    //         status: ++e.detail.index,
+    //         visible3: false
+    //     })
+    //     this.getCoupon();
+    // },
+    // getCoupon: function () {
+    //     //状态
+    //     console.log(this.data.vipObj);
+    //     const self = this;
+    //     wx.request({
+    //         url: app.globalData.url + `/userImpl/purchaseVIP?USER_ID=2&VIP_TYPE=${self.data.vipObj}`,
+    //         method: "GET",
+    //         success: function (res) {
+    //             if (res.statusCode == 200) {
+    //                 app.relUserInfo();
+    //                 wx.showToast({
+    //                     title: '购买成功!',
+    //                     icon: 'success',
+    //                     duration: 2000
+    //                 });
+    //                 setTimeout(() => {
+    //                     wx.reLaunch({
+    //                         url: '/pages/my/index'
+    //                     })
+    //                 }, 1000)
+    //             }
+    //         }
+    //     })
+    // }
     // 'gitCoupon': function (_0x43e571) {
     //     var _0x1faf22 = {
     //         'yPksZ': function (_0x526924, _0x41d700) {

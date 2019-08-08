@@ -39,43 +39,61 @@ Page({
                 optionsGoodsId: options.goodId
             })
         }
-        wx.showLoading({});
-        this.data.isRunOnShow = true;
-        if (this.data.optionsGoodsId) {
-            wx.request({
-                url: app.globalData.url + `/goodImpl/goodInfo?GOOD_ID=${this.data.optionsGoodsId}&USER_ID=${app.globalData.userInfo.USER_ID}`,
-                method: "GET",
-                success: function (res) {
-                    if (res.statusCode == 200) {
-                        const goodsInfo = {
-                            goodsDetail: res.data.goodInfo,
-                            buyNumber: options.num,
-                            active: true
-                        };
-                        // goodsInfo.goodsDetail =
-                        const good = [];
-                        good.push(goodsInfo)
-                        self.setData({
-                            goodsList: good,
-                            isShping: false
-                        });
-                    }
-                    self.countPay();
-                }
-            });
-        } else {
-            const shopCarList = wx.getStorageSync('shopCar');
-            const goodsList = [];
-            for (const item of shopCarList) {
-                if (item.active) {
-                    goodsList.push(item);
-                }
-            }
-            this.setData({
+        //如果是购买会员卡，则不查询商品
+        if (options.payVip) {
+            const goodsList = [{
+                goodsDetail: {
+                    goodId: options.payVip,
+                    USER_ID: options.payVip,
+                    NAME: options.payVip == 9999 ? '爱心天使' : '光明天使',
+                    PRICE: options.payVip == 9999 ? 999 : 199
+                },
+                buyNumber: 1
+            }]
+            self.setData({
                 goodsList: goodsList,
-                isShping: true
+                isPayVip: true,
+                countPay: options.payVip == 9999 ? 999 : 199
             })
-            self.countPay();
+        } else {
+            wx.showLoading({});
+            this.data.isRunOnShow = true;
+            if (this.data.optionsGoodsId) {
+                wx.request({
+                    url: app.globalData.url + `/goodImpl/goodInfo?GOOD_ID=${this.data.optionsGoodsId}&USER_ID=${app.globalData.userInfo.USER_ID}`,
+                    method: "GET",
+                    success: function (res) {
+                        if (res.statusCode == 200) {
+                            const goodsInfo = {
+                                goodsDetail: res.data.goodInfo,
+                                buyNumber: options.num,
+                                active: true
+                            };
+                            // goodsInfo.goodsDetail =
+                            const good = [];
+                            good.push(goodsInfo)
+                            self.setData({
+                                goodsList: good,
+                                isShping: false
+                            });
+                        }
+                        self.countPay();
+                    }
+                });
+            } else {
+                const shopCarList = wx.getStorageSync('shopCar');
+                const goodsList = [];
+                for (const item of shopCarList) {
+                    if (item.active) {
+                        goodsList.push(item);
+                    }
+                }
+                this.setData({
+                    goodsList: goodsList,
+                    isShping: true
+                })
+                self.countPay();
+            }
         }
     },
     countPay: function () {
@@ -117,7 +135,7 @@ Page({
             })
         }
     },
-    handleFruitChange: function ({detail = {}}) {
+    handleFruitChange: function ({ detail = {} }) {
         this.setData({
             zffs: detail.value
         })
@@ -125,20 +143,25 @@ Page({
     createOrder: function () {
         let status = 1;
         const self = this;
-        if (this.data.countPay < 198) {
-            wx.showToast({
-                title: '首次最低消费198!',
-                icon: 'none',
-                duration: 2000
-            })
-            return false;
-        }
+        // if (this.data.countPay < 198) {
+        //     wx.showToast({
+        //         title: '首次最低消费198!',
+        //         icon: 'none',
+        //         duration: 2000
+        //     })
+        //     return false;
+        // }
         if (!this.data.addressList || !this.data.addressList.USER_ID) {
             wx.showToast({
                 title: '请选择收货人地址!',
                 icon: 'none',
                 duration: 2000
             })
+            return false;
+        }
+        //如果是购买vip
+        if (self.data.isPayVip) {
+            self.createVipOrder();
             return false;
         }
         wx.showLoading({});
@@ -165,6 +188,7 @@ Page({
             payType: status,
             orderGoodList: orderGoodsList
         }
+        debugger
         wx.request({
             url: app.globalData.url + `orderImpl/beforePayCheck`,
             method: "POST",
@@ -172,8 +196,56 @@ Page({
             success: function (res) {
                 if (res.statusCode == 200) {
                     self.clearShopCar();
+                    debugger
                     wx.navigateTo({
                         url: `/pages/to-pay-order/success/index?orderCode=${res.data.order_code}&addressId=${obj.addressId}&count=${self.data.countPay}&status=${status}`
+                    })
+                }
+                wx.hideLoading();
+            }
+        })
+    },
+    createVipOrder: function () {
+        const self = this;
+        let status = 1;
+        wx.showLoading({});
+        switch (this.data.zffs) {
+            case "在线支付":
+                break;
+            case "奖金币支付":
+                status = 2;
+                break;
+        }
+        const orderGoodsList = [];
+        for (const item of this.data.goodsList) {
+            orderGoodsList.push({
+                goodId: item.goodsDetail.USER_ID,
+                num: item.buyNumber
+                // price: item.goodsDetail.PRICE
+            })
+        }
+        const obj = {
+            userId: app.globalData.userInfo.USER_ID,
+            // addressId: this.data.addressList.USER_ID,
+            payType: status,
+            vipSaveOrderList: orderGoodsList
+        }
+        wx.request({
+            url: app.globalData.url + `orderImpl/beforePayCheckVIP`,
+            method: "POST",
+            data: obj,
+            success: function (res) {
+                if (res.statusCode == 200) {
+                    self.clearShopCar();
+                    wx.navigateTo({
+                        url: `/pages/to-pay-order/success/index?orderCode=${res.data.order_code}&count=${self.data.countPay}&status=${res.data.pay_type}&isPayVip=${self.data.isPayVip}`
+                    })
+                } else {
+                    wx.showToast({
+                        title: res.data.msg,
+                        icon: 'none',
+                        duration: 1000,
+                        mask: true
                     })
                 }
                 wx.hideLoading();
@@ -193,85 +265,6 @@ Page({
             }
         })
     },
-    // 'onShow': function () {
-    //     var _0x460c07 = {
-    //         'chnWu': function (_0x510a34, _0x4ed225) {
-    //             return _0x510a34 == _0x4ed225;
-    //         },
-    //         'HYEjd': function (_0x42210c, _0x3bd63f) {
-    //             return _0x42210c !== _0x3bd63f;
-    //         },
-    //         'DxopD': wanzikun_0x1432('0x0'),
-    //         'CJDOA': wanzikun_0x1432('0x1'),
-    //         'cvbwQ': function (_0x36987f, _0x3e7f51) {
-    //             return _0x36987f == _0x3e7f51;
-    //         },
-    //         'EWTEg': wanzikun_0x1432('0x2'),
-    //         'tnPHl': function (_0x403145, _0x17c354) {
-    //             return _0x403145 == _0x17c354;
-    //         },
-    //         'vJfto': wanzikun_0x1432('0x3'),
-    //         'qImMx': wanzikun_0x1432('0x4'),
-    //         'fBvSk': function (_0x56c641, _0x5ee086) {
-    //             return _0x56c641 === _0x5ee086;
-    //         },
-    //         'caqMP': wanzikun_0x1432('0x5'),
-    //         'gIaiW': 'buyNow',
-    //         'lupMm': 'shopCarInfo'
-    //     };
-    //     var _0xc94a24 = this;
-    //     var _0x2aa758 = [];
-    //     if (_0x460c07['cvbwQ']('buykj', _0xc94a24[wanzikun_0x1432('0x6')][wanzikun_0x1432('0x7')])) {
-    //         if (_0x460c07[wanzikun_0x1432('0x8')](_0x2aa758[wanzikun_0x1432('0x9')], 0x0)) {
-    //             var _0x1ba75d = wx[wanzikun_0x1432('0xa')](_0x460c07['EWTEg']);
-    //             if (_0x1ba75d && _0x1ba75d[wanzikun_0x1432('0xb')]) {
-    //                 _0x2aa758 = _0x1ba75d[wanzikun_0x1432('0xb')];
-    //             }
-    //         }
-    //     } else if (_0x460c07[wanzikun_0x1432('0xc')](_0x460c07[wanzikun_0x1432('0xd')], _0xc94a24[wanzikun_0x1432('0x6')][wanzikun_0x1432('0x7')])) {
-    //         if (_0x460c07['tnPHl'](_0x2aa758[wanzikun_0x1432('0x9')], 0x0)) {
-    //             var _0x289da1 = wx[wanzikun_0x1432('0xa')](_0x460c07[wanzikun_0x1432('0xe')]);
-    //             if (_0x289da1 && _0x289da1[wanzikun_0x1432('0xb')]) {
-    //                 if (_0x460c07[wanzikun_0x1432('0xf')](_0x460c07[wanzikun_0x1432('0x10')], wanzikun_0x1432('0x11'))) {
-    //                     var _0x164482 = this;
-    //                     if (_0x460c07[wanzikun_0x1432('0x12')](wanzikun_0x346709[wanzikun_0x1432('0x13')][wanzikun_0x1432('0x14')], !![])) {
-    //                         _0x164482[wanzikun_0x1432('0x15')]({
-    //                             'iphone': wanzikun_0x1432('0x14')
-    //                         });
-    //                     }
-    //                     _0x164482[wanzikun_0x1432('0x15')]({
-    //                         'isNeedLogistics': 0x1,
-    //                         'orderType': e[wanzikun_0x1432('0x7')]
-    //                     });
-    //                 } else {
-    //                     _0x2aa758 = _0x289da1[wanzikun_0x1432('0xb')];
-    //                 }
-    //             }
-    //         }
-    //     } else if (_0x460c07[wanzikun_0x1432('0xc')](_0x460c07[wanzikun_0x1432('0x16')], _0xc94a24[wanzikun_0x1432('0x6')]['orderType'])) {
-    //         var _0x5645c9 = wx['getStorageSync'](wanzikun_0x1432('0x17'));
-    //         if (_0x5645c9 && _0x5645c9['shopList']) {
-    //             _0x2aa758 = _0x5645c9[wanzikun_0x1432('0xb')];
-    //         }
-    //     } else {
-    //         var _0x3c37ce = wx[wanzikun_0x1432('0xa')](_0x460c07['lupMm']);
-    //         if (_0x3c37ce && _0x3c37ce[wanzikun_0x1432('0xb')]) {
-    //             _0x2aa758 = _0x3c37ce['shopList'][wanzikun_0x1432('0x18')](_0x2df218 => {
-    //                 if (_0x460c07[wanzikun_0x1432('0x19')](_0x460c07[wanzikun_0x1432('0x1a')], _0x460c07['CJDOA'])) {
-    //                     return _0x2df218[wanzikun_0x1432('0x1b')];
-    //                 } else {
-    //                     _0x2aa758 = _0x3c37ce[wanzikun_0x1432('0xb')]['filter'](_0x1c1b34 => {
-    //                         return _0x1c1b34[wanzikun_0x1432('0x1b')];
-    //                     });
-    //                 }
-    //             });
-    //         }
-    //     }
-    //     _0xc94a24['setData']({
-    //         'goodsList': _0x2aa758
-    //     });
-    //     _0xc94a24[wanzikun_0x1432('0x1c')]();
-    // },
     'getDistrictId': function (_0x2390a1, _0x32b368) {
         var _0x3e0882 = {
             'pdgSP': function (_0x3782c3, _0x57a4f8) {
