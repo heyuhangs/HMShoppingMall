@@ -524,7 +524,19 @@ Page({
     },
     onLoad: function (options) {
         const self = this;
-        if(options.id){
+        self.isMembership().then(res=>{
+            if (res == 200){
+                return false;
+            }
+        })
+        // if (app.globalData.userInfo.PHONE == '' || app.globalData.userInfo.PHONE == null) {
+        //     self.setData({
+        //         isMemberShipStatus: true
+        //     })
+        //     self.confirmMemberShip();
+        //     return false;
+        // }
+        if (options.id) {
             self.setData({
                 optionsgGoodId: options.id
             })
@@ -593,7 +605,7 @@ Page({
     isMembership: function () {
         const self = this;
         return new Promise(function (resolve, reject) {
-            if (!app.globalData.userInfo.PHONE || app.globalData.userInfo.PHONE == '') {
+            if (app.globalData.userInfo.PHONE == '' || app.globalData.userInfo.PHONE == null) {
                 self.setData({
                     isMemberShipStatus: false,
                     hideShopPopup: true

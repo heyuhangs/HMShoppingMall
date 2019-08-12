@@ -18,8 +18,7 @@ App({
         _0x4b3d7f[wanzikun_0x1f1d('0x9')]();
     },
     relUserInfo() {
-        // const userKey = wx.getStorageSync('userKey');
-        const userKey = 2
+        const userKey = wx.getStorageSync('userKey');
         if (userKey) {
             wx.request({
                 url: app.globalData.url + `userImpl/userInfo?USER_ID=${userKey}`,
@@ -46,16 +45,16 @@ App({
         return new Promise(function (resolve, reject) {
             wx.login({
                 success: function (res) {
-                    // wx.showToast({
-                    //     title: JSON.stringify(res),
-                    //     icon: 'none',
-                    //     duration: 200000
-                    // })
                     if (res.code) {
                         wx.request({
                             url: self.globalData.url + `userImpl/getWxInfo?code=${res.code}`,
                             method: "get",
                             success: function (res) {
+                                wx.showToast({
+                                    title: res.statusCode,
+                                    icon: 'none',
+                                    duration: 2000
+                                })
                                 if (res.statusCode == 200) {
                                     self.globalData.wxUser = res.data.wxInfo;
                                     self.globalData.userInfo = res.data.userInfo;
@@ -139,8 +138,8 @@ App({
         payId: '',
         userInfo: '',
         Urls: {},
-        url: 'http://localhost:8888/HM_war_exploded/'
-        // url: 'http://f22t435363.imwork.net/FXK'
-        // url: 'https://www.guime99.com/'
+        // url: 'http://localhost:8888/HM_war_exploded/'
+        // url: 'http://f22t435363.imwork.net/HM/'
+        url: 'http://www.hmgm999.com/'
     }
 });

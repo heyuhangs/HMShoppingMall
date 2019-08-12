@@ -22,14 +22,10 @@
             <view class="a-goods" wx:for-items="{{goodsList}}" wx:key="{{index}}">
                 <view class="img-box">
                     <!--                    VIDEO_PATH-->
-                    <view wx:if="{{isPayVip}}">
-                        <image class="img" src="../../images/gm.jpg"></image>
-                    </view>
-                    <view wx:else>
-                        <image wx:if="{{item.VIDEO_PATH != ''}}" src="{{item.goodsDetail.IMAGES_LIST[1].PATH}}"
-                               class="img"/>
-                        <image wx:else src="{{item.goodsDetail.IMAGES_LIST[0].PATH}}" class="img"/>
-                    </view>
+                    <image wx:if="{{isPayVip}}" class="img" src="../../images/gm.jpg"></image>
+                    <image wx:elif="{{item.VIDEO_PATH != ''}}" src="{{item.goodsDetail.IMAGES_LIST[1].PATH}}"
+                           class="img"/>
+                    <image wx:else src="{{item.goodsDetail.IMAGES_LIST[0].PATH}}" class="img"/>
                 </view>
                 <view class="text-box">
                     <view class="arow arow01">

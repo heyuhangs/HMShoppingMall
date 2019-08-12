@@ -48,19 +48,24 @@ Page({
     toPayTap: function () {
         const self = this;
         wx.showLoading({});
-        debugger
         wx.request({
             url: app.globalData.url + `/orderImpl/orderPay?USER_ID=${app.globalData.userInfo.USER_ID}&ORDER_CODE=${this.data.orderCode}&PAY_TYPE=${this.data.status}`,
             method: "GET",
             success: function (res) {
-                debugger
                 if (res.data.clear == 'yes' || res.statusCode == 200) {
-                    wx.reLaunch({
-                        url: '/pages/order-list/index?currentType=2&status=1'
-                    })
-                }else{
                     wx.showToast({
-                        title:res.data.msg,
+                        title: '购买成功',
+                        icon: 'success',
+                        duration: 2000
+                    });
+                    setTimeout(function () {
+                        wx.reLaunch({
+                            url: '/pages/order-list/index?currentType=2&status=1'
+                        })
+                    }, 1500)
+                } else {
+                    wx.showToast({
+                        title: res.data.msg,
                         icon: 'none',
                         duration: 1000,
                         mask: true

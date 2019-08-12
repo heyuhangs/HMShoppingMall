@@ -188,7 +188,6 @@ Page({
             payType: status,
             orderGoodList: orderGoodsList
         }
-        debugger
         wx.request({
             url: app.globalData.url + `orderImpl/beforePayCheck`,
             method: "POST",
@@ -196,7 +195,6 @@ Page({
             success: function (res) {
                 if (res.statusCode == 200) {
                     self.clearShopCar();
-                    debugger
                     wx.navigateTo({
                         url: `/pages/to-pay-order/success/index?orderCode=${res.data.order_code}&addressId=${obj.addressId}&count=${self.data.countPay}&status=${status}`
                     })

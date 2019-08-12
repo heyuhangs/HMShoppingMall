@@ -29,11 +29,11 @@
         </view>
     </view>
 
-    <view class="swiper-container" wx:if="{{isVideo}}">
-        <video style="display: none;" src="{{goodsDetail.VIDEO_PATH}}" class="slide-image" id="myVideo"
-               lazy-load="true"
-               class="bcg" controls="true"></video>
-    </view>
+<!--    <view class="swiper-container" wx:if="{{isVideo}}">-->
+<!--        <video style="display: none;" src="{{goodsDetail.VIDEO_PATH}}" class="slide-image" id="myVideo"-->
+<!--               lazy-load="true"-->
+<!--               class="bcg" controls="true"></video>-->
+<!--    </view>-->
     <view class="goods-info">
         <view class="goods-left">
             <view class="goods-title">{{goodsDetail.NAME}}</view>

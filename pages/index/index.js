@@ -168,7 +168,7 @@ Page({
             "views": 15667,
             "weight": 0
         }],
-        topgoods: {"remark": "/pages/index/index", "value": "人气推荐"},
+        topgoods: { "remark": "/pages/index/index", "value": "人气推荐" },
         toptopics: [{
             "author": "丸子君",
             "categoryId": 1561,
@@ -518,12 +518,12 @@ Page({
         })
         this.getBannerData();
     },
-    nativedd: function(){
+    nativedd: function () {
         wx.navigateTo({
             url: '/pages/order-list/index?currentType=0'
         })
     },
-    nativezd: function(){
+    nativezd: function () {
         wx.navigateTo({
             url: '/pages/my-kanjia/index'
         })

@@ -44,6 +44,11 @@ Page({
     },
     onLoad: function () {
         const self = this;
+        self.isMembership().then(res => {
+            if (res == 200) {
+                return false;
+            }
+        });
         wx.request({
             url: app.globalData.url + `/userImpl/userInfo?USER_ID=${app.globalData.userInfo.USER_ID}`,
             method: "GET",
@@ -56,6 +61,21 @@ Page({
             }
         })
 
+    },
+    // isMemberShipStatus
+    isMembership: function () {
+        const self = this;
+        return new Promise(function (resolve, reject) {
+            if (app.globalData.userInfo.PHONE == '' || app.globalData.userInfo.PHONE == null) {
+                self.setData({
+                    isMemberShipStatus: false,
+                    hideShopPopup: true
+                })
+                resolve(200)
+            } else {
+                resolve(400)
+            }
+        })
     },
     'goorderlist'(_0x4ed87b) {
         var _0x1f5978 = {

@@ -2,5 +2,8 @@
    "navigationBarTitleText": "商品详情",
    "backgroundTextStyle": "dark",
    "enablePullDownRefresh": true,
-   "navigationBarTextStyle": "white"
+   "navigationBarTextStyle": "white",
+   "usingComponents": {
+      "i-modal": "../../dist/modal/index"
+   }
 }
