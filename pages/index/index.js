@@ -487,8 +487,11 @@ Page({
         //     return false;
         // }
         if (!app.globalData.userInfo || app.globalData.userInfo == '') {
-            self.setData({
-                wxlogin: true
+            // self.setData({
+            //     wxlogin: true
+            // })
+            wx.redirectTo({
+                url: '/pages/jurisDiction/jurisDiction'
             })
             return false;
         }
@@ -671,68 +674,6 @@ Page({
                 }
             }
         });
-    },
-    userlogin: function () {
-        const self = this;
-        wx.getUserInfo({
-            success: function (res) {
-                if (res.userInfo) {
-                    const obj = res.userInfo
-                    // let sex = ''
-                    // if (obj.gender === 1) {
-                    //     sex = '男'
-                    // } else if (obj.gender === 2) {
-                    //     sex = '女'
-                    // } else {
-                    //     sex = ''
-                    // }
-                    let newObject = {
-                        PAR_ID: '',
-                        OPEN_ID: app.globalData.wxUser.openid,
-                        WX_NICKNAME: obj.nickName,
-                        WX_IMG: obj.avatarUrl,
-                    }
-                    // if(self.data.id){
-                    //     newObject.objectId = self.data.id
-                    // }
-                    wx.request({
-                        url: app.globalData.url + `/userImpl/saveUser?PAR_ID=${newObject.PAR_ID}&OPEN_ID=${newObject.OPEN_ID}&WX_NICKNAME=${newObject.WX_NICKNAME}&WX_IMG=${newObject.WX_IMG}`,
-                        method: "get",
-                        success: function (res) {
-                            if (res.statusCode == 200) {
-                                app.globalData.userInfo = res.data.userInfo;
-                                wx.reLaunch({
-                                    url: '/pages/index/index',
-                                });
-                            } else {
-                                wx.showToast({
-                                    title: '信息注册失败，请联系管理员!',
-                                    icon: 'none',
-                                    duration: 2000
-                                })
-                            }
-                        }
-                    })
-                    // wx.request({
-                    //     url: app.globalData.getServerUrl() + app.globalData.applicationId + '/' + app.globalData.secretKey + `/data/WXUser`,
-                    //     method: 'PUT',
-                    //     data: JSON.stringify(newObject),
-                    //     success: function (res) {
-                    //         app.globalData.userInfo = res.data
-                    //         if(app.globalData.userInfo){
-                    //             wx.redirectTo({
-                    //                 url: '/pages/home/home'
-                    //             })
-                    //         }
-                    //         // self.setData({
-                    //         //   userInfo: app.globalData.userInfo
-                    //         // })
-                    //         console.log('userInfo', app.globalData.userInfo)
-                    //     }
-                    // })
-                }
-            },
-        })
     },
     'onShow': function () {
         var _0x17bbc4 = {
