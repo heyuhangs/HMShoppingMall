@@ -34,6 +34,36 @@ Page({
     },
     onLoad: function (options) {
         const self = this;
+        wx.showLoading();
+        if (options.selects) {
+            wx.request({
+                url: app.globalData.url + `/userImpl/getAddressList?ADDRESS_ID=${options.myAddress}&USER_ID=${app.globalData.userInfo.USER_ID}`,
+                method: "GET",
+                success: function (res) {
+                    if (res.data.addList.length && res.statusCode == 200) {
+                        self.setData({
+                            addressList: res.data.addList[0],
+                            isAddress: true
+                        })
+                    }
+                    wx.hideLoading();
+                }
+            })
+        } else {
+            wx.request({
+                url: app.globalData.url + `/userImpl/getAddressList?USER_ID=${app.globalData.userInfo.USER_ID}`,
+                method: "GET",
+                success: function (res) {
+                    if (res.data.addList.length && res.statusCode == 200) {
+                        self.setData({
+                            addressList: res.data.addList[0],
+                            isAddress: true
+                        })
+                    }
+                    wx.hideLoading();
+                }
+            })
+        }
         if (options.goodId) {
             self.setData({
                 optionsGoodsId: options.goodId
@@ -112,28 +142,15 @@ Page({
         if (!this.data.isRunOnShow) {
             this.onLoad();
         }
-        const myAddress = wx.getStorageSync('myAddress');
-        if (myAddress) {
-            self.setData({
-                addressList: myAddress,
-                isAddress: true
-            })
-            wx.hideLoading();
-        } else {
-            wx.request({
-                url: app.globalData.url + `/userImpl/getAddressList?USER_ID=${app.globalData.userInfo.USER_ID}`,
-                method: "GET",
-                success: function (res) {
-                    if (res.data.addList.length && res.statusCode == 200) {
-                        self.setData({
-                            addressList: res.data.addList[0],
-                            isAddress: true
-                        })
-                    }
-                    wx.hideLoading();
-                }
-            })
-        }
+        // const myAddress = wx.getStorageSync('myAddress');
+        // if (myAddress) {
+        //     self.setData({
+        //         addressList: myAddress,
+        //         isAddress: true
+        //     })
+        //     wx.hideLoading();
+        // } else {
+        // }
     },
     handleFruitChange: function ({ detail = {} }) {
         this.setData({
@@ -677,7 +694,7 @@ Page({
             'fLSOI': wanzikun_0x1432('0xa6')
         };
         wx['navigateTo']({
-            'url': _0x4d546e[wanzikun_0x1432('0xa7')]
+            'url': _0x4d546e[wanzikun_0x1432('0xa7')] + '?selects=1'
         });
     },
     'getMyCoupons': function () {

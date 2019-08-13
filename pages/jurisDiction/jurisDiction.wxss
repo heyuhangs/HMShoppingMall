@@ -15,7 +15,7 @@
     margin: 0 auto;
     height: 600rpx;
     background-color: #fff;
-    margin-top: 30%;
+    margin-top: 35%;
     border-radius: 10rpx;
 }
 
@@ -28,44 +28,44 @@
 }
 
 .show-logo-box image {
-    width: 120rpx;
-    height: 120rpx;
+    width: 155rpx;
+    height: 155rpx;
     border-radius: 50%;
     display: block;
     margin: 0 auto;
 }
 
 .show-mall-name {
-    font-size: 32rpx;
-    margin-top: 30rpx;
-    margin-bottom: 20rpx;
+    font-size: 38rpx;
+    margin-top: 55rpx;
+    margin-bottom: 30rpx;
     color: #333;
 }
 
 .show-text-box {
     margin-top: 10%;
-    margin-bottom: 15%;
+    margin-bottom: 20%;
 }
 
 .show-text-name {
-    font-size: 30rpx;
+    font-size: 35rpx;
     color: #333;
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
-    margin-bottom: 35rpx;
+    margin-bottom: 40rpx;
 }
 
 .show-text-info {
     width: 80%;
     margin: 0 auto;
-    font-size: 24rpx;
+    font-size: 28rpx;
     color: #999;
-    margin-top: 15rpx;
+    margin-top: 25rpx;
 }
 
 .show-text-info text {
     margin-right: 10rpx;
-    font-size: 26rpx;
+    font-size: 30rpx;
 }
 
 .show-box button::after {
@@ -75,9 +75,9 @@
 
 .show-box button {
     width: 80%;
-    height: 70rpx;
-    line-height: 70rpx;
-    font-size: 30rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    font-size: 32rpx;
     background-color: #04be01;
     color: #fff;
 }
