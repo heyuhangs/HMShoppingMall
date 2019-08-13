@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="728786a9-b381-4290-92f9-790acc559dcd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/address-add/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/address-add/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/to-pay-order/success/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/to-pay-order/success/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,64 +19,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/goods-details/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-11615">
-              <caret line="526" column="8" selection-start-line="526" selection-start-column="8" selection-end-line="526" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="119" column="8" selection-start-line="119" selection-start-column="8" selection-end-line="119" selection-end-column="8" />
+            <state relative-caret-position="1028">
+              <caret line="156" column="52" selection-start-line="156" selection-start-column="52" selection-end-line="156" selection-end-column="52" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.json">
+        <entry file="file://$PROJECT_DIR$/pages/to-pay-order/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
-              <caret line="34" column="48" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="48" />
+            <state relative-caret-position="364">
+              <caret line="221" column="6" selection-start-line="221" selection-start-column="6" selection-end-line="221" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/index/index.wxml">
+        <entry file="file://$PROJECT_DIR$/pages/to-pay-order/success/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="146" column="27" selection-start-line="146" selection-start-column="13" selection-end-line="146" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/jurisDiction/jurisDiction.wxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="21" column="66" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="66" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/jurisDiction/jurisDiction.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="881">
-              <caret line="94" column="22" lean-forward="true" selection-start-line="94" selection-start-column="22" selection-end-line="94" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/index/index.wxss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="796">
-              <caret line="569" lean-forward="true" selection-start-line="443" selection-end-line="569" />
+            <state relative-caret-position="440">
+              <caret line="57" column="27" lean-forward="true" selection-start-line="57" selection-start-column="27" selection-end-line="57" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -83,26 +48,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/jurisDiction/jurisDiction.wxss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="54" column="20" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
+            <state relative-caret-position="190">
+              <caret line="12" column="15" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/my/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-480">
-              <caret line="50" column="11" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/index/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="496" column="9" lean-forward="true" selection-start-line="496" selection-start-column="9" selection-end-line="496" selection-end-column="9" />
+            <state relative-caret-position="-6612">
+              <caret line="508" column="10" lean-forward="true" selection-start-line="508" selection-start-column="10" selection-end-line="508" selection-end-column="10" />
               <folding>
                 <element signature="n#style#0;n#ul#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#p#6;n#!!top" expanded="true" />
@@ -115,18 +71,53 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/order-list/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="100" column="20" selection-start-line="100" selection-start-column="20" selection-end-line="104" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/jurisDiction/jurisDiction.wxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="21" column="71" selection-start-line="21" selection-start-column="71" selection-end-line="21" selection-end-column="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/select-address/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="439">
+              <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/address-add/index.wxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-372" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/address-add/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="583">
+              <caret line="152" column="56" lean-forward="true" selection-start-line="152" selection-start-column="56" selection-end-line="152" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>onLoad</find>
-      <find>dd</find>
-      <find>row-box</find>
-      <find>gitCoupon</find>
-      <find>成功</find>
-      <find>app</find>
-      <find>userInfo</find>
-      <find>pages/to-pay-order/index</find>
       <find>countPay</find>
       <find>createOrder</find>
       <find>goodId</find>
@@ -137,7 +128,6 @@
       <find>confirmMemberShip</find>
       <find>/pages/register/register</find>
       <find>hideShopPopup</find>
-      <find>debugger</find>
       <find>isMemberShipStatus</find>
       <find>isMembership</find>
       <find>show-container</find>
@@ -149,6 +139,15 @@
       <find>userlogin</find>
       <find>.show-text-name</find>
       <find>wxlogin</find>
+      <find>orderPay</find>
+      <find>addressList</find>
+      <find>myAddress</find>
+      <find>selects</find>
+      <find>selectAddress</find>
+      <find>isRunOnShow</find>
+      <find>addAddess</find>
+      <find>debugger</find>
+      <find>120rpx</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -160,19 +159,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pages/register/register.js" />
         <option value="$PROJECT_DIR$/pages/to-pay-order/success/index.wxml" />
         <option value="$PROJECT_DIR$/pages/select-address/index.wxml" />
         <option value="$PROJECT_DIR$/dist/modal/index.wxss" />
         <option value="$PROJECT_DIR$/pages/order-list/index.json" />
-        <option value="$PROJECT_DIR$/pages/select-address/index.js" />
         <option value="$PROJECT_DIR$/pages/shop-cart/index.js" />
         <option value="$PROJECT_DIR$/pages/wuliu/index.json" />
         <option value="$PROJECT_DIR$/pages/goods-details/index.wxss" />
         <option value="$PROJECT_DIR$/pages/wuliu/index.wxml" />
         <option value="$PROJECT_DIR$/pages/wuliu/index.wxss" />
         <option value="$PROJECT_DIR$/pages/order-list/index.wxml" />
-        <option value="$PROJECT_DIR$/pages/order-list/index.js" />
         <option value="$PROJECT_DIR$/pages/order-details/index.wxml" />
         <option value="$PROJECT_DIR$/pages/order-details/index.wxss" />
         <option value="$PROJECT_DIR$/pages/order-details/index.js" />
@@ -201,23 +197,26 @@
         <option value="$PROJECT_DIR$/pages/to-pay-order/index.wxml" />
         <option value="$PROJECT_DIR$/pages/goods-details/index.json" />
         <option value="$PROJECT_DIR$/pages/start/start.js" />
-        <option value="$PROJECT_DIR$/pages/to-pay-order/index.js" />
-        <option value="$PROJECT_DIR$/pages/to-pay-order/success/index.js" />
         <option value="$PROJECT_DIR$/pages/goods-details/index.js" />
         <option value="$PROJECT_DIR$/pages/my/index.js" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/app.json" />
-        <option value="$PROJECT_DIR$/pages/jurisDiction/jurisDiction.wxml" />
-        <option value="$PROJECT_DIR$/pages/jurisDiction/jurisDiction.wxss" />
         <option value="$PROJECT_DIR$/pages/jurisDiction/jurisDiction.js" />
         <option value="$PROJECT_DIR$/pages/index/index.js" />
+        <option value="$PROJECT_DIR$/pages/order-list/index.js" />
+        <option value="$PROJECT_DIR$/pages/select-address/index.js" />
+        <option value="$PROJECT_DIR$/pages/jurisDiction/jurisDiction.wxml" />
+        <option value="$PROJECT_DIR$/pages/jurisDiction/jurisDiction.wxss" />
+        <option value="$PROJECT_DIR$/pages/to-pay-order/index.js" />
+        <option value="$PROJECT_DIR$/pages/to-pay-order/success/index.js" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/pages/address-add/index.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="y" value="23" />
     <option name="width" value="1680" />
-    <option name="height" value="965" />
+    <option name="height" value="934" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -240,6 +239,12 @@
               <item name="HMShoppingMall" type="b2602c69:ProjectViewProjectNode" />
               <item name="HMShoppingMall" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="address-add" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HMShoppingMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HMShoppingMall" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="index" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -247,6 +252,25 @@
               <item name="HMShoppingMall" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="jurisDiction" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HMShoppingMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HMShoppingMall" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="order-list" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HMShoppingMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HMShoppingMall" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="to-pay-order" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HMShoppingMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HMShoppingMall" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="to-pay-order" type="462c0819:PsiDirectoryNode" />
+              <item name="success" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -290,7 +314,7 @@
     </option>
   </component>
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>$USER_HOME$/.subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -322,7 +346,7 @@
       <workItem from="1565085622424" duration="2832000" />
       <workItem from="1565178073762" duration="11884000" />
       <workItem from="1565271727121" duration="9105000" />
-      <workItem from="1565523506437" duration="1899000" />
+      <workItem from="1565523506437" duration="12183000" />
     </task>
     <task id="LOCAL-00001" summary="修改">
       <created>1556588731373</created>
@@ -646,11 +670,25 @@
       <option name="project" value="LOCAL" />
       <updated>1565587329476</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="修改获取用户信息问题">
+      <created>1565590313590</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1565590313590</updated>
+    </task>
+    <task id="LOCAL-00048" summary="修改授权页问题">
+      <created>1565659991255</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1565659991255</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="284290000" />
+    <option name="totallyTimeSpent" value="294574000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -663,7 +701,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17962629" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -749,8 +786,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="修改商品详情" />
-    <MESSAGE value="修改商品详情页问题" />
     <MESSAGE value="加入购物车功能" />
     <MESSAGE value="购物车功能" />
     <MESSAGE value="完成购物车功能" />
@@ -774,30 +809,11 @@
     <MESSAGE value="修改问题" />
     <MESSAGE value="增加会员购买" />
     <MESSAGE value="修改若干bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改若干bug" />
+    <MESSAGE value="修改获取用户信息问题" />
+    <MESSAGE value="修改授权页问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改授权页问题" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/images/gohome.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/error.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/coupon_empty.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/coupon_button.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/default_avatar.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/empty_collection.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/empty_comment.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/images/empty_goods.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -915,20 +931,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/to-pay-order/index.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/to-pay-order/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4560">
-          <caret line="240" column="36" lean-forward="true" selection-start-line="240" selection-start-column="36" selection-end-line="240" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/shop-cart/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5187">
@@ -941,13 +943,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/to-pay-order/success/index.wxml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/to-pay-order/success/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="988">
-          <caret line="52" column="58" selection-start-line="52" selection-start-column="50" selection-end-line="52" selection-end-column="58" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/newcoupons/index.wxml">
       <provider selected="true" editor-type-id="text-editor">
@@ -1007,13 +1002,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="119" column="8" selection-start-line="119" selection-start-column="8" selection-end-line="119" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/index/index.wxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -1028,27 +1016,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/jurisDiction/jurisDiction.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="66" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="34" column="48" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/jurisDiction/jurisDiction.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="54" column="20" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/jurisDiction/jurisDiction.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="881">
@@ -1056,10 +1023,81 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pages/order-list/index.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="54" column="107" selection-start-line="54" selection-start-column="99" selection-end-line="54" selection-end-column="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="15" column="41" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/to-pay-order/index.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="12" column="61" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/select-address/index.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/select-address/index.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="28" column="45" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/jurisDiction/jurisDiction.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="71" selection-start-line="21" selection-start-column="71" selection-end-line="21" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/jurisDiction/jurisDiction.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="12" column="15" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/to-pay-order/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="221" column="6" selection-start-line="221" selection-start-column="6" selection-end-line="221" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1028">
+          <caret line="156" column="52" selection-start-line="156" selection-start-column="52" selection-end-line="156" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/select-address/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/address-add/index.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-372" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/index/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="496" column="9" lean-forward="true" selection-start-line="496" selection-start-column="9" selection-end-line="496" selection-end-column="9" />
+        <state relative-caret-position="-6612">
+          <caret line="508" column="10" lean-forward="true" selection-start-line="508" selection-start-column="10" selection-end-line="508" selection-end-column="10" />
           <folding>
             <element signature="n#style#0;n#ul#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#p#6;n#!!top" expanded="true" />
@@ -1068,6 +1106,27 @@
             <element signature="e#678#684#0" expanded="true" />
             <element signature="e#693#699#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/order-list/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="100" column="20" selection-start-line="100" selection-start-column="20" selection-end-line="104" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/to-pay-order/success/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="57" column="27" lean-forward="true" selection-start-line="57" selection-start-column="27" selection-end-line="57" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/address-add/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="583">
+          <caret line="152" column="56" lean-forward="true" selection-start-line="152" selection-start-column="56" selection-end-line="152" selection-end-column="56" />
         </state>
       </provider>
     </entry>

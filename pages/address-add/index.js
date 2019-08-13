@@ -89,7 +89,7 @@ Page({
             obj.USER_ID = self.data.addressData.USER_ID
         }
         wx.request({
-            url: app.globalData.url + '' + url ,
+            url: app.globalData.url + '' + url,
             method: "POST",
             data: obj,
             success: function (res) {
@@ -144,21 +144,26 @@ Page({
                         url: app.globalData.url + `/userImpl/deleteAddress?UESR_ID=${e.currentTarget.dataset.id}`,
                         method: "GET",
                         success: function (res) {
-                            // if (res.statusCode == 200) {
-                            //     const obj = res.data.addList[0];
-                            //     self.setData({
-                            //         selProvince: obj.PROVINCE,
-                            //         selCity: obj.CITY,
-                            //         selDistrict: obj.DISTRICT,
-                            //         more: obj.IS_USE == 1 ? true : false,
-                            //         addressData: obj,
-                            //         isEdit: true
-                            //     })
-                            //     wx.hideLoading();
-                            // }
+                            if (res.statusCode == 200) {
+                                wx.showToast({
+                                    title: '删除成功!',
+                                    icon: 'none',
+                                    duration: 2000
+                                });
+                                setTimeout(function () {
+                                    wx.redirectTo({
+                                        url: '/pages/select-address/index'
+                                    })
+                                }, 1500)
+                            }
                         }
                     })
                 } else if (sm.cancel) {
+                    wx.showToast({
+                        title: '取消成功!',
+                        icon: 'none',
+                        duration: 2000
+                    });
                     // console.log('取消');
                 }
             }

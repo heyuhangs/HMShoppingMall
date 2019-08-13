@@ -40,6 +40,22 @@ App({
             });
         }
     },
+    //微信充值生成随机数
+    randomWord: function (randomFlag, min, max) {
+        var str = "",
+            range = min,
+            arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+
+        // 随机产生
+        if (randomFlag) {
+            range = Math.round(Math.random() * (max - min)) + min;
+        }
+        for (var i = 0; i < range; i++) {
+            var pos = Math.round(Math.random() * (arr.length - 1));
+            str += arr[pos];
+        }
+        return str
+    },
     getUserInfo() {
         const self = this;
         return new Promise(function (resolve, reject) {
@@ -139,7 +155,7 @@ App({
         userInfo: '',
         Urls: {},
         // url: 'http://localhost:8888/HM_war_exploded/'
-        // url: 'http://f22t435363.imwork.net/HM/'
-        url: 'https://www.hmgm999.com/'
+        url: 'http://f22t435363.imwork.net/HM/'
+        // url: 'https://www.hmgm999.com/'
     }
 });

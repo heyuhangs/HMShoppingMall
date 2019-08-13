@@ -45,9 +45,24 @@ Page({
             })
         }
     },
+    toPay(countPay) {
+        let oddNum = app.randomWord(true, 32, 32);
+        let newObject = {
+            body: '商品购买',
+            openId: app.globalData.wxUser.openId,
+            out_trade_no: oddNum,
+            total_fee: countPay * 100
+        }
+
+    },
     toPayTap: function () {
         const self = this;
         wx.showLoading({});
+        // if (this.data.status == 1) {
+        //     self.toPay(self.data.countPay)
+        // } else {
+        //
+        // }
         wx.request({
             url: app.globalData.url + `/orderImpl/orderPay?USER_ID=${app.globalData.userInfo.USER_ID}&ORDER_CODE=${this.data.orderCode}&PAY_TYPE=${this.data.status}`,
             method: "GET",
