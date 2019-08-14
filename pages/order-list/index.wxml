@@ -35,7 +35,9 @@
             </view>
             <view class="goods-info" bindtap="orderDetail" data-id="{{item.USER_ID}}">
                 <view class="goods-des">
-                    <view>订单号:{{item.ORDER_CODE}}</view>
+                    <view class="aa">订单号:{{item.ORDER_CODE}}</view>
+                    <view class="bb" wx:if="{{item.PAY_TYPE == 1}}">在线支付</view>
+                    <view clsss="bb" wx:else>奖金支付</view>
                 </view>
             </view>
             <view>

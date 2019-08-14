@@ -128,13 +128,21 @@
 
 .goods-info  .goods-des {
   width: 95%;
+  overflow: hidden;
   line-height: 39rpx;
   font-size: 26rpx;
   color: #000;
   overflow: hidden;
   margin-left: 30rpx;
 }
-
+.goods-des .aa{
+  float: left;
+}
+.goods-des .bb{
+  float: right;
+  font-size: 26rpx;
+  padding-right: 25rpx;
+}
 .goods-img-container {
   height: 180rpx;
   box-sizing: border-box;
