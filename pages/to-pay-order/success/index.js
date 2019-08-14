@@ -70,7 +70,7 @@ Page({
             url: app.globalData.url + `/orderImpl/orderPay?USER_ID=${app.globalData.userInfo.USER_ID}&ORDER_CODE=${this.data.orderCode}&PAY_TYPE=${this.data.status}`,
             method: "GET",
             success: function (res) {
-                if (res.data.clear == 'yes' || res.statusCode == 200) {
+                if (res.data.result != 'error') {
                     wx.showToast({
                         title: '购买成功',
                         icon: 'success',

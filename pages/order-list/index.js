@@ -23,7 +23,7 @@ Page({
         'currentType': 0,
         'tabClass': ['', '', '', '', ''],
         orderList: [
-            {dateAdd: '2018-09-09', status: 1, statusStr: 'xiangqing', orderNumber: '12312312312', remark: 'beuzhu'}
+            { dateAdd: '2018-09-09', status: 1, statusStr: 'xiangqing', orderNumber: '12312312312', remark: 'beuzhu' }
         ],
         url: ''
     },
@@ -78,9 +78,23 @@ Page({
             url: app.globalData.url + `/orderImpl/orderPay?USER_ID=${app.globalData.userInfo.USER_ID}&ORDER_CODE=${e.currentTarget.dataset.id.ORDER_CODE}&PAY_TYPE=${e.currentTarget.dataset.id.PAY_STATUS}`,
             method: "POST",
             success: function (res) {
-                if (res.data.clear == 'yes' || res.statusCode == 200) {
-                    wx.reLaunch({
-                        url: '/pages/order-list/index?currentType=2&status=1'
+                if (res.data.result != 'error') {
+                    wx.showToast({
+                        title: '购买成功',
+                        icon: 'success',
+                        duration: 2000
+                    });
+                    setTimeout(function () {
+                        wx.reLaunch({
+                            url: '/pages/order-list/index?currentType=2&status=1'
+                        })
+                    }, 1500)
+                } else {
+                    wx.showToast({
+                        title: res.data.msg,
+                        icon: 'none',
+                        duration: 1000,
+                        mask: true
                     })
                 }
                 wx.hideLoading();
