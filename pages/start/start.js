@@ -14,7 +14,8 @@ var wanzikun_0x3fe9 = function (_0x414709, _0x3df5b1) {
 };
 var wanzikun_0x3891c7 = getApp();
 
-// const app = getApp();
+const app = getApp();
+
 function wanzikun_0x4a9cec(_0x16ae00) {
     var _0x2751c4 = {
         'TKDhz': '../index/index',
@@ -33,6 +34,12 @@ function wanzikun_0x4a9cec(_0x16ae00) {
     var _0x41f282 = _0x16ae00[wanzikun_0x3fe9('0x1')][wanzikun_0x3fe9('0x2')];
     if (_0x41f282 == 0x0) {
         if (_0x2751c4[wanzikun_0x3fe9('0x3')](_0x13ba76, 0x0)) {
+            if (!app.globalData.userInfo || app.globalData.userInfo == '') {
+                wx.redirectTo({
+                    url: '/pages/jurisDiction/jurisDiction'
+                })
+                return false;
+            }
             if (_0x2751c4[wanzikun_0x3fe9('0x4')](_0x2751c4[wanzikun_0x3fe9('0x5')], _0x2751c4['zZRlu'])) {
                 wx[wanzikun_0x3fe9('0x6')]({
                     'url': _0x2751c4['TKDhz']
@@ -54,7 +61,6 @@ function wanzikun_0x4a9cec(_0x16ae00) {
     }, 0x3e8);
 }
 
-const app = getApp();
 Page({
     'data': {
         'second': 0x6,
@@ -163,33 +169,6 @@ Page({
         var _0x3aff02 = this;
         _0x19fa02[wanzikun_0x3fe9('0x19')](wanzikun_0x4a9cec, _0x3aff02);
         //获取当前banner等
-        // wx[wanzikun_0x3fe9('0x1a')]({
-        //     'url': wanzikun_0x3891c7[wanzikun_0x3fe9('0x1b')]['urls'] + _0x19fa02[wanzikun_0x3fe9('0x1c')],
-        //     'data': {
-        //         'key': _0x19fa02[wanzikun_0x3fe9('0x1d')],
-        //         'type': _0x19fa02[wanzikun_0x3fe9('0x1e')]
-        //     },
-        //     'success': function (_0x47c9f4) {
-        //         var _0x2af600 = {
-        //             'cLAxP': function (_0x41adee, _0x1d50a8) {
-        //                 return _0x19fa02[wanzikun_0x3fe9('0x1f')](_0x41adee, _0x1d50a8);
-        //             }
-        //         };
-        //         if (_0x19fa02[wanzikun_0x3fe9('0x20')] !== _0x19fa02['dwINl']) {
-        //             if (_0x2af600['cLAxP'](_0x47c9f4[wanzikun_0x3fe9('0x1')][wanzikun_0x3fe9('0x21')], 0x0)) {
-        //                 _0x3aff02['setData']({
-        //                     'sales': _0x47c9f4[wanzikun_0x3fe9('0x1')][wanzikun_0x3fe9('0x1')]
-        //                 });
-        //             }
-        //         } else {
-        //             if (_0x19fa02[wanzikun_0x3fe9('0x1f')](_0x47c9f4[wanzikun_0x3fe9('0x1')][wanzikun_0x3fe9('0x21')], 0x0)) {
-        //                 _0x3aff02[wanzikun_0x3fe9('0x8')]({
-        //                     'sales': _0x47c9f4['data']['data']
-        //                 });
-        //             }
-        //         }
-        //     }
-        // });
     }
 })
 ;

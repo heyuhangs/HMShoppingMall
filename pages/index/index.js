@@ -487,15 +487,6 @@ Page({
         //     });
         //     return false;
         // }
-        if (!app.globalData.userInfo || app.globalData.userInfo == '') {
-            // self.setData({
-            //     wxlogin: true
-            // })
-            wx.redirectTo({
-                url: '/pages/jurisDiction/jurisDiction'
-            })
-            return false;
-        }
         wx.showLoading({});
         wx.request({
             url: app.globalData.url + `/goodImpl/goodListByType?USER_ID=${app.globalData.userInfo.USER_ID}&TYPE_ONE_ID=&TYPE_TWO_ID=&keywords=`,
