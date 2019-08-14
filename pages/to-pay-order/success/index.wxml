@@ -21,5 +21,5 @@
     </view>
     <view wx:if="{{status == 1}}" class="pay-btn" bindtap="toPayTap" data-id="{{id}}" data-money="{{money}}">在线支付 ¥{{countPay}}</view>
     <view wx:if="{{status == 2}}" class="pay-btn" bindtap="toPayTap" data-id="{{id}}" data-money="{{money}}">奖金支付 ¥{{countPay}}</view>
-    <view wx:if="{{status == 3}}" class="pay-btn" bindtap="toPayTap" data-id="{{id}}" data-money="{{money}}">奖金及积分支付 ¥{{countPay}}</view>
+<!--    <view wx:if="{{status == 3}}" class="pay-btn" bindtap="toPayTap" data-id="{{id}}" data-money="{{money}}">奖金及积分支付 ¥{{countPay}}</view>-->
 </view>

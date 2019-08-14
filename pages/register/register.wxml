@@ -5,7 +5,7 @@
     </view>
     <view class="main">
         <i-panel title="基础用法">
-            <i-input value="{{ PAR_NAME }}" blur="valiData" title="推荐人姓名" disabled="isdbName"/>
+            <i-input value="{{ PAR_NAME }}" blur="valiData" title="介绍人" disabled="isdbName"/>
             <i-input maxlength="11" bind:change="parPhoneChange" class="phoneInp" bindblur="changeParPhone" placeholder="请输入推荐人电话" autofocus="{{isAutoPhone}}" bind:blur="phoneValData" i-class="phoneInp" value="{{ PAR_PHONE }}" title="推荐人电话" disabled="{{isdbPhone}}"/>
             <view style="display: inline-block;" bindtap="handIcon"><i-icon type="brush_fill" size="28" color="#80848f"/></view>
             <view wx:if="{{PAR_ID == 2}}" class="zhu">注：您当前的领导默认设置为公司。您有且仅有一次机会更换为其它领导人，本次补充保存后，不可更改推荐人及电话号</view>

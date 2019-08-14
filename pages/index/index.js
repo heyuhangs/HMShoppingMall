@@ -463,7 +463,8 @@ Page({
         'hovercoupons': !![],
         'iphone': ![],
         'pics': {},
-        wxlogin: false
+        wxlogin: false,
+        url: ''
     },
     onLoad: function () {
         const self = this;
@@ -519,6 +520,9 @@ Page({
                 }
             }
         })
+        this.setData({
+            url: app.globalData.imgUrl
+        })
         this.getBannerData();
     },
     nativedd: function () {
@@ -573,6 +577,11 @@ Page({
     },
     tapBanner: function () {
 
+    },
+    toPayVip: function () {
+        wx.navigateTo({
+            url:'/pages/newcoupons/index'
+        })
     },
     // 'tapBanner': function (_0x12fcb1) {
     //     var _0x259e61 = {

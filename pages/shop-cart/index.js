@@ -237,6 +237,9 @@ Page({
             this.isAllSelect();
             this.countPay();
         }
+        this.setData({
+            url: app.globalData.imgUrl
+        })
         this.getGoodsList();
     },
     onShow: function () {

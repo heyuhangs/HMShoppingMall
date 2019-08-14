@@ -18,7 +18,7 @@
                 <!--                    <image src="{{item.PATH}}" class="slide-image" lazy-load="true"/>-->
                 <!--                </swiper-item>-->
                 <swiper-item>
-                    <image src="{{item.PATH}}" class="slide-image" lazy-load="true"/>
+                    <image src="{{url}}{{item.PATH}}" class="slide-image" lazy-load="true"/>
                 </swiper-item>
             </block>
         </swiper>
@@ -61,7 +61,7 @@
                 <view class="wxParse-p">
                     <image class="wxParse-img" data-from="article" data-idx="0"
                            mode="widthFix"
-                           src="{{goodsDetail.DEMO_IMAGES_LIST.PATH}}"
+                           src="{{url}}{{goodsDetail.DEMO_IMAGES_LIST.PATH}}"
                            style="width: 365px; height: 1842.03px;"></image>
                     <!--                    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>-->
                 </view>

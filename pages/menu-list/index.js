@@ -32,6 +32,9 @@ Page({
     onLoad:function (options) {
         const self = this;
         wx.showLoading({});
+        this.setData({
+            url: app.globalData.imgUrl
+        })
         wx.request({
             url: app.globalData.url+`/goodImpl/goodListByType?USER_ID=${app.globalData.userInfo.USER_ID}&TYPE_ONE_ID=${options.oId}&TYPE_TWO_ID=${options.id}&keywords=`,
             method: "GET",

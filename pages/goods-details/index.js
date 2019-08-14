@@ -541,6 +541,9 @@ Page({
                 optionsgGoodId: options.id
             })
         }
+        this.setData({
+            url: app.globalData.imgUrl
+        })
         const shopCarList = wx.getStorageSync('shopCar');
         let num = 0;
         for (const item of shopCarList) {

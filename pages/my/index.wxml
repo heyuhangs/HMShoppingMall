@@ -5,9 +5,9 @@
         </view>
         <view class="iser-info-box">
             <open-data class="userinfo-nickname" type="userNickName"></open-data>
-            <text wx:if="{{user.VIP_TYPE == 1}}" class="userinfo-score userinfo-vipTar">光明天使</text>
-            <text wx:elif="{{user.VIP_TYPE == 2}}" class="userinfo-score userinfo-vipTar">爱心天使</text>
-            <text wx:else class="userinfo-score userinfo-vipTar" bindtap="clickVip">成为会员</text>
+            <text wx:if="{{user.VIP_TYPE == 2}}" class="userinfo-score userinfo-vipTar">光明天使</text>
+            <text wx:elif="{{user.VIP_TYPE == 3}}" class="userinfo-score userinfo-vipTar">爱心天使</text>
+            <text wx:else class="userinfo-score userinfo-vipTar" bindtap="clickVip">快乐天使</text>
             <view>
             <text class="userinfo-score-day">积分：{{score}}</text>
             </view>

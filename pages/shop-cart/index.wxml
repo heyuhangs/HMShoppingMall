@@ -10,7 +10,7 @@
     <view class="goods-list">
       <view class="goods-box" wx:for="{{hostGoodsList}}" wx:key="{{index}}" bindtap="toDetailsTap" data-id="{{item.USER_ID}}">
         <view class="img-box">
-          <image src="{{item.PATH}}" class="image" />
+          <image src="{{url}}{{item.PATH}}" class="image" />
           <view class="goods-characteristic">
             <text>{{item.DETAIL}}</text>
           </view>

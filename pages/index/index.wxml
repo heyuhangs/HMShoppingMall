@@ -24,21 +24,21 @@
     <!--首页菜单-->
     <view class="menu-container">
         <view class="menu-list">
+            <button class="ImgBtn ImgBtn2"></button>
+            <button bindtap="onShareAppMessage">公告</button>
+        </view>
+        <view class="menu-list">
             <button class="ImgBtn ImgBtn0" bindtap="onShareAppMessage" open-type="share"></button>
             <button bindtap="onShareAppMessage" open-type="share">邀请新人</button>
         </view>
         <view class="menu-list">
-            <button class="ImgBtn ImgBtn1" bindtap="nativedd"></button>
-            <button bindtap="onShareAppMessage">我的订单</button>
+            <button class="ImgBtn ImgBtn3"></button>
+            <button bindtap="toPayVip">成为Vip</button>
         </view>
         <view class="menu-list">
-            <button class="ImgBtn ImgBtn2" bindtap="nativezd"></button>
-            <button bindtap="onShareAppMessage">我的账单</button>
+            <button class="ImgBtn ImgBtn1"></button>
+            <button bindtap="onShareAppMessage">我的奖金</button>
         </view>
-<!--        <view class="menu-list">-->
-<!--            <button class="ImgBtn ImgBtn3" bindtap=""></button>-->
-<!--            <button bindtap="onShareAppMessage" open-type="share">3</button>-->
-<!--        </view>-->
     </view>
     <!--菜单遮层-->
     <view class="home-hover" wx:if="{{banners}}"></view>
@@ -69,7 +69,7 @@
         </view>
         <view class="goods-list" wx:for-items="{{topGoodList}}" wx:key="{{index}}" bindtap="toDetailsTap"
               data-id="{{item.USER_ID}}">
-            <image src="{{item.PATH}}"/>
+            <image src="{{url}}{{item.PATH}}"/>
             <view class="goods-list-title">{{item.NAME}}</view>
             <view class="goods-list-text">{{item.DETAIL}}</view>
             <view class="goods-list-money">Ұ{{item.PRICE}}</view>
@@ -127,7 +127,7 @@
         </view>
         <view class="goods-list" wx:for-items="{{goods}}" wx:key="{{index}}" bindtap="toDetailsTap"
               data-id="{{item.USER_ID}}">
-            <image src="{{item.PATH}}"/>
+            <image src="{{url}}{{item.PATH}}"/>
             <view class="goods-list-title">{{item.NAME}}</view>
             <view class="goods-list-text">{{item.DETAIL}}</view>
             <view class="goods-list-money">Ұ{{item.PRICE}}</view>

@@ -13,9 +13,13 @@ var wanzikun_0x27de = function(_0x5e252a, _0x402780) {
     return _0x5a6c33;
 };
 var wanzikun_0x569d7d = getApp();
+const app = getApp();
 Page({
     'data': {},
     'onLoad': function() {
+        this.setData({
+            url: app.globalData.imgUrl
+        })
         var _0xeaf045 = {
             'TYGXz': wanzikun_0x27de('0x0')
         };

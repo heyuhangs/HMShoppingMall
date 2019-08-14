@@ -20,6 +20,9 @@ Page({
     onLoad: function (options) {
         const self = this;
         wx.showLoading({});
+        this.setData({
+            url: app.globalData.imgUrl
+        })
         if (options.isPayVip) {
             self.setData({
                 orderCode: options.orderCode,
