@@ -580,7 +580,7 @@ Page({
     },
     toPayVip: function () {
         wx.navigateTo({
-            url:'/pages/newcoupons/index'
+            url: '/pages/newcoupons/index'
         })
     },
     // 'tapBanner': function (_0x12fcb1) {
@@ -1586,6 +1586,11 @@ Page({
                 'naviphone': ''
             });
         }
+    },
+    onjiangjin: function () {
+        wx.navigateTo({
+            url: '/pages/kanjia-list/index'
+        })
     },
     onShareAppMessage: function (ops) {
         if (ops.from === 'button') {

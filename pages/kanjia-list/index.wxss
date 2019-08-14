@@ -1,3 +1,7 @@
+.top-header {
+  border-bottom: 0;
+}
+
 .container {
   width: 100%;
   height: 100%;
@@ -12,80 +16,168 @@
   margin-top: 180rpx;
 }
 
-.kanjia-list {
+.tab-header {
   width: 100%;
-  height: 130px;
-  padding-bottom: 5px;
+  padding-top: 10px;
+  background-color: #fff;
+}
+
+.tab-header view {
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  font-size: 30rpx;
+  color: #999;
   border-bottom: 1px solid #f5f5f5;
-  padding-top: 15px;
+  height: 35px;
   font-weight: 300;
 }
 
-.kanjia-list .goods {
+.tab-header .active {
+  color: #b5272d;
+  border-bottom: 1px solid #b5272d;
+}
+
+.tab-container {
+  width: 100%;
+  line-height: 160%;
+}
+
+.tab-container .tab-item {
+  width: 100%;
+  display: none;
+}
+
+.tab-container .tab-item.active {
+  display: block;
+}
+
+.tab-item-list {
+  background-color: #fff;
+  /*margin-top: 10px;*/
+  padding: 10px;
+  height: 75px;
+  border-bottom: 1px solid #f5f5f5;
+}
+.list-info-detail{
+  display: inline-block;
+  font-size: 30rpx;
+}
+
+/*.tab-item-list image {*/
+/*  width: 100px;*/
+/*  height: 100px;*/
+/*  float: left;*/
+/*  border-radius: 6rpx;*/
+/*}*/
+
+.tab-item-list-info {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 10px;
+  float: left;
+  font-size: 30rpx;
+  color: #333;
+}
+.list-info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list-info-title {
+  display: inline-block;
+  font-weight: 500;
+  width: 80%;
+  /*float: ledt;*/
+  text-overflow: ellipsis;
+  font-size: 37rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  /*background: goldenrod;*/
+  white-space: nowrap;
+}
+.list-info-detail{
+  font-size: 48rpx;
+  color: #EE7600;
+}
+
+.list-info-money {
+  font-size: 27rpx;
+  color: #333;
+  line-height: 25px;
+}
+.list-infi-money-date{
+  color: #666;
+}
+
+.money-min, .money-max {
+  display: inline-block;
+}
+
+.money-min text {
+  font-size: 28rpx;
+  color: #b5272d;
+}
+
+.money-max {
+  padding-left: 15px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.list-info-info {
+  font-size: 26rpx;
+  color: #b5272d;
+}
+
+.status-box {
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+
+.status-box .status-label {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  font-size: 28rpx;
+  color: #353535;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.status-box .status-label.active {
+  color: #b5272d;
+  border-bottom: 6rpx solid #b5272d;
+}
+
+.status-box .status-label .red-dot {
+  width: 16rpx;
+  height: 16rpx;
+  position: absolute;
+  left: 125rpx;
+  top: 20rpx;
+  background-color: #b5272d;
+  border-radius: 50%;
+}
+.no-more-goods {
+  text-align: center;
+  margin-top: 50%;
+}
+
+.no-order-img {
   width: 110px;
   height: 110px;
-  float: left;
-  border-radius: 6rpx;
-  margin-left: 10px;
 }
 
-.list-box-title {
-  padding-left: 15px;
-}
-
-.list-box {
-  color: #333;
-  font-size: 30rpx;
-  float: left;
-  padding-top: 10px;
-  width: 62%;
-}
-
-.list-box-info {
-  color: #999;
-  font-size: 24rpx;
-  padding-top: 2px;
-  padding-bottom: 15px;
-  padding-left: 15px;
-}
-
-.list-box-kjmin {
-  display: inline-block;
-  text-align: center;
-  width: 30%;
-  font-size: 24rpx;
-  border-right: 1px solid #f5f5f5;
-}
-
-.list-box-kjmin text {
-  display: block;
-  color: #b5272d;
-  font-size: 32rpx;
-}
-
-.list-box-kjmax {
-  display: inline-block;
-  text-align: center;
-  width: 30%;
-  font-size: 24rpx;
-  color: #999;
-  border-right: 1px solid #f5f5f5;
-}
-
-.list-box-kjmax text {
-  display: block;
+.no-more-goods .text {
   font-size: 28rpx;
-}
-
-.list-box-sales {
-  display: inline-block;
-  text-align: center;
-  width: 30%;
-  font-size: 24rpx;
   color: #999;
-}
-
-.list-box-sales text {
-  display: block;
-  font-size: 28rpx;
+  margin-top: -5px;
 }

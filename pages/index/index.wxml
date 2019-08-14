@@ -35,9 +35,9 @@
             <button class="ImgBtn ImgBtn3"></button>
             <button bindtap="toPayVip">成为Vip</button>
         </view>
-        <view class="menu-list">
+        <view class="menu-list" bindtap="onjiangjin">
             <button class="ImgBtn ImgBtn1"></button>
-            <button bindtap="onShareAppMessage">我的奖金</button>
+            <button>我的奖金</button>
         </view>
     </view>
     <!--菜单遮层-->
