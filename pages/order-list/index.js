@@ -24,7 +24,8 @@ Page({
         'tabClass': ['', '', '', '', ''],
         orderList: [
             {dateAdd: '2018-09-09', status: 1, statusStr: 'xiangqing', orderNumber: '12312312312', remark: 'beuzhu'}
-        ]
+        ],
+        url: ''
     },
     'statusTap': function (e) {
 
@@ -37,6 +38,9 @@ Page({
     onLoad: function (e) {
         wx.showLoading({});
         const stu = parseInt(e.currentType) + 1;
+        this.setData({
+            url: app.globalData.imgUrl
+        })
         if (e.status) {
             this.setData({
                 status: e.status,

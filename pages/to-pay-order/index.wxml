@@ -23,8 +23,8 @@
                 <view class="img-box">
                     <!--                    VIDEO_PATH-->
                     <image wx:if="{{isPayVip}}" class="img" src="../../images/gm.jpg"></image>
-                    <image wx:elif="{{item.VIDEO_PATH != ''}}" src="{{url}}{{item.goodsDetail.IMAGES_LIST[1].PATH}}"
-                           class="img"/>
+<!--                    <image wx:elif="{{item.VIDEO_PATH != ''}}" src="{{url}}{{item.goodsDetail.IMAGES_LIST[1].PATH}}"-->
+<!--                           class="img"/>-->
                     <image wx:else src="{{url}}{{item.goodsDetail.IMAGES_LIST[0].PATH}}" class="img"/>
                 </view>
                 <view class="text-box">

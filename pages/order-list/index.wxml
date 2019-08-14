@@ -42,7 +42,7 @@
                 <scroll-view class="goods-img-container" scroll-x="true">
                     <view class="img-box" wx:for="{{item.orderMiddleList}}" wx:for-item="items" bindtap="orderDetail"
                           data-id="{{items.USER_ID}}" wx:key="itemsIndex">
-                        <image src="{{items.PATH}}" class="goods-img"></image>
+                        <image src="{{url}}{{items.PATH}}" class="goods-img"></image>
                     </view>
                 </scroll-view>
             </view>
@@ -55,9 +55,9 @@
                 <view class="btn topay-btn" hidden="{{item.PAY_STATUS==1? fslse : true}}" bindtap="orderPay"
                       data-id="{{item}}" data-money="{{item.amountReal}}">立即支付
                 </view>
-<!--                <view class="btn topay-btn" hidden="{{currentInd==3? fslse : true}}" bindtap="toPingjia"-->
-<!--                      data-id="{{item}}" data-money="{{item.amountReal}}">立即评价-->
-<!--                </view>-->
+                <!--                <view class="btn topay-btn" hidden="{{currentInd==3? fslse : true}}" bindtap="toPingjia"-->
+                <!--                      data-id="{{item}}" data-money="{{item.amountReal}}">立即评价-->
+                <!--                </view>-->
             </view>
         </view>
     </view>

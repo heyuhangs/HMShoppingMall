@@ -106,3 +106,20 @@ page,.container {
   border-bottom-right-radius:5px;
   border-bottom-left-radius:5px;
 }
+.aixin{
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+.aixin image{
+  display: inline-block;
+  width: 90%;
+  height: 260rpx;
+}
+.aixin view{
+  margin: 25rpx 0;
+  font-size: 28rpx;
+  color: #333;
+  display: inline-block;
+  margin: 0 auto;
+}

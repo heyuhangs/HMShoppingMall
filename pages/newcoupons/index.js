@@ -15,56 +15,9 @@ var wanzikun_0x4a33 = function (_0x330af9, _0x27f57d) {
 const app = getApp();
 Page({
     data: {
-        coupons: [
-            {
-                "dateAdd": "2018-03-12 20:54:24",
-                "dateEndDays": 10,
-                "dateEndType": 1,
-                "dateStartType": 1,
-                "dateUpdate": "2018-08-13 18:49:03",
-                "id": 1409,
-                "moneyHreshold": '199元成为光明天使',
-                "moneyMax": 199,
-                "moneyMin": 5,
-                "name": "光明天使",
-                "needScore": 0,
-                "needSignedContinuous": 0,
-                "numberGit": 1100,
-                "numberGitNumber": 673,
-                "numberLeft": 0,
-                "numberPersonMax": 3,
-                "numberTotle": 327,
-                "numberUsed": 23,
-                "refId": 30164,
-                "status": 10000,
-                "statusStr": "正常",
-                "type": "shop"
-            },
-            {
-                "dateAdd": "2018-03-12 20:53:22",
-                "dateEndDays": 10,
-                "dateEndType": 1,
-                "dateStartType": 1,
-                "dateUpdate": "2019-07-23 15:49:44",
-                "id": 1408,
-                "moneyHreshold": '999元成为爱心天使',
-                "moneyMax": 999,
-                "moneyMin": 10,
-                "name": "爱心天使",
-                "needScore": 20,
-                "needSignedContinuous": 0,
-                "numberGit": 950,
-                "numberGitNumber": 949,
-                "numberLeft": 118,
-                "numberPersonMax": 2,
-                "numberTotle": 1000,
-                "numberUsed": 51,
-                "status": 9999,
-                "statusStr": "正常",
-                "type": "shop"
-            },
-        ],
+        coupons: [],
         visible3: false,
+        user: null,
         actions3: [
             {
                 name: '在线支付',
@@ -97,7 +50,8 @@ Page({
         //         "userId": 797
         //     }
         // ],
-        "hasNoCoupons": false
+        "hasNoCoupons": false,
+        isGJ: true
     },
     topPay: function (e) {
         wx.navigateTo({
@@ -200,6 +154,74 @@ Page({
         });
     },
     'onLoad': function () {
+        this.setData({
+            user: app.globalData.userInfo,
+            coupons: []
+        })
+        const aVip = {
+            "dateAdd": "2018-03-12 20:54:24",
+            "dateEndDays": 10,
+            "dateEndType": 1,
+            "dateStartType": 1,
+            "dateUpdate": "2018-08-13 18:49:03",
+            "id": 1409,
+            "moneyHreshold": '199元成为光明天使',
+            "moneyMax": 199,
+            "moneyMin": 5,
+            "name": "光明天使",
+            "needScore": 0,
+            "needSignedContinuous": 0,
+            "numberGit": 1100,
+            "numberGitNumber": 673,
+            "numberLeft": 0,
+            "numberPersonMax": 3,
+            "numberTotle": 327,
+            "numberUsed": 23,
+            "refId": 30164,
+            "status": 10000,
+            "statusStr": "正常",
+            "type": "shop"
+        }
+        const bVip = {
+            "dateAdd": "2018-03-12 20:53:22",
+            "dateEndDays": 10,
+            "dateEndType": 1,
+            "dateStartType": 1,
+            "dateUpdate": "2019-07-23 15:49:44",
+            "id": 1408,
+            "moneyHreshold": '999元成为爱心天使',
+            "moneyMax": 999,
+            "moneyMin": 10,
+            "name": "爱心天使",
+            "needScore": 20,
+            "needSignedContinuous": 0,
+            "numberGit": 950,
+            "numberGitNumber": 949,
+            "numberLeft": 118,
+            "numberPersonMax": 2,
+            "numberTotle": 1000,
+            "numberUsed": 51,
+            "status": 9999,
+            "statusStr": "正常",
+            "type": "shop"
+        }
+        const all = [];
+        if (this.data.user.VIP_TYPE == 1) {
+            all.push(aVip);
+            all.push(bVip);
+            this.setData({
+                coupons: all
+            })
+        } else if (this.data.user.VIP_TYPE == 2) {
+            all.push(bVip);
+            this.setData({
+                coupons: all
+            })
+        } else {
+            this.setData({
+                isGJ: false
+            })
+        }
         // var _0x21aa3c = {
         //     'QBdPP': wanzikun_0x4a33('0x1d'),
         //     'jVGKt': function (_0x4d0ea4, _0x142cc1) {

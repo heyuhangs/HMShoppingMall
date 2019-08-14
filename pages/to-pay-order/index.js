@@ -30,11 +30,16 @@ Page({
         'youhuijine': 0x0,
         'curCoupon': null,
         addressList: {},
-        isShping: false
+        isShping: false,
+        url: '',
+        isOneGood: false
     },
     onLoad: function (options) {
         const self = this;
         wx.showLoading();
+        self.setData({
+            url: app.globalData.imgUrl
+        })
         if (options.selects) {
             wx.request({
                 url: app.globalData.url + `/userImpl/getAddressList?ADDRESS_ID=${options.myAddress}&USER_ID=${app.globalData.userInfo.USER_ID}`,
@@ -66,7 +71,15 @@ Page({
         }
         if (options.goodId) {
             self.setData({
-                optionsGoodsId: options.goodId
+                optionsGoodsId: options.goodId,
+                isOneGood: true,
+                num: options.num
+            })
+        }
+        if (options.optionsGoodsId) {
+            self.setData({
+                optionsGoodsId: options.optionsGoodsId,
+                num: options.num
             })
         }
         //如果是购买会员卡，则不查询商品
@@ -185,7 +198,7 @@ Page({
         switch (this.data.zffs) {
             case "在线支付":
                 break;
-            case "奖金币支付":
+            case "奖金积分支付":
                 status = 2;
                 break;
         }
@@ -227,7 +240,7 @@ Page({
         switch (this.data.zffs) {
             case "在线支付":
                 break;
-            case "奖金币支付":
+            case "奖金积分支付":
                 status = 2;
                 break;
         }
@@ -464,19 +477,30 @@ Page({
         _0x475c6f['createOrder']();
     },
     'addAddress': function () {
-        this.data.isRunOnShow = false;
-        wx[wanzikun_0x1432('0xa4')]({
-            'url': wanzikun_0x1432('0xa5')
-        });
+        if (this.data.isOneGood) {
+            wx.navigateTo({
+                url: '/pages/address-add/index?isAadd=1&optionsGoodsId=' + this.data.optionsGoodsId + '&num=' + this.data.num
+            })
+        } else {
+            wx.navigateTo({
+                url: '/pages/address-add/index?isAadd=1'
+            })
+        }
     },
     'selectAddress': function () {
         this.data.isRunOnShow = false;
         var _0x4d546e = {
             'fLSOI': wanzikun_0x1432('0xa6')
         };
-        wx['navigateTo']({
-            'url': _0x4d546e[wanzikun_0x1432('0xa7')] + '?selects=1'
-        });
+        if (this.data.isOneGood) {
+            wx.navigateTo({
+                url: _0x4d546e[wanzikun_0x1432('0xa7')] + '?selects=1&optionsGoodsId=' + this.data.optionsGoodsId + '&num=' + this.data.num
+            })
+        } else {
+            wx.navigateTo({
+                url: _0x4d546e[wanzikun_0x1432('0xa7')] + '?selects=1'
+            })
+        }
     },
     'getMyCoupons': function () {
         var _0x4746c7 = {

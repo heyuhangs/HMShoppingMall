@@ -17,13 +17,20 @@ const app = getApp();
 Page({
     'data': {
         addressList: [],
-        selects: 0
+        selects: 0,
+        optionsGoodsId: false
     },
     selectTap: function (e) {
         if (this.data.selects) {
-            wx.redirectTo({
-                url: `/pages/to-pay-order/index?myAddress=${e.currentTarget.dataset.id.USER_ID}&selects=1`
-            })
+            if (this.data.optionsGoodsId) {
+                wx.redirectTo({
+                    url: `/pages/to-pay-order/index?myAddress=${e.currentTarget.dataset.id.USER_ID}&selects=1&optionsGoodsId=${this.data.optionsGoodsId}&num=${this.data.num}`
+                })
+            } else {
+                wx.redirectTo({
+                    url: `/pages/to-pay-order/index?myAddress=${e.currentTarget.dataset.id.USER_ID}&selects=1`
+                })
+            }
         } else {
             return false
         }
@@ -59,6 +66,12 @@ Page({
         if (e.selects) {
             self.setData({
                 selects: e.selects
+            })
+        }
+        if (e.optionsGoodsId) {
+            self.setData({
+                optionsGoodsId: e.optionsGoodsId,
+                num: e.num
             })
         }
         wx.showLoading({});

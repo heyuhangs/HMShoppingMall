@@ -62,7 +62,9 @@ Page({
         'selCityIndex': 0x0,
         'selDistrictIndex': 0x0,
         more: false,
-        isEdit: false
+        isEdit: false,
+        isAdd: false,
+        optionsGoodsId: false
     },
     'bindCancel': function () {
         wx[wanzikun_0x14fd('0x2')]({});
@@ -93,15 +95,28 @@ Page({
             method: "POST",
             data: obj,
             success: function (res) {
+                let url = '/pages/select-address/index'
                 wx.showToast({
                     title: '地址保存成功!',
                     icon: 'success',
                     duration: 1000,
                     mask: true
                 });
-                wx.redirectTo({
-                    url: '/pages/select-address/index'
-                })
+                if (self.data.isAdd) {
+                    if (self.data.optionsGoodsId) {
+                        wx.redirectTo({
+                            url: url + '?selects=1&optionsGoodsId=' + self.data.optionsGoodsId + '&num=' + self.data.num
+                        })
+                    } else {
+                        wx.redirectTo({
+                            url: url + '?selects=1'
+                        })
+                    }
+                } else {
+                    wx.redirectTo({
+                        url: url
+                    })
+                }
             }
         })
     },
@@ -112,6 +127,17 @@ Page({
     },
     onLoad: function (options) {
         const self = this;
+        if (options.isAadd) {
+            self.setData({
+                isAdd: true
+            })
+        }
+        if (options.optionsGoodsId) {
+            self.setData({
+                optionsGoodsId: options.optionsGoodsId,
+                num: options.num
+            })
+        }
         if (options.id) {
             wx.showLoading({});
             wx.request({

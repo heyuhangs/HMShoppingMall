@@ -28,6 +28,10 @@
       <view class="money-fooder" wx:if="{{item.dateEndType == 1}}"></view>
     </view>
   </view>
+  <view class="aixin" hidden="{{isGJ}}">
+    <image src="../../images/aixin.jpg"/>
+    <view>您已经是爱心天使，无法再升级了～</view>
+  </view>
 </view>
 <!--<i-modal title="支付" visible="{{ visible3 }}" actions="{{ actions3 }}" bind:click="handleClick3">-->
 <!--  <view>请选择支付方式</view>-->
