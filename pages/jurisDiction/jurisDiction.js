@@ -75,11 +75,13 @@ Page({
                         WX_NICKNAME: obj.nickName,
                         WX_IMG: obj.avatarUrl,
                     }
+                    debugger
                     wx.request({
                         url: app.globalData.url + `/userImpl/saveUser?PAR_ID=${newObject.PAR_ID}&OPEN_ID=${newObject.OPEN_ID}&WX_NICKNAME=${newObject.WX_NICKNAME}&WX_IMG=${newObject.WX_IMG}`,
                         method: "get",
                         success: function (res) {
-                            if (res.statusCode == 200) {
+                            debugger
+                            if (res.data.result != 'error') {
                                 app.globalData.userInfo = res.data.userInfo;
                                 wx.reLaunch({
                                     url: '/pages/index/index',

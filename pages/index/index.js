@@ -1583,6 +1583,11 @@ Page({
             url: '/pages/kanjia-list/index'
         })
     },
+    onBulletin: function () {
+        wx.navigateTo({
+            url: '/pages/bulletinList/index'
+        })
+    },
     onShareAppMessage: function (ops) {
         if (ops.from === 'button') {
             // 来自页面内转发按钮

@@ -32,7 +32,8 @@
                 "pages/register/register",
                 "pages/cashWithdrawal/cashWithdrawal",
                 "pages/recharge/recharge",
-                "pages/jurisDiction/jurisDiction"
+                "pages/jurisDiction/jurisDiction",
+                "pages/bulletinList/index"
         ],
         "window": {
                 "backgroundTextStyle": "light",

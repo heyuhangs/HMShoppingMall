@@ -95,6 +95,14 @@ Page({
             method: "POST",
             data: obj,
             success: function (res) {
+                if (res.data.result == 'error') {
+                    wx.showToast({
+                        title: '操作失败，请联系管理员!',
+                        icon: 'none',
+                        duration: 2000
+                    })
+                    return false;
+                }
                 let url = '/pages/select-address/index'
                 wx.showToast({
                     title: '地址保存成功!',

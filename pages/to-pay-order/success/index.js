@@ -52,11 +52,10 @@ Page({
         let oddNum = app.randomWord(true, 32, 32);
         let newObject = {
             body: '商品购买',
+            outTradeNo: oddNum,
+            totalFee: countPay * 100,
             openId: app.globalData.wxUser.openId,
-            out_trade_no: oddNum,
-            total_fee: countPay * 100
         }
-
     },
     toPayTap: function () {
         const self = this;

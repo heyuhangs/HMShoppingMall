@@ -23,9 +23,9 @@
     </view>
     <!--首页菜单-->
     <view class="menu-container">
-        <view class="menu-list">
+        <view class="menu-list" bindtap="onBulletin">
             <button class="ImgBtn ImgBtn2"></button>
-            <button bindtap="onShareAppMessage">公告</button>
+            <button>公告</button>
         </view>
         <view class="menu-list">
             <button class="ImgBtn ImgBtn0" bindtap="onShareAppMessage" open-type="share"></button>

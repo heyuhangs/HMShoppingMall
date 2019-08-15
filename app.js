@@ -74,7 +74,7 @@ App({
                                 if (res.statusCode == 200) {
                                     self.globalData.wxUser = res.data.wxInfo;
                                     self.globalData.userInfo = res.data.userInfo;
-                                    if (res.data.userInfo != '') {
+                                    if (res.data.userInfo) {
                                         wx.setStorage({
                                             key: 'userKey',
                                             data: res.data.userInfo.USER_ID,

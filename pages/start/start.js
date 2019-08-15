@@ -85,47 +85,18 @@ Page({
         this[wanzikun_0x3fe9('0x8')]({
             'home': 0x1
         });
-        wx['switchTab']({
-            'url': wanzikun_0x3fe9('0x9')
-        });
+        if (!app.globalData.userInfo || app.globalData.userInfo == '') {
+            wx.redirectTo({
+                url: '/pages/jurisDiction/jurisDiction'
+            })
+            return false;
+        } else {
+            wx['switchTab']({
+                'url': wanzikun_0x3fe9('0x9')
+            });
+        }
+
     },
-    // 'tapBanner': function (_0x187eb3) {
-    //     var _0x4c1ad3 = {
-    //         'mBHgL': function (_0x3a14d0, _0x282a0b) {
-    //             return _0x3a14d0 - _0x282a0b;
-    //         },
-    //         'kleSE': function (_0x3c46a9, _0x1f6eba) {
-    //             return _0x3c46a9 != _0x1f6eba;
-    //         },
-    //         'PWKvl': function (_0x3a3bdd, _0x330aaa) {
-    //             return _0x3a3bdd !== _0x330aaa;
-    //         },
-    //         'Fdavb': wanzikun_0x3fe9('0xa'),
-    //         'fOMiM': function (_0x15fcff, _0x956da0) {
-    //             return _0x15fcff + _0x956da0;
-    //         },
-    //         'sGCTK': function (_0x230b92, _0x434508) {
-    //             return _0x230b92 + _0x434508;
-    //         },
-    //         'fmxsh': wanzikun_0x3fe9('0xb'),
-    //         'JKOFV': '&share=1'
-    //     };
-    //     if (_0x4c1ad3[wanzikun_0x3fe9('0xc')](_0x187eb3[wanzikun_0x3fe9('0xd')][wanzikun_0x3fe9('0xe')]['id'], 0x0)) {
-    //         if (_0x4c1ad3[wanzikun_0x3fe9('0xf')](wanzikun_0x3fe9('0xa'), _0x4c1ad3[wanzikun_0x3fe9('0x10')])) {
-    //             that[wanzikun_0x3fe9('0x8')]({
-    //                 'second': _0x4c1ad3[wanzikun_0x3fe9('0x11')](second, 0x1)
-    //             });
-    //             wanzikun_0x4a9cec(that);
-    //         } else {
-    //             this[wanzikun_0x3fe9('0x8')]({
-    //                 'home': 0x1
-    //             });
-    //             wx[wanzikun_0x3fe9('0x12')]({
-    //                 'url': _0x4c1ad3[wanzikun_0x3fe9('0x13')](_0x4c1ad3[wanzikun_0x3fe9('0x14')](_0x4c1ad3[wanzikun_0x3fe9('0x15')], _0x187eb3['currentTarget'][wanzikun_0x3fe9('0xe')]['id']), _0x4c1ad3[wanzikun_0x3fe9('0x16')])
-    //             });
-    //         }
-    //     }
-    // },
     onLoad: function (options) {
         const self = this;
         const userKey = wx.getStorageSync('userKey');
