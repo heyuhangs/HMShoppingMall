@@ -70,7 +70,7 @@
         </view>
         <view class="userinfo-item" bindtap="favlist">
             <image src="../../images/profile_collection.png"></image>
-            <navigator hover-class="none">团队管理</navigator>
+            <navigator hover-class="none">市场管理</navigator>
         </view>
         <!--    <view class="userinfo-item" bindtap="mycoupons">-->
         <!--      <image src="../../images/profile_ticket.png"></image>-->

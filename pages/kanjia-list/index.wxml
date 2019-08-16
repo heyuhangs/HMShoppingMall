@@ -3,7 +3,7 @@
     <navigator open-type="navigateBack" delta="1" hover-class="navigator-hover">
       <image class="goback" src="../../images/goback.png"/>
     </navigator>
-    <view class="header-name">我的奖金</view>
+    <view class="header-name">我的收益</view>
   </view>
   <view class="tab-container">
     <view class="tab-item-list" wx:for="{{list}}" wx:key="{{index}}">

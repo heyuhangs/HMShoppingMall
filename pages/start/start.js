@@ -101,6 +101,7 @@ Page({
         const self = this;
         const userKey = wx.getStorageSync('userKey');
         // const userKey = 2;
+        debugger
         if (userKey) {
             wx.request({
                 url: app.globalData.url + `userImpl/userInfo?USER_ID=${userKey}`,
