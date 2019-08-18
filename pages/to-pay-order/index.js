@@ -198,7 +198,7 @@ Page({
         switch (this.data.zffs) {
             case "在线支付":
                 break;
-            case "奖金积分支付":
+            case "奖金支付":
                 status = 2;
                 break;
         }
@@ -225,6 +225,7 @@ Page({
             success: function (res) {
                 if (res.statusCode == 200) {
                     self.clearShopCar();
+                    debugger
                     wx.navigateTo({
                         url: `/pages/to-pay-order/success/index?orderCode=${res.data.order_code}&addressId=${obj.addressId}&count=${self.data.countPay}&status=${status}`
                     })

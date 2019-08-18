@@ -44,7 +44,7 @@
                 <i-panel i-class="dd">
                     <i-radio-group current="{{zffs}}" bindchange="handleFruitChange">
                         <i-radio wx:key="1" value="在线支付"></i-radio>
-                        <i-radio wx:key="2" value="奖金积分支付"></i-radio>
+                        <i-radio wx:key="2" value="奖金支付"></i-radio>
                     </i-radio-group>
                 </i-panel>
             </view>

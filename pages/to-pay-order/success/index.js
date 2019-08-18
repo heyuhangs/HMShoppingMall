@@ -47,42 +47,44 @@ Page({
                 }
             })
         }
-        // this.toPay(0.1)
+    },
+    pay(e) {
+        debugger
     },
     toPayTap: function () {
         const self = this;
+        debugger
         wx.showLoading({});
-        // if (this.data.status == 1) {
-        //     self.toPay(self.data.countPay)
-        // } else {
-        //
-        // }
-        wx.request({
-            url: app.globalData.url + `/orderImpl/orderPay?USER_ID=${app.globalData.userInfo.USER_ID}&ORDER_CODE=${this.data.orderCode}&PAY_TYPE=${this.data.status}`,
-            method: "GET",
-            success: function (res) {
-                if (res.data.result != 'error') {
-                    wx.showToast({
-                        title: '购买成功',
-                        icon: 'success',
-                        duration: 2000
-                    });
-                    setTimeout(function () {
-                        wx.reLaunch({
-                            url: '/pages/order-list/index?currentType=2&status=1'
+        if (this.data.status != 1) {
+            wx.request({
+                url: app.globalData.url + `/orderImpl/orderPay?USER_ID=${app.globalData.userInfo.USER_ID}&ORDER_CODE=${this.data.orderCode}&PAY_TYPE=2`,
+                method: "GET",
+                success: function (res) {
+                    if (res.data.result != 'error') {
+                        wx.showToast({
+                            title: '购买成功',
+                            icon: 'success',
+                            duration: 2000
+                        });
+                        setTimeout(function () {
+                            wx.reLaunch({
+                                url: '/pages/order-list/index?currentType=2&status=1'
+                            })
+                        }, 1500)
+                    } else {
+                        wx.showToast({
+                            title: res.data.msg,
+                            icon: 'none',
+                            duration: 1000,
+                            mask: true
                         })
-                    }, 1500)
-                } else {
-                    wx.showToast({
-                        title: res.data.msg,
-                        icon: 'none',
-                        duration: 1000,
-                        mask: true
-                    })
+                    }
+                    wx.hideLoading({});
                 }
-                wx.hideLoading({});
-            }
-        })
+            });
+        } else {
+            self.pay()
+        }
     },
     'closeOreder': function () {
         var _0x1aa24b = {

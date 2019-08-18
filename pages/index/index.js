@@ -515,72 +515,6 @@ Page({
             url: app.globalData.imgUrl
         })
         this.getBannerData();
-        this.toPay(0.1);
-    },
-    toPay(countPay) {
-        let oddNum = app.randomWord(true, 32, 32);
-        let newObject = {
-            body: '商品购买',
-            outTradeNo: oddNum,
-            totalFee: countPay * 100,
-            openId: app.globalData.wxUser.openid,
-        }
-        debugger
-        wx.request({
-            url: app.globalData.url + '/wxPayImpl/pay',
-            method: "POST",
-            data: newObject,
-            success: function (res) {
-                debugger
-                if (res.data.result_code === 'SUCCESS') {
-                    wx.requestPayment(
-                        {
-                            'timeStamp': res.data.timeStamp, // 时间戳，从 1970 年 1 月 1 日 00:00:00 至今的秒数，即当前的时间
-                            'nonceStr': res.data.nonceStr, // 随机字符串，长度为32个字符以下
-                            'package': res.data.package, // 统一下单接口返回的 prepay_id 参数值，提交格式如：prepay_id=***
-                            'signType': res.data.signType, // 签名算法
-                            'paySign': res.data.paySign,
-                            'success': function (res) {
-                                if (res.errMsg === 'requestPayment:ok') {
-
-                                } else {
-                                    wx.showToast({
-                                        title: '充值失败，请及时联系管理员!',
-                                        icon: 'none',
-                                        duration: 2000
-                                    })
-                                }
-                            },
-                            'fail': function (res) {
-                                wx.showToast({
-                                    title: '充值失败，请及时联系管理员!',
-                                    icon: 'none',
-                                    duration: 2000
-                                })
-                            },
-                            'complete': function (res) {
-                                // console.log('complete', res)
-                                if (res.errMsg === 'requestPayment:ok') {
-                                    console.log('支付成功')
-                                } else if (res.errMsg === 'requestPayment:fail cancel') {
-                                    wx.showToast({
-                                        title: '支付已取消!',
-                                        icon: 'none',
-                                        duration: 2000
-                                    })
-                                }
-                            }
-                        })
-
-                } else {
-                    wx.showToast({
-                        title: '支付失败!',
-                        icon: 'none',
-                        duration: 2000
-                    })
-                }
-            }
-        })
     },
     nativedd: function () {
         wx.navigateTo({
@@ -640,34 +574,6 @@ Page({
             url: '/pages/newcoupons/index'
         })
     },
-    // 'tapBanner': function (_0x12fcb1) {
-    //     var _0x259e61 = {
-    //         'uNfiJ': function (_0xa638ff, _0x55eb29) {
-    //             return _0xa638ff != _0x55eb29;
-    //         },
-    //         'zZGNu': function (_0x1e467c, _0x5c27c5) {
-    //             return _0x1e467c !== _0x5c27c5;
-    //         },
-    //         'VEWTF': wanzikun_0x35f5('0x8'),
-    //         'RzwcP': function (_0x4da18a, _0x42ef93) {
-    //             return _0x4da18a + _0x42ef93;
-    //         },
-    //         'YmUnZ': wanzikun_0x35f5('0x9')
-    //     };
-    //     if (_0x259e61[wanzikun_0x35f5('0xa')](_0x12fcb1[wanzikun_0x35f5('0x5')][wanzikun_0x35f5('0x6')]['id'], 0x0)) {
-    //         if (_0x259e61[wanzikun_0x35f5('0xb')](wanzikun_0x35f5('0x8'), _0x259e61[wanzikun_0x35f5('0xc')])) {
-    //             if (res[wanzikun_0x35f5('0xd')][wanzikun_0x35f5('0xe')] == 0x0) {
-    //                 that['setData']({
-    //                     'flag': ![]
-    //                 });
-    //             }
-    //         } else {
-    //             wx[wanzikun_0x35f5('0x3')]({
-    //                 'url': _0x259e61[wanzikun_0x35f5('0xf')](_0x259e61['YmUnZ'], _0x12fcb1[wanzikun_0x35f5('0x5')][wanzikun_0x35f5('0x6')]['id'])
-    //             });
-    //         }
-    //     }
-    // },
     'kanjiaTap': function (_0x5c89aa) {
         var _0x4ca6a7 = {
             'dCuUE': function (_0x46ea61, _0x34a1e7) {
