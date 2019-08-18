@@ -515,6 +515,72 @@ Page({
             url: app.globalData.imgUrl
         })
         this.getBannerData();
+        this.toPay(0.1);
+    },
+    toPay(countPay) {
+        let oddNum = app.randomWord(true, 32, 32);
+        let newObject = {
+            body: '商品购买',
+            outTradeNo: oddNum,
+            totalFee: countPay * 100,
+            openId: app.globalData.wxUser.openid,
+        }
+        debugger
+        wx.request({
+            url: app.globalData.url + '/wxPayImpl/pay',
+            method: "POST",
+            data: newObject,
+            success: function (res) {
+                debugger
+                if (res.data.result_code === 'SUCCESS') {
+                    wx.requestPayment(
+                        {
+                            'timeStamp': res.data.timeStamp, // 时间戳，从 1970 年 1 月 1 日 00:00:00 至今的秒数，即当前的时间
+                            'nonceStr': res.data.nonceStr, // 随机字符串，长度为32个字符以下
+                            'package': res.data.package, // 统一下单接口返回的 prepay_id 参数值，提交格式如：prepay_id=***
+                            'signType': res.data.signType, // 签名算法
+                            'paySign': res.data.paySign,
+                            'success': function (res) {
+                                if (res.errMsg === 'requestPayment:ok') {
+
+                                } else {
+                                    wx.showToast({
+                                        title: '充值失败，请及时联系管理员!',
+                                        icon: 'none',
+                                        duration: 2000
+                                    })
+                                }
+                            },
+                            'fail': function (res) {
+                                wx.showToast({
+                                    title: '充值失败，请及时联系管理员!',
+                                    icon: 'none',
+                                    duration: 2000
+                                })
+                            },
+                            'complete': function (res) {
+                                // console.log('complete', res)
+                                if (res.errMsg === 'requestPayment:ok') {
+                                    console.log('支付成功')
+                                } else if (res.errMsg === 'requestPayment:fail cancel') {
+                                    wx.showToast({
+                                        title: '支付已取消!',
+                                        icon: 'none',
+                                        duration: 2000
+                                    })
+                                }
+                            }
+                        })
+
+                } else {
+                    wx.showToast({
+                        title: '支付失败!',
+                        icon: 'none',
+                        duration: 2000
+                    })
+                }
+            }
+        })
     },
     nativedd: function () {
         wx.navigateTo({

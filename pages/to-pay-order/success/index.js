@@ -47,15 +47,7 @@ Page({
                 }
             })
         }
-    },
-    toPay(countPay) {
-        let oddNum = app.randomWord(true, 32, 32);
-        let newObject = {
-            body: '商品购买',
-            outTradeNo: oddNum,
-            totalFee: countPay * 100,
-            openId: app.globalData.wxUser.openId,
-        }
+        // this.toPay(0.1)
     },
     toPayTap: function () {
         const self = this;
