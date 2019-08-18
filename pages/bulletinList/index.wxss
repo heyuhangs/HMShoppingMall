@@ -104,9 +104,8 @@
 }
 
 .list-info-money {
-    font-size: 27rpx;
-    color: #333;
-    line-height: 25px;
+    font-size: 25rpx;
+    color: #666;
 }
 .list-infi-money-date{
     color: #666;

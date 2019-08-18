@@ -59,6 +59,7 @@ Page({
                 url: app.globalData.url + `/userImpl/getAddressList?USER_ID=${app.globalData.userInfo.USER_ID}`,
                 method: "GET",
                 success: function (res) {
+                    debugger
                     if (res.data.addList.length && res.statusCode == 200) {
                         self.setData({
                             addressList: res.data.addList[0],
@@ -223,11 +224,17 @@ Page({
             method: "POST",
             data: obj,
             success: function (res) {
-                if (res.statusCode == 200) {
+                if (res.errMsg != "request:ok") {
                     self.clearShopCar();
                     debugger
                     wx.navigateTo({
                         url: `/pages/to-pay-order/success/index?orderCode=${res.data.order_code}&addressId=${obj.addressId}&count=${self.data.countPay}&status=${status}`
+                    })
+                }else{
+                    wx.showToast({
+                        title: '提交失败，请及时联系管理员!',
+                        icon: 'none',
+                        duration: 2000
                     })
                 }
                 wx.hideLoading();

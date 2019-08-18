@@ -3,26 +3,22 @@
         <navigator open-type="navigateBack" delta="1" hover-class="navigator-hover">
             <image class="goback" src="../../images/goback.png"/>
         </navigator>
-        <view class="header-name">我的奖金</view>
+        <view class="header-name">公告信息</view>
     </view>
     <view class="tab-container">
         <view class="tab-item-list" wx:for="{{list}}" wx:key="{{index}}">
             <view class="tab-item-list-info" bindtap="gokj" data-id="{{item.USER_ID}}">
                 <view class="list-info">
                     <view class="list-info-title">
-                        <view>奖金收益</view>
-                    </view>
-                    <view class="list-info-detail">
-                        <text>+{{item.ONE_MONEY}}</text>
+                        <view>标题</view>
                     </view>
                 </view>
-                <view class="list-info-money">{{item.MEMO}}</view>
-                <view class="list-info-money list-infi-money-date">{{item.START_TIME}}</view>
+                <view class="list-info-money">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</view>
             </view>
         </view>
     </view>
     <view hidden="{{list.length}}" class="no-more-goods">
         <image src="/images/zd.png" class="no-order-img"></image>
-        <view class="text">还没有奖金信息呢</view>
+        <view class="text">还没有公告信息呢</view>
     </view>
 </view>

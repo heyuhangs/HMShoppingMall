@@ -57,9 +57,12 @@ Page({
             },
             'LIsDf': wanzikun_0x4919('0x12')
         };
-        wx[wanzikun_0x4919('0x10')]({
-            'url': _0x1ab862['ydjBI'](_0x1ab862[wanzikun_0x4919('0x13')], _0x3b7953[wanzikun_0x4919('0x3')]['dataset']['id'])
-        });
+        wx.redirectTo({
+            url: _0x1ab862['ydjBI'](_0x1ab862[wanzikun_0x4919('0x13')], _0x3b7953[wanzikun_0x4919('0x3')]['dataset']['id'])
+        })
+        // wx[wanzikun_0x4919('0x10')]({
+        //     'url':
+        // });
     },
     'onLoad': function (e) {
         const self = this;
