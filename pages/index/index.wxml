@@ -1,14 +1,8 @@
-<!--index.wxml-->
-<!--<view class="hidden {{navigationbar}} {{naviphone}}">-->
-<!--<image src="{{toplogo}}" />-->
-<!--</view>-->
 <view class="container">
     <view class="swiper-container">
-        <!--        <swiper class="swiper_box" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"-->
-        <!--                bindchange="swiperchange" circular="circular">-->
         <swiper class="swiper_box" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"
-                circular="circular">
-            <block wx:for="{{bannerList}}" wx:key="PICTURES_ID">
+                bindchange="swiperchange" circular="circular">
+            <block wx:for="{{bannerList}}" wx:key="{{item.index}}">
                 <swiper-item>
                     <image bindtap="tapBanner" data-id="{{item.PICTURES_ID}}" src="{{item.PATH}}"
                            class="slide-image"/>
@@ -16,7 +10,7 @@
             </block>
         </swiper>
         <view class="dots">
-            <block wx:for="{{bannerList}}" wx:key="unique">
+            <block wx:for="{{bannerList}}" wx:key="{{item.index}}">
                 <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
             </block>
         </view>
@@ -74,30 +68,30 @@
             <view class="goods-list-text">{{item.DETAIL}}</view>
             <view class="goods-list-money">Ұ{{item.PRICE}}</view>
         </view>
-<!--        <view class="kanjia-list" wx:for-items="{{topGoodList}}" wx:key="{{index}}" bindtap="toDetailsTap"-->
-<!--              data-id="{{item.USER_ID}}">-->
-<!--            <view class="kanjia-list-image">-->
-<!--                <image src="{{item.PATH}}"/>-->
-<!--            </view>-->
-<!--            <view class="kanjia-list-info">-->
-<!--                <view class="kanjia-list-info-title">{{item.NAME}}</view>-->
-<!--                <view class="kanjia-list-info-info">{{item.DETAIL}}</view>-->
-<!--                <view class="kanjia-list-info-money">-->
-<!--                    <view class="kanjia-list-info-money-a">-->
-<!--                        <text class="a">Ұ{{item.PRICE}}</text>-->
-<!--                        <text class="b">底价</text>-->
-<!--                    </view>-->
-<!--                    <view class="kanjia-list-info-money-a">-->
-<!--                        <text>Ұ{{item.Q_PRICE}}</text>-->
-<!--                        <text>原价</text>-->
-<!--                    </view>-->
-<!--                    <view class="kanjia-list-info-money-a">-->
-<!--                        <text>{{item.SUM_SALES}}件</text>-->
-<!--                        <text>销量</text>-->
-<!--                    </view>-->
-<!--                </view>-->
-<!--            </view>-->
-<!--        </view>-->
+        <!--        <view class="kanjia-list" wx:for-items="{{topGoodList}}" wx:key="{{index}}" bindtap="toDetailsTap"-->
+        <!--              data-id="{{item.USER_ID}}">-->
+        <!--            <view class="kanjia-list-image">-->
+        <!--                <image src="{{item.PATH}}"/>-->
+        <!--            </view>-->
+        <!--            <view class="kanjia-list-info">-->
+        <!--                <view class="kanjia-list-info-title">{{item.NAME}}</view>-->
+        <!--                <view class="kanjia-list-info-info">{{item.DETAIL}}</view>-->
+        <!--                <view class="kanjia-list-info-money">-->
+        <!--                    <view class="kanjia-list-info-money-a">-->
+        <!--                        <text class="a">Ұ{{item.PRICE}}</text>-->
+        <!--                        <text class="b">底价</text>-->
+        <!--                    </view>-->
+        <!--                    <view class="kanjia-list-info-money-a">-->
+        <!--                        <text>Ұ{{item.Q_PRICE}}</text>-->
+        <!--                        <text>原价</text>-->
+        <!--                    </view>-->
+        <!--                    <view class="kanjia-list-info-money-a">-->
+        <!--                        <text>{{item.SUM_SALES}}件</text>-->
+        <!--                        <text>销量</text>-->
+        <!--                    </view>-->
+        <!--                </view>-->
+        <!--            </view>-->
+        <!--        </view>-->
     </view>
     <!-- 精选主题 -->
     <!--      <view wx:if="{{toptopic}}" class="topic-container" wx:for="{{toptopic}}" wx:key="id">-->
