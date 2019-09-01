@@ -5,17 +5,9 @@
         </navigator>
         <view class="header-name">代理商查询</view>
     </view>
-    <view class="status-box">
-        <view bindtap="statusTap" class="status-label {{index == currentType ? 'active' : ''}}"
-              wx:for-items="{{statusType}}" wx:key="{{index}}" data-index="{{index}}">
-            {{item}}
-            <view class="{{tabClass[index]}}"></view>
-        </view>
-    </view>
-    <picker mode="date" fields="month" value="{{date}}" start="2016-01-01" end="2018-12-31" bindchange="getDateTime">
+    <picker mode="date" fields="month" value="{{date}}" bindchange="getDateTime">
         <view class="selectDate">
-            {{years}}年{{months}}月
-            <image src="../images/down.png"/>
+            {{date}}
         </view>
     </picker>
     <view class="tab-container">
@@ -41,6 +33,6 @@
     </view>
     <view hidden="{{list.length}}" class="no-more-goods">
         <image src="/images/zd.png" class="no-order-img"></image>
-        <view class="text">还没有账单信息呢</view>
+        <view class="text">还没有信息呢</view>
     </view>
 </view>
