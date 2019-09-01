@@ -3,7 +3,7 @@
         <navigator open-type="navigateBack" delta="1" hover-class="navigator-hover">
             <image class="goback" src="../../images/goback.png"/>
         </navigator>
-        <view class="header-name">我的收益</view>
+        <view class="header-name">代理商查询</view>
     </view>
     <view class="status-box">
         <view bindtap="statusTap" class="status-label {{index == currentType ? 'active' : ''}}"
@@ -17,13 +17,11 @@
             <view class="tab-item-list-info" bindtap="gokj" data-id="{{item.USER_ID}}">
                 <view class="list-info">
                     <view class="list-info-title">
-                        <view wx:if="{{item.REASON_TYPE == 1}}">推荐奖</view>
-                        <view wx:if="{{item.REASON_TYPE == 2}}">重消奖</view>
-                        <view wx:if="{{item.REASON_TYPE == 3}}">团队奖</view>
-                        <view wx:if="{{item.REASON_TYPE == 4}}">分红奖</view>
-                        <view wx:if="{{item.REASON_TYPE == 5}}">代理返利</view>
-                        <view wx:if="{{item.REASON_TYPE == 6}}">会员分红</view>
-                        <view wx:if="{{item.REASON_TYPE == 7}}">招募代理商奖</view>
+                        <view wx:if="{{item.REASON_TYPE == 1}}">充值</view>
+                        <view wx:if="{{item.REASON_TYPE == 2}}">奖金</view>
+                        <view wx:if="{{item.REASON_TYPE == 4}}">购物</view>
+                        <view wx:if="{{item.REASON_TYPE == 5}}">转账</view>
+                        <view wx:if="{{item.REASON_TYPE == 6}}">提现</view>
                     </view>
                     <view class="list-info-detail">
                         <text wx:if="{{item.TYPE == 1}}">+{{item.ONE_MONEY}}</text>
@@ -37,6 +35,6 @@
     </view>
     <view hidden="{{list.length}}" class="no-more-goods">
         <image src="/images/zd.png" class="no-order-img"></image>
-        <view class="text">还没有奖金信息呢</view>
+        <view class="text">还没有账单信息呢</view>
     </view>
 </view>

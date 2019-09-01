@@ -17,15 +17,15 @@ const app = getApp();
 Page({
     'data': {
         loadingMoreHidden: true,
-        favList: [
+        childList: [
             {
-                goodsId: '1',
-                pic: 'http://img4.imgtn.bdimg.com/it/u=4236557082,1340503178&fm=26&gp=0.jpg',
-                goodsName: '飞机',
-                dateAdd: '2018-08-09'
+                NAME: '1',
+                LEVEL: '4',
+                VIP_TYPE: '1',
+                PHONE: '22222'
             }
         ],
-        childList: []
+        // childList: []
     },
     onLoad: function () {
         const self = this;
@@ -35,9 +35,9 @@ Page({
             method: "GET",
             success: function (res) {
                 if (res.statusCode == 200) {
-                    self.setData({
-                        childList: res.data.childList
-                    })
+                    // self.setData({
+                    //     childList: res.data.childList
+                    // })
                 }
                 wx.hideLoading({});
             }

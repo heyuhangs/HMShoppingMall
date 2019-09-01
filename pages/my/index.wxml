@@ -9,11 +9,10 @@
             <text wx:elif="{{user.VIP_TYPE == 3}}" class="userinfo-score userinfo-vipTar">爱心天使</text>
             <text wx:else class="userinfo-score userinfo-vipTar" bindtap="clickVip">快乐天使</text>
             <view>
-            <text class="userinfo-score-day">积分：{{score}}</text>
+                <text class="userinfo-score-day">积分：{{score}}</text>
             </view>
-            <!--      <text class="userinfo-score" bindtap="score">积分：{{score}}</text>-->
-            <!--                  <text  class="userinfo-score-day" bindtap="clickVip">成为会员</text>-->
-            <!--                  <text  class="userinfo-score-day">已连续签到{{score_sign_continuous}}天</text>-->
+            <text class="userinfo-score" bindtap="score">积分：{{score}}</text>
+            <text class="userinfo-score-day">已连续签到{{score_sign_continuous}}天</text>
         </view>
     </view>
     <view class="userinfo-notice" wx:if="{{noticeList}}">
@@ -64,13 +63,25 @@
             <text>{{balance}}元</text>
             <navigator hover-class="none">我的余额</navigator>
         </view>
-        <view class="userinfo-item" bindtap="mykanjia">
+        <view class="userinfo-item" bindtap="capitalMovements">
             <image src="../../images/kanjia/jyjl.png"></image>
             <navigator hover-class="none">我的账单</navigator>
+        </view>
+        <view class="userinfo-item" bindtap="mykanjia">
+            <image src="../../images/kanjia/jyjl.png"></image>
+            <navigator hover-class="none">我的收益</navigator>
+        </view>
+        <view class="userinfo-item" bindtap="myVipList">
+            <image src="../../images/kanjia/jyjl.png"></image>
+            <navigator hover-class="none">直推会员</navigator>
         </view>
         <view class="userinfo-item" bindtap="favlist">
             <image src="../../images/profile_collection.png"></image>
             <navigator hover-class="none">市场管理</navigator>
+        </view>
+        <view class="userinfo-item" bindtap="yjlist">
+            <image src="../../images/profile_collection.png"></image>
+            <navigator hover-class="none">业绩统计</navigator>
         </view>
         <!--    <view class="userinfo-item" bindtap="mycoupons">-->
         <!--      <image src="../../images/profile_ticket.png"></image>-->

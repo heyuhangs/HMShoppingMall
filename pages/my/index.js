@@ -60,7 +60,18 @@ Page({
                 }
             }
         })
-
+        wx.request({
+            url: app.globalData.url + `userImpl/vipSale?USER_ID=${app.globalData.userInfo.USER_ID}`,
+            method: "GET",
+            success: function (res) {
+                if (res.statusCode == 200) {
+                    debugger
+                    // self.setData({
+                    //     user: res.data.user
+                    // })
+                }
+            }
+        })
     },
     // isMemberShipStatus
     isMembership: function () {
@@ -435,6 +446,22 @@ Page({
             'url': _0x16ae19[wanzikun_0x42d0('0x6c')]
         });
     },
+    myVipList: function () {
+        var _0x1bc935 = {
+            'tfapv': '/pages/vipList/index'
+        };
+        wx['navigateTo']({
+            'url': _0x1bc935['tfapv']
+        });
+    },
+    yjlist: function () {
+        var _0x1bc935 = {
+            'tfapv': '/pages/vipList/index'
+        };
+        wx['navigateTo']({
+            'url': _0x1bc935['tfapv']
+        });
+    },
     'withdraw': function () {
         var _0x1bc935 = {
             'tfapv': wanzikun_0x42d0('0x6d')
@@ -454,6 +481,14 @@ Page({
     'mykanjia': function () {
         var _0x2c653c = {
             'LdFxV': wanzikun_0x42d0('0x70')
+        };
+        wx[wanzikun_0x42d0('0x3')]({
+            'url': _0x2c653c['LdFxV']
+        });
+    },
+    capitalMovements: function () {
+        var _0x2c653c = {
+            'LdFxV': '/pages/capitalMovements/index'
         };
         wx[wanzikun_0x42d0('0x3')]({
             'url': _0x2c653c['LdFxV']

@@ -33,7 +33,10 @@
                 "pages/cashWithdrawal/cashWithdrawal",
                 "pages/recharge/recharge",
                 "pages/jurisDiction/jurisDiction",
-                "pages/bulletinList/index"
+                "pages/bulletinList/index",
+                "pages/vipList/index",
+                "pages/yjList/yjList",
+                "pages/capitalMovements/index"
         ],
         "window": {
                 "backgroundTextStyle": "light",

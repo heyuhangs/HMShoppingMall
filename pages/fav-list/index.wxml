@@ -10,11 +10,11 @@
 <!--      <image src="{{item.pic}}_m" class="image" mode="aspectFill" lazy-load="true" />-->
 <!--    </view>-->
     <view class="goods-title">
-      <view wx:if="{{item.LEVEL == 6}}">{{item.NAME}}（董事）</view>
-      <view wx:else>{{item.NAME}}（{{item.LEVEL}}星会员）</view>
+<!--      <view wx:if="{{item.LEVEL == 6}}">{{item.NAME}}</view>-->
+      <view>{{item.VIP_TYPE}}</view>
     </view>
     <view class="good-money">
-      <view>直推人数：{{item.ZT_NUM}}</view>
+      <view>{{item.NAME}}</view>
       <view>联系方式：{{item.PHONE}}</view>
     </view>
 <!--    <view class="title-opacity">查看详细</view>-->

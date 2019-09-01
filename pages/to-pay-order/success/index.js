@@ -53,7 +53,6 @@ Page({
     },
     toPayTap: function () {
         const self = this;
-        debugger
         wx.showLoading({});
         if (this.data.status != 1) {
             wx.request({
