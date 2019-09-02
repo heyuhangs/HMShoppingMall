@@ -48,13 +48,10 @@ Page({
             })
         }
     },
-    pay(e) {
-        debugger
-    },
     toPayTap: function () {
         const self = this;
         wx.showLoading({});
-        if (this.data.status != 1) {
+        // if (this.data.status != 1) {
             wx.request({
                 url: app.globalData.url + `/orderImpl/orderPay?USER_ID=${app.globalData.userInfo.USER_ID}&ORDER_CODE=${this.data.orderCode}&PAY_TYPE=2`,
                 method: "GET",
@@ -81,9 +78,9 @@ Page({
                     wx.hideLoading({});
                 }
             });
-        } else {
-            self.pay()
-        }
+        // } else {
+        //     self.pay()
+        // }
     },
     'closeOreder': function () {
         var _0x1aa24b = {

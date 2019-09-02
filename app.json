@@ -35,7 +35,6 @@
                 "pages/jurisDiction/jurisDiction",
                 "pages/bulletinList/index",
                 "pages/vipList/index",
-                "pages/yjList/yjList",
                 "pages/capitalMovements/index"
         ],
         "window": {

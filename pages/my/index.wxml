@@ -11,8 +11,6 @@
             <view>
                 <text class="userinfo-score-day">积分：{{score}}</text>
             </view>
-            <text class="userinfo-score" bindtap="score">积分：{{score}}</text>
-            <text class="userinfo-score-day">已连续签到{{score_sign_continuous}}天</text>
         </view>
     </view>
     <view class="userinfo-notice" wx:if="{{noticeList}}">

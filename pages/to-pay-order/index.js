@@ -1,13 +1,13 @@
 var wanzikun_0x1f39 = ['token', 'pHxDO', 'DuluR', 'HoVLx', 'JPJlw', 'detail', 'value', 'remark', 'goodsJsonStr', 'VRCBq', 'isNeedLogistics', 'mtltD', 'curAddressData', 'hideLoading', 'showModal', 'wCrNW', 'xZGTd', 'goodsList', 'pingtuanId', 'IWuZt', 'hmIJp', 'wYAMJ', 'kjid', 'EmzqE', 'provinceId', 'cityId', 'districtId', 'address', 'linkMan', 'mobile', 'expireMinutes', 'closeorder', 'curCoupon', 'yzFAX', 'couponId', 'moneyHreshold', 'allGoodsAndYunPrice', 'WpLpB', 'zBhKF', 'calculate', 'hEPDy', 'request', 'ZJqLs', 'POST', 'OswCz', 'zLKvR', 'buyNow', 'removeStorageSync', 'amountLogistics', 'amountTotle', 'lrMPP', 'eooEI', 'vqDTX', 'rvAUh', 'dKcla', 'keyword1', 'dateAdd', 'keyword2', 'amountReal', 'orderNumber', 'keyword4', '订单已关闭', 'lyNQu', 'keyword5', 'neYEY', 'siteInfo', 'closeorderkey', 'formId', 'YUeLG', 'stringify', 'keyword3', 'sendTempleMsg', 'deliveryorderkey', 'kvrPQ', 'cgJkd', 'XOAZp', '&id=', 'CqNzW', '/user/shipping-address/default', 'ISpAo', 'urls', 'XjvpK', 'HrxPI', 'qKWRE', 'KSKZn', 'auXhw', 'McbFv', 'fwqOU', 'JJVhy', 'inviter_id_', 'pOJFg', '{"goodsId":', 'logistics', 'erqLY', 'price', 'number', 'wUUDQ', 'Wpamy', 'GfZeH', 'TkJRF', 'fIlvB', 'goodsId', 'cbvyD', 'NhYZc', 'Yquhu', 'coupons', 'money', 'IVzOB', 'pguat', 'propertyChildIds', '","logisticsType":0, "inviter_id":', 'navigateTo', '/pages/address-add/index', '/pages/select-address/index', 'fLSOI', 'true', 'vHUID', 'Ygxpg', 'RmmKn', 'gFdza', 'AKYEt', 'zXigj', 'aRCgi', 'FduiU', 'log', 'SUNWW', 'brHOS', 'XKils', 'gGXJY', 'UCEUb', 'JXxNY', 'OnPyF', 'nmaXN', 'buykjInfo', 'buyPT', 'PingTuanInfo', 'eLYsg', 'data', 'orderType', 'cvbwQ', 'length', 'getStorageSync', 'shopList', 'tnPHl', 'vJfto', 'qImMx', 'fBvSk', 'caqMP', 'SBEbz', 'chnWu', 'globalData', 'iphone', 'setData', 'gIaiW', 'buyNowInfo', 'filter', 'HYEjd', 'DxopD', 'active', 'initShippingAddress', 'wEpuq', 'gWjHm', 'UZkSu', 'GHYXP', 'rxjpv', 'pdgSP', 'code', 'processYunfei', 'shopCarInfo', 'pecUB', 'ogNUh', 'YePCA', '#173177', '您可以重新下单，请在30分钟内完成支付', 'pages/index/index', 'pages/order-details/index?id=', '/pages/to-pay-order/success/index?order=', '&money=', '请先设置您的收货地址！', 'mgFdH', 'FqCOQ', 'Glgty', 'application/x-www-form-urlencoded', 'showLoading'];
-(function (_0x31085c, _0x3a3c14) {
-    var _0x314bcf = function (_0x377943) {
+(function(_0x31085c, _0x3a3c14) {
+    var _0x314bcf = function(_0x377943) {
         while (--_0x377943) {
             _0x31085c['push'](_0x31085c['shift']());
         }
     };
     _0x314bcf(++_0x3a3c14);
 }(wanzikun_0x1f39, 0x13b));
-var wanzikun_0x1432 = function (_0x172c3c, _0x540d37) {
+var wanzikun_0x1432 = function(_0x172c3c, _0x540d37) {
     _0x172c3c = _0x172c3c - 0x0;
     var _0x649845 = wanzikun_0x1f39[_0x172c3c];
     return _0x649845;
@@ -34,7 +34,7 @@ Page({
         url: '',
         isOneGood: false
     },
-    onLoad: function (options) {
+    onLoad: function(options) {
         const self = this;
         wx.showLoading();
         self.setData({
@@ -44,7 +44,7 @@ Page({
             wx.request({
                 url: app.globalData.url + `/userImpl/getAddressList?ADDRESS_ID=${options.myAddress}&USER_ID=${app.globalData.userInfo.USER_ID}`,
                 method: "GET",
-                success: function (res) {
+                success: function(res) {
                     if (res.data.addList.length && res.statusCode == 200) {
                         self.setData({
                             addressList: res.data.addList[0],
@@ -58,7 +58,7 @@ Page({
             wx.request({
                 url: app.globalData.url + `/userImpl/getAddressList?USER_ID=${app.globalData.userInfo.USER_ID}`,
                 method: "GET",
-                success: function (res) {
+                success: function(res) {
                     if (res.data.addList.length && res.statusCode == 200) {
                         self.setData({
                             addressList: res.data.addList[0],
@@ -105,7 +105,7 @@ Page({
                 wx.request({
                     url: app.globalData.url + `/goodImpl/goodInfo?GOOD_ID=${this.data.optionsGoodsId}&USER_ID=${app.globalData.userInfo.USER_ID}`,
                     method: "GET",
-                    success: function (res) {
+                    success: function(res) {
                         if (res.statusCode == 200) {
                             const goodsInfo = {
                                 goodsDetail: res.data.goodInfo,
@@ -139,7 +139,7 @@ Page({
             }
         }
     },
-    countPay: function () {
+    countPay: function() {
         let countPay = 0;
         for (const item of this.data.goodsList) {
             if (item.active) {
@@ -150,7 +150,7 @@ Page({
             countPay: countPay
         });
     },
-    onShow: function () {
+    onShow: function() {
         const self = this;
         if (!this.data.isRunOnShow) {
             this.onLoad();
@@ -165,14 +165,17 @@ Page({
         // } else {
         // }
     },
-    handleFruitChange: function ({ detail = {} }) {
+    handleFruitChange: function({ detail = {} }) {
         this.setData({
             zffs: detail.value
         })
     },
-    createOrder: function () {
+    createOrder: function() {
         let status = 1;
         const self = this;
+        wx.showLoading({
+            mask: true
+        })
         // if (this.data.countPay < 198) {
         //     wx.showToast({
         //         title: '首次最低消费198!',
@@ -194,7 +197,6 @@ Page({
             self.createVipOrder();
             return false;
         }
-        wx.showLoading({});
         switch (this.data.zffs) {
             case "在线支付":
                 break;
@@ -222,27 +224,111 @@ Page({
             url: app.globalData.url + `orderImpl/beforePayCheck`,
             method: "POST",
             data: obj,
-            success: function (res) {
-                if (res.errMsg != "request:ok") {
+            success: function(res) {
+                if (res.errMsg == "request:ok") {
                     self.clearShopCar();
+                    if (status == 1) {
+                        self.pay('商品购买', res.data.order_code);
+                        return false;
+                    }
                     wx.navigateTo({
                         url: `/pages/to-pay-order/success/index?orderCode=${res.data.order_code}&addressId=${obj.addressId}&count=${self.data.countPay}&status=${status}`
                     })
-                }else{
+                } else {
                     wx.showToast({
                         title: '提交失败，请及时联系管理员!',
                         icon: 'none',
                         duration: 2000
                     })
                 }
+            },
+            complete(res) {
                 wx.hideLoading();
             }
         })
     },
-    createVipOrder: function () {
+    pay(e, o) {
+        const self = this
+        let oddNum = app.randomWord(true, 32, 32);
+        let newObject = {
+            body: e,
+            outTradeNo: o,
+            // order_code: o,
+            totalFee: self.data.countPay * 100,
+            openId: app.globalData.wxUser.openid,
+        }
+        wx.request({
+            url: app.globalData.url + '/wxPayImpl/pay',
+            method: "POST",
+            data: newObject,
+            success: function(res) {
+                if (res.data.result_code === 'SUCCESS') {
+                    wx.requestPayment(
+                        {
+                            'timeStamp': res.data.timeStamp, // 时间戳，从 1970 年 1 月 1 日 00:00:00 至今的秒数，即当前的时间
+                            'nonceStr': res.data.nonceStr, // 随机字符串，长度为32个字符以下
+                            'package': res.data.packAge, // 统一下单接口返回的 prepay_id 参数值，提交格式如：prepay_id=***
+                            'signType': res.data.signType, // 签名算法
+                            'paySign': res.data.paySign,
+                            'success': function(res) {
+                                if (res.errMsg === 'requestPayment:ok') {
+                                    wx.showToast({
+                                        title: '支付成功!',
+                                        icon: 'success',
+                                        mask: true,
+                                        duration: 2000
+                                    });
+                                    setTimeout(function() {
+                                        wx.reLaunch({
+                                            url: '/pages/order-list/index?currentType=2&status=1'
+                                        })
+                                    }, 1500)
+                                } else {
+                                    wx.showToast({
+                                        title: '充值失败，请及时联系管理员!',
+                                        icon: 'none',
+                                        duration: 2000
+                                    })
+                                }
+                            },
+                            'fail': function(res) {
+                                wx.showToast({
+                                    title: '充值失败，请及时联系管理员!',
+                                    icon: 'none',
+                                    duration: 2000
+                                })
+                            },
+                            'complete': function(res) {
+                                // console.log('complete', res)
+                                wx.hideLoading();
+                                if (res.errMsg === 'requestPayment:ok') {
+                                    console.log('支付成功')
+                                } else if (res.errMsg === 'requestPayment:fail cancel') {
+                                    wx.showToast({
+                                        title: '支付已取消!',
+                                        icon: 'none',
+                                        duration: 2000
+                                    })
+                                }
+                            }
+                        })
+
+                } else {
+                    wx.showToast({
+                        title: '支付失败!',
+                        icon: 'none',
+                        duration: 2000
+                    })
+                }
+            },
+            complete(res) {
+                wx.hideLoading();
+            }
+        })
+    },
+    createVipOrder: function() {
         const self = this;
         let status = 1;
-        wx.showLoading({});
         switch (this.data.zffs) {
             case "在线支付":
                 break;
@@ -268,9 +354,13 @@ Page({
             url: app.globalData.url + `orderImpl/beforePayCheckVIP`,
             method: "POST",
             data: obj,
-            success: function (res) {
+            success: function(res) {
                 if (res.statusCode == 200) {
                     self.clearShopCar();
+                    if (status == 1) {
+                        self.pay('会员购买');
+                        return false;
+                    }
                     wx.navigateTo({
                         url: `/pages/to-pay-order/success/index?orderCode=${res.data.order_code}&count=${self.data.countPay}&status=${res.data.pay_type}&isPayVip=${self.data.isPayVip}`
                     })
@@ -282,11 +372,13 @@ Page({
                         mask: true
                     })
                 }
+            },
+            complete(res) {
                 wx.hideLoading();
             }
         })
     },
-    clearShopCar: function () {
+    clearShopCar: function() {
         // const shopCarList = wx.getStorageSync('shopCar');
         // for (let i = 0; i < shopCarList.length; i++) {
         //     if (shopCarList[i].USER_ID == this.data.goodsList[i].USER_ID) {
@@ -295,16 +387,16 @@ Page({
         // }
         wx.removeStorage({
             key: 'shopCar',
-            success: function (res) {
+            success: function(res) {
             }
         })
     },
-    'getDistrictId': function (_0x2390a1, _0x32b368) {
+    'getDistrictId': function(_0x2390a1, _0x32b368) {
         var _0x3e0882 = {
-            'pdgSP': function (_0x3782c3, _0x57a4f8) {
+            'pdgSP': function(_0x3782c3, _0x57a4f8) {
                 return _0x3782c3 == _0x57a4f8;
             },
-            'GHYXP': function (_0x129e91, _0x4326f8) {
+            'GHYXP': function(_0x129e91, _0x4326f8) {
                 return _0x129e91 === _0x4326f8;
             },
             'rxjpv': wanzikun_0x1432('0x1f')
@@ -330,22 +422,22 @@ Page({
         }
         return _0x32b368;
     },
-    'initShippingAddress': function () {
+    'initShippingAddress': function() {
         var _0x1f475f = {
-            'HrxPI': function (_0x21ac8c, _0x55e7af) {
+            'HrxPI': function(_0x21ac8c, _0x55e7af) {
                 return _0x21ac8c == _0x55e7af;
             },
-            'ISpAo': function (_0x3aeeda, _0x5bda9f) {
+            'ISpAo': function(_0x3aeeda, _0x5bda9f) {
                 return _0x3aeeda + _0x5bda9f;
             },
-            'qKWRE': function (_0x52200b, _0x591ab8) {
+            'qKWRE': function(_0x52200b, _0x591ab8) {
                 return _0x52200b !== _0x591ab8;
             },
             'KSKZn': wanzikun_0x1432('0x82'),
-            'McbFv': function (_0x54e5e5, _0x1c36a3) {
+            'McbFv': function(_0x54e5e5, _0x1c36a3) {
                 return _0x54e5e5 == _0x1c36a3;
             },
-            'fwqOU': function (_0x4f742f, _0x381959) {
+            'fwqOU': function(_0x4f742f, _0x381959) {
                 return _0x4f742f === _0x381959;
             },
             'JJVhy': 'rMMtA',
@@ -359,10 +451,10 @@ Page({
             },
             'success': _0x5dec27 => {
                 var _0x5cc03d = {
-                    'auXhw': function (_0x2def7d, _0x5b7b04) {
+                    'auXhw': function(_0x2def7d, _0x5b7b04) {
                         return _0x1f475f[wanzikun_0x1432('0x87')](_0x2def7d, _0x5b7b04);
                     },
-                    'DQvZP': function (_0x572b9d, _0x454503) {
+                    'DQvZP': function(_0x572b9d, _0x454503) {
                         return _0x1f475f[wanzikun_0x1432('0x84')](_0x572b9d, _0x454503);
                     }
                 };
@@ -405,30 +497,30 @@ Page({
             }
         });
     },
-    'processYunfei': function () {
+    'processYunfei': function() {
         var _0x4ed991 = {
-            'TkJRF': function (_0x3fe91d, _0x3d277c) {
+            'TkJRF': function(_0x3fe91d, _0x3d277c) {
                 return _0x3fe91d + _0x3d277c;
             },
-            'NhYZc': function (_0x148843, _0x1f7189) {
+            'NhYZc': function(_0x148843, _0x1f7189) {
                 return _0x148843 - _0x1f7189;
             },
-            'Yquhu': function (_0x5bd791, _0x4b9948) {
+            'Yquhu': function(_0x5bd791, _0x4b9948) {
                 return _0x5bd791 == _0x4b9948;
             },
-            'ovdnh': function (_0x4b0b4d, _0x386450) {
+            'ovdnh': function(_0x4b0b4d, _0x386450) {
                 return _0x4b0b4d < _0x386450;
             },
-            'erqLY': function (_0x48de50, _0x141405) {
+            'erqLY': function(_0x48de50, _0x141405) {
                 return _0x48de50 * _0x141405;
             },
-            'wUUDQ': function (_0x467003, _0x55a662) {
+            'wUUDQ': function(_0x467003, _0x55a662) {
                 return _0x467003 === _0x55a662;
             },
             'GfZeH': 'Wpamy',
             'fIlvB': wanzikun_0x1432('0x8e'),
             'cbvyD': wanzikun_0x1432('0x8f'),
-            'IVzOB': function (_0x18ac98, _0x5b77f3) {
+            'IVzOB': function(_0x18ac98, _0x5b77f3) {
                 return _0x18ac98 + _0x5b77f3;
             },
             'pguat': wanzikun_0x1432('0x90')
@@ -482,7 +574,7 @@ Page({
         });
         _0x475c6f['createOrder']();
     },
-    'addAddress': function () {
+    'addAddress': function() {
         if (this.data.isOneGood) {
             wx.navigateTo({
                 url: '/pages/address-add/index?isAadd=1&optionsGoodsId=' + this.data.optionsGoodsId + '&num=' + this.data.num
@@ -493,7 +585,7 @@ Page({
             })
         }
     },
-    'selectAddress': function () {
+    'selectAddress': function() {
         this.data.isRunOnShow = false;
         var _0x4d546e = {
             'fLSOI': wanzikun_0x1432('0xa6')
@@ -508,24 +600,24 @@ Page({
             })
         }
     },
-    'getMyCoupons': function () {
+    'getMyCoupons': function() {
         var _0x4746c7 = {
             'FduiU': wanzikun_0x1432('0xa8'),
-            'gFdza': function (_0x3d7b4c, _0x484763) {
+            'gFdza': function(_0x3d7b4c, _0x484763) {
                 return _0x3d7b4c <= _0x484763;
                 ``
             },
-            'CGVCR': function (_0x54e965, _0x410662) {
+            'CGVCR': function(_0x54e965, _0x410662) {
                 return _0x54e965 == _0x410662;
             },
-            'AKYEt': function (_0x44bdb9, _0x13166e) {
+            'AKYEt': function(_0x44bdb9, _0x13166e) {
                 return _0x44bdb9 === _0x13166e;
             },
             'aRCgi': wanzikun_0x1432('0xa9'),
-            'brHOS': function (_0x2f619d, _0x54cc3e) {
+            'brHOS': function(_0x2f619d, _0x54cc3e) {
                 return _0x2f619d > _0x54cc3e;
             },
-            'Ygxpg': function (_0xe771fa, _0x143f44) {
+            'Ygxpg': function(_0xe771fa, _0x143f44) {
                 return _0xe771fa + _0x143f44;
             },
             'RmmKn': '/discounts/my'
@@ -537,9 +629,9 @@ Page({
                 'token': wanzikun_0x346709[wanzikun_0x1432('0x13')][wanzikun_0x1432('0x35')],
                 'status': 0x0
             },
-            'success': function (_0x2b8bf6) {
+            'success': function(_0x2b8bf6) {
                 var _0x1a7598 = {
-                    'SUNWW': function (_0x357021, _0x503191) {
+                    'SUNWW': function(_0x357021, _0x503191) {
                         return _0x4746c7[wanzikun_0x1432('0xac')](_0x357021, _0x503191);
                     }
                 };
@@ -563,10 +655,10 @@ Page({
             }
         });
     },
-    'bindChangeCoupon': function (_0xeacd45) {
+    'bindChangeCoupon': function(_0xeacd45) {
         var _0x4b80da = {
             'JXxNY': wanzikun_0x1432('0x17'),
-            'gGXJY': function (_0x55abd7, _0x12a9e8) {
+            'gGXJY': function(_0x55abd7, _0x12a9e8) {
                 return _0x55abd7 == _0x12a9e8;
             },
             'UCEUb': wanzikun_0x1432('0xb4')
