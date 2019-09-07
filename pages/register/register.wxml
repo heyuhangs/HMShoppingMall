@@ -12,7 +12,7 @@
             <i-input maxlength="5" bind:change="nameChange" type="text" value="{{ NAME }}" title="真实姓名" autofocus placeholder="请输入真实姓名"/>
             <i-input maxlength="40" bind:change="passwordChange" value="{{ PASSWORD }}" type="password" title="密码" placeholder="请输入密码"/>
             <i-input maxlength="40" bind:change="bankCodeChange" value="{{ BANKCODE }}" type="number" title="银行卡" placeholder="请输入银行卡号"/>
-            <i-input maxlength="40" bind:change="bankNameChange" value="{{ BANKNAME }}" title="银行名" placeholder="请输入开户人"/>
+            <i-input maxlength="40" bind:change="bankNameChange" value="{{ BANKNAME }}" title="开户人姓名" placeholder="请输入开户人姓名"/>
             <i-input maxlength="11" bind:change="phoneChange" error="{{PHONEErr}}" bind:focus="changePhone" bind:blur="phoneValData" value="{{ PHONE }}" title="手机号"
                      placeholder="请输入手机号"/>
             <view class="tel">

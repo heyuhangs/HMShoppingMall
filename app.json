@@ -35,7 +35,8 @@
                 "pages/jurisDiction/jurisDiction",
                 "pages/bulletinList/index",
                 "pages/vipList/index",
-                "pages/capitalMovements/index"
+                "pages/capitalMovements/index",
+                "pages/performanceStatistics/index"
         ],
         "window": {
                 "backgroundTextStyle": "light",

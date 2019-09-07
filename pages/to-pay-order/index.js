@@ -184,17 +184,17 @@ Page({
         //     })
         //     return false;
         // }
+        //如果是购买vip
+        if (self.data.isPayVip) {
+            self.createVipOrder();
+            return false;
+        }
         if (!this.data.addressList || !this.data.addressList.USER_ID) {
             wx.showToast({
                 title: '请选择收货人地址!',
                 icon: 'none',
                 duration: 2000
             })
-            return false;
-        }
-        //如果是购买vip
-        if (self.data.isPayVip) {
-            self.createVipOrder();
             return false;
         }
         switch (this.data.zffs) {
@@ -329,10 +329,11 @@ Page({
     createVipOrder: function() {
         const self = this;
         let status = 1;
+        debugger
         switch (this.data.zffs) {
             case "在线支付":
                 break;
-            case "奖金积分支付":
+            case "奖金支付":
                 status = 2;
                 break;
         }

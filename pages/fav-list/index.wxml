@@ -1,27 +1,36 @@
 <view class="goods-container iphone">
-  <view class="header-container">
-    <navigator open-type="navigateBack" delta="1" hover-class="navigator-hover">
-      <image class="goback" src="../../images/goback.png" />
-    </navigator>
-    <view class="header-name">市场管理</view>
-  </view>
-  <view class="goods-box" wx:for-items="{{childList}}" wx:key="{{index}}" bindtap="toDetailsTap" data-id="{{item.USER_ID}}">
-<!--    <view class="img-box">-->
-<!--      <image src="{{item.pic}}_m" class="image" mode="aspectFill" lazy-load="true" />-->
-<!--    </view>-->
-    <view class="goods-title">
-<!--      <view wx:if="{{item.LEVEL == 6}}">{{item.NAME}}</view>-->
-      <view>{{item.VIP_TYPE}}</view>
+    <view class="header-container">
+        <navigator open-type="navigateBack" delta="1" hover-class="navigator-hover">
+            <image class="goback" src="../../images/goback.png"/>
+        </navigator>
+        <view class="header-name">辖区管理</view>
     </view>
-    <view class="good-money">
-      <view>{{item.NAME}}</view>
-      <view>联系方式：{{item.PHONE}}</view>
+    <picker mode="date" fields="month" value="{{date}}" bindchange="getDateTime">
+        <view class="selectDate">
+            {{date}}
+        </view>
+    </picker>
+    <view class="goods-box" wx:for-items="{{childList}}" wx:key="{{index}}" bindtap="toDetailsTap"
+          data-id="{{item.USER_ID}}">
+        <view class="goods-title">
+            <view>{{item.NAME}}(
+                <text wx:if="{{item.VIP_TYPE == 1}}">快乐天使</text>
+                <text wx:if="{{item.VIP_TYPE == 2}}">光明天使</text>
+                <text wx:if="{{item.VIP_TYPE == 3}}">爱心天使</text>
+                )
+            </view>
+            <view wx:if="{{item.DS_ROLE == 0}}">非代理商</view>
+            <view wx:if="{{item.DS_ROLE == 1}}">区代理商</view>
+            <view wx:if="{{item.DS_ROLE == 2}}">市代理</view>
+            <view wx:if="{{item.DS_ROLE == 3}}">省代理</view>
+        </view>
+        <view class="good-money">
+            <view>{{item.DL_NAME}}</view>
+            <view>{{item.DL_SALE}}</view>
+        </view>
     </view>
-<!--    <view class="title-opacity">查看详细</view>-->
-  </view>
-  <view hidden="{{childList.length}}" class="no-more-goods">
-<!--    <image src="/images/empty_collection.png" class="no-order-img"></image>-->
-      <image src="/images/team.png" class="no-order-img"></image>
-    <view class="text">还没有团队呢</view>
-  </view>
+    <view hidden="{{childList.length}}" class="no-more-goods">
+        <image src="/images/team.png" class="no-order-img"></image>
+        <view class="text">还没有团队呢</view>
+    </view>
 </view>

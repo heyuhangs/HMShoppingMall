@@ -40,10 +40,10 @@
             <view class="goods-characteristic">{{goodsDetail.DETAIL}}</view>
             <block>
                 <view class="goods-price">Ұ {{goodsDetail.PRICE}}</view>
-                <view class="goods-originalPrice">Ұ {{goodsDetail.Q_PRICE}}</view>
-                <view class="piangjia">
-                    已售 {{goodsDetail.SUM_SALES}}
-                </view>
+<!--                <view class="goods-originalPrice">Ұ {{goodsDetail.Q_PRICE}}</view>-->
+<!--                <view class="piangjia">-->
+<!--                    已售 {{goodsDetail.SUM_SALES}}-->
+<!--                </view>-->
             </block>
         </view>
     </view>

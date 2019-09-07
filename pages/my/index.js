@@ -22,7 +22,8 @@ Page({
         'score': 0x0,
         'score_sign_continuous': 0x0,
         'tabClass': ['', '', '', '', ''],
-        user: {}
+        user: {},
+        salepd:{}
     },
     isMembership: function () {
         const self = this;
@@ -65,10 +66,9 @@ Page({
             method: "GET",
             success: function (res) {
                 if (res.statusCode == 200) {
-                    debugger
-                    // self.setData({
-                    //     user: res.data.user
-                    // })
+                    self.setData({
+                        salepd: res.data.salepd
+                    })
                 }
             }
         })
@@ -456,7 +456,7 @@ Page({
     },
     yjlist: function () {
         var _0x1bc935 = {
-            'tfapv': '/pages/vipList/index'
+            'tfapv': '/pages/performanceStatistics/index'
         };
         wx['navigateTo']({
             'url': _0x1bc935['tfapv']

@@ -1,9 +1,9 @@
 <view class="container iphone">
   <view class="type-header-menu type-header-menu-con">
     <view class="type-search type-search-con">
-      <image src="../../images/search.png" />
-      <input class="input {{searchinput == true ? 'active':''}}" type="text" confirm-type="search" placeholder="搜索商品" bindfocus="searchfocus" bindconfirm="search"></input>
-      <view hidden="{{search}}" bindtap="searchclose" class="header-search-btn">取消</view>
+<!--      <image src="../../images/search.png" />-->
+<!--      <input class="input {{searchinput == true ? 'active':''}}" type="text" confirm-type="search" placeholder="搜索商品" bindfocus="searchfocus" bindconfirm="search"></input>-->
+<!--      <view hidden="{{search}}" bindtap="searchclose" class="header-search-btn">取消</view>-->
     </view>
   </view>
   <view class="type-container-boxx">
