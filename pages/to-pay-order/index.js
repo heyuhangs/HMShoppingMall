@@ -329,7 +329,6 @@ Page({
     createVipOrder: function() {
         const self = this;
         let status = 1;
-        debugger
         switch (this.data.zffs) {
             case "在线支付":
                 break;
@@ -340,9 +339,10 @@ Page({
         const orderGoodsList = [];
         for (const item of this.data.goodsList) {
             orderGoodsList.push({
-                goodId: item.goodsDetail.USER_ID,
-                num: item.buyNumber
-                // price: item.goodsDetail.PRICE
+                goodId: '',
+                // goodId: item.goodsDetail.USER_ID,
+                // price: item.buyNumber
+                price: item.goodsDetail.PRICE
             })
         }
         const obj = {
@@ -351,6 +351,7 @@ Page({
             payType: status,
             vipSaveOrderList: orderGoodsList
         }
+        debugger
         wx.request({
             url: app.globalData.url + `orderImpl/beforePayCheckVIP`,
             method: "POST",
