@@ -26,11 +26,12 @@
         </view>
         <view class="good-money">
             <view>{{item.DL_NAME}}</view>
-            <view>{{item.DL_SALE}}</view>
+            <view wx:if="{{item.DL_SALE == 0}}">正常已激活</view>
+            <view wx:if="{{item.DL_SALE == 1}}">未激活</view>
         </view>
     </view>
     <view hidden="{{childList.length}}" class="no-more-goods">
         <image src="/images/team.png" class="no-order-img"></image>
-        <view class="text">还没有团队呢</view>
+        <view class="text">还没有信息呢</view>
     </view>
 </view>

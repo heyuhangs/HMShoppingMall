@@ -29,7 +29,7 @@
                         <text wx:if="{{item.TYPE == 2}}">-{{item.ONE_MONEY}}</text>
                     </view>
                 </view>
-                <view class="list-info-money">{{item.MEMO}}</view>
+                <view class="list-info-money">变动后金额: {{item.SUM_MONEY}}</view>
                 <view class="list-info-money list-infi-money-date">{{item.START_TIME}}</view>
             </view>
         </view>

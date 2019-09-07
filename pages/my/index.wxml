@@ -94,11 +94,11 @@
         <!--      <navigator hover-class="none">联系客服</navigator>-->
         <!--      <button open-type="contact" session-from="weapp"></button>-->
         <!--    </view>-->
-        <view class="userinfo-item">
-            <image src="../../images/profile_service.png"></image>
-            <navigator hover-class="none">联系客服</navigator>
-            <button open-type="contact" session-from="weapp"></button>
-        </view>
+<!--        <view class="userinfo-item">-->
+<!--            <image src="../../images/profile_service.png"></image>-->
+<!--            <navigator hover-class="none">联系客服</navigator>-->
+<!--            <button open-type="contact" session-from="weapp"></button>-->
+<!--        </view>-->
     </view>
     <!--  <view class="userinfo-info">-->
     <!--    光光科技v1.0-->

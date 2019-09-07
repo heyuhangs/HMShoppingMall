@@ -37,6 +37,6 @@
     </view>
     <view hidden="{{list.length}}" class="no-more-goods">
         <image src="/images/zd.png" class="no-order-img"></image>
-        <view class="text">还没有奖金信息呢</view>
+        <view class="text">还没有收益信息呢</view>
     </view>
 </view>

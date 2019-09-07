@@ -71,7 +71,7 @@ page {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 30rpx;
+  font-size: 28rpx;
   /*color: #999;*/
   padding-top: 6px;
   color: #666;

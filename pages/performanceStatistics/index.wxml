@@ -16,10 +16,10 @@
     <!--          data-id="{{item.USER_ID}}">-->
     <view class="goods-box" wx:if="{{currentType == 0}}">
         <view class="goods-title">
-            <view>个人业绩合计: {{list.SELF_SALE}}</view>
+            <view>个人业绩合计: {{list.SELF_SALE || 0}}</view>
         </view>
         <view class="goods-title">
-            <view>下级会员业绩合计: {{list.ALL_SALE}}</view>
+            <view>下级会员业绩合计: {{list.ALL_SALE || 0}}</view>
         </view>
         <!--        <view class="goods-title">-->
         <!--            <view>{{}}</view>-->
@@ -32,14 +32,14 @@
     <view wx:if="{{currentType == 1}}">
         <view class="goods-box" wx:for-items="{{list}}">
             <view class="good-money">
-                <view>个人月业绩: {{item.DL_SALE_MONTH}}</view>
-                <view>下级月业绩: {{item.DL_SALE_DOWN_MONTH}}</view>
-                <view>月份: {{item.SALE_MONTH}}</view>
+                <view>个人月业绩: {{item.DL_SALE_MONTH || 0}}</view>
+                <view>下级月业绩: {{item.DL_SALE_DOWN_MONTH || 0}}</view>
+                <view>月份: {{item.SALE_MONTH || 0}}</view>
             </view>
         </view>
     </view>
-    <view hidden="{{list.length}}" class="no-more-goods">
-        <image src="/images/zd.png" class="no-order-img"></image>
-        <view class="text">还没有奖金信息呢</view>
-    </view>
+    <!--    <view hidden="{{list.length}}" class="no-more-goods">-->
+    <!--        <image src="/images/zd.png" class="no-order-img"></image>-->
+    <!--        <view class="text">还没有奖金信息呢</view>-->
+    <!--    </view>-->
 </view>
