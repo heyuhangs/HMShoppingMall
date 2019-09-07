@@ -1,13 +1,13 @@
 var wanzikun_0x533d = ['JODfc', 'Iyqya', '3|1|4|2|6|0|5', 'ieKCZ', 'BjBwB', 'bpuad', 'kvNvz', 'JXjaS', 'ABJyx', 'FgEtP', 'mzjqx', 'confirm', 'VTOYI', '/order/close', 'hideLoading', 'gldjc', 'qECUt', 'xAPJk', 'DZowG', 'navigateTo', 'tTRCy', 'mIZhF', 'split', 'OJtOV', '/pages/my/index', 'iDzAE', 'red-dot', 'BBMXe', 'application/x-www-form-urlencoded', 'LPlqH', '无法获取用户资金信息', '/user/amount', 'KhXXx', 'PsatG', 'cktkQ', 'vlPuO', 'balance', 'PzFkQ', 'bOWFx', 'FeHih', 'DRkkZ', 'wxpay', 'tJQqI', '/order/pay', 'POST', 'okymY', 'fimQi', 'Toqqf', 'VYzGf', 'reLaunch', 'WGpoH', 'TPmxO', 'XoMPM', 'gAPgr', 'showModal', 'iphone', 'WYCdS', 'share', 'PBshm', 'MouWn', 'qLGDq', 'CYvdW', 'ZjGAc', 'rbtzV', 'tkHAT', 'HmAgQ', 'apmAW', '6|0|1|2|5|4|3', 'vziyT', 'YSYpr', 'kyqIY', 'GZDoF', 'Kndxn', '/order/statistics', 'dkebc', 'ZTWsC', 'VYxNj', 'hTjPe', 'oQWrz', 'pgqvQ', 'tabClass', 'count_id_no_pay', 'cIkuz', 'GQqTu', 'xrusn', 'ZIBfk', 'count_id_no_transfer', 'quZZi', 'ogZMi', 'ZyUes', 'statusTap', 'vShyn', 'count_id_no_reputation', 'FBZqr', 'evHsl', 'count_id_success', 'lZfRH', '/order/list', 'status', 'getOrderStatistics', 'llKrH', 'KRqUr', 'lGgAx', 'UrIaT', 'BjHyU', 'OkIjM', 'TNCFl', 'AsQHp', 'logisticsMap', 'goodsMap', 'ktvKV', '待付款', '待发货', '待收货', 'xqJsK', 'uuxMu', '出现Cannot read property "dataset" of undefined;这样的错误是正常的，不用管！', 'sSXea', 'IKTXz', 'yAYGr', 'WQvxl', 'showLoading', 'request', 'wUXZY', 'siteInfo', 'url', 'subDomain', 'QhtVX', 'globalData', 'token', 'ZRuts', 'data', 'code', 'log', 'dJelr', 'currentTarget', 'dataset', 'index', 'currentType', 'setData', 'onShow', '/pages/order-details/index?id=', '&share=1'];
-(function (_0x27f6f7, _0x344cda) {
-    var _0x1a3a62 = function (_0xd8769f) {
+(function(_0x27f6f7, _0x344cda) {
+    var _0x1a3a62 = function(_0xd8769f) {
         while (--_0xd8769f) {
             _0x27f6f7['push'](_0x27f6f7['shift']());
         }
     };
     _0x1a3a62(++_0x344cda);
 }(wanzikun_0x533d, 0x18d));
-var wanzikun_0x28c0 = function (_0x23080f, _0x23a207) {
+var wanzikun_0x28c0 = function(_0x23080f, _0x23a207) {
     _0x23080f = _0x23080f - 0x0;
     var _0x342ccd = wanzikun_0x533d[_0x23080f];
     return _0x342ccd;
@@ -27,7 +27,7 @@ Page({
         ],
         url: ''
     },
-    'statusTap': function (e) {
+    'statusTap': function(e) {
 
         this.setData({
             currentType: e.currentTarget.dataset.index,
@@ -35,9 +35,14 @@ Page({
         })
         this.getData();
     },
-    onLoad: function (e) {
+    onLoad: function(e) {
         wx.showLoading({});
-        const stu = parseInt(e.currentType) + 1;
+        let stu = 0;
+        if (!e.currentType) {
+            stu = 1;
+        }else{
+            stu = parseInt(e.currentType) + 1;
+        }
         this.setData({
             url: app.globalData.imgUrl
         })
@@ -62,7 +67,7 @@ Page({
         wx.request({
             url: app.globalData.url + `/orderImpl/orderList?USER_ID=${app.globalData.userInfo.USER_ID}&STATUS=${this.data.currentInd}`,
             method: "GET",
-            success: function (res) {
+            success: function(res) {
                 if (res.statusCode == 200) {
                     self.setData({
                         orderList: res.data.orderList
@@ -72,19 +77,19 @@ Page({
             }
         })
     },
-    orderPay: function (e) {
+    orderPay: function(e) {
         wx.showLoading({});
         wx.request({
             url: app.globalData.url + `/orderImpl/orderPay?USER_ID=${app.globalData.userInfo.USER_ID}&ORDER_CODE=${e.currentTarget.dataset.id.ORDER_CODE}&PAY_TYPE=${e.currentTarget.dataset.id.PAY_STATUS}`,
             method: "POST",
-            success: function (res) {
+            success: function(res) {
                 if (res.data.result != 'error') {
                     wx.showToast({
                         title: '购买成功',
                         icon: 'success',
                         duration: 2000
                     });
-                    setTimeout(function () {
+                    setTimeout(function() {
                         wx.reLaunch({
                             url: '/pages/order-list/index?currentType=2&status=1'
                         })
@@ -101,20 +106,20 @@ Page({
             }
         })
     },
-    cancelOrderTap: function (e) {
+    cancelOrderTap: function(e) {
         this.setData({
             isCancel: true,
             cancelId: e.currentTarget.dataset.id.USER_ID,
             cancelOId: e.currentTarget.dataset.id.ORDER_CODE
         })
     },
-    handleCancel: function () {
+    handleCancel: function() {
         const self = this;
         wx.showLoading({});
         wx.request({
             url: app.globalData.url + `/orderImpl/editOrder?USER_ID=${this.data.cancelId}&ORDER_CODE=${this.data.cancelOId}&ORDER_STATUS=2`,
             method: "GET",
-            success: function (res) {
+            success: function(res) {
                 if (res.statusCode == 200) {
                     wx.showToast({
                         title: '订单取消成功!',
@@ -130,7 +135,7 @@ Page({
             }
         })
     },
-    handleNoCancel: function () {
+    handleNoCancel: function() {
         this.setData({
             isCancel: false
         })
@@ -148,7 +153,7 @@ Page({
     //         'url': _0x81a849['mPOMm'](_0x81a849[wanzikun_0x28c0('0x20')], _0x2451b7) + _0x81a849[wanzikun_0x28c0('0x21')]
     //     });
     // },
-    orderDetail: function (e) {
+    orderDetail: function(e) {
         wx.navigateTo({
             url: `/pages/order-details/index?id=${e.currentTarget.dataset.id}&currentType=${this.data.currentType}`
         })
@@ -268,36 +273,36 @@ Page({
     //         }
     //     });
     // },
-    'toPayTap': function (_0x476fcc) {
+    'toPayTap': function(_0x476fcc) {
         var _0x4c781f = {
             'cktkQ': wanzikun_0x28c0('0x38'),
-            'fimQi': function (_0x118f61, _0x1e87f3) {
+            'fimQi': function(_0x118f61, _0x1e87f3) {
                 return _0x118f61 !== _0x1e87f3;
             },
             'Toqqf': 'XgXpJ',
             'VYzGf': wanzikun_0x28c0('0x39'),
             'gAPgr': wanzikun_0x28c0('0x3a'),
-            'vlPuO': function (_0x570166, _0x41fc4b) {
+            'vlPuO': function(_0x570166, _0x41fc4b) {
                 return _0x570166 == _0x41fc4b;
             },
-            'COeWs': function (_0x5c571a, _0x30e063) {
+            'COeWs': function(_0x5c571a, _0x30e063) {
                 return _0x5c571a - _0x30e063;
             },
-            'PzFkQ': function (_0x4053b5, _0x4011e0) {
+            'PzFkQ': function(_0x4053b5, _0x4011e0) {
                 return _0x4053b5 <= _0x4011e0;
             },
-            'bOWFx': function (_0x4331ca, _0x320f9a) {
+            'bOWFx': function(_0x4331ca, _0x320f9a) {
                 return _0x4331ca === _0x320f9a;
             },
             'DRkkZ': wanzikun_0x28c0('0x3b'),
-            'tJQqI': function (_0x5a1089, _0x19a20f) {
+            'tJQqI': function(_0x5a1089, _0x19a20f) {
                 return _0x5a1089 + _0x19a20f;
             },
-            'KhXXx': function (_0x262cd1, _0x2cb01a) {
+            'KhXXx': function(_0x262cd1, _0x2cb01a) {
                 return _0x262cd1 + _0x2cb01a;
             },
             'okymY': wanzikun_0x28c0('0x3c'),
-            'TPmxO': function (_0x1304db, _0x197f29) {
+            'TPmxO': function(_0x1304db, _0x197f29) {
                 return _0x1304db !== _0x197f29;
             },
             'XoMPM': wanzikun_0x28c0('0x3d'),
@@ -312,7 +317,7 @@ Page({
             'data': {
                 'token': wanzikun_0x1930be[wanzikun_0x28c0('0x11')][wanzikun_0x28c0('0x12')]
             },
-            'success': function (_0x3e5ddb) {
+            'success': function(_0x3e5ddb) {
                 var _0x4af2ad = {
                     'WGpoH': _0x4c781f[wanzikun_0x28c0('0x42')]
                 };
@@ -332,7 +337,7 @@ Page({
                                     'token': wanzikun_0x1930be[wanzikun_0x28c0('0x11')]['token'],
                                     'orderId': _0x5b26e3
                                 },
-                                'success': function (_0x477f03) {
+                                'success': function(_0x477f03) {
                                     if (_0x4c781f[wanzikun_0x28c0('0x4e')](_0x4c781f[wanzikun_0x28c0('0x4f')], _0x4c781f[wanzikun_0x28c0('0x50')])) {
                                         wx[wanzikun_0x28c0('0x51')]({
                                             'url': _0x4c781f[wanzikun_0x28c0('0x42')]
@@ -362,34 +367,34 @@ Page({
             }
         });
     },
-    'onReady': function () {
+    'onReady': function() {
     },
-    'getOrderStatistics': function () {
+    'getOrderStatistics': function() {
         var _0x634475 = {
             'cIkuz': wanzikun_0x28c0('0x3a'),
             'VYxNj': wanzikun_0x28c0('0x63'),
-            'hTjPe': function (_0x41eda0, _0x1f3c7c) {
+            'hTjPe': function(_0x41eda0, _0x1f3c7c) {
                 return _0x41eda0 == _0x1f3c7c;
             },
-            'oQWrz': function (_0x55de75, _0x18607f) {
+            'oQWrz': function(_0x55de75, _0x18607f) {
                 return _0x55de75 !== _0x18607f;
             },
             'xrusn': wanzikun_0x28c0('0x64'),
-            'ZIBfk': function (_0x161a5e, _0x1d5cfc) {
+            'ZIBfk': function(_0x161a5e, _0x1d5cfc) {
                 return _0x161a5e > _0x1d5cfc;
             },
-            'quZZi': function (_0x3bcd67, _0x58b810) {
+            'quZZi': function(_0x3bcd67, _0x58b810) {
                 return _0x3bcd67 === _0x58b810;
             },
             'ogZMi': wanzikun_0x28c0('0x65'),
             'ARiCv': wanzikun_0x28c0('0x66'),
             'JqMWH': wanzikun_0x28c0('0x67'),
             'vShyn': 'KRmaq',
-            'FBZqr': function (_0x1ce7d7, _0xcf567d) {
+            'FBZqr': function(_0x1ce7d7, _0xcf567d) {
                 return _0x1ce7d7 === _0xcf567d;
             },
             'QZnxL': wanzikun_0x28c0('0x68'),
-            'dkebc': function (_0x1a4366, _0x415b40) {
+            'dkebc': function(_0x1a4366, _0x415b40) {
                 return _0x1a4366 + _0x415b40;
             },
             'ZTWsC': wanzikun_0x28c0('0x69')
@@ -566,12 +571,12 @@ Page({
     //         }
     //     });
     // },
-    'onHide': function () {
+    'onHide': function() {
     },
-    'onUnload': function () {
+    'onUnload': function() {
     },
-    'onPullDownRefresh': function () {
+    'onPullDownRefresh': function() {
     },
-    'onReachBottom': function () {
+    'onReachBottom': function() {
     }
 });

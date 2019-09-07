@@ -236,7 +236,7 @@ Page({
                     })
                 } else {
                     wx.showToast({
-                        title: '提交失败，请及时联系管理员!',
+                        title: res.data.msg,
                         icon: 'none',
                         duration: 2000
                     })
@@ -359,7 +359,7 @@ Page({
                 if (res.statusCode == 200) {
                     self.clearShopCar();
                     if (status == 1) {
-                        self.pay('会员购买');
+                        self.pay('会员购买', res.data.order_code);
                         return false;
                     }
                     wx.navigateTo({
@@ -369,8 +369,7 @@ Page({
                     wx.showToast({
                         title: res.data.msg,
                         icon: 'none',
-                        duration: 1000,
-                        mask: true
+                        duration: 2000
                     })
                 }
             },
