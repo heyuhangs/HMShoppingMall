@@ -1,13 +1,13 @@
 var wanzikun_0x4533 = ['/shop/goods/kanjia/info', 'KWdqL', '&id=', 'MuctR', 'SABzS', '/shop/goods/detail', 'pics', 'rUaZH', 'Lrbwj', 'KOkLZ', 'ypdOU', 'uFRqx', 'nLPeV', 'OavAm', 'QQCxO', '/pages/kanjia/index?kjId=', 'kjId', '&joiner=', 'RWMKV', 'showModal', 'basicInfo', 'GruUM', 'naojD', 'FLkee', 'UfnSP', 'BtSDW', 'vLUhC', 'OjQfb', 'Bajza', '/shop/goods/kanjia/join', 'currentTarget', 'dataset', 'sseYi', 'navigateTo', 'ybvDL', 'BGDZZ', 'pNdba', 'msg', '1|2|0|3|4', 'split', 'curHdIndex', 'curBdIndex', '/shop/goods/kanjia/myHelp', 'iovNv', 'mPAhj', 'RHMib', 'cBWxE', 'riUEr', 'IdSvy', 'iphone', 'EggGZ', 'globalData', 'DbdOt', 'Mogdq', 'JOzvZ', 'setData', 'vmIcy', 'code', 'push', 'data', 'kanjiaInfo', 'request', 'ZLLSw', 'urls', 'wAaLv', 'lhyKf', 'uJQPR', 'JaQXg', 'lxVik', 'NxRmF', 'VRBxU', 'token', 'uid', 'iQPfd', 'gethelpkj', 'goodsId', 'gBUfw', 'TeTmA', 'result', 'length', 'EauyR', 'qyQtU', 'RKVkj', 'ITztp', 'getgoods', 'mykanjia', 'kjhelp', '/shop/goods/kanjia/my', 'reYIm', 'umetS', 'eneKZ', 'qsVfZ', 'PXCtY', 'gethelpid'];
-(function (_0x3971bd, _0x1e7e7e) {
-    var _0x385d7c = function (_0x4bb821) {
+(function(_0x3971bd, _0x1e7e7e) {
+    var _0x385d7c = function(_0x4bb821) {
         while (--_0x4bb821) {
             _0x3971bd['push'](_0x3971bd['shift']());
         }
     };
     _0x385d7c(++_0x1e7e7e);
 }(wanzikun_0x4533, 0x1a2));
-var wanzikun_0x58c9 = function (_0x1f8e9f, _0x35b601) {
+var wanzikun_0x58c9 = function(_0x1f8e9f, _0x35b601) {
     _0x1f8e9f = _0x1f8e9f - 0x0;
     var _0x1c7b59 = wanzikun_0x4533[_0x1f8e9f];
     return _0x1c7b59;
@@ -30,24 +30,30 @@ Page({
         currentType: 0,
         page: 1
     },
-    onLoad: function () {
+    onLoad: function() {
         const self = this;
         const status = this.data.currentType;
         wx.showLoading({});
         wx.request({
             url: app.globalData.url + `moneyImpl/moneyChangeList?DS_ROLE=${status}&USER_ID=${app.globalData.userInfo.USER_ID}&page=${this.data.page}&JJB_TYPE=&REASON_TYPE=2&MONEY_TYPE=1`,
             method: "get",
-            success: function (res) {
-                if (res.statusCode == 200) {
+            success: function(res) {
+                if (res.data.result != 'error') {
                     self.setData({
                         list: res.data.list
+                    })
+                } else {
+                    wx.showToast({
+                        title: '系统繁忙',
+                        icon: 'none',
+                        duration: 2000
                     })
                 }
                 wx.hideLoading({});
             }
         })
     },
-    'statusTap': function (e) {
+    'statusTap': function(e) {
         // console.log(e.currentTarget.dataset.index)
         // if()
         this.setData({
@@ -167,12 +173,12 @@ Page({
     //         }
     //     });
     // },
-    'mykanjia': function (_0x50ba47) {
+    'mykanjia': function(_0x50ba47) {
         var _0x4a1951 = {
-            'reYIm': function (_0x4e704d, _0x285f08) {
+            'reYIm': function(_0x4e704d, _0x285f08) {
                 return _0x4e704d < _0x285f08;
             },
-            'umetS': function (_0x3dc643, _0x2ff6d7) {
+            'umetS': function(_0x3dc643, _0x2ff6d7) {
                 return _0x3dc643 + _0x2ff6d7;
             },
             'eneKZ': wanzikun_0x58c9('0x2d')
@@ -187,7 +193,7 @@ Page({
                     'kjid': _0x3fa4cc,
                     'token': wanzikun_0x54cd32['globalData'][wanzikun_0x58c9('0x1d')]
                 },
-                'success': function (_0x286356) {
+                'success': function(_0x286356) {
                     if (_0x286356[wanzikun_0x58c9('0x11')][wanzikun_0x58c9('0xf')] == 0x0) {
                         _0x56fefa['push'](_0x286356[wanzikun_0x58c9('0x11')]['data']);
                         _0x1f5643[wanzikun_0x58c9('0xd')]({
@@ -198,15 +204,15 @@ Page({
             });
         }
     },
-    'kjhelp': function (_0x9790f6) {
+    'kjhelp': function(_0x9790f6) {
         var _0x27c31b = {
-            'PXCtY': function (_0x5b6f19, _0x26313f) {
+            'PXCtY': function(_0x5b6f19, _0x26313f) {
                 return _0x5b6f19 == _0x26313f;
             },
-            'qsVfZ': function (_0x4293fb, _0x1b07d1) {
+            'qsVfZ': function(_0x4293fb, _0x1b07d1) {
                 return _0x4293fb < _0x1b07d1;
             },
-            'BFvkQ': function (_0x5c88a3, _0xbf847e) {
+            'BFvkQ': function(_0x5c88a3, _0xbf847e) {
                 return _0x5c88a3 + _0xbf847e;
             },
             'ULYwp': wanzikun_0x58c9('0x0')
@@ -221,7 +227,7 @@ Page({
                     'token': wanzikun_0x54cd32[wanzikun_0x58c9('0x9')][wanzikun_0x58c9('0x1d')],
                     'joinerUser': wanzikun_0x54cd32['globalData'][wanzikun_0x58c9('0x1e')]
                 },
-                'success': function (_0x3ce794) {
+                'success': function(_0x3ce794) {
                     if (_0x27c31b[wanzikun_0x58c9('0x32')](_0x3ce794['data'][wanzikun_0x58c9('0xf')], 0x0)) {
                         _0x3e1ec5['gethelpkj'](_0x103888);
                         _0x3e1ec5[wanzikun_0x58c9('0x33')](_0x3ce794[wanzikun_0x58c9('0x11')]['data'][wanzikun_0x58c9('0x21')]);
@@ -230,9 +236,9 @@ Page({
             });
         }
     },
-    'gethelpkj': function (_0x51c606) {
+    'gethelpkj': function(_0x51c606) {
         var _0x2ba387 = {
-            'KiHxm': function (_0x134655, _0x18fc78) {
+            'KiHxm': function(_0x134655, _0x18fc78) {
                 return _0x134655 + _0x18fc78;
             },
             'KWdqL': wanzikun_0x58c9('0x34')
@@ -245,7 +251,7 @@ Page({
                 'kjid': _0x51c606,
                 'joiner': wanzikun_0x54cd32[wanzikun_0x58c9('0x9')][wanzikun_0x58c9('0x1e')]
             },
-            'success': function (_0x10a8df) {
+            'success': function(_0x10a8df) {
                 if (_0x10a8df[wanzikun_0x58c9('0x11')][wanzikun_0x58c9('0xf')] == 0x0) {
                     _0x133b5d[wanzikun_0x58c9('0x10')](_0x10a8df[wanzikun_0x58c9('0x11')][wanzikun_0x58c9('0x11')][wanzikun_0x58c9('0x12')]);
                     _0x33291c[wanzikun_0x58c9('0xd')]({
@@ -255,26 +261,26 @@ Page({
             }
         });
     },
-    'getgoods': function (_0x1319ed) {
+    'getgoods': function(_0x1319ed) {
         var _0x4ae10f = {
-            'ypdOU': function (_0x750913, _0x355148) {
+            'ypdOU': function(_0x750913, _0x355148) {
                 return _0x750913 == _0x355148;
             },
-            'OavAm': function (_0x391cf9, _0x2123c1) {
+            'OavAm': function(_0x391cf9, _0x2123c1) {
                 return _0x391cf9 + _0x2123c1;
             },
-            'jSuHP': function (_0x1ca9d5, _0x3ba2e0) {
+            'jSuHP': function(_0x1ca9d5, _0x3ba2e0) {
                 return _0x1ca9d5 + _0x3ba2e0;
             },
-            'QQCxO': function (_0x386314, _0x212e5e) {
+            'QQCxO': function(_0x386314, _0x212e5e) {
                 return _0x386314 + _0x212e5e;
             },
             'RWMKV': wanzikun_0x58c9('0x36'),
-            'Lrbwj': function (_0x385b21, _0xd24760) {
+            'Lrbwj': function(_0x385b21, _0xd24760) {
                 return _0x385b21 === _0xd24760;
             },
             'KOkLZ': wanzikun_0x58c9('0x37'),
-            'uFRqx': function (_0x353ca7, _0x5598ef) {
+            'uFRqx': function(_0x353ca7, _0x5598ef) {
                 return _0x353ca7 !== _0x5598ef;
             },
             'nLPeV': wanzikun_0x58c9('0x38'),
@@ -287,9 +293,9 @@ Page({
             'data': {
                 'id': _0x1319ed
             },
-            'success': function (_0x402501) {
+            'success': function(_0x402501) {
                 var _0x19c164 = {
-                    'GruUM': function (_0xc278f0, _0x55c92e) {
+                    'GruUM': function(_0xc278f0, _0x55c92e) {
                         return _0xc278f0 == _0x55c92e;
                     }
                 };
@@ -325,17 +331,17 @@ Page({
             }
         });
     },
-    'gethelpid': function (_0x114beb) {
+    'gethelpid': function(_0x114beb) {
         var _0x27262d = {
-            'UfnSP': function (_0x532d30, _0x290da9) {
+            'UfnSP': function(_0x532d30, _0x290da9) {
                 return _0x532d30 + _0x290da9;
             },
-            'NWnIP': function (_0x79837f, _0x559ddc) {
+            'NWnIP': function(_0x79837f, _0x559ddc) {
                 return _0x79837f !== _0x559ddc;
             },
             'BtSDW': wanzikun_0x58c9('0x4a'),
             'wSiJO': wanzikun_0x58c9('0x4b'),
-            'vLUhC': function (_0x471763, _0x32c3ad) {
+            'vLUhC': function(_0x471763, _0x32c3ad) {
                 return _0x471763 == _0x32c3ad;
             }
         };
@@ -346,12 +352,12 @@ Page({
             'data': {
                 'id': _0x114beb
             },
-            'success': function (_0x262fd8) {
+            'success': function(_0x262fd8) {
                 var _0x368436 = {
-                    'Bajza': function (_0x3cc7ae, _0x3ba9c6) {
+                    'Bajza': function(_0x3cc7ae, _0x3ba9c6) {
                         return _0x3cc7ae == _0x3ba9c6;
                     },
-                    'OjQfb': function (_0x486090, _0x466d51) {
+                    'OjQfb': function(_0x486090, _0x466d51) {
                         return _0x27262d[wanzikun_0x58c9('0x4c')](_0x486090, _0x466d51);
                     }
                 };
@@ -370,7 +376,7 @@ Page({
                         'data': {
                             'id': _0x114beb
                         },
-                        'success': function (_0x5ef2eb) {
+                        'success': function(_0x5ef2eb) {
                             if (_0x368436[wanzikun_0x58c9('0x50')](_0x5ef2eb[wanzikun_0x58c9('0x11')][wanzikun_0x58c9('0xf')], 0x0)) {
                                 _0x36bf6d[_0x114beb] = _0x5ef2eb['data'][wanzikun_0x58c9('0x11')][wanzikun_0x58c9('0x48')];
                                 _0x3e4a8d['setData']({
@@ -420,7 +426,7 @@ Page({
     //         }
     //     });
     // },
-    'tabFun': function (_0x145b6d) {
+    'tabFun': function(_0x145b6d) {
         var _0x1f2a30 = wanzikun_0x58c9('0x5a')[wanzikun_0x58c9('0x5b')]('|'),
             _0x3f7c3a = 0x0;
         while (!![]) {

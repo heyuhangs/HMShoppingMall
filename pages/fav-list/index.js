@@ -47,9 +47,16 @@ Page({
             url: app.globalData.url + `userImpl/childDLUser?USER_ID=${app.globalData.userInfo.USER_ID}&SALE_MONTH=${self.data.date}`,
             method: "GET",
             success: function(res) {
-                if (res.statusCode == 200) {
+                debugger
+                if (res.data.result != 'error') {
                     self.setData({
                         childList: res.data.childList
+                    })
+                } else {
+                    wx.showToast({
+                        title: '系统繁忙',
+                        icon: 'none',
+                        duration: 2000
                     })
                 }
                 wx.hideLoading({});

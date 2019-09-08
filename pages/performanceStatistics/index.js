@@ -42,8 +42,7 @@ Page({
             url: app.globalData.url + url,
             method: "get",
             success: function(res) {
-                debugger
-                if (res.statusCode == 200) {
+                if (res.data.result != 'error') {
                     if (status == 0) {
                         self.setData({
                             list: res.data.salepd
@@ -54,6 +53,12 @@ Page({
                         })
 
                     }
+                } else {
+                    wx.showToast({
+                        title: '系统繁忙',
+                        icon: 'none',
+                        duration: 2000
+                    })
                 }
                 wx.hideLoading({});
             }

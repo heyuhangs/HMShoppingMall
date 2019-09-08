@@ -40,7 +40,7 @@ Page({
         let stu = 0;
         if (!e.currentType) {
             stu = 1;
-        }else{
+        } else {
             stu = parseInt(e.currentType) + 1;
         }
         this.setData({
@@ -120,7 +120,7 @@ Page({
             url: app.globalData.url + `/orderImpl/editOrder?USER_ID=${this.data.cancelId}&ORDER_CODE=${this.data.cancelOId}&ORDER_STATUS=2`,
             method: "GET",
             success: function(res) {
-                if (res.statusCode == 200) {
+                if (res.data.result != 'error') {
                     wx.showToast({
                         title: '订单取消成功!',
                         icon: 'none',
@@ -130,6 +130,12 @@ Page({
                         isCancel: false
                     })
                     self.getData();
+                } else {
+                    wx.showToast({
+                        title: '系统繁忙',
+                        icon: 'none',
+                        duration: 2000
+                    })
                 }
                 wx.hideLoading();
             }

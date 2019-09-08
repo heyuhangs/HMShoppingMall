@@ -47,9 +47,15 @@ Page({
             url: app.globalData.url + `/userImpl/childUser?USER_ID=${app.globalData.userInfo.USER_ID}&LEVEL=&keywords=`,
             method: "get",
             success: function(res) {
-                if (res.statusCode == 200) {
+                if (res.data.result != 'error') {
                     self.setData({
                         list: res.data.childList
+                    })
+                } else {
+                    wx.showToast({
+                        title: '系统繁忙',
+                        icon: 'none',
+                        duration: 2000
                     })
                 }
                 wx.hideLoading({});
