@@ -7,10 +7,18 @@
     </view>
     <view class="tab-container">
         <view class="tab-item-list">
-                <i-input value="{{ value1 }}" title="收货人" autofocus placeholder="名字"/>
-                <i-input value="{{ value2 }}" type="number" title="联系电话" placeholder="请输入手机号"/>
-                <i-input value="{{ value3 }}" type="textarea" title="详细地址" placeholder="请输入详细地址(最多50字)" maxlength="50"/>
-                <i-input value="{{ value4 }}" title="用户信息" disabled/>
+            <i-cell>
+                <text class="i-cell-text i-cell-leftTrxt" style="line-height: 120rpx;">头像</text>
+                <open-data class="i-cell-rightTrxt userinfo-avatar" type="userAvatarUrl" lang="zh_CN"></open-data>
+            </i-cell>
+            <i-cell class="list-text">
+                <text class="i-cell-text i-cell-leftTrxt">名字</text>
+                <open-data class="i-cell-text i-cell-rightTrxt userinfo-nickname" type="userNickName"></open-data>
+            </i-cell>
+<!--            <i-input value="{{ value1 }}" title="收货人" autofocus placeholder="名字"/>-->
+<!--            <i-input value="{{ value2 }}" type="number" title="联系电话" placeholder="请输入手机号"/>-->
+<!--            <i-input value="{{ value3 }}" type="textarea" title="详细地址" placeholder="请输入详细地址(最多50字)" maxlength="50"/>-->
+<!--            <i-input value="{{ value4 }}" title="用户信息" disabled/>-->
         </view>
     </view>
 </view>

@@ -14,7 +14,28 @@ page {
 .header-container {
     background-color: #fff;
 }
-
+.i-cell-text{
+    float: left;
+}
+.i-input-title {
+    color: #000;
+}
+.i-cell-rightTrxt{
+    float: right;
+    overflow: hidden;
+    display: inline-block;
+}
+.userinfo-avatar{
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 5px;
+}
+.i-cell-leftTrxt{
+    float: left;
+}
+.list-text{
+    box-sizing: border-box;
+}
 .iphone {
     margin-top: 180rpx;
 }

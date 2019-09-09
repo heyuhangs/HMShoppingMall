@@ -14,6 +14,10 @@ page {
   justify-content: space-between;
   box-sizing: border-box;
 }
+.userinfo-avatar{
+  width: 160rpx;
+  height: 160rpx;
+}
 
 .userinfo {
   background: #fff;
