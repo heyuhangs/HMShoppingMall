@@ -387,15 +387,23 @@
 .goods-container {
   width: 100%;
   float: left;
-  margin-bottom: 20rpx;
+  /*margin-bottom: 20rpx;*/
+  border-bottom: 20rpx solid #f5f5f5;
 }
 
 .goods-container .goods-title {
+  /*text-align: center;*/
+  /*height: 90rpx;*/
+  /*line-height: 90rpx;*/
+  /*color: #333;*/
+  /*font-size: 32rpx;*/
   text-align: center;
-  height: 90rpx;
-  line-height: 90rpx;
+  height: 80rpx;
+  line-height: 80rpx;
   color: #333;
   font-size: 32rpx;
+  border-bottom: 1px solid #f5f5f5;
+  margin-bottom: 20rpx;
 }
 
 .goods-container .goods-title image {

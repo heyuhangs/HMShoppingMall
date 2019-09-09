@@ -45,7 +45,6 @@ Page({
             success: function(res) {
                 if (res.statusCode == 200) {
                     const list = res.data.list;
-                    debugger
                     const data = list.concat(self.data.list);
                     self.setData({
                         list: data,
@@ -61,7 +60,6 @@ Page({
         const totalCount = this.data.totalCount;
         p++;
         const count = p * 10;
-        debugger
         if (count % totalCount == count) {
             return false;
         }

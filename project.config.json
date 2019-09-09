@@ -50,8 +50,8 @@
 			"list": [
 				{
 					"id": 0,
-					"name": "权限",
-					"pathName": "pages/vipList/index",
+					"name": "pages/personalInformation/index",
+					"pathName": "pages/personalInformation/index",
 					"query": "",
 					"scene": null
 				},

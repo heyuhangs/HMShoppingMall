@@ -1,4 +1,6 @@
 {
-    "navigationBarTitleText": "个人中心",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "white",
+    "usingComponents": {
+        "i-input": "../../dist/input/index"
+    }
 }

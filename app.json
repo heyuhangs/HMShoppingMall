@@ -36,7 +36,9 @@
                 "pages/bulletinList/index",
                 "pages/vipList/index",
                 "pages/capitalMovements/index",
-                "pages/performanceStatistics/index"
+                "pages/performanceStatistics/index",
+                "pages/goods-list/index",
+                "pages/personalInformation/index"
         ],
         "window": {
                 "backgroundTextStyle": "light",

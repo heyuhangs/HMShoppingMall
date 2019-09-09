@@ -51,6 +51,7 @@ Page({
                     self.setData({
                         list: res.data.childList
                     })
+                    wx.hideLoading({});
                 } else {
                     wx.showToast({
                         title: '系统繁忙',
@@ -58,7 +59,7 @@ Page({
                         duration: 2000
                     })
                 }
-                wx.hideLoading({});
+            },complete(res) {
             }
         })
     },

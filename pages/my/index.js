@@ -454,6 +454,15 @@ Page({
             'url': _0x1bc935['tfapv']
         });
     },
+    geren: function(){
+        debugger
+        var _0x1bc935 = {
+            'tfapv': '/pages/personalInformation/index'
+        };
+        wx['navigateTo']({
+            'url': _0x1bc935['tfapv']
+        });
+    },
     yjlist: function () {
         var _0x1bc935 = {
             'tfapv': '/pages/performanceStatistics/index'

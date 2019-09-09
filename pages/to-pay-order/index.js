@@ -351,7 +351,6 @@ Page({
             payType: status,
             vipSaveOrderList: orderGoodsList
         }
-        debugger
         wx.request({
             url: app.globalData.url + `orderImpl/beforePayCheckVIP`,
             method: "POST",

@@ -68,12 +68,18 @@ Page({
             url: app.globalData.url + `/orderImpl/orderList?USER_ID=${app.globalData.userInfo.USER_ID}&STATUS=${this.data.currentInd}`,
             method: "GET",
             success: function(res) {
-                if (res.statusCode == 200) {
+                if (res.data.result != 'error') {
                     self.setData({
                         orderList: res.data.orderList
                     })
+                    wx.hideLoading();
+                } else {
+                    wx.showToast({
+                        title: '系统繁忙',
+                        icon: 'none',
+                        duration: 2000
+                    })
                 }
-                wx.hideLoading();
             }
         })
     },
@@ -129,6 +135,7 @@ Page({
                     self.setData({
                         isCancel: false
                     })
+                    wx.hideLoading();
                     self.getData();
                 } else {
                     wx.showToast({
@@ -137,7 +144,7 @@ Page({
                         duration: 2000
                     })
                 }
-                wx.hideLoading();
+            }, complete(res) {
             }
         })
     },
