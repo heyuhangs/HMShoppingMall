@@ -19,16 +19,13 @@ Page({
     'data': {
         isCancel: false,
         status: false,
-        'statusType': ['待付款', '待发货', '已完成', '已取消'],
+        'statusType': ['待付款', '已发货', '已完成', '已取消'],
         'currentType': 0,
         'tabClass': ['', '', '', '', ''],
-        orderList: [
-            { dateAdd: '2018-09-09', status: 1, statusStr: 'xiangqing', orderNumber: '12312312312', remark: 'beuzhu' }
-        ],
+        orderList: [],
         url: ''
     },
     'statusTap': function(e) {
-
         this.setData({
             currentType: e.currentTarget.dataset.index,
             currentInd: parseInt(e.currentTarget.dataset.index) + 1
@@ -36,36 +33,46 @@ Page({
         this.getData();
     },
     onLoad: function(e) {
-        wx.showLoading({});
-        let stu = 0;
-        if (!e.currentType) {
-            stu = 1;
-        } else {
-            stu = parseInt(e.currentType) + 1;
-        }
         this.setData({
             url: app.globalData.imgUrl
         })
-        if (e.status) {
+        if (e.currentType) {
+            let status = 0;
+            switch (e.currentType) {
+                case "1":
+                    status = 1;
+                    break;
+                case "2":
+                    status = 3;
+                    break;
+                case "3":
+                    status = 2;
+                    break;
+            }
             this.setData({
-                status: e.status,
+                status: status,
                 currentType: e.currentType,
-                currentInd: stu
+                currentInd: status
             })
         } else {
             this.setData({
                 currentType: e.currentType,
-                currentInd: stu
+                currentInd: 0
             })
         }
-        wx.hideLoading();
         this.getData();
     },
     getData() {
         const self = this;
         wx.showLoading({});
+        let url = '';
+        if (this.data.currentInd == 0) {
+            url = app.globalData.url + `/orderImpl/orderList?USER_ID=${app.globalData.userInfo.USER_ID}&PAY_STATUS=1&ORDER_STATUS=`
+        } else {
+            url = app.globalData.url + `/orderImpl/orderList?USER_ID=${app.globalData.userInfo.USER_ID}&ORDER_STATUS=${this.data.currentInd}&PAY_STATUS=0`
+        }
         wx.request({
-            url: app.globalData.url + `/orderImpl/orderList?USER_ID=${app.globalData.userInfo.USER_ID}&STATUS=${this.data.currentInd}`,
+            url: url,
             method: "GET",
             success: function(res) {
                 if (res.data.result != 'error') {

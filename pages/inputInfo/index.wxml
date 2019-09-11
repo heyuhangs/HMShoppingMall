@@ -1,0 +1,24 @@
+<view class="container iphone">
+    <view class="header-container">
+        <navigator open-type="navigateBack" delta="1" hover-class="navigator-hover">
+            <image class="goback" src="../../images/goback.png"/>
+        </navigator>
+        <view class="header-name">{{title}}</view>
+    </view>
+    <view class="main">
+        <i-panel wx:if="{{status == 1}}">
+            <i-input maxlength="11" bind:change="changPhone" bind:blur="phoneChange" error="{{PHONEErr}}" data-value="{{val}}" value="{{ PHONE }}" title="手机号"
+                     placeholder="请输入手机号"/>
+            <view class="tel">
+                <i-input maxlength="20" i-class="telInp" bind:change="yzmChange" value="{{ yzmVal }}" title="验证码"
+                         placeholder="请输入验证码"/>
+                <i-button i-class="telBtn" bind:click="getCAPTCHA" type="primary" disabled="{{isyzm}}">{{yzm}}
+                </i-button>
+            </view>
+        </i-panel>
+        <i-panel wx:else>
+            <i-input maxlength="40" bind:change="changBankCode" value="{{ BANKCODE }}" type="number" title="银行卡" placeholder="请输入银行卡号"/>
+        </i-panel>
+        <i-button i-class='formbtn' bind:click="handleClick">确定</i-button>
+    </view>
+</view>

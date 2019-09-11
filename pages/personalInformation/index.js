@@ -16,10 +16,66 @@ const wanzikun_0x54cd32 = getApp();
 const app = getApp();
 Page({
     data: {
-
+        parUser: null,
+        user: null
     },
-    onLoad: function() {
+    onLoad: function(e) {
+        this.getUserData(e.userId)
+        // if (e.BANKCODE) {
+        //
+        // }
+        // if (e.PHONE) {
+        //
+        // }
+    },
+    getUserData: function(id) {
         const self = this;
-
+        wx.showLoading({
+            mask: true
+        })
+        wx.request({
+            url: app.globalData.url + `userImpl/userInfo?USER_ID=${id}`,
+            method: "get",
+            success: function(res) {
+                if (res.statusCode == 200) {
+                    app.globalData.userInfo = res.data.user;
+                    self.setData({
+                        user: res.data.user
+                    })
+                }
+                self.getParData();
+                wx.hideLoading({});
+            }
+        });
     },
+    getParData: function() {
+        const self = this;
+        wx.request({
+            url: app.globalData.url + `userImpl/userInfo?USER_ID=${self.data.user.PAR_ID}`,
+            method: "get",
+            success: function(res) {
+                if (res.statusCode == 200) {
+                    self.setData({
+                        parUser: res.data.user
+                    })
+                }
+            }
+        });
+    },
+    inputVal: function(e) {
+        let title = ''
+        let status = 0
+        let val = ''
+        if (e.currentTarget.dataset.id == 'BANKCODE') {
+            title = '更换银行卡号'
+            val = this.data.user.BANKCODE
+        } else {
+            title = '更换手机号'
+            status = 1
+            val = this.data.user.PHONE
+        }
+        wx.navigateTo({
+            url: `/pages/inputInfo/index?title=${title}&status=${status}&val=${val}`
+        })
+    }
 });

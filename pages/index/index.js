@@ -1638,7 +1638,7 @@ Page({
     },
     onjiangjin: function() {
         wx.navigateTo({
-            url: '/pages/kanjia-list/index'
+            url: '/pages/my-kanjia/index'
         })
     },
     onBulletin: function() {

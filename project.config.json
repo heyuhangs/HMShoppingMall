@@ -52,7 +52,7 @@
 					"id": 0,
 					"name": "pages/personalInformation/index",
 					"pathName": "pages/personalInformation/index",
-					"query": "",
+					"query": "userId=18",
 					"scene": null
 				},
 				{
@@ -63,9 +63,9 @@
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "分类",
-					"pathName": "pages/menu/index",
+					"id": 2,
+					"name": "订单",
+					"pathName": "pages/order-list/index",
 					"query": "",
 					"scene": null
 				},

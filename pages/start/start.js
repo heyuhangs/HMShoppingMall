@@ -1,13 +1,13 @@
 var wanzikun_0x39de = ['WjNYi', 'gbyVf', 'EkwWm', 'JefPz', 'dwINl', 'code', 'second', 'data', 'home', 'WjCSa', 'ZWXUt', 'zZRlu', 'switchTab', 'TKDhz', 'setData', '../index/index', 'FHlvL', '/pages/goods-details/index?id=', 'kleSE', 'currentTarget', 'dataset', 'PWKvl', 'Fdavb', 'mBHgL', 'redirectTo', 'fOMiM', 'sGCTK', 'fmxsh', 'JKOFV', 'mallName', 'start', 'Vxzia', 'request', 'globalData'];
-(function (_0x2144b9, _0x3f25e4) {
-    var _0x3aace5 = function (_0x56ce83) {
+(function(_0x2144b9, _0x3f25e4) {
+    var _0x3aace5 = function(_0x56ce83) {
         while (--_0x56ce83) {
             _0x2144b9['push'](_0x2144b9['shift']());
         }
     };
     _0x3aace5(++_0x3f25e4);
 }(wanzikun_0x39de, 0x116));
-var wanzikun_0x3fe9 = function (_0x414709, _0x3df5b1) {
+var wanzikun_0x3fe9 = function(_0x414709, _0x3df5b1) {
     _0x414709 = _0x414709 - 0x0;
     var _0x2fafed = wanzikun_0x39de[_0x414709];
     return _0x2fafed;
@@ -19,13 +19,13 @@ const app = getApp();
 function wanzikun_0x4a9cec(_0x16ae00) {
     var _0x2751c4 = {
         'TKDhz': '../index/index',
-        'WTdgq': function (_0x459152, _0xad196) {
+        'WTdgq': function(_0x459152, _0xad196) {
             return _0x459152(_0xad196);
         },
-        'WjCSa': function (_0x55ea7e, _0x14083f) {
+        'WjCSa': function(_0x55ea7e, _0x14083f) {
             return _0x55ea7e == _0x14083f;
         },
-        'ZWXUt': function (_0x551a41, _0x34bd35) {
+        'ZWXUt': function(_0x551a41, _0x34bd35) {
             return _0x551a41 === _0x34bd35;
         },
         'zZRlu': 'FNdzm'
@@ -53,7 +53,7 @@ function wanzikun_0x4a9cec(_0x16ae00) {
             }
         }
     }
-    var _0x8e69bb = setTimeout(function () {
+    var _0x8e69bb = setTimeout(function() {
         _0x16ae00[wanzikun_0x3fe9('0x8')]({
             'second': _0x13ba76 - 0x1
         });
@@ -81,7 +81,7 @@ Page({
             "userId": 797
         }]
     },
-    'home': function () {
+    'home': function() {
         this[wanzikun_0x3fe9('0x8')]({
             'home': 0x1
         });
@@ -97,7 +97,7 @@ Page({
         }
 
     },
-    onLoad: function (options) {
+    onLoad: function(options) {
         const self = this;
         const userKey = wx.getStorageSync('userKey');
         // const userKey = 2;
@@ -105,20 +105,26 @@ Page({
             wx.request({
                 url: app.globalData.url + `userImpl/userInfo?USER_ID=${userKey}`,
                 method: "get",
-                success: function (res) {
-                    if (res.statusCode == 200) {
+                success: function(res) {
+                    if (res.data.result != 'error') {
                         app.globalData.userInfo = res.data.user;
                         app.globalData.wxUser = {
                             WX_IMG: res.data.user.WX_IMG,
                             WX_NICKNAME: res.data.user.WX_NICKNAME,
                             openid: res.data.user.OPEN_ID
                         }
+                    } else {
+                        wx.showToast({
+                            title: '获取失败无法登陆!',
+                            icon: 'none',
+                            duration: 2000
+                        })
+                        return false
                     }
                 }
             });
         } else {
             app.getUserInfo().then(res => {
-
             });
         }
         //获取推荐人信息
@@ -126,11 +132,11 @@ Page({
             app.globalData.payId = options.PAR_ID;
         }
         var _0x19fa02 = {
-            'JefPz': function (_0x404048, _0x1a0c63) {
+            'JefPz': function(_0x404048, _0x1a0c63) {
                 return _0x404048 == _0x1a0c63;
             },
             'dwINl': 'VUGMU',
-            'Vxzia': function (_0x18da9a, _0x269348) {
+            'Vxzia': function(_0x18da9a, _0x269348) {
                 return _0x18da9a(_0x269348);
             },
             'WjNYi': '/banner/list',

@@ -1,13 +1,13 @@
 var wanzikun_0xed31 = ['ppZik', 'vNfYk', 'VKzBi', 'EdxtX', 'WqTtL', 'mallinfo', '/score/today-signed', 'kLZgd', 'vmNLE', 'oiVMO', 'dNClU', 'vzYHF', 'cSRdp', 'KeJBe', 'NHwwn', 'rBvrY', 'showModal', 'msg', '/score/sign', 'voYte', 'rQBwc', 'OlyWP', '重新登陆成功', 'SulBM', 'PXtEW', 'login', 'DPdAI', 'confirm', 'IoOQd', 'VPjXa', 'ZMHMd', '/pages/withdraw/index', '/pages/score/index', 'ziKEN', '/pages/my-kanjia/index', '/pages/mycoupons/index', 'wgpob', 'uwQDa', 'currentTarget', 'dataset', 'index', 'navigateTo', 'NLwEV', '/pages/order-list/index?currentType=', 'GQPmD', 'getUserApiInfo', 'getUserAmount', 'checkScoreSign', 'getInfo', 'request', 'gYdDb', 'globalData', 'urls', 'tXTBt', 'jZCPJ', 'WymxO', 'onShow', 'RpLpV', 'data', '/pages/select-address/index', 'PfNSD', 'XrARc', 'OMgVt', 'MkqLz', 'fStCN', '/order/statistics', 'shopCarInfo', 'TskIh', 'token', 'BPEDm', 'RmNKh', 'code', 'count_id_no_pay', 'setTabBarBadge', 'WmmZQ', 'removeTabBarBadge', 'setData', 'count_id_no_transfer', 'count_id_no_confirm', 'count_id_no_reputation', 'balance', 'freeze', 'score', 'getStorage', 'wBnKU', 'EXUZs', 'wHVWB', 'ZnCrY', 'nFVba', 'bYeNV', 'shopNum', 'iKOjL', 'RBtNk', 'EFFEV', 'NTKEM', 'okMYf', 'dYUXs', 'nejFP', '/user/detail', 'hKRAo', 'OhUhJ', 'zAzyc', 'dJkqn', 'XNFfV', 'SOFbw', 'XAyuv', 'ojIVr', 'rRqLA', 'fKchH', 'continuous', 'nEsyg', '/user/amount', 'IgAAe', 'QGUEd', 'Jvdhb', 'cPlQC'];
-(function (_0x2bde96, _0x47cebf) {
-    var _0x4a3205 = function (_0x4e29a9) {
+(function(_0x2bde96, _0x47cebf) {
+    var _0x4a3205 = function(_0x4e29a9) {
         while (--_0x4e29a9) {
             _0x2bde96['push'](_0x2bde96['shift']());
         }
     };
     _0x4a3205(++_0x47cebf);
 }(wanzikun_0xed31, 0x9a));
-var wanzikun_0x42d0 = function (_0x4116aa, _0x5a522b) {
+var wanzikun_0x42d0 = function(_0x4116aa, _0x5a522b) {
     _0x4116aa = _0x4116aa - 0x0;
     var _0x1e0951 = wanzikun_0xed31[_0x4116aa];
     return _0x1e0951;
@@ -23,11 +23,11 @@ Page({
         'score_sign_continuous': 0x0,
         'tabClass': ['', '', '', '', ''],
         user: {},
-        salepd:{}
+        salepd: {}
     },
-    isMembership: function () {
+    isMembership: function() {
         const self = this;
-        return new Promise(function (resolve, reject) {
+        return new Promise(function(resolve, reject) {
             if (!app.globalData.userInfo.PHONE || app.globalData.userInfo.PHONE == '') {
                 self.setData({
                     isMemberShipStatus: false
@@ -38,12 +38,12 @@ Page({
             }
         })
     },
-    confirmMemberShip: function () {
+    confirmMemberShip: function() {
         wx.redirectTo({
             url: '/pages/register/register',
         });
     },
-    onLoad: function () {
+    onLoad: function() {
         const self = this;
         self.isMembership().then(res => {
             if (res == 200) {
@@ -53,7 +53,7 @@ Page({
         wx.request({
             url: app.globalData.url + `/userImpl/userInfo?USER_ID=${app.globalData.userInfo.USER_ID}`,
             method: "GET",
-            success: function (res) {
+            success: function(res) {
                 if (res.statusCode == 200) {
                     self.setData({
                         user: res.data.user
@@ -64,7 +64,7 @@ Page({
         wx.request({
             url: app.globalData.url + `userImpl/vipSale?USER_ID=${app.globalData.userInfo.USER_ID}`,
             method: "GET",
-            success: function (res) {
+            success: function(res) {
                 if (res.statusCode == 200) {
                     self.setData({
                         salepd: res.data.salepd
@@ -74,9 +74,9 @@ Page({
         })
     },
     // isMemberShipStatus
-    isMembership: function () {
+    isMembership: function() {
         const self = this;
-        return new Promise(function (resolve, reject) {
+        return new Promise(function(resolve, reject) {
             if (app.globalData.userInfo.PHONE == '' || app.globalData.userInfo.PHONE == null) {
                 self.setData({
                     isMemberShipStatus: false,
@@ -90,7 +90,7 @@ Page({
     },
     'goorderlist'(_0x4ed87b) {
         var _0x1f5978 = {
-            'NLwEV': function (_0x1768e4, _0xaa680f) {
+            'NLwEV': function(_0x1768e4, _0xaa680f) {
                 return _0x1768e4 + _0xaa680f;
             }
         };
@@ -104,24 +104,24 @@ Page({
             url: '/pages/newcoupons/index'
         })
     },
-    'getUserApiInfo': function () {
+    'getUserApiInfo': function() {
         var _0x83412c = {
-            'zAzyc': function (_0x5d545c, _0x5264b8) {
+            'zAzyc': function(_0x5d545c, _0x5264b8) {
                 return _0x5d545c == _0x5264b8;
             },
-            'ojIVr': function (_0x585308, _0x112621) {
+            'ojIVr': function(_0x585308, _0x112621) {
                 return _0x585308 + _0x112621;
             },
             'dJkqn': wanzikun_0x42d0('0x3a'),
-            'XNFfV': function (_0x25bb57, _0x5f2a26) {
+            'XNFfV': function(_0x25bb57, _0x5f2a26) {
                 return _0x25bb57 == _0x5f2a26;
             },
-            'Zswnk': function (_0x312775, _0xb967a9) {
+            'Zswnk': function(_0x312775, _0xb967a9) {
                 return _0x312775 !== _0xb967a9;
             },
             'SOFbw': wanzikun_0x42d0('0x3b'),
             'XAyuv': 'LthGH',
-            'hKRAo': function (_0x160727, _0x54a31e) {
+            'hKRAo': function(_0x160727, _0x54a31e) {
                 return _0x160727 + _0x54a31e;
             },
             'OhUhJ': wanzikun_0x42d0('0x3c')
@@ -132,9 +132,9 @@ Page({
             'data': {
                 'token': wanzikun_0x10e85e[wanzikun_0x42d0('0xd')][wanzikun_0x42d0('0x1e')]
             },
-            'success': function (_0x2ebf40) {
+            'success': function(_0x2ebf40) {
                 var _0x3584c5 = {
-                    'fKchH': function (_0x1a6af5, _0x114fc5) {
+                    'fKchH': function(_0x1a6af5, _0x114fc5) {
                         return _0x83412c[wanzikun_0x42d0('0x3f')](_0x1a6af5, _0x114fc5);
                     }
                 };
@@ -146,7 +146,7 @@ Page({
                             });
                         } else {
                             var _0x2a980f = {
-                                'rRqLA': function (_0x58373c, _0x15620d) {
+                                'rRqLA': function(_0x58373c, _0x15620d) {
                                     return _0x83412c[wanzikun_0x42d0('0x3f')](_0x58373c, _0x15620d);
                                 }
                             };
@@ -156,7 +156,7 @@ Page({
                                 'data': {
                                     'token': wanzikun_0x10e85e[wanzikun_0x42d0('0xd')][wanzikun_0x42d0('0x1e')]
                                 },
-                                'success': function (_0x2a8de0) {
+                                'success': function(_0x2a8de0) {
                                     if (_0x2a980f[wanzikun_0x42d0('0x45')](_0x2a8de0['data'][wanzikun_0x42d0('0x21')], 0x0)) {
                                         _0x21cd52[wanzikun_0x42d0('0x26')]({
                                             'balance': _0x2a8de0[wanzikun_0x42d0('0x14')][wanzikun_0x42d0('0x14')][wanzikun_0x42d0('0x2a')],
@@ -178,18 +178,18 @@ Page({
             }
         });
     },
-    'getUserAmount': function () {
+    'getUserAmount': function() {
         var _0x46f2ac = {
-            'QGUEd': function (_0x446e22, _0x329246) {
+            'QGUEd': function(_0x446e22, _0x329246) {
                 return _0x446e22 == _0x329246;
             },
-            'Jvdhb': function (_0x1f4740, _0x5e1a01) {
+            'Jvdhb': function(_0x1f4740, _0x5e1a01) {
                 return _0x1f4740 > _0x5e1a01;
             },
-            'cPlQC': function (_0x3703c2, _0x60c110) {
+            'cPlQC': function(_0x3703c2, _0x60c110) {
                 return _0x3703c2 + _0x60c110;
             },
-            'nSAcT': function (_0x22c814, _0x51aaa2) {
+            'nSAcT': function(_0x22c814, _0x51aaa2) {
                 return _0x22c814 !== _0x51aaa2;
             },
             'ppZik': wanzikun_0x42d0('0x48'),
@@ -201,18 +201,18 @@ Page({
             'data': {
                 'token': wanzikun_0x10e85e[wanzikun_0x42d0('0xd')][wanzikun_0x42d0('0x1e')]
             },
-            'success': function (_0x203c48) {
+            'success': function(_0x203c48) {
                 var _0x23d6c1 = {
-                    'SaQrI': function (_0x40f326, _0x127605) {
+                    'SaQrI': function(_0x40f326, _0x127605) {
                         return _0x46f2ac[wanzikun_0x42d0('0x4b')](_0x40f326, _0x127605);
                     },
-                    'vNfYk': function (_0x3f31af, _0x558d70) {
+                    'vNfYk': function(_0x3f31af, _0x558d70) {
                         return _0x46f2ac[wanzikun_0x42d0('0x4c')](_0x3f31af, _0x558d70);
                     },
-                    'VKzBi': function (_0x312a5f, _0x57230f) {
+                    'VKzBi': function(_0x312a5f, _0x57230f) {
                         return _0x46f2ac[wanzikun_0x42d0('0x4d')](_0x312a5f, _0x57230f);
                     },
-                    'EdxtX': function (_0x4490f3, _0x107cba) {
+                    'EdxtX': function(_0x4490f3, _0x107cba) {
                         return _0x4490f3 + _0x107cba;
                     }
                 };
@@ -247,9 +247,9 @@ Page({
             }
         });
     },
-    'getInfo': function () {
+    'getInfo': function() {
         var _0x54b776 = {
-            'QUjFL': function (_0x4794e6, _0x183edc) {
+            'QUjFL': function(_0x4794e6, _0x183edc) {
                 return _0x4794e6 == _0x183edc;
             },
             'WqTtL': '/config/get-value'
@@ -260,7 +260,7 @@ Page({
             'data': {
                 'key': wanzikun_0x42d0('0x53')
             },
-            'success': function (_0x4690c3) {
+            'success': function(_0x4690c3) {
                 if (_0x54b776['QUjFL'](_0x4690c3[wanzikun_0x42d0('0x14')][wanzikun_0x42d0('0x21')], 0x0)) {
                     _0x51fba0[wanzikun_0x42d0('0x26')]({
                         'getInfo': _0x4690c3['data']['data']['value']
@@ -269,26 +269,26 @@ Page({
             }
         });
     },
-    'checkScoreSign': function () {
+    'checkScoreSign': function() {
         var _0x2fe160 = {
-            'dNClU': function (_0x820be7, _0x3ae88c) {
+            'dNClU': function(_0x820be7, _0x3ae88c) {
                 return _0x820be7 > _0x3ae88c;
             },
-            'vzYHF': function (_0x58ef19, _0x4fb233) {
+            'vzYHF': function(_0x58ef19, _0x4fb233) {
                 return _0x58ef19 + _0x4fb233;
             },
-            'vmNLE': function (_0x3469ef, _0x381909) {
+            'vmNLE': function(_0x3469ef, _0x381909) {
                 return _0x3469ef !== _0x381909;
             },
             'oiVMO': 'AsVlp',
-            'cSRdp': function (_0x3c8c25, _0x3fec93) {
+            'cSRdp': function(_0x3c8c25, _0x3fec93) {
                 return _0x3c8c25 == _0x3fec93;
             },
-            'KeJBe': function (_0x99b958, _0x1b640b) {
+            'KeJBe': function(_0x99b958, _0x1b640b) {
                 return _0x99b958 === _0x1b640b;
             },
             'NHwwn': 'SzCOk',
-            'OhKAW': function (_0xef72ab, _0x2db62b) {
+            'OhKAW': function(_0xef72ab, _0x2db62b) {
                 return _0xef72ab + _0x2db62b;
             },
             'kLZgd': wanzikun_0x42d0('0x54')
@@ -299,9 +299,9 @@ Page({
             'data': {
                 'token': wanzikun_0x10e85e[wanzikun_0x42d0('0xd')][wanzikun_0x42d0('0x1e')]
             },
-            'success': function (_0x2edc63) {
+            'success': function(_0x2edc63) {
                 var _0x4945fe = {
-                    'rBvrY': function (_0x4da568, _0x476e73) {
+                    'rBvrY': function(_0x4da568, _0x476e73) {
                         return _0x4da568 == _0x476e73;
                     }
                 };
@@ -345,12 +345,12 @@ Page({
             }
         });
     },
-    'scoresign': function () {
+    'scoresign': function() {
         var _0x1e1ea4 = {
-            'rQBwc': function (_0x120b09, _0xd09809) {
+            'rQBwc': function(_0x120b09, _0xd09809) {
                 return _0x120b09 == _0xd09809;
             },
-            'BJFFJ': function (_0x3e6e5e, _0x8bdd75) {
+            'BJFFJ': function(_0x3e6e5e, _0x8bdd75) {
                 return _0x3e6e5e + _0x8bdd75;
             },
             'voYte': wanzikun_0x42d0('0x60')
@@ -361,7 +361,7 @@ Page({
             'data': {
                 'token': wanzikun_0x10e85e[wanzikun_0x42d0('0xd')][wanzikun_0x42d0('0x1e')]
             },
-            'success': function (_0x3eeba8) {
+            'success': function(_0x3eeba8) {
                 if (_0x1e1ea4[wanzikun_0x42d0('0x62')](_0x3eeba8[wanzikun_0x42d0('0x14')]['code'], 0x0)) {
                     _0x5b4e86['getUserAmount']();
                     _0x5b4e86['checkScoreSign']();
@@ -375,10 +375,10 @@ Page({
             }
         });
     },
-    'relogin': function () {
+    'relogin': function() {
         var _0x2b4e0d = {
             'SulBM': wanzikun_0x42d0('0x63'),
-            'PXtEW': function (_0x32894e, _0xff04f) {
+            'PXtEW': function(_0x32894e, _0xff04f) {
                 return _0x32894e === _0xff04f;
             },
             'dWoAn': wanzikun_0x42d0('0x64'),
@@ -390,7 +390,7 @@ Page({
             'success'() {
                 var _0x5559d = {
                     'DPdAI': _0x2b4e0d[wanzikun_0x42d0('0x65')],
-                    'IoOQd': function (_0x3c31c7, _0xee8bb1) {
+                    'IoOQd': function(_0x3c31c7, _0xee8bb1) {
                         return _0x2b4e0d[wanzikun_0x42d0('0x66')](_0x3c31c7, _0xee8bb1);
                     }
                 };
@@ -400,7 +400,7 @@ Page({
                     'title': '提示',
                     'content': _0x2b4e0d['dWoAn'],
                     'showCancel': ![],
-                    'success': function (_0x7f994d) {
+                    'success': function(_0x7f994d) {
                         var _0x190825 = {
                             'VPjXa': wanzikun_0x42d0('0x64')
                         };
@@ -415,7 +415,7 @@ Page({
                                         'title': '提示',
                                         'content': _0x190825[wanzikun_0x42d0('0x6b')],
                                         'showCancel': ![],
-                                        'success': function (_0x151249) {
+                                        'success': function(_0x151249) {
                                             if (_0x151249['confirm']) {
                                                 _0x18ec2e[wanzikun_0x42d0('0x12')]();
                                             }
@@ -438,7 +438,7 @@ Page({
             }
         });
     },
-    'address': function () {
+    'address': function() {
         var _0x16ae19 = {
             'ZMHMd': '/pages/select-address/index'
         };
@@ -446,7 +446,7 @@ Page({
             'url': _0x16ae19[wanzikun_0x42d0('0x6c')]
         });
     },
-    myVipList: function () {
+    myVipList: function() {
         var _0x1bc935 = {
             'tfapv': '/pages/vipList/index'
         };
@@ -454,16 +454,15 @@ Page({
             'url': _0x1bc935['tfapv']
         });
     },
-    geren: function(){
-        debugger
+    geren: function() {
         var _0x1bc935 = {
-            'tfapv': '/pages/personalInformation/index'
+            'tfapv': '/pages/personalInformation/index?userId=' + this.data.user.USER_ID
         };
         wx['navigateTo']({
             'url': _0x1bc935['tfapv']
         });
     },
-    yjlist: function () {
+    yjlist: function() {
         var _0x1bc935 = {
             'tfapv': '/pages/performanceStatistics/index'
         };
@@ -471,7 +470,7 @@ Page({
             'url': _0x1bc935['tfapv']
         });
     },
-    'withdraw': function () {
+    'withdraw': function() {
         var _0x1bc935 = {
             'tfapv': wanzikun_0x42d0('0x6d')
         };
@@ -479,7 +478,7 @@ Page({
             'url': _0x1bc935['tfapv']
         });
     },
-    'score': function () {
+    'score': function() {
         var _0x42d8fe = {
             'ziKEN': wanzikun_0x42d0('0x6e')
         };
@@ -487,7 +486,7 @@ Page({
             'url': _0x42d8fe[wanzikun_0x42d0('0x6f')]
         });
     },
-    'mykanjia': function () {
+    'mykanjia': function() {
         var _0x2c653c = {
             'LdFxV': wanzikun_0x42d0('0x70')
         };
@@ -495,7 +494,7 @@ Page({
             'url': _0x2c653c['LdFxV']
         });
     },
-    capitalMovements: function () {
+    capitalMovements: function() {
         var _0x2c653c = {
             'LdFxV': '/pages/capitalMovements/index'
         };
@@ -503,7 +502,7 @@ Page({
             'url': _0x2c653c['LdFxV']
         });
     },
-    'mycoupons': function () {
+    'mycoupons': function() {
         var _0x32db71 = {
             'wgpob': wanzikun_0x42d0('0x71')
         };
@@ -511,7 +510,7 @@ Page({
             'url': _0x32db71[wanzikun_0x42d0('0x72')]
         });
     },
-    'favlist': function () {
+    'favlist': function() {
         var _0xec6078 = {
             'uwQDa': '/pages/fav-list/index'
         };

@@ -38,7 +38,8 @@
                 "pages/capitalMovements/index",
                 "pages/performanceStatistics/index",
                 "pages/goods-list/index",
-                "pages/personalInformation/index"
+                "pages/personalInformation/index",
+                "pages/inputInfo/index"
         ],
         "window": {
                 "backgroundTextStyle": "light",

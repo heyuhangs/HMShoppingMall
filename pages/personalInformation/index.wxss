@@ -33,8 +33,17 @@ page {
 .i-cell-leftTrxt{
     float: left;
 }
+.i-cell-rightTrxt image{
+    float: right;
+    box-sizing: border-box;
+    width: 28rpx;
+    height: 28rpx;
+    margin-top: 2%;
+    /*padding-left: 5%;*/
+}
 .list-text{
     box-sizing: border-box;
+    border-top: 1px solid #666;
 }
 .iphone {
     margin-top: 180rpx;
