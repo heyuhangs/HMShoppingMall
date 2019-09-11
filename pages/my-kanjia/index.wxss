@@ -7,7 +7,17 @@
   height: 100%;
   margin-top: 130rpx;
 }
-
+.selectDate{
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  color: #555;
+  /*height: 70rpx;*/
+  border: 1px solid #eee;
+  margin: 0 auto;
+  font-size: 28rpx;
+}
 .header-container {
   background-color: #fff;
 }

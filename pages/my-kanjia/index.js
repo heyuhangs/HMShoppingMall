@@ -28,14 +28,24 @@ Page({
         'helps': {},
         'statusType': ['会员奖金', '代理奖金'],
         currentType: 0,
-        page: 1
+        page: 1,
+        date: '2019-09-01'
     },
     onLoad: function() {
-        const self = this;
         const status = this.data.currentType;
+        this.getData(status)
+        //默认时间
+        // const date = self.doHandleDate();
+        // self.setData({
+        //     date: date
+        // });
+
+    },
+    getData: function(status) {
+        const self = this
         wx.showLoading({});
         wx.request({
-            url: app.globalData.url + `moneyImpl/moneyChangeList?DS_ROLE=${status}&USER_ID=${app.globalData.userInfo.USER_ID}&page=${this.data.page}&JJB_TYPE=&REASON_TYPE=2&MONEY_TYPE=1`,
+            url: app.globalData.url + `moneyImpl/moneyChangeList?DS_ROLE=${status}&USER_ID=${app.globalData.userInfo.USER_ID}&page=${self.data.page}&JJB_TYPE=&REASON_TYPE=2&MONEY_TYPE=1&START_TIME=${self.data.date}`,
             method: "get",
             success: function(res) {
                 if (res.data.result != 'error') {
@@ -50,9 +60,26 @@ Page({
                         duration: 2000
                     })
                 }
-            },complete(res) {
+            }, complete(res) {
             }
         })
+    },
+    // doHandleDate: function() {
+    //     var myDate = new Date();
+    //     var tYear = myDate.getFullYear();
+    //     var tMonth = myDate.getMonth();
+    //
+    //     var m = tMonth + 1;
+    //     if (m.toString().length == 1) {
+    //         m = "0" + m;
+    //     }
+    //     return tYear + '-' + m;
+    // },
+    getDateTime: function(e) {
+        this.setData({
+            date: e.detail.value
+        })
+        this.getData(0);
     },
     'statusTap': function(e) {
         // console.log(e.currentTarget.dataset.index)
@@ -62,118 +89,6 @@ Page({
         })
         this.onLoad();
     },
-    // 'onLoad' () {
-    //     var _0x16cc81 = {
-    //         'nxbAf': function(_0x34c894, _0x5cd125) {
-    //             return _0x34c894 == _0x5cd125;
-    //         },
-    //         'wAaLv': function(_0x2fffd2, _0x4587aa) {
-    //             return _0x2fffd2 == _0x4587aa;
-    //         },
-    //         'lhyKf': function(_0x3b9d39, _0x34dac9) {
-    //             return _0x3b9d39 + _0x34dac9;
-    //         },
-    //         'uJQPR': wanzikun_0x58c9('0x0'),
-    //         'gBUfw': function(_0x3341cb, _0x584cc2) {
-    //             return _0x3341cb == _0x584cc2;
-    //         },
-    //         'JaQXg': function(_0x45c31f, _0x5cc180) {
-    //             return _0x45c31f === _0x5cc180;
-    //         },
-    //         'lxVik': wanzikun_0x58c9('0x1'),
-    //         'ApRqi': wanzikun_0x58c9('0x2'),
-    //         'TeTmA': function(_0x4c6527, _0x357bdd) {
-    //             return _0x4c6527 > _0x357bdd;
-    //         },
-    //         'EauyR': function(_0x5ce265, _0x5b6a77) {
-    //             return _0x5ce265 === _0x5b6a77;
-    //         },
-    //         'qyQtU': wanzikun_0x58c9('0x3'),
-    //         'RKVkj': wanzikun_0x58c9('0x4'),
-    //         'EggGZ': function(_0x1731a6, _0x18b3ed) {
-    //             return _0x1731a6 == _0x18b3ed;
-    //         },
-    //         'DbdOt': function(_0x4db7a9, _0x452fde) {
-    //             return _0x4db7a9 !== _0x452fde;
-    //         },
-    //         'Mogdq': wanzikun_0x58c9('0x5'),
-    //         'JOzvZ': wanzikun_0x58c9('0x6'),
-    //         'vmIcy': wanzikun_0x58c9('0x7'),
-    //         'ZLLSw': function(_0x4954ce, _0x132fe7) {
-    //             return _0x4954ce + _0x132fe7;
-    //         }
-    //     };
-    //     var _0x213d11 = this;
-    //     if (_0x16cc81[wanzikun_0x58c9('0x8')](wanzikun_0x54cd32[wanzikun_0x58c9('0x9')][wanzikun_0x58c9('0x7')], !![])) {
-    //         if (_0x16cc81[wanzikun_0x58c9('0xa')](_0x16cc81[wanzikun_0x58c9('0xb')], _0x16cc81[wanzikun_0x58c9('0xc')])) {
-    //             _0x213d11[wanzikun_0x58c9('0xd')]({
-    //                 'iphone': _0x16cc81[wanzikun_0x58c9('0xe')]
-    //             });
-    //         } else {
-    //             if (_0x16cc81['nxbAf'](res['data'][wanzikun_0x58c9('0xf')], 0x0)) {
-    //                 kjhelp[wanzikun_0x58c9('0x10')](res[wanzikun_0x58c9('0x11')]['data'][wanzikun_0x58c9('0x12')]);
-    //                 _0x213d11[wanzikun_0x58c9('0xd')]({
-    //                     'kjhelp': kjhelp
-    //                 });
-    //             }
-    //         }
-    //     }
-    //     wx[wanzikun_0x58c9('0x13')]({
-    //         'url': _0x16cc81[wanzikun_0x58c9('0x14')](wanzikun_0x54cd32[wanzikun_0x58c9('0x9')][wanzikun_0x58c9('0x15')], '/shop/goods/kanjia/list'),
-    //         'success': function(_0x14b8c2) {
-    //             var _0x9f9252 = {
-    //                 'iQPfd': function(_0x17a024, _0x21f520) {
-    //                     return _0x16cc81[wanzikun_0x58c9('0x16')](_0x17a024, _0x21f520);
-    //                 },
-    //                 'NxRmF': function(_0x9175c9, _0xad274d) {
-    //                     return _0x16cc81[wanzikun_0x58c9('0x17')](_0x9175c9, _0xad274d);
-    //                 },
-    //                 'VRBxU': _0x16cc81[wanzikun_0x58c9('0x18')],
-    //                 'ITztp': function(_0x198bbe, _0x1f3874) {
-    //                     return _0x16cc81['gBUfw'](_0x198bbe, _0x1f3874);
-    //                 }
-    //             };
-    //             if (_0x16cc81[wanzikun_0x58c9('0x19')](_0x16cc81[wanzikun_0x58c9('0x1a')], _0x16cc81['ApRqi'])) {
-    //                 var _0x5bb9ef = e[_0x45cf99];
-    //                 wx[wanzikun_0x58c9('0x13')]({
-    //                     'url': _0x9f9252[wanzikun_0x58c9('0x1b')](wanzikun_0x54cd32[wanzikun_0x58c9('0x9')][wanzikun_0x58c9('0x15')], _0x9f9252[wanzikun_0x58c9('0x1c')]),
-    //                     'data': {
-    //                         'kjid': _0x5bb9ef,
-    //                         'token': wanzikun_0x54cd32['globalData'][wanzikun_0x58c9('0x1d')],
-    //                         'joinerUser': wanzikun_0x54cd32[wanzikun_0x58c9('0x9')][wanzikun_0x58c9('0x1e')]
-    //                     },
-    //                     'success': function(_0x11660e) {
-    //                         if (_0x9f9252[wanzikun_0x58c9('0x1f')](_0x11660e[wanzikun_0x58c9('0x11')]['code'], 0x0)) {
-    //                             _0x213d11[wanzikun_0x58c9('0x20')](_0x5bb9ef);
-    //                             _0x213d11['gethelpid'](_0x11660e['data'][wanzikun_0x58c9('0x11')][wanzikun_0x58c9('0x21')]);
-    //                         }
-    //                     }
-    //                 });
-    //             } else {
-    //                 if (_0x16cc81[wanzikun_0x58c9('0x22')](_0x14b8c2[wanzikun_0x58c9('0x11')][wanzikun_0x58c9('0xf')], 0x0) && _0x16cc81[wanzikun_0x58c9('0x23')](_0x14b8c2[wanzikun_0x58c9('0x11')][wanzikun_0x58c9('0x11')][wanzikun_0x58c9('0x24')][wanzikun_0x58c9('0x25')], 0x0)) {
-    //                     var _0x2c6060 = [];
-    //                     var _0x3db20d = [];
-    //                     for (var _0x45cf99 = 0x0; _0x45cf99 < _0x14b8c2[wanzikun_0x58c9('0x11')][wanzikun_0x58c9('0x11')][wanzikun_0x58c9('0x24')][wanzikun_0x58c9('0x25')]; _0x45cf99++) {
-    //                         if (_0x16cc81[wanzikun_0x58c9('0x26')](_0x16cc81[wanzikun_0x58c9('0x27')], _0x16cc81[wanzikun_0x58c9('0x28')])) {
-    //                             if (_0x9f9252[wanzikun_0x58c9('0x29')](_0x14b8c2[wanzikun_0x58c9('0x11')][wanzikun_0x58c9('0xf')], 0x0)) {
-    //                                 kjgoods[wanzikun_0x58c9('0x10')](_0x14b8c2[wanzikun_0x58c9('0x11')]['data']);
-    //                                 _0x213d11[wanzikun_0x58c9('0xd')]({
-    //                                     'kjgoods': kjgoods
-    //                                 });
-    //                             }
-    //                         } else {
-    //                             _0x2c6060[wanzikun_0x58c9('0x10')](_0x14b8c2[wanzikun_0x58c9('0x11')]['data']['result'][_0x45cf99]['id']);
-    //                             _0x3db20d[wanzikun_0x58c9('0x10')](_0x14b8c2[wanzikun_0x58c9('0x11')]['data'][wanzikun_0x58c9('0x24')][_0x45cf99][wanzikun_0x58c9('0x21')]);
-    //                             _0x213d11[wanzikun_0x58c9('0x2a')](_0x14b8c2[wanzikun_0x58c9('0x11')][wanzikun_0x58c9('0x11')][wanzikun_0x58c9('0x24')][_0x45cf99][wanzikun_0x58c9('0x21')]);
-    //                         }
-    //                     }
-    //                     _0x213d11[wanzikun_0x58c9('0x2b')](_0x2c6060);
-    //                     _0x213d11[wanzikun_0x58c9('0x2c')](_0x2c6060);
-    //                 }
-    //             }
-    //         }
-    //     });
-    // },
     'mykanjia': function(_0x50ba47) {
         var _0x4a1951 = {
             'reYIm': function(_0x4e704d, _0x285f08) {
