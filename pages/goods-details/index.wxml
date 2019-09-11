@@ -29,22 +29,36 @@
         </view>
     </view>
 
-<!--    <view class="swiper-container" wx:if="{{isVideo}}">-->
-<!--        <video style="display: none;" src="{{goodsDetail.VIDEO_PATH}}" class="slide-image" id="myVideo"-->
-<!--               lazy-load="true"-->
-<!--               class="bcg" controls="true"></video>-->
-<!--    </view>-->
+    <!--    <view class="swiper-container" wx:if="{{isVideo}}">-->
+    <!--        <video style="display: none;" src="{{goodsDetail.VIDEO_PATH}}" class="slide-image" id="myVideo"-->
+    <!--               lazy-load="true"-->
+    <!--               class="bcg" controls="true"></video>-->
+    <!--    </view>-->
     <view class="goods-info">
         <view class="goods-left">
             <view class="goods-title">{{goodsDetail.NAME}}</view>
             <view class="goods-characteristic">{{goodsDetail.DETAIL}}</view>
             <block>
                 <view class="goods-price">Ұ {{goodsDetail.PRICE}}</view>
-<!--                <view class="goods-originalPrice">Ұ {{goodsDetail.Q_PRICE}}</view>-->
-<!--                <view class="piangjia">-->
-<!--                    已售 {{goodsDetail.SUM_SALES}}-->
-<!--                </view>-->
+                <!--                <view class="goods-originalPrice">Ұ {{goodsDetail.Q_PRICE}}</view>-->
+                <!--                <view class="piangjia">-->
+                <!--                    已售 {{goodsDetail.SUM_SALES}}-->
+                <!--                </view>-->
             </block>
+        </view>
+        <view class="goods-status">
+            <view class="goods-statusItem">
+                <image src="../../images/rz.png"/>
+                <text>快乐天使</text>
+            </view>
+            <view class="goods-statusItem" wx:if="{{goodsDetail.VIP_ONE_BUY == 0}}">
+                <image src="../../images/rz.png"/>
+                <text>光明天使</text>
+            </view>
+            <view class="goods-statusItem" wx:if="{{goodsDetail.VIP_TWO_BUY == 0}}">
+                <image src="../../images/rz.png"/>
+                <text>爱心天使</text>
+            </view>
         </view>
     </view>
     <view wx:if="{{hasMoreSelect}}" class="row-arrow" bindtap="bindGuiGeTap">

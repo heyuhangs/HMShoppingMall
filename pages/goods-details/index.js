@@ -536,6 +536,9 @@ Page({
         //     self.confirmMemberShip();
         //     return false;
         // }
+        wx.showLoading({
+            mask: true
+        })
         if (options.id) {
             self.setData({
                 optionsgGoodId: options.id
@@ -570,10 +573,18 @@ Page({
                     // } else {
                     self.setData({
                         goodsDetail: res.data.goodInfo,
-                        shopNum: num
+                        shopNum: num,
+                        canBuy: res.data.canBuy
                     });
+                    if (res.data.canBuy == 1) {
+                        wx.showToast({
+                            title: '需要升级会员才可购买',
+                            icon: 'none',
+                            duration: 2000
+                        })
+                    }
                     // }
-                }else{
+                } else {
                     wx.showToast({
                         title: '系统繁忙',
                         icon: 'none',
@@ -581,6 +592,8 @@ Page({
                         mask: true
                     })
                 }
+            }, complete(res) {
+                wx.hideLoading({})
             }
         });
         //商品评价
@@ -672,11 +685,25 @@ Page({
         });
     },
     tobuy: function() {
+        if (this.data.canBuy == 1) {
+            wx.showToast({
+                title: '需要升级会员才可购买',
+                icon: 'none',
+                duration: 2000
+            })
+            setTimeout(function() {
+                wx.navigateTo({
+                    url: '/pages/newcoupons/index'
+                })
+            }, 1800)
+            return false;
+        }
         this.setData({
             isShoping: true
         })
     },
     buyNow: function() {
+        const self = this;
         this.isMembership().then(res => {
             if (res == 200) {
                 return false;
@@ -750,6 +777,20 @@ Page({
         });
     },
     'toAddShopCar': function() {
+        const self = this
+        if (this.data.canBuy == 1) {
+            wx.showToast({
+                title: '需要升级会员才可购买',
+                icon: 'none',
+                duration: 2000
+            })
+            setTimeout(function() {
+                wx.navigateTo({
+                    url: '/pages/newcoupons/index'
+                })
+            }, 1800)
+            return false;
+        }
         var _0x250276 = {
             'GMqaX': wanzikun_0x446e('0x2')
         };

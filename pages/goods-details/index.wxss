@@ -19,7 +19,31 @@ page {
   width: 100%;
   height: 750rpx;
 }
-
+.goods-status{
+  width: 93%;
+  margin: 10rpx auto;
+  padding: 20rpx 0;
+  border-top: 1px solid #ccc;
+    overflow: hidden;
+  /*border-bottom: 1px solid #ccc;*/
+}
+.goods-statusItem{
+    float: left;
+    overflow: hidden;
+    margin: 0 10rpx;
+}
+.goods-statusItem image{
+    float: left;
+    width: 28rpx;
+    height: 28rpx;
+    margin-right: 5rpx;
+    margin-top: 5rpx;
+}
+.goods-statusItem text{
+    font-size: 26rpx;
+    color: #666;
+    float: left;
+}
 swiper-item image {
   width: 100%;
   display: inline-block;
