@@ -55,13 +55,16 @@
 .tab-item-list {
     background-color: #fff;
     /*margin-top: 10px;*/
-    padding: 10px;
-    height: 75px;
+    padding: 15rpx;
+    /*height: 75px;*/
+    overflow: hidden;
     border-bottom: 1px solid #f5f5f5;
 }
-.list-info-detail{
-    display: inline-block;
-    font-size: 30rpx;
+.list-info-money{
+    display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;
+    overflow: hidden;
+    line-height: 37rpx;
+    font-size: 28rpx;
 }
 
 /*.tab-item-list image {*/
@@ -89,14 +92,20 @@
     display: inline-block;
     font-weight: 500;
     width: 80%;
-    /*float: ledt;*/
-    text-overflow: ellipsis;
     font-size: 37rpx;
-    white-space: nowrap;
+    margin-bottom: 10rpx;
     overflow: hidden;
     text-overflow:ellipsis;
-    /*background: goldenrod;*/
     white-space: nowrap;
+}
+.list-info-date{
+    display: block;
+    width: 100%;
+    text-align: right;
+    margin-top: 5rpx;
+    font-size: 25rpx;
+    color: #666;
+    /*float: right;*/
 }
 .list-info-detail{
     font-size: 48rpx;

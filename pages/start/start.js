@@ -82,6 +82,9 @@ Page({
         }]
     },
     'home': function() {
+        if (!this.data.isGo) {
+            return false;
+        }
         this[wanzikun_0x3fe9('0x8')]({
             'home': 0x1
         });
@@ -121,10 +124,17 @@ Page({
                         })
                         return false
                     }
+                }, complete(res) {
+                    self.setData({
+                        isGo: true
+                    })
                 }
             });
         } else {
             app.getUserInfo().then(res => {
+                self.setData({
+                    isGo: true
+                })
             });
         }
         //获取推荐人信息

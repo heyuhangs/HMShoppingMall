@@ -1,0 +1,21 @@
+/* pages/bulletinDetails/index.wxss */
+.list-con{
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 180rpx;
+}
+.list-con-title{
+    font-weight: bold;
+    font-size: 38rpx;
+    margin: 20rpx 0;
+}
+.list-con-date{
+    font-size: 28rpx;
+    color: #999;
+    margin-bottom: 20rpx;
+}
+.list-con-main{
+    color: #333;
+    font-size: 30rpx;
+    line-height: 45rpx;
+}

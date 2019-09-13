@@ -24,7 +24,6 @@
                 "pages/withdraw/index",
                 "pages/kanjia/index",
                 "pages/my-kanjia/index",
-                "pages/kanjia-goods/index",
                 "pages/kanjia-list/index",
                 "pages/pingtuan/index",
                 "pages/pingtuan-list/index",
@@ -39,7 +38,8 @@
                 "pages/performanceStatistics/index",
                 "pages/goods-list/index",
                 "pages/personalInformation/index",
-                "pages/inputInfo/index"
+                "pages/inputInfo/index",
+                "pages/bulletinDetails/index"
         ],
         "window": {
                 "backgroundTextStyle": "light",

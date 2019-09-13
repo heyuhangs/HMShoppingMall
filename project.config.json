@@ -84,17 +84,17 @@
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "购物车",
-					"pathName": "pages/shop-cart/index",
+					"id": 5,
+					"name": "公告",
+					"pathName": "pages/bulletinList/index",
 					"query": "",
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "新增地址",
-					"pathName": "pages/address-add/index",
-					"query": "",
+					"id": 6,
+					"name": "公告详情",
+					"pathName": "pages/bulletinDetails/index",
+					"query": "userId=1",
 					"scene": null
 				},
 				{

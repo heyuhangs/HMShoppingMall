@@ -1,0 +1,5 @@
+<view class="list-con">
+    <view class="list-con-title">{{obj.TITLE}}</view>
+    <view class="list-con-date">{{obj.INSERT_DATE}}</view>
+    <view class="list-con-main">{{obj.CONTENT}}</view>
+</view>

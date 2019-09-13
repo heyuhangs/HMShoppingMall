@@ -16,7 +16,10 @@ const app = getApp();
 Page({
     'data': {
         'balance': 0x0,
-        user: null
+        user: null,
+        PHONE: '',
+        ajxtrue: false,
+        PAR_NAME: ''
     },
     'onLoad': function() {
         const self = this;
@@ -67,6 +70,72 @@ Page({
         //                 }
         //         }
         // });
+    },
+    phoneChange: function(e) {
+        debugger
+        this.setData({
+            PHONE: e.detail.detail.value
+        })
+    },
+    phoneValData: function(e) {
+        const phone = e.detail.detail.value;
+        let that = this
+        if (!(/^1[34578]\d{9}$/.test(phone))) {
+            this.setData({
+                ajxtrue: false
+            })
+            if (phone.length > 11 || phone.length < 11) {
+                wx.showToast({
+                    title: '手机号有误',
+                    icon: 'none',
+                    duration: 2000
+                })
+                that.setData({
+                    PHONEErr: true
+                })
+            }
+        } else {
+            this.setData({
+                ajxtrue: true,
+                PHONEErr: false
+            })
+            that.searchUser(phone)
+            console.log('验证成功', that.data.ajxtrue)
+        }
+    },
+    searchUser: function(phone) {
+        const self = this
+        wx.request({
+            url: app.globalData.url + `/userImpl/getUserByPhone?PHONE=${phone}`,
+            method: "get",
+            success: function(res) {
+                wx.showToast({
+                    title: '进入',
+                    icon: 'none',
+                    duration: 2000
+                });
+                if (res.data.result == 'error') {
+                    self.setData({
+                        PAR_NAME: '无推荐人',
+                        PAR_PHONE: '无推荐人'
+                    })
+                    wx.showToast({
+                        title: '无此推荐人!',
+                        icon: 'none',
+                        duration: 2000
+                    });
+                    return false;
+                }
+                debugger
+                if (res.statusCode == 200) {
+                    self.setData({
+                        PAR_NAME: res.data.user.NAME,
+                        PAR_PHONE: res.data.user.PHONE
+                    })
+                }
+                wx.hideLoading({});
+            }
+        });
     },
     bindSaveSub: function() {
         const self = this;
