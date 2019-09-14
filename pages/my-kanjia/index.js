@@ -29,7 +29,7 @@ Page({
         'statusType': ['会员奖金', '代理奖金'],
         currentType: 0,
         page: 1,
-        date: '2019-09-01'
+        date: '2019-09'
     },
     onLoad: function() {
         const status = this.data.currentType;

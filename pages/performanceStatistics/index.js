@@ -28,7 +28,9 @@ Page({
         'helps': {},
         'statusType': ['个人业绩', '辖区业绩'],
         currentType: 0,
-        page: 1
+        page: 1,
+        list: [],
+        obj: null
     },
     onLoad: function() {
         const self = this;
@@ -45,18 +47,17 @@ Page({
                 if (res.data.result != 'error') {
                     if (status == 0) {
                         self.setData({
-                            list: res.data.salepd
+                            obj: res.data.salepd
                         })
                     } else {
                         self.setData({
                             list: res.data.salepdList
                         })
-
                     }
                     wx.hideLoading({});
                 } else {
                     wx.showToast({
-                        title: '系统繁忙',
+                        title: res.data.msg,
                         icon: 'none',
                         duration: 2000
                     })

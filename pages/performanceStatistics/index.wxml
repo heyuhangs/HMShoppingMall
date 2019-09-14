@@ -16,10 +16,10 @@
     <!--          data-id="{{item.USER_ID}}">-->
     <view class="goods-box" wx:if="{{currentType == 0}}">
         <view class="goods-title">
-            <view>个人业绩合计: {{list.SELF_SALE || 0}}</view>
+            <view>个人业绩合计: {{obj.SELF_SALE || 0}}</view>
         </view>
         <view class="goods-title">
-            <view>下级会员业绩合计: {{list.ALL_SALE || 0}}</view>
+            <view>下级会员业绩合计: {{obj.ALL_SALE || 0}}</view>
         </view>
         <!--        <view class="goods-title">-->
         <!--            <view>{{}}</view>-->

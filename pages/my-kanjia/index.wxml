@@ -5,7 +5,12 @@
         </navigator>
         <view class="header-name">我的收益</view>
     </view>
-    <picker class="weui-btn" mode="date" value="{{date}}" start="" end="" bindchange="getDateTime">
+<!--    <picker class="weui-btn" mode="date" value="{{date}}" start="" end="" bindchange="getDateTime">-->
+<!--        <view class="selectDate">-->
+<!--            {{date}}-->
+<!--        </view>-->
+<!--    </picker>-->
+    <picker mode="date" fields="month" value="{{date}}" bindchange="getDateTime">
         <view class="selectDate">
             {{date}}
         </view>
