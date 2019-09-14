@@ -107,9 +107,14 @@ Page({
                     wx.showToast({
                         title: '提现成功',
                         icon: 'success',
-                        duration: 1000,
+                        duration: 2000,
                         mask: true
                     });
+                    setTimeout(function() {
+                        wx.navigateTo({
+                            url: '/pages/capitalMovements/index'
+                        })
+                    }, 1800)
                 } else {
                     wx.showToast({
                         title: res.data.msg,

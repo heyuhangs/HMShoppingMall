@@ -92,7 +92,7 @@
                 </view>
                 <view class="goods-reputa-mark">
                     <view class="goods-reputa-user">
-                        {{item.NICK_NAME}}
+                        {{item.VIP_NAME}}
                         <text wx:if="{{item.PL_STAR < 2}}">差评</text>
                         <text wx:if="{{item.PL_STAR < 4 && item.PL_STAR >= 2}}">中评</text>
                         <text wx:if="{{item.PL_STAR == 5}}">好评</text>

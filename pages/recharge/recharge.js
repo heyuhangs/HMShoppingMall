@@ -164,7 +164,7 @@ Page({
             })
             return false;
         }
-        if (self.data.je.trim() == '') {
+        if (e.detail.value.amount == '') {
             wx.showToast({
                 title: '填写转账金额',
                 icon: 'none',
@@ -172,7 +172,7 @@ Page({
             })
             return false
         }
-        if (self.data.je <= 0) {
+        if (e.detail.value.amount <= 0) {
             wx.showToast({
                 title: '转账金额不能为0',
                 icon: 'none',
@@ -192,13 +192,18 @@ Page({
             method: "POST",
             data: data,
             success: function(res) {
-                if (res.data.code == 200) {
+                if (res.data.result == 'success') {
                     wx.showLoading({
                         title: '转账成功',
                         icon: 'success',
                         duration: 2000,
                         mask: true
-                    })
+                    });
+                    setTimeout(function() {
+                        wx.navigateTo({
+                            url: '/pages/capitalMovements/index'
+                        })
+                    }, 1800)
                 } else {
                     wx.showToast({
                         title: res.data.msg,
@@ -207,8 +212,6 @@ Page({
                         mask: true
                     });
                 }
-            }, complete(res) {
-                wx.hideLoading();
             }
         })
     },

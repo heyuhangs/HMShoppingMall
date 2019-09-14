@@ -601,13 +601,13 @@ Page({
         });
         //商品评价
         wx.request({
-            url: app.globalData.url + `/goodImpl/goodCommentList?GOOD_ID=${options.id}&USER_ID=${app.globalData.userInfo.USER_ID}`,
+            url: app.globalData.url + `/goodImpl/goodCommentList?GOOD_ID=${options.id}&USER_ID=&ORDER_ID=`,
             method: "GET",
             success: function(res) {
+                debugger
                 self.setData({
                     commentList: res.data.commentList
                 });
-                // commentList
             }
         });
         //

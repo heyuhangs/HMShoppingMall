@@ -13,21 +13,18 @@
     <view class="goods-box" wx:for-items="{{childList}}" wx:key="{{index}}" bindtap="toDetailsTap"
           data-id="{{item.USER_ID}}">
         <view class="goods-title">
-            <view>{{item.NAME}}(
-                <text wx:if="{{item.VIP_TYPE == 1}}">快乐天使</text>
-                <text wx:if="{{item.VIP_TYPE == 2}}">光明天使</text>
-                <text wx:if="{{item.VIP_TYPE == 3}}">爱心天使</text>
+            <view>{{item.NAME}} (
+                <text wx:if="{{item.DS_ROLE == 0}}">非代理商</text>
+                <text wx:if="{{item.DS_ROLE == 1}}">区代理商</text>
+                <text wx:if="{{item.DS_ROLE == 2}}">市代理</text>
+                <text wx:if="{{item.DS_ROLE == 3}}">省代理</text>
                 )
             </view>
-            <view wx:if="{{item.DS_ROLE == 0}}">非代理商</view>
-            <view wx:if="{{item.DS_ROLE == 1}}">区代理商</view>
-            <view wx:if="{{item.DS_ROLE == 2}}">市代理</view>
-            <view wx:if="{{item.DS_ROLE == 3}}">省代理</view>
+            <view>{{item.DL_SALE}}</view>
         </view>
         <view class="good-money">
             <view>{{item.DL_NAME}}</view>
-            <view wx:if="{{item.DL_SALE == 0}}">正常已激活</view>
-            <view wx:if="{{item.DL_SALE == 1}}">未激活</view>
+            <view>{{item.PHONE}}</view>
         </view>
     </view>
     <view hidden="{{childList.length}}" class="no-more-goods">
