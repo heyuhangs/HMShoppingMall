@@ -17,7 +17,8 @@ const app = getApp();
 Page({
     data: {
         parUser: null,
-        user: null
+        user: null,
+        valiData: false
     },
     onLoad: function(e) {
         this.getUserData(e.userId)
@@ -42,6 +43,11 @@ Page({
                     self.setData({
                         user: res.data.user
                     })
+                    if (res.data.user.RIGHTS == 99) {
+                        self.setData({
+                            valiData: true
+                        })
+                    }
                 }
                 self.getParData();
                 wx.hideLoading({});

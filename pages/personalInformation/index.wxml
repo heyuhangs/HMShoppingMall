@@ -5,7 +5,7 @@
         </navigator>
         <view class="header-name">个人信息</view>
     </view>
-    <view class="tab-container">
+    <view class="tab-container" wx:if="{{!valiData}}">
         <view class="tab-item-list">
             <i-cell>
                 <text class="i-cell-text i-cell-leftTrxt" style="line-height: 120rpx;">头像</text>
