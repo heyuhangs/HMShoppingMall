@@ -67,10 +67,11 @@ form{
     height:100%;
     font-size:70rpx;
     float:left;
-    margin:-5px 0;
+    margin:-13px 0;
     width:80%;
     padding:5px 0;
     color:#333;
+    border: none;
 }
 .row-wrap .right-box{
     margin-right: 30rpx;

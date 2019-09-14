@@ -17,434 +17,72 @@ var wanzikun_0x459368 = getApp();
 Page({
     'data': {
         isMemberShipStatus: true,
-        goods: [{
-            "barCode": "",
-            "categoryId": 10450,
-            "characteristic": "全场模版使用优惠券立减88元",
-            "commission": 0,
-            "commissionType": 0,
-            "dateAdd": "2018-04-19 13:02:49",
-            "dateStart": "2018-04-19 12:57:19",
-            "dateUpdate": "2019-04-11 19:39:10",
-            "gotScore": 0,
-            "gotScoreType": 0,
-            "id": 43223,
-            "kanjia": false,
-            "kanjiaPrice": 0,
-            "logisticsId": 1273,
-            "minPrice": 299,
-            "minScore": 0,
-            "name": "清欢素雅小程序端模版（API工厂授权版）",
-            "numberFav": 82,
-            "numberGoodReputation": 27,
-            "numberOrders": 262,
-            "numberSells": 11,
-            "originalPrice": 550,
-            "paixu": 0,
-            "pic": "https://cdn.it120.cc/apifactory/2018/04/18/14569682d80bf52cd8ff4c3c116758a7.png",
-            "pingtuan": false,
-            "pingtuanPrice": 289,
-            "propertyIds": ",5420,",
-            "recommendStatus": 1,
-            "recommendStatusStr": "推荐",
-            "shopId": 755,
-            "status": 0,
-            "statusStr": "上架",
-            "stores": 92,
-            "userId": 797,
-            "videoId": "",
-            "views": 34132,
-            "weight": 0
-        }, {
-            "barCode": "",
-            "categoryId": 10450,
-            "characteristic": "全场模版使用优惠券立减88元",
-            "commission": 0,
-            "commissionType": 0,
-            "dateAdd": "2018-04-12 00:00:00",
-            "dateStart": "2018-04-12 00:00:00",
-            "dateUpdate": "2019-04-11 19:12:56",
-            "gotScore": 0,
-            "gotScoreType": 0,
-            "id": 40601,
-            "kanjia": false,
-            "kanjiaPrice": 0,
-            "logisticsId": 1273,
-            "minPrice": 399,
-            "minScore": 0,
-            "name": "清欢食光机Plus小程序端模版（API工厂授权版）",
-            "numberFav": 62,
-            "numberGoodReputation": 2,
-            "numberOrders": 270,
-            "numberSells": 2,
-            "originalPrice": 999,
-            "paixu": 0,
-            "pic": "https://cdn.it120.cc/apifactory/2018/04/12/42c001a698072b3bae9ac71f65ca2cfc.jpg",
-            "pingtuan": false,
-            "pingtuanPrice": 389,
-            "propertyIds": ",5420,",
-            "recommendStatus": 1,
-            "recommendStatusStr": "推荐",
-            "shopId": 755,
-            "status": 0,
-            "statusStr": "上架",
-            "stores": 100,
-            "userId": 797,
-            "videoId": "",
-            "views": 31323,
-            "weight": 0
-        }, {
-            "barCode": "",
-            "categoryId": 10450,
-            "characteristic": "全场模版使用优惠券立减88元",
-            "commission": 10,
-            "commissionType": 0,
-            "dateAdd": "2018-03-15 00:00:00",
-            "dateStart": "2018-03-15 00:00:00",
-            "dateUpdate": "2019-04-11 19:12:56",
-            "gotScore": 0,
-            "gotScoreType": 0,
-            "id": 30164,
-            "kanjia": false,
-            "kanjiaPrice": 0,
-            "logisticsId": 1273,
-            "minPrice": 299,
-            "minScore": 0,
-            "name": "清欢严选商城小程序端模版（API工厂授权版）",
-            "numberFav": 250,
-            "numberGoodReputation": 180,
-            "numberOrders": 405,
-            "numberSells": 69,
-            "originalPrice": 699,
-            "paixu": 0,
-            "pic": "https://cdn.it120.cc/apifactory/2018/05/19/84833eee6df34fa550cd7644b2242cf5.png",
-            "pingtuan": true,
-            "pingtuanPrice": 289,
-            "propertyIds": ",5420,3688,",
-            "recommendStatus": 1,
-            "recommendStatusStr": "推荐",
-            "shopId": 755,
-            "status": 0,
-            "statusStr": "上架",
-            "stores": 100,
-            "userId": 797,
-            "videoId": "",
-            "views": 77261,
-            "weight": 0
-        }, {
-            "barCode": "",
-            "categoryId": 10451,
-            "characteristic": "100%全棉，椰林自然设计",
-            "commission": 10,
-            "commissionType": 1,
-            "dateAdd": "2018-04-04 00:00:00",
-            "dateStart": "2018-04-04 00:00:00",
-            "dateUpdate": "2019-04-11 19:54:10",
-            "gotScore": 0,
-            "gotScoreType": 0,
-            "id": 36888,
-            "kanjia": false,
-            "kanjiaPrice": 0,
-            "logisticsId": 2065,
-            "minPrice": 299,
-            "minScore": 0,
-            "name": "唤自然 仲夏椰香四件套",
-            "numberFav": 119,
-            "numberGoodReputation": 8,
-            "numberOrders": 139,
-            "numberSells": 8,
-            "originalPrice": 399,
-            "paixu": 1,
-            "pic": "https://cdn.it120.cc/apifactory/2018/04/02/0eaf91e4696b51e326313efaec5e9b11.jpg",
-            "pingtuan": false,
-            "pingtuanPrice": 99,
-            "recommendStatus": 1,
-            "recommendStatusStr": "推荐",
-            "shopId": 755,
-            "status": 0,
-            "statusStr": "上架",
-            "stores": 30,
-            "userId": 797,
-            "videoId": "",
-            "views": 15667,
-            "weight": 0
-        }],
-        topgoods: { "remark": "/pages/index/index", "value": "人气推荐" },
-        toptopics: [{
-            "author": "丸子君",
-            "categoryId": 1561,
-            "commentNumber": 210,
-            "content": "<p>“无论是近几年流行‘逃离北上广’，还是备受好评的皮克斯电影《寻梦环游记》，回归故乡和家庭寻求温暖和慰藉是永恒的话题。不知道即将到来的节日，你是否能和家人团聚？如果你还未踏上回家的路，那我向你推荐一款速食鸡汤，即使你在异乡漂泊，也少吃外卖，喝一碗有家的味道的鸡汤。</p><p>除了白果炖鸡汤，我们的冰糖银耳莲子羹也是不错的，微甜，好喝，很适合女生，希望大家喜欢。”</p>",
-            "dateAdd": "2018-03-12 21:35:07",
-            "dateUpdate": "2019-04-10 21:20:04",
-            "descript": "鸡汤、银耳羹即食好物",
-            "id": 3474,
-            "income": "",
-            "isRecommend": false,
-            "keywords": "30164,36894",
-            "paixu": 2,
-            "pic": "https://cdn.it120.cc/apifactory/2018/03/14/3417249759125d9967eb353980be0e7e.jpg",
-            "status": 2,
-            "statusStr": "审核通过",
-            "tags": "",
-            "title": "别吃外卖了，来喝碗鸡汤",
-            "uid": 0,
-            "unusefulNumber": 0,
-            "usefulNumber": 0,
-            "userId": 797,
-            "views": 69830
-        }, {
-            "author": "丸子君",
-            "categoryId": 1587,
-            "commentNumber": 210,
-            "content": "<p>普通文字普通文字普通文字</p><p><br/></p><p><strong>加粗文字加粗文字加粗文字</strong></p><p><br/></p><p>列表文字：</p><ul class=\" list-paddingleft-2\" style=\"list-style-type: disc;\"><li><p>文字1</p></li><li><p>文字2</p></li><li><p>文字3</p></li><li><p>文字4</p></li></ul><p><br/></p><p><span style=\"background-color: rgb(192, 0, 0);\">有背景颜色的文字</span></p><p><br/></p><p><span style=\"color: rgb(192, 0, 0);\">有颜色的文字</span></p>",
-            "dateAdd": "2018-03-14 15:03:49",
-            "dateUpdate": "2019-04-10 21:20:04",
-            "descript": "味道是台时光机，带我们回家",
-            "id": 3489,
-            "income": "",
-            "isRecommend": false,
-            "keywords": "36907,36888,37531",
-            "paixu": 3,
-            "pic": "https://cdn.it120.cc/apifactory/2018/03/14/764c5dfe2022047f08ec55fd155d2a81.jpg",
-            "status": 2,
-            "statusStr": "审核通过",
-            "tags": "",
-            "title": "难忘的食物都有家的味道",
-            "uid": 0,
-            "unusefulNumber": 0,
-            "usefulNumber": 0,
-            "userId": 797,
-            "views": 69175
-        }, {
-            "author": "丸子君",
-            "categoryId": 1561,
-            "commentNumber": 210,
-            "content": "<p>大佬云集的互联网大会刚刚落幕，一年一次的“丁磊饭局”，依然是大家津津乐道的谈资。今年丸子君给大佬们带来的是“全猪宴”，美颜脚圈、糖醋排骨、蒜蓉白肉、白封肉4道硬菜，撑起饭局的半壁江山。</p><p>如果说去年的味央黑猪肉，是大佬们才能吃到的饭局特供，那现在的黑猪，已经走进了大多数人家的餐桌。而且和去年最大的区别是，饭局上的黑猪肉，已经可以买到大佬同款了！我们上架了鲜宴礼盒、飨宴礼盒及安心猪油，这场“顶级饭局”的主食材，都在里面啦。</p><p>飨宴礼盒中人气最高的肋排部位，肉厚骨细，松软无筋，裹上调汁制成饭局上桂花小排，惊艳了四座。黑猪猪蹄，用来烹制美颜脚圈，脂肪少，胶质足，一口咬下去满满的胶原蛋白。饭局上引人注目的白封肉，最能考验猪肉的品质，黑猪们“蹲马桶、住公寓、吃液态猪粮、喝深层地下水”，慢养300天后的肌间脂肪饱满，制作出的白切肉干净透明，切下去有切慕斯的手感，如果想品尝好肉本来的味道，试试这样烹制礼盒中的五花肉，滋味一定不会让你失望。</p><p>希望大佬们品尝到的顶级舌尖美味，你也能轻松拥有。</p><p style=\"text-align: center;\"><img src=\"https://cdn.it120.cc/apifactory/2018/03/14/b095170fac3749a3792e6de7cfa9adbe.png\" title=\"apifactory/2018/03/14/b095170fac3749a3792e6de7cfa9adbe.png\" alt=\"111.png\"/>&nbsp;大佬同款黑猪肉推荐&nbsp;<img src=\"https://cdn.it120.cc/apifactory/2018/03/14/086760e6c89a0f4e7993eba54b60ea07.png\" title=\"apifactory/2018/03/14/086760e6c89a0f4e7993eba54b60ea07.png\" alt=\"2222.png\"/></p>",
-            "dateAdd": "2018-03-12 20:20:20",
-            "dateUpdate": "2019-04-10 21:21:04",
-            "descript": "舌尖上的未央猪骨汤",
-            "id": 3473,
-            "income": "29起",
-            "isRecommend": false,
-            "keywords": "36888,36889,36890,36891",
-            "paixu": 1,
-            "pic": "https://cdn.it120.cc/apifactory/2018/03/14/eb6ac972f9dde0dfb7ff8fda01992c3e.jpg",
-            "status": 2,
-            "statusStr": "审核通过",
-            "tags": "",
-            "title": "《舌尖》看不够？用味央猪解解馋",
-            "uid": 0,
-            "unusefulNumber": 0,
-            "usefulNumber": 0,
-            "userId": 797,
-            "views": 71647
-        }],
-        toptopic: [{
-            "businessId": 0,
-            "dateAdd": "2018-05-11 09:19:33",
-            "id": 8297,
-            "linkUrl": "/pages/topic-list/index",
-            "paixu": 14,
-            "picUrl": "",
-            "remark": "3473,3474,3489",
-            "status": 0,
-            "statusStr": "显示",
-            "title": "精选专题",
-            "type": "toptopic",
-            "userId": 797
-        }],
-        topkan: [{
-            "businessId": 0,
-            "dateAdd": "2018-05-10 23:35:46",
-            "dateUpdate": "2018-05-12 07:47:39",
-            "id": 8289,
-            "linkUrl": "/pages/kanjia-list/index",
-            "paixu": 13,
-            "picUrl": "",
-            "remark": "38759,38772,38932",
-            "status": 0,
-            "statusStr": "显示",
-            "title": "全民砍价",
-            "type": "topkan",
-            "userId": 797
-        }],
-        toptuan: [{
-            "businessId": 30164,
-            "dateAdd": "2018-05-10 21:26:56",
-            "dateUpdate": "2018-07-12 09:59:13",
-            "id": 8275,
-            "linkUrl": "性价比最高",
-            "paixu": 9,
-            "picUrl": "https://cdn.it120.cc/apifactory/2018/06/26/0dcfc0c9fd272718637c4a7947b4e130.png",
-            "remark": "自助下单",
-            "status": 0,
-            "statusStr": "显示",
-            "title": "清欢严选小程序端模版",
-            "type": "toptuan",
-            "userId": 797
-        }, {
-            "businessId": 43223,
-            "dateAdd": "2018-05-10 22:01:08",
-            "dateUpdate": "2018-07-12 09:59:23",
-            "id": 8279,
-            "linkUrl": "极简风格",
-            "paixu": 10,
-            "picUrl": "https://cdn.it120.cc/apifactory/2018/06/26/2d8c0087f8c5e384670274c162738f11.png",
-            "remark": "自助下单",
-            "status": 0,
-            "statusStr": "显示",
-            "title": "清欢素雅小程序端模版",
-            "type": "toptuan",
-            "userId": 797
-        }, {
-            "businessId": 40601,
-            "dateAdd": "2018-05-10 22:26:07",
-            "dateUpdate": "2018-07-12 09:59:28",
-            "id": 8282,
-            "linkUrl": "多店铺功能",
-            "paixu": 11,
-            "picUrl": "https://cdn.it120.cc/apifactory/2018/06/26/60e80cf7946946d494b2538d1557cf8d.png",
-            "remark": "自助下单",
-            "status": 0,
-            "statusStr": "显示",
-            "title": "清欢食光机Plus小程序端模版",
-            "type": "toptuan",
-            "userId": 797
-        }, {
-            "businessId": 36888,
-            "dateAdd": "2018-05-10 22:31:25",
-            "dateUpdate": "2018-06-21 22:24:32",
-            "id": 8283,
-            "linkUrl": "999起",
-            "paixu": 12,
-            "picUrl": "https://cdn.it120.cc/apifactory/2018/05/09/aacf690ca68bd771c23360d20ce1e699.png",
-            "remark": "测试",
-            "status": 0,
-            "statusStr": "显示",
-            "title": "床头柜中的颜值担当",
-            "type": "toptuan",
-            "userId": 797
-        }],
-        toptuaninfo: {
-            "dateUpdate": "2018-09-03 00:06:09",
-            "remark": "/pages/pingtuan-list/index",
-            "value": "👇 模版购买看这里👇"
-        },
-        sales: [{
-            "businessId": 0,
-            "dateAdd": "2018-03-01 17:15:21",
-            "dateUpdate": "2018-05-11 00:44:59",
-            "id": 5296,
-            "linkUrl": "/pages/score/index",
-            "paixu": 5,
-            "picUrl": "https://cdn.it120.cc/apifactory/2018/05/09/0630c87c94e2f1a4f213f7ffb5845e6d.png",
-            "remark": "",
-            "status": 0,
-            "statusStr": "显示",
-            "title": "签到",
-            "type": "sale",
-            "userId": 797
-        }, {
-            "businessId": 0,
-            "dateAdd": "2018-03-01 17:17:29",
-            "dateUpdate": "2018-05-11 00:45:07",
-            "id": 5297,
-            "linkUrl": "/pages/newcoupons/index",
-            "paixu": 6,
-            "picUrl": "https://cdn.it120.cc/apifactory/2018/05/09/1ba413178d361771f25332ebd04f3bf7.png",
-            "remark": "",
-            "status": 0,
-            "statusStr": "显示",
-            "title": "礼券",
-            "type": "sale",
-            "userId": 797
-        }, {
-            "businessId": 0,
-            "dateAdd": "2018-03-01 17:19:13",
-            "dateUpdate": "2018-05-14 17:48:52",
-            "id": 5298,
-            "linkUrl": "/pages/kanjia-list/index",
-            "paixu": 7,
-            "picUrl": "https://cdn.it120.cc/apifactory/2018/05/09/496a0c3e4042afbb688837358217f501.png",
-            "remark": "",
-            "status": 0,
-            "statusStr": "显示",
-            "title": "砍价",
-            "type": "sale",
-            "userId": 797
-        }, {
-            "businessId": 0,
-            "dateAdd": "2018-05-10 20:54:20",
-            "dateUpdate": "2018-05-11 00:45:23",
-            "id": 8262,
-            "linkUrl": "/pages/topic-list/index",
-            "paixu": 8,
-            "picUrl": "https://cdn.it120.cc/apifactory/2018/05/09/88f45bf6e95ec010f1f945c414e6df03.png",
-            "remark": "",
-            "status": 0,
-            "statusStr": "显示",
-            "title": "专栏",
-            "type": "sale",
-            "userId": 797
-        }],
-        banners: [{
-            "businessId": 30164,
-            "dateAdd": "2018-05-10 18:50:18",
-            "dateUpdate": "2018-05-13 22:02:21",
-            "id": 8253,
-            "linkUrl": "",
-            "paixu": 2,
-            "picUrl": "https://cdn.it120.cc/apifactory/2018/05/09/2e8638183135b207c97490ed95fb44ba.jpg",
-            "remark": "",
-            "status": 0,
-            "statusStr": "显示",
-            "title": "30164",
-            "type": "home",
-            "userId": 797
-        }, {
-            "businessId": 30164,
-            "dateAdd": "2018-05-10 18:49:55",
-            "dateUpdate": "2018-05-13 22:02:27",
-            "id": 8252,
-            "linkUrl": "",
-            "paixu": 3,
-            "picUrl": "https://cdn.it120.cc/apifactory/2018/05/09/d1cbc05833c4fa09b1fae15593df1b63.jpg",
-            "remark": "",
-            "status": 0,
-            "statusStr": "显示",
-            "title": "30164",
-            "type": "home",
-            "userId": 797
-        }, {
-            "businessId": 30164,
-            "dateAdd": "2018-05-10 19:17:46",
-            "dateUpdate": "2018-05-13 22:02:33",
-            "id": 8255,
-            "linkUrl": "",
-            "paixu": 4,
-            "picUrl": "https://cdn.it120.cc/apifactory/2018/05/09/dc11f00add7f97ee549b41b97134fe65.jpg",
-            "remark": "",
-            "status": 0,
-            "statusStr": "显示",
-            "title": "30164",
-            "type": "home",
-            "userId": 797
-        }, {
-            "businessId": 30164,
-            "dateAdd": "2018-05-10 19:18:06",
-            "dateUpdate": "2018-05-13 22:02:38",
-            "id": 8256,
-            "linkUrl": "",
-            "paixu": 5,
-            "picUrl": "https://cdn.it120.cc/apifactory/2018/05/09/62c5fb354ced6e13c06d554cde479679.jpg",
-            "remark": "",
-            "status": 0,
-            "statusStr": "显示",
-            "title": "30164",
-            "type": "home",
-            "userId": 797
-        }],
+        goods: [],
+        topgoods: {},
+        toptopics: [],
+        toptopic: [],
+        topkan: [],
+        toptuan: [],
+        toptuaninfo: {},
+        sales: [],
+        // banners: [{
+        //     "businessId": 30164,
+        //     "dateAdd": "2018-05-10 18:50:18",
+        //     "dateUpdate": "2018-05-13 22:02:21",
+        //     "id": 8253,
+        //     "linkUrl": "",
+        //     "paixu": 2,
+        //     "picUrl": "https://cdn.it120.cc/apifactory/2018/05/09/2e8638183135b207c97490ed95fb44ba.jpg",
+        //     "remark": "",
+        //     "status": 0,
+        //     "statusStr": "显示",
+        //     "title": "30164",
+        //     "type": "home",
+        //     "userId": 797
+        // }, {
+        //     "businessId": 30164,
+        //     "dateAdd": "2018-05-10 18:49:55",
+        //     "dateUpdate": "2018-05-13 22:02:27",
+        //     "id": 8252,
+        //     "linkUrl": "",
+        //     "paixu": 3,
+        //     "picUrl": "https://cdn.it120.cc/apifactory/2018/05/09/d1cbc05833c4fa09b1fae15593df1b63.jpg",
+        //     "remark": "",
+        //     "status": 0,
+        //     "statusStr": "显示",
+        //     "title": "30164",
+        //     "type": "home",
+        //     "userId": 797
+        // }, {
+        //     "businessId": 30164,
+        //     "dateAdd": "2018-05-10 19:17:46",
+        //     "dateUpdate": "2018-05-13 22:02:33",
+        //     "id": 8255,
+        //     "linkUrl": "",
+        //     "paixu": 4,
+        //     "picUrl": "https://cdn.it120.cc/apifactory/2018/05/09/dc11f00add7f97ee549b41b97134fe65.jpg",
+        //     "remark": "",
+        //     "status": 0,
+        //     "statusStr": "显示",
+        //     "title": "30164",
+        //     "type": "home",
+        //     "userId": 797
+        // }, {
+        //     "businessId": 30164,
+        //     "dateAdd": "2018-05-10 19:18:06",
+        //     "dateUpdate": "2018-05-13 22:02:38",
+        //     "id": 8256,
+        //     "linkUrl": "",
+        //     "paixu": 5,
+        //     "picUrl": "https://cdn.it120.cc/apifactory/2018/05/09/62c5fb354ced6e13c06d554cde479679.jpg",
+        //     "remark": "",
+        //     "status": 0,
+        //     "statusStr": "显示",
+        //     "title": "30164",
+        //     "type": "home",
+        //     "userId": 797
+        // }],
+        banners: [],
         'flag': !![],
         'indicatorDots': !![],
         'autoplay': true,
@@ -489,6 +127,19 @@ Page({
         //     return false;
         // }
         wx.showLoading({});
+        //获取banner
+        // wx.request({
+        //     url: app.globalData.url + `/goodImpl/goodListByType?USER_ID=${app.globalData.userInfo.USER_ID}&TYPE_ONE_ID=&TYPE_TWO_ID=&keywords=`,
+        //     method: "GET",
+        //     success: function(res) {
+        //         if (res.statusCode == 200) {
+        //             self.setData({
+        //                 goods: res.data.goodList
+        //             })
+        //         }
+        //     }
+        // })
+        //获取商品
         wx.request({
             url: app.globalData.url + `/goodImpl/goodListByType?USER_ID=${app.globalData.userInfo.USER_ID}&TYPE_ONE_ID=&TYPE_TWO_ID=&keywords=`,
             method: "GET",
@@ -833,239 +484,7 @@ Page({
                 }
             }
         });
-        // _0x17bbc4[wanzikun_0x35f5('0x53')](setTimeout, function() {
-        //     if (wanzikun_0x459368[wanzikun_0x35f5('0x1c')]['usinfo'] == 0x0) {
-        //         if (wanzikun_0x35f5('0x54') !== _0x17bbc4[wanzikun_0x35f5('0x55')]) {
-        //             _0x3dd458[wanzikun_0x35f5('0x0')]({
-        //                 'wxlogin': ![]
-        //             });
-        //             wx[wanzikun_0x35f5('0x56')]();
-        //         } else {
-        //             if (res[wanzikun_0x35f5('0xd')][wanzikun_0x35f5('0xe')] == 0x0) {
-        //                 _0x3dd458[wanzikun_0x35f5('0x0')]({
-        //                     'banners': res['data'][wanzikun_0x35f5('0xd')]
-        //                 });
-        //             }
-        //         }
-        //     }
-        // }, 0x320);
     },
-    // 'onLoad': function (options) {
-    //     if (options.jump) {
-    //         wx.showToast({
-    //             title: options.jump,
-    //             icon: 'none',
-    //             duration: 2000
-    //         })
-    //     }
-    //     var _0x22895d = {
-    //         'SScII': wanzikun_0x35f5('0x57'),
-    //         'ZFjqo': function (_0x50809b, _0x29910b) {
-    //             return _0x50809b + _0x29910b;
-    //         },
-    //         'MNiVp': '/cms/news/detail',
-    //         'LUCkD': function (_0x1a48f6, _0x10df42) {
-    //             return _0x1a48f6 !== _0x10df42;
-    //         },
-    //         'fSyUJ': wanzikun_0x35f5('0x58'),
-    //         'SaFUt': function (_0x243484, _0x56ba2e) {
-    //             return _0x243484 == _0x56ba2e;
-    //         },
-    //         'UOPgF': function (_0x5beab0, _0x478339) {
-    //             return _0x5beab0 === _0x478339;
-    //         },
-    //         'nqmJt': wanzikun_0x35f5('0x59'),
-    //         'lQUjG': 'tsapF',
-    //         'XguQa': wanzikun_0x35f5('0x5a'),
-    //         'cQmQA': function (_0x370d3e, _0x3e61e8) {
-    //             return _0x370d3e == _0x3e61e8;
-    //         },
-    //         'EPMjm': wanzikun_0x35f5('0x5b'),
-    //         'wFyiv': function (_0x3ee512, _0x45fec3) {
-    //             return _0x3ee512 < _0x45fec3;
-    //         },
-    //         'Czqyu': function (_0x208262, _0x46f0a7) {
-    //             return _0x208262 != _0x46f0a7;
-    //         },
-    //         'iFBbt': function (_0x222df2, _0x1cc2a3) {
-    //             return _0x222df2 == _0x1cc2a3;
-    //         },
-    //         'DjbqJ': function (_0x25b3e9, _0x51198c) {
-    //             return _0x25b3e9 + _0x51198c;
-    //         },
-    //         'UYPul': wanzikun_0x35f5('0x5c'),
-    //         'TDwir': function (_0x462bd2, _0x41219d) {
-    //             return _0x462bd2 == _0x41219d;
-    //         },
-    //         'JkfOU': function (_0x16a334, _0x3dbe77) {
-    //             return _0x16a334 !== _0x3dbe77;
-    //         },
-    //         'COCfO': wanzikun_0x35f5('0x5d'),
-    //         'gtcMs': wanzikun_0x35f5('0x5e'),
-    //         'YSJeL': wanzikun_0x35f5('0x5f'),
-    //         'qxOYv': function (_0x918c5e, _0x87af2f) {
-    //             return _0x918c5e + _0x87af2f;
-    //         },
-    //         'cxrAC': 'home',
-    //         'cgxwh': wanzikun_0x35f5('0x60')
-    //     };
-    //     var _0x25c71f = this;
-    //     if (_0x22895d['TDwir'](wanzikun_0x459368[wanzikun_0x35f5('0x1c')][wanzikun_0x35f5('0x61')], !![])) {
-    //         if (_0x22895d['JkfOU'](_0x22895d[wanzikun_0x35f5('0x62')], _0x22895d['COCfO'])) {
-    //             _0x25c71f[wanzikun_0x35f5('0x0')]({
-    //                 'toplogo': res['data'][wanzikun_0x35f5('0xd')][0x0][wanzikun_0x35f5('0x63')],
-    //                 'topname': wx[wanzikun_0x35f5('0x64')](_0x22895d[wanzikun_0x35f5('0x65')])
-    //             });
-    //         } else {
-    //             _0x25c71f[wanzikun_0x35f5('0x0')]({
-    //                 'iphone': !![]
-    //             });
-    //         }
-    //     }
-    //     wx[wanzikun_0x35f5('0x2d')]({
-    //         'url': wanzikun_0x459368[wanzikun_0x35f5('0x1c')]['urls'] + _0x22895d['gtcMs'],
-    //         'data': {
-    //             'type': _0x22895d[wanzikun_0x35f5('0x66')]
-    //         },
-    //         'success': function (_0xc672d6) {
-    //             var _0x45efb8 = {
-    //                 'JQtbf': function (_0x5a7044, _0x38a1da) {
-    //                     return _0x22895d[wanzikun_0x35f5('0x67')](_0x5a7044, _0x38a1da);
-    //                 },
-    //                 'QgifU': _0x22895d[wanzikun_0x35f5('0x68')]
-    //             };
-    //             if (_0x22895d['LUCkD'](wanzikun_0x35f5('0x58'), _0x22895d[wanzikun_0x35f5('0x69')])) {
-    //                 if (_0xc672d6[wanzikun_0x35f5('0xd')][wanzikun_0x35f5('0xe')] == 0x0) {
-    //                     _0x25c71f[wanzikun_0x35f5('0x0')]({
-    //                         'toplogo': _0xc672d6[wanzikun_0x35f5('0xd')][wanzikun_0x35f5('0xd')][0x0][wanzikun_0x35f5('0x63')],
-    //                         'topname': wx[wanzikun_0x35f5('0x64')](_0x22895d['SScII'])
-    //                     });
-    //                 }
-    //             } else {
-    //                 if (_0x22895d[wanzikun_0x35f5('0x6a')](_0xc672d6[wanzikun_0x35f5('0xd')][wanzikun_0x35f5('0xe')], 0x0)) {
-    //                     if (_0x22895d['UOPgF'](_0x22895d[wanzikun_0x35f5('0x6b')], _0x22895d[wanzikun_0x35f5('0x6b')])) {
-    //                         _0x25c71f[wanzikun_0x35f5('0x0')]({
-    //                             'toplogo': _0xc672d6[wanzikun_0x35f5('0xd')][wanzikun_0x35f5('0xd')][0x0][wanzikun_0x35f5('0x63')],
-    //                             'topname': wx['getStorageSync'](_0x22895d['SScII'])
-    //                         });
-    //                     } else {
-    //                         var _0xb587c8 = {
-    //                             'GeYUo': function (_0x343111, _0x5d42cf) {
-    //                                 return _0x343111 == _0x5d42cf;
-    //                             }
-    //                         };
-    //                         // wx[wanzikun_0x35f5('0x2d')]({
-    //                         //     'url': _0x45efb8[wanzikun_0x35f5('0x6c')](wanzikun_0x459368[wanzikun_0x35f5('0x1c')][wanzikun_0x35f5('0x1a')], _0x45efb8[wanzikun_0x35f5('0x6d')]),
-    //                         //     'data': {
-    //                         //         'id': kbarr[i]
-    //                         //     },
-    //                         //     'success': function(_0x269ba4) {
-    //                         //         if (_0xb587c8['GeYUo'](_0x269ba4[wanzikun_0x35f5('0xd')][wanzikun_0x35f5('0xe')], 0x0)) {
-    //                         //             toptopics[wanzikun_0x35f5('0x31')](_0x269ba4[wanzikun_0x35f5('0xd')][wanzikun_0x35f5('0xd')]);
-    //                         //         }
-    //                         //         _0x25c71f[wanzikun_0x35f5('0x0')]({
-    //                         //             'toptopics': toptopics
-    //                         //         });
-    //                         //     }
-    //                         // });
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //     });
-    //     // wx[wanzikun_0x35f5('0x2d')]({
-    //     //     'url': _0x22895d[wanzikun_0x35f5('0x6e')](wanzikun_0x459368[wanzikun_0x35f5('0x1c')]['urls'], _0x22895d[wanzikun_0x35f5('0x6f')]),
-    //     //     'data': {
-    //     //         'type': _0x22895d[wanzikun_0x35f5('0x70')]
-    //     //     },
-    //     //     'success': function(_0x4b3a4d) {
-    //     //         if (_0x4b3a4d[wanzikun_0x35f5('0xd')][wanzikun_0x35f5('0xe')] == 0x0) {
-    //     //             console.log(JSON.stringify(_0x4b3a4d['data'][wanzikun_0x35f5('0xd')]));
-    //     //             _0x25c71f['setData']({
-    //     //                 'banners': _0x4b3a4d['data'][wanzikun_0x35f5('0xd')]
-    //     //             });
-    //     //         }
-    //     //     }
-    //     // });
-    //     // wx[wanzikun_0x35f5('0x2d')]({
-    //     //     'url': _0x22895d[wanzikun_0x35f5('0x6e')](wanzikun_0x459368[wanzikun_0x35f5('0x1c')][wanzikun_0x35f5('0x1a')], wanzikun_0x35f5('0x5e')),
-    //     //     'data': {
-    //     //         'key': _0x22895d[wanzikun_0x35f5('0x65')],
-    //     //         'type': 'sale'
-    //     //     },
-    //     //     'success': function(_0x23aee6) {
-    //     //         if (_0x22895d['UOPgF'](_0x22895d[wanzikun_0x35f5('0x71')], _0x22895d['XguQa'])) {
-    //     //             wx[wanzikun_0x35f5('0x3')]({
-    //     //                 'url': wanzikun_0x35f5('0x9') + e[wanzikun_0x35f5('0x5')][wanzikun_0x35f5('0x6')]['id']
-    //     //             });
-    //     //         } else {
-    //     //             if (_0x22895d[wanzikun_0x35f5('0x72')](_0x23aee6['data'][wanzikun_0x35f5('0xe')], 0x0)) {
-    //     //                 console.log(JSON.stringify(_0x23aee6[wanzikun_0x35f5('0xd')][wanzikun_0x35f5('0xd')]));
-    //     //                 _0x25c71f[wanzikun_0x35f5('0x0')]({
-    //     //                     'sales': _0x23aee6[wanzikun_0x35f5('0xd')][wanzikun_0x35f5('0xd')]
-    //     //                 });
-    //     //             }
-    //     //         }
-    //     //     }
-    //     // });
-    //     // wx[wanzikun_0x35f5('0x2d')]({
-    //     //     'url': _0x22895d[wanzikun_0x35f5('0x6e')](wanzikun_0x459368[wanzikun_0x35f5('0x1c')][wanzikun_0x35f5('0x1a')], _0x22895d[wanzikun_0x35f5('0x73')]),
-    //     //     'data': {
-    //     //         'key': wanzikun_0x35f5('0x74')
-    //     //     },
-    //     //     'success': function(_0x36ab8e) {
-    //     //         if (_0x22895d[wanzikun_0x35f5('0x75')](_0x36ab8e[wanzikun_0x35f5('0xd')][wanzikun_0x35f5('0xe')], 0x0)) {
-    //     //             _0x25c71f[wanzikun_0x35f5('0x0')]({
-    //     //                 'topgoods': _0x36ab8e[wanzikun_0x35f5('0xd')]['data']
-    //     //             });
-    //     //             wx['request']({
-    //     //                 'url': _0x22895d[wanzikun_0x35f5('0x76')](wanzikun_0x459368[wanzikun_0x35f5('0x1c')][wanzikun_0x35f5('0x1a')], _0x22895d[wanzikun_0x35f5('0x77')]),
-    //     //                 'data': {
-    //     //                     'recommendStatus': 0x1,
-    //     //                     'pageSize': 0xa
-    //     //                 },
-    //     //                 'success': function(_0x36ab8e) {
-    //     //                     var _0x32d1ff = _0x22895d[wanzikun_0x35f5('0x78')][wanzikun_0x35f5('0x35')]('|'),
-    //     //                         _0x581cc5 = 0x0;
-    //     //                     while (!![]) {
-    //     //                         switch (_0x32d1ff[_0x581cc5++]) {
-    //     //                             case '0':
-    //     //                                 _0x25c71f[wanzikun_0x35f5('0x0')]({
-    //     //                                     'goods': _0x11a07f
-    //     //                                 });
-    //     //                                 continue;
-    //     //                             case '1':
-    //     //                                 for (var _0x2ff773 = 0x0; _0x22895d[wanzikun_0x35f5('0x79')](_0x2ff773, _0x36ab8e[wanzikun_0x35f5('0xd')][wanzikun_0x35f5('0xd')][wanzikun_0x35f5('0x2b')]); _0x2ff773++) {
-    //     //                                     _0x11a07f[wanzikun_0x35f5('0x31')](_0x36ab8e[wanzikun_0x35f5('0xd')][wanzikun_0x35f5('0xd')][_0x2ff773]);
-    //     //                                 }
-    //     //                                 continue;
-    //     //                             case '2':
-    //     //                                 var _0x11a07f = [];
-    //     //                                 continue;
-    //     //                             case '3':
-    //     //                                 if (_0x22895d[wanzikun_0x35f5('0x7a')](_0x36ab8e[wanzikun_0x35f5('0xd')][wanzikun_0x35f5('0xe')], 0x0) || _0x22895d['cQmQA'](_0x36ab8e[wanzikun_0x35f5('0xd')][wanzikun_0x35f5('0xd')][wanzikun_0x35f5('0x2b')], 0x0)) {
-    //     //                                     _0x25c71f[wanzikun_0x35f5('0x0')]({
-    //     //                                         'loadingMoreHidden': ![]
-    //     //                                     });
-    //     //                                     return;
-    //     //                                 }
-    //     //                                 continue;
-    //     //                             case '4':
-    //     //                                 _0x25c71f[wanzikun_0x35f5('0x0')]({
-    //     //                                     'goods': [],
-    //     //                                     'loadingMoreHidden': !![]
-    //     //                                 });
-    //     //                                 continue;
-    //     //                         }
-    //     //                         break;
-    //     //                     }
-    //     //                 }
-    //     //             });
-    //     //         }
-    //     //     }
-    //     // });
-    //     _0x25c71f['getNewUsercoups']();
-    // },
     'onReady': function() {
         var _0x90db27 = {
             'Awlft': function(_0x288ef6, _0x427c3f) {
