@@ -20,7 +20,9 @@ Page({
         PHONE: '',
         ajxtrue: false,
         PAR_NAME: '请输入手机号',
-        par_status: true
+        par_status: true,
+        je: '',
+        user_phone: ''
     },
     'onLoad': function() {
         const self = this;
@@ -97,7 +99,8 @@ Page({
         } else {
             this.setData({
                 ajxtrue: true,
-                PHONEErr: false
+                PHONEErr: false,
+                user_phone: phone
             })
             that.searchUser(phone)
             console.log('验证成功', that.data.ajxtrue)
@@ -126,7 +129,8 @@ Page({
                     self.setData({
                         PAR_NAME: res.data.user.NAME,
                         PAR_PHONE: res.data.user.PHONE,
-                        PAR_ID: res.data.user.USER_ID
+                        PAR_ID: res.data.user.USER_ID,
+                        par_status: true
                     })
                 }
                 wx.hideLoading({});
@@ -160,7 +164,15 @@ Page({
             })
             return false;
         }
-        if (self.data.je < 0) {
+        if (self.data.je.trim() == '') {
+            wx.showToast({
+                title: '填写转账金额',
+                icon: 'none',
+                duration: 2000
+            })
+            return false
+        }
+        if (self.data.je <= 0) {
             wx.showToast({
                 title: '转账金额不能为0',
                 icon: 'none',
@@ -168,6 +180,7 @@ Page({
             })
             return false
         }
+        self.searchUser(this.data.user_phone);
         const data = {
             remitterId: app.globalData.userInfo.USER_ID,
             payeeId: self.data.PAR_ID,
