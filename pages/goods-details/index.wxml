@@ -47,7 +47,7 @@
             </block>
         </view>
         <view class="goods-status">
-            <view class="goods-statusItem">
+            <view class="goods-statusItem" wx:if="{{goodsDetail.FIRST_TIME_BUY == 0}}">
                 <image src="../../images/rz.png"/>
                 <text>快乐天使</text>
             </view>
@@ -117,10 +117,10 @@
                 <view class="shop-num">{{shopNum}}</view>
             </view>
             <view class="box-title">
-                <view class="box-shop-cart npx" bindtap="tobuy">立即购买</view>
+                <view class="box-shop-cart npx {{qxVal?'qx':''}}" bindtap="tobuy">立即购买</view>
             </view>
             <view class="box-title buy-now">
-                <view class="box-now-buy npx" bindtap="toAddShopCar">加入购物车</view>
+                <view class="box-now-buy npx {{qxVal?'qx':''}}" bindtap="toAddShopCar">加入购物车</view>
             </view>
         </view>
     </block>

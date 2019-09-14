@@ -146,6 +146,7 @@ Page({
         //         "weight": 0
         //     }
         // },
+        qxVal: false,
         "swiperCurrent": 0,
         "hasMoreSelect": false,
         "selectSize": "选择规格：",
@@ -575,7 +576,8 @@ Page({
                     self.setData({
                         goodsDetail: res.data.goodInfo,
                         shopNum: num,
-                        canBuy: res.data.canBuy
+                        canBuy: res.data.canBuy,
+                        qxVal: res.data.canBuy == 1 ? true : false
                     });
                     if (res.data.canBuy == 1) {
                         wx.showToast({
@@ -584,7 +586,6 @@ Page({
                             duration: 2000
                         })
                     }
-                    // }
                 } else {
                     wx.showToast({
                         title: '系统繁忙',

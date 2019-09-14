@@ -39,6 +39,10 @@ page {
     margin-right: 5rpx;
     margin-top: 5rpx;
 }
+.qx{
+  background: #909399 !important;
+    color: #fff !important;
+}
 .goods-statusItem text{
     font-size: 26rpx;
     color: #666;
