@@ -59,22 +59,17 @@ Page({
             })
         } else {
             if (je > 0) {
-                this.setData({
+                that.setData({
                     ajxtrue: true,
-                    jeErr: false
+                    jeErr: false,
+                    je: je
                 })
                 console.log('验证成功', that.data.ajxtrue)
             } else {
-                wx.showToast({
-
-                })
+                wx.showToast({})
             }
         }
     },
-    // : function (e) {
-    //
-    // //
-    // },
     handleClick({ detail }) {
         wx.reLaunch({
             url: '/pages/my/index'
@@ -88,6 +83,14 @@ Page({
                 icon: 'none',
                 duration: 2000
             })
+        }
+        if (self.data.je < 0) {
+            wx.showToast({
+                title: '提现金额不能为0',
+                icon: 'none',
+                duration: 2000
+            })
+            return false
         }
         wx.showLoading({});
         const data = {

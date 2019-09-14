@@ -73,6 +73,9 @@ form{
     color:#333;
     border: none;
 }
+.i-cell::after {
+    border: none!important;
+}
 .row-wrap .right-box{
     margin-right: 30rpx;
 }
