@@ -280,7 +280,7 @@ Page({
                                     });
                                     setTimeout(function() {
                                         wx.reLaunch({
-                                            url: '/pages/order-list/index?currentType=2&status=1'
+                                            url: '/pages/order-list/index?currentType=1&status=1'
                                         })
                                     }, 1500)
                                 } else {

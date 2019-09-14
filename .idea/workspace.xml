@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="728786a9-b381-4290-92f9-790acc559dcd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/capitalMovements/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/capitalMovements/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/to-pay-order/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/to-pay-order/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/to-pay-order/success/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/to-pay-order/success/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,19 +18,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/capitalMovements/index.wxml">
+        <entry file="file://$PROJECT_DIR$/pages/to-pay-order/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
-              <caret line="33" column="19" lean-forward="true" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+            <state relative-caret-position="416">
+              <caret line="284" column="44" lean-forward="true" selection-start-line="284" selection-start-column="44" selection-end-line="284" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pages/capitalMovements/index.js">
+        <entry file="file://$PROJECT_DIR$/pages/to-pay-order/success/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="42" column="187" selection-start-line="42" selection-start-column="187" selection-end-line="42" selection-end-column="187" />
+            <state relative-caret-position="-137">
+              <caret line="66" column="75" selection-start-line="66" selection-start-column="75" selection-end-line="66" selection-end-column="75" />
             </state>
           </provider>
         </entry>
@@ -38,7 +39,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>logo</find>
       <find>selectDate</find>
       <find>date</find>
       <find>getDateTime</find>
@@ -68,6 +68,7 @@
       <find>isMemberShipStatus</find>
       <find>PASSWORD</find>
       <find>showToast</find>
+      <find>status</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -79,12 +80,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pages/performanceStatistics/index.wxml" />
         <option value="$PROJECT_DIR$/pages/fav-list/index.wxml" />
         <option value="$PROJECT_DIR$/pages/vipList/index.js" />
         <option value="$PROJECT_DIR$/pages/performanceStatistics/index.js" />
         <option value="$PROJECT_DIR$/pages/fav-list/index.js" />
-        <option value="$PROJECT_DIR$/pages/to-pay-order/index.js" />
         <option value="$PROJECT_DIR$/pages/index/index.wxss" />
         <option value="$PROJECT_DIR$/pages/goods-list/index.wxss" />
         <option value="$PROJECT_DIR$/pages/goods-list/index.wxml" />
@@ -102,7 +101,6 @@
         <option value="$PROJECT_DIR$/pages/inputInfo/index.json" />
         <option value="$PROJECT_DIR$/pages/inputInfo/index.wxss" />
         <option value="$PROJECT_DIR$/pages/personalInformation/index.js" />
-        <option value="$PROJECT_DIR$/pages/order-list/index.js" />
         <option value="$PROJECT_DIR$/pages/inputInfo/index.wxml" />
         <option value="$PROJECT_DIR$/pages/inputInfo/index.js" />
         <option value="$PROJECT_DIR$/pages/my-kanjia/index.wxss" />
@@ -130,6 +128,9 @@
         <option value="$PROJECT_DIR$/pages/register/register.js" />
         <option value="$PROJECT_DIR$/pages/personalInformation/index.wxml" />
         <option value="$PROJECT_DIR$/pages/capitalMovements/index.js" />
+        <option value="$PROJECT_DIR$/pages/order-list/index.js" />
+        <option value="$PROJECT_DIR$/pages/to-pay-order/index.js" />
+        <option value="$PROJECT_DIR$/pages/to-pay-order/success/index.js" />
       </list>
     </option>
   </component>
@@ -160,55 +161,14 @@
               <item name="HMShoppingMall" type="b2602c69:ProjectViewProjectNode" />
               <item name="HMShoppingMall" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="bulletinList" type="462c0819:PsiDirectoryNode" />
+              <item name="to-pay-order" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="HMShoppingMall" type="b2602c69:ProjectViewProjectNode" />
               <item name="HMShoppingMall" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="capitalMovements" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HMShoppingMall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HMShoppingMall" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HMShoppingMall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HMShoppingMall" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="inputInfo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HMShoppingMall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HMShoppingMall" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="my" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HMShoppingMall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HMShoppingMall" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="performanceStatistics" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HMShoppingMall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HMShoppingMall" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="personalInformation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HMShoppingMall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HMShoppingMall" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="recharge" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HMShoppingMall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HMShoppingMall" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="register" type="462c0819:PsiDirectoryNode" />
+              <item name="to-pay-order" type="462c0819:PsiDirectoryNode" />
+              <item name="success" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -292,21 +252,7 @@
       <workItem from="1567155779468" duration="18359000" />
       <workItem from="1567432705511" duration="3060000" />
       <workItem from="1567667588697" duration="46072000" />
-      <workItem from="1568101206034" duration="22956000" />
-    </task>
-    <task id="LOCAL-00029" summary="修改若干问题">
-      <created>1559188246924</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1559188246924</updated>
-    </task>
-    <task id="LOCAL-00030" summary="若干问题">
-      <created>1559271594342</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1559271594343</updated>
+      <workItem from="1568101206034" duration="25094000" />
     </task>
     <task id="LOCAL-00031" summary="完成问题">
       <created>1559285880109</created>
@@ -637,11 +583,25 @@
       <option name="project" value="LOCAL" />
       <updated>1568430391102</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="修改问题">
+      <created>1568430675623</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1568430675623</updated>
+    </task>
+    <task id="LOCAL-00079" summary="订单问题 修改">
+      <created>1568433084313</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1568433084313</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="415667000" />
+    <option name="totallyTimeSpent" value="417805000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -720,7 +680,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="修改若干bug" />
     <MESSAGE value="修改获取用户信息问题" />
     <MESSAGE value="修改授权页问题" />
     <MESSAGE value="修改图片显示问题" />
@@ -738,47 +697,17 @@
     <MESSAGE value="统计" />
     <MESSAGE value="上传小程序" />
     <MESSAGE value="修改错误" />
-    <MESSAGE value="修改问题" />
     <MESSAGE value="修改问题 增加个人信息" />
     <MESSAGE value="修改个人信息问题" />
     <MESSAGE value="我的收益修改" />
     <MESSAGE value="整理" />
     <MESSAGE value="完成转账功能等" />
     <MESSAGE value="修改bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改bug" />
+    <MESSAGE value="修改问题" />
+    <MESSAGE value="订单问题 修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="订单问题 修改" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/inputInfo/index.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="37" column="18" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/order-list/index.wxml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/order-list/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="773">
-          <caret line="71" column="151" lean-forward="true" selection-start-line="71" selection-start-column="151" selection-end-line="71" selection-end-column="151" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/personalInformation/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="33" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/inputInfo/index.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="62" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/kanjia-list/index.wxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
@@ -1083,8 +1012,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/capitalMovements/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="42" column="187" selection-start-line="42" selection-start-column="187" selection-end-line="42" selection-end-column="187" />
+        <state relative-caret-position="432">
+          <caret line="55" column="38" lean-forward="true" selection-start-line="55" selection-start-column="38" selection-end-line="55" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/order-list/index.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="34" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/order-list/index.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/order-list/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="47" column="22" lean-forward="true" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/to-pay-order/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="284" column="44" lean-forward="true" selection-start-line="284" selection-start-column="44" selection-end-line="284" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/to-pay-order/success/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-137">
+          <caret line="66" column="75" selection-start-line="66" selection-start-column="75" selection-end-line="66" selection-end-column="75" />
         </state>
       </provider>
     </entry>
