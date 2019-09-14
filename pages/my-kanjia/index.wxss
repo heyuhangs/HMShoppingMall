@@ -7,6 +7,62 @@
   height: 100%;
   margin-top: 130rpx;
 }
+
+.status-box {
+  width: 100%;
+  height: 75rpx;
+  line-height: 75rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-top: 1rpx solid #eee;
+  border-bottom: 1rpx solid #eee;
+}
+
+.status-box .status-label {
+  /*width: 50%;*/
+  width: 20%;
+  text-align: center;
+  height: 100%;
+  /*text-align: center;*/
+  font-size: 28rpx;
+  color: #353535;
+  box-sizing: border-box;
+  position: relative;
+
+}
+.status-box .status-label image{
+  width: 20rpx;
+  height: 20rpx;
+  margin-left: 3rpx;
+}
+
+.status-box .status-label.active {
+  color: #b5272d;
+  border-bottom: 6rpx solid #b5272d;
+}
+
+.status-box .status-label .red-dot {
+  width: 16rpx;
+  height: 16rpx;
+  position: absolute;
+  left: 125rpx;
+  top: 20rpx;
+  background-color: #b5272d;
+  border-radius: 50%;
+}
+.demo-container{
+  box-sizing: border-box;
+  width:65vw;
+  height: 100vh;
+  background:#fff;
+  color: #333;
+  padding-top: 11.5vh;
+}
+.dialog-con{
+  background: #fff;
+}
 .selectDate{
   display: inline-block;
   width: 100%;

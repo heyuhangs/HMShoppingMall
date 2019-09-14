@@ -29,7 +29,33 @@ Page({
         'statusType': ['会员奖金', '代理奖金'],
         currentType: 0,
         page: 1,
-        date: '2019-09'
+        date: '2019-09',
+        fruit: [{
+            id: 1,
+            name: '推荐奖',
+        }, {
+            id: 2,
+            name: '重消奖'
+        }, {
+            id: 3,
+            name: '团队奖'
+        }, {
+            id: 4,
+            name: '辖区分红奖',
+        }, {
+            id: 5,
+            name: '月年代理返利',
+        }, {
+            id: 6,
+            name: '会员分红',
+        }, {
+            id: 7,
+            name: '招募代理商奖',
+        }],
+        current: '',
+        position: 'left',
+        JJB_TYPE: '',
+        status: 0
     },
     onLoad: function() {
         const status = this.data.currentType;
@@ -45,12 +71,13 @@ Page({
         const self = this
         wx.showLoading({});
         wx.request({
-            url: app.globalData.url + `moneyImpl/moneyChangeList?DS_ROLE=${status}&USER_ID=${app.globalData.userInfo.USER_ID}&page=${self.data.page}&JJB_TYPE=&REASON_TYPE=2&MONEY_TYPE=1&START_TIME=${self.data.date}`,
+            url: app.globalData.url + `moneyImpl/moneyChangeList?DS_ROLE=${status}&USER_ID=${app.globalData.userInfo.USER_ID}&page=${self.data.page}&JJB_TYPE=${self.data.JJB_TYPE}&REASON_TYPE=2&MONEY_TYPE=1&START_TIME=${self.data.date}`,
             method: "get",
             success: function(res) {
                 if (res.data.result != 'error') {
                     self.setData({
-                        list: res.data.list
+                        list: res.data.list,
+                        status: status
                     })
                     wx.hideLoading({});
                 } else {
@@ -75,17 +102,49 @@ Page({
     //     }
     //     return tYear + '-' + m;
     // },
+    toggleRight: function() {
+        this.setData({
+            showLeft: !this.data.showLeft
+        });
+    },
+    toggleLeft: function() {
+        this.setData({
+            showLeft: !this.data.showLeft
+        });
+    },
+    handleStatusClick: function() {
+        this.setData({
+            showLeft: !this.data.showLeft,
+            page: 1
+        });
+        this.getData(this.data.status);
+    },
+    // handlesStatusChange: function({ detail = {} }){
+    //     this.setData({
+    //         valiDataName: detail.current
+    //     })
+    // },
+    handleFruitChange({ detail = {} }) {
+        const a = this.data.fruit.filter(function(e) {
+            return e.name == detail.value
+        })
+        this.setData({
+            current: detail.value,
+            JJB_TYPE: a[0].id,
+        });
+    },
     getDateTime: function(e) {
         this.setData({
             date: e.detail.value
         })
-        this.getData(0);
+        this.getData(this.data.status);
     },
     'statusTap': function(e) {
         // console.log(e.currentTarget.dataset.index)
         // if()
         this.setData({
-            currentType: e.currentTarget.dataset.index
+            currentType: e.currentTarget.dataset.index,
+            status: e.currentTarget.dataset.index
         })
         this.onLoad();
     },

@@ -5,16 +5,17 @@
         </navigator>
         <view class="header-name">我的收益</view>
     </view>
-<!--    <picker class="weui-btn" mode="date" value="{{date}}" start="" end="" bindchange="getDateTime">-->
-<!--        <view class="selectDate">-->
-<!--            {{date}}-->
-<!--        </view>-->
-<!--    </picker>-->
     <picker mode="date" fields="month" value="{{date}}" bindchange="getDateTime">
         <view class="selectDate">
             {{date}}
         </view>
     </picker>
+    <view class="status-box">
+        <view class="status-label" bindtap="toggleRight">
+            筛选
+            <image src="../../images/tz.png"/>
+        </view>
+    </view>
     <view class="status-box">
         <view bindtap="statusTap" class="status-label {{index == currentType ? 'active' : ''}}"
               wx:for-items="{{statusType}}" wx:key="{{index}}" data-index="{{index}}">
@@ -27,13 +28,14 @@
             <view class="tab-item-list-info" bindtap="gokj" data-id="{{item.USER_ID}}">
                 <view class="list-info">
                     <view class="list-info-title">
-                        <view wx:if="{{item.REASON_TYPE == 1}}">推荐奖</view>
-                        <view wx:if="{{item.REASON_TYPE == 2}}">重消奖</view>
-                        <view wx:if="{{item.REASON_TYPE == 3}}">团队奖</view>
-                        <view wx:if="{{item.REASON_TYPE == 4}}">分红奖</view>
-                        <view wx:if="{{item.REASON_TYPE == 5}}">代理返利</view>
-                        <view wx:if="{{item.REASON_TYPE == 6}}">会员分红</view>
-                        <view wx:if="{{item.REASON_TYPE == 7}}">招募代理商奖</view>
+<!--                        1推荐奖.2重消奖3团队奖4辖区分红奖 5月年代理返利6.会员分红 7招募代理商奖-->
+                        <view wx:if="{{item.JJB_TYPE == 1}}">推荐奖</view>
+                        <view wx:if="{{item.JJB_TYPE == 2}}">重消奖</view>
+                        <view wx:if="{{item.JJB_TYPE == 3}}">团队奖</view>
+                        <view wx:if="{{item.JJB_TYPE == 4}}">分红奖</view>
+                        <view wx:if="{{item.JJB_TYPE == 5}}">代理返利</view>
+                        <view wx:if="{{item.JJB_TYPE == 6}}">会员分红</view>
+                        <view wx:if="{{item.JJB_TYPE == 7}}">招募代理商奖</view>
                     </view>
                     <view class="list-info-detail">
                         <text wx:if="{{item.TYPE == 1}}">+{{item.ONE_MONEY}}</text>
@@ -49,4 +51,17 @@
         <image src="/images/zd.png" class="no-order-img"></image>
         <view class="text">还没有收益信息呢</view>
     </view>
+    <i-drawer i-class="dialog-con" mode="left" visible="{{showLeft}}" bind:close="toggleLeft">
+        <view class="demo-container">
+            <i-panel title="">
+                <i-radio-group current="{{current}}" bindchange="handleFruitChange">
+                    <i-radio wx:for="{{fruit}}" position="{{position}}" wx:key="{{item.id}}" value="{{item.name}}">
+                    </i-radio>
+                </i-radio-group>
+            </i-panel>
+            <view>
+                <i-button bind:click="handleStatusClick" type="primary">确定</i-button>
+            </view>
+        </view>
+    </i-drawer>
 </view>

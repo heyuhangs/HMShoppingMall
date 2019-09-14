@@ -30,7 +30,24 @@ Page({
         currentType: 0,
         page: 1,
         totalCount: 0,
-        list: []
+        list: [],
+        showLeft: false,
+        fruit: [{
+            id: 2,
+            name: '奖金',
+        }, {
+            id: 6,
+            name: '提现'
+        }, {
+            id: 5,
+            name: '转账'
+        }, {
+            id: 4,
+            name: '购物',
+        }],
+        current: '',
+        position: 'left',
+        REASON_TYPE: ''
     },
     onLoad: function() {
         const self = this;
@@ -40,14 +57,14 @@ Page({
         const self = this;
         wx.showLoading({});
         wx.request({
-            url: app.globalData.url + `moneyImpl/moneyChangeList?JJB_TYPE=&REASON_TYPE=&MONEY_TYPE=1&DS_ROLE=&USER_ID=${app.globalData.userInfo.USER_ID}&page=${this.data.page}&START_TIME=`,
+            url: app.globalData.url + `moneyImpl/moneyChangeList?JJB_TYPE=&REASON_TYPE=${self.data.REASON_TYPE}&MONEY_TYPE=1&DS_ROLE=&USER_ID=${app.globalData.userInfo.USER_ID}&page=${this.data.page}&START_TIME=`,
             method: "get",
             success: function(res) {
                 if (res.data.result != 'error') {
                     const list = res.data.list;
-                    const data = list.concat(self.data.list);
+                    // const data = list.concat(self.data.list);
                     self.setData({
-                        list: data,
+                        list: list,
                         totalCount: res.data.totalCount
                     })
                 } else {
@@ -57,10 +74,41 @@ Page({
                         duration: 2000
                     })
                 }
-            },complete(res) {
+            }, complete(res) {
                 wx.hideLoading({});
             }
         })
+    },
+    toggleRight: function() {
+        this.setData({
+            showLeft: !this.data.showLeft
+        });
+    },
+    toggleLeft: function() {
+        this.setData({
+            showLeft: !this.data.showLeft
+        });
+    },
+    handleStatusClick: function() {
+        this.setData({
+            showLeft: !this.data.showLeft,
+            page: 1
+        });
+        this.getData();
+    },
+    // handlesStatusChange: function({ detail = {} }){
+    //     this.setData({
+    //         valiDataName: detail.current
+    //     })
+    // },
+    handleFruitChange({ detail = {} }) {
+        const a = this.data.fruit.filter(function(e) {
+            return e.name == detail.value
+        })
+        this.setData({
+            current: detail.value,
+            REASON_TYPE: a[0].id,
+        });
     },
     onReachBottom: function() {
         let p = this.data.page;
@@ -73,7 +121,7 @@ Page({
         this.setData({
             page: p
         })
-        this.getData();
+        // this.getData();
     },
 
     'statusTap': function(e) {

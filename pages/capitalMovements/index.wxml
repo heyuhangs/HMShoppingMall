@@ -5,13 +5,12 @@
         </navigator>
         <view class="header-name">我的账单</view>
     </view>
-<!--    <view class="status-box">-->
-<!--        <view bindtap="statusTap" class="status-label {{index == currentType ? 'active' : ''}}"-->
-<!--              wx:for-items="{{statusType}}" wx:key="{{index}}" data-index="{{index}}">-->
-<!--            {{item}}-->
-<!--            <view class="{{tabClass[index]}}"></view>-->
-<!--        </view>-->
-<!--    </view>-->
+    <view class="status-box">
+        <view class="status-label" bindtap="toggleRight">
+            筛选
+            <image src="../../images/tz.png"/>
+        </view>
+    </view>
     <view class="tab-container">
         <view class="tab-item-list" wx:for="{{list}}" wx:key="{{index}}">
             <view class="tab-item-list-info" bindtap="gokj" data-id="{{item.USER_ID}}">
@@ -37,5 +36,30 @@
     <view hidden="{{list.length}}" class="no-more-goods">
         <image src="/images/zd.png" class="no-order-img"></image>
         <view class="text">还没有账单信息呢</view>
+    </view>
+    <view>
+        <i-drawer i-class="dialog-con" mode="left" visible="{{showLeft}}" bind:close="toggleLeft">
+            <view class="demo-container">
+                <i-panel title="">
+                    <i-radio-group current="{{current}}" bindchange="handleFruitChange">
+                        <i-radio wx:for="{{fruit}}" position="{{position}}" wx:key="{{item.id}}" value="{{item.name}}">
+                        </i-radio>
+                    </i-radio-group>
+                </i-panel>
+<!--                <i-panel title="group">-->
+<!--                    <i-radio-group current="{{valiDataName}}" bindchange="">-->
+<!--                        <i-radio wx:for="{{fruit}}" position="left" wx:key="{{item.id}}" value="{{item.name}}">-->
+<!--                        </i-radio>-->
+<!--                        &lt;!&ndash;                        <i-radio position="right" wx:key="6" value="提现"/>&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        <i-radio position="right" wx:key="1" value="购物"/>&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        <i-radio position="right" wx:key="2" value="转账"/>&ndash;&gt;-->
+<!--                        &lt;!&ndash;                        <i-radio position="right" wx:key="3" value="奖金"/>&ndash;&gt;-->
+<!--                    </i-radio-group>-->
+<!--                </i-panel>-->
+                <view>
+                    <i-button bind:click="handleStatusClick" type="primary">确定</i-button>
+                </view>
+            </view>
+        </i-drawer>
     </view>
 </view>
