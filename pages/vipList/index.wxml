@@ -6,14 +6,20 @@
         <view class="header-name">市场管理</view>
     </view>
     <view class="goods-box" wx:for-items="{{list}}" wx:key="{{index}}" bindtap="getVipList" data-id="{{item.USER_ID}}">
-        <view class="goods-title">
-            <view>{{item.NAME}}</view>
+        <view class="img">
+            <image src="{{item.WX_IMG}}"/>
         </view>
-        <view class="good-money">
-            <view wx:if="{{item.VIP_TYPE == 1}}">快乐天使</view>
-            <view wx:if="{{item.VIP_TYPE == 2}}">光明天使</view>
-            <view wx:if="{{item.VIP_TYPE == 3}}">爱心天使</view>
-            <view>联系方式：{{item.PHONE}}</view>
+        <view class="right-text">
+            <view class="goods-title">
+                <view>{{item.NAME}} (<view wx:if="{{item.VIP_TYPE == 1}}">快乐天使</view>
+                    <view wx:if="{{item.VIP_TYPE == 2}}">光明天使</view>
+                    <view wx:if="{{item.VIP_TYPE == 3}}">爱心天使</view>)
+                </view>
+            </view>
+            <view class="good-money">
+
+                <view>联系方式：{{item.PHONE}}</view>
+            </view>
         </view>
     </view>
     <view hidden="{{list.length}}" class="no-more-goods">

@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="728786a9-b381-4290-92f9-790acc559dcd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/recharge/recharge.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/recharge/recharge.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/vipList/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/vipList/index.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/vipList/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/vipList/index.wxss" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,95 +18,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/inputInfo/index.js">
+        <entry file="file://$PROJECT_DIR$/pages/vipList/index.wxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2907">
-              <caret line="153" column="25" selection-start-line="153" selection-start-column="25" selection-end-line="153" selection-end-column="25" />
+            <state relative-caret-position="228">
+              <caret line="12" column="36" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/personalInformation/index.wxml">
+        <entry file="file://$PROJECT_DIR$/pages/vipList/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-              <folding>
-                <element signature="n#style#0;n#text#0;n#i-cell#0;n#view#0;n#view#1;n#view#0;n#!!top" expanded="true" />
-                <marker date="1568441749870" expanded="true" signature="84:239" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/goods-details/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="702" column="21" lean-forward="true" selection-start-line="702" selection-start-column="21" selection-end-line="702" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/cashWithdrawal/cashWithdrawal.wxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="19" column="74" selection-start-line="19" selection-start-column="67" selection-end-line="19" selection-end-column="74" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/cashWithdrawal/cashWithdrawal.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="109" column="29" lean-forward="true" selection-start-line="109" selection-start-column="29" selection-end-line="109" selection-end-column="29" />
+            <state relative-caret-position="450">
+              <caret line="89" column="30" lean-forward="true" selection-start-line="89" selection-start-column="30" selection-end-line="89" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pages/recharge/recharge.js">
+        <entry file="file://$PROJECT_DIR$/pages/vipList/index.wxss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="181" column="9" lean-forward="true" selection-start-line="181" selection-start-column="9" selection-end-line="181" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/goods-details/index.wxss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="43" column="27" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/goods-details/index.wxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="154" column="87" selection-start-line="154" selection-start-column="81" selection-end-line="154" selection-end-column="87" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/to-pay-order/success/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="68" column="32" lean-forward="true" selection-start-line="68" selection-start-column="32" selection-end-line="68" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/inputInfo/index.wxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="84" selection-start-line="9" selection-start-column="61" selection-end-line="9" selection-end-column="84" />
+            <state relative-caret-position="443">
+              <caret line="269" column="26" selection-start-line="269" selection-start-column="26" selection-end-line="269" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -114,9 +48,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>tab-item-list</find>
-      <find>iphone</find>
-      <find>changeParPhone</find>
       <find>phoneValData</find>
       <find>进入</find>
       <find>onShareAppMessage</find>
@@ -144,6 +75,9 @@
       <find>tobuy</find>
       <find>buyNow</find>
       <find>par_status</find>
+      <find>picker</find>
+      <find>goods-box</find>
+      <find>goods-title</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -155,9 +89,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pages/goods-list/index.js" />
-        <option value="$PROJECT_DIR$/pages/my/index.wxml" />
-        <option value="$PROJECT_DIR$/pages/my/index.json" />
         <option value="$PROJECT_DIR$/pages/my/index.wxss" />
         <option value="$PROJECT_DIR$/pages/personalInformation/index.json" />
         <option value="$PROJECT_DIR$/pages/my/index.js" />
@@ -169,8 +100,6 @@
         <option value="$PROJECT_DIR$/pages/inputInfo/index.wxml" />
         <option value="$PROJECT_DIR$/pages/inputInfo/index.js" />
         <option value="$PROJECT_DIR$/pages/my-kanjia/index.wxss" />
-        <option value="$PROJECT_DIR$/pages/my-kanjia/index.wxml" />
-        <option value="$PROJECT_DIR$/pages/my-kanjia/index.js" />
         <option value="$PROJECT_DIR$/pages/start/start.wxss" />
         <option value="$PROJECT_DIR$/pages/start/start.wxml" />
         <option value="$PROJECT_DIR$/pages/start/start.js" />
@@ -198,7 +127,6 @@
         <option value="$PROJECT_DIR$/pages/goods-details/index.json" />
         <option value="$PROJECT_DIR$/pages/goods-details/index.wxml" />
         <option value="$PROJECT_DIR$/pages/goods-details/index.wxss" />
-        <option value="$PROJECT_DIR$/pages/vipList/index.wxml" />
         <option value="$PROJECT_DIR$/pages/vipList/index.js" />
         <option value="$PROJECT_DIR$/pages/personalInformation/index.js" />
         <option value="$PROJECT_DIR$/pages/personalInformation/index.wxml" />
@@ -206,6 +134,12 @@
         <option value="$PROJECT_DIR$/pages/cashWithdrawal/cashWithdrawal.js" />
         <option value="$PROJECT_DIR$/pages/goods-details/index.js" />
         <option value="$PROJECT_DIR$/pages/recharge/recharge.js" />
+        <option value="$PROJECT_DIR$/pages/performanceStatistics/index.wxml" />
+        <option value="$PROJECT_DIR$/pages/performanceStatistics/index.js" />
+        <option value="$PROJECT_DIR$/pages/my-kanjia/index.wxml" />
+        <option value="$PROJECT_DIR$/pages/my-kanjia/index.js" />
+        <option value="$PROJECT_DIR$/pages/vipList/index.wxml" />
+        <option value="$PROJECT_DIR$/pages/vipList/index.wxss" />
       </list>
     </option>
   </component>
@@ -248,13 +182,13 @@
               <item name="HMShoppingMall" type="b2602c69:ProjectViewProjectNode" />
               <item name="HMShoppingMall" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
+              <item name="my-kanjia" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="HMShoppingMall" type="b2602c69:ProjectViewProjectNode" />
               <item name="HMShoppingMall" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="recharge" type="462c0819:PsiDirectoryNode" />
+              <item name="vipList" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -338,21 +272,7 @@
       <workItem from="1567155779468" duration="18359000" />
       <workItem from="1567432705511" duration="3060000" />
       <workItem from="1567667588697" duration="46072000" />
-      <workItem from="1568101206034" duration="33407000" />
-    </task>
-    <task id="LOCAL-00043" summary="修改账单信息">
-      <created>1564724781453</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1564724781453</updated>
-    </task>
-    <task id="LOCAL-00044" summary="修改问题">
-      <created>1565181004324</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1565181004324</updated>
+      <workItem from="1568101206034" duration="34625000" />
     </task>
     <task id="LOCAL-00045" summary="增加会员购买">
       <created>1565239999994</created>
@@ -683,11 +603,25 @@
       <option name="project" value="LOCAL" />
       <updated>1568445251006</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="修改充值">
+      <created>1568445768495</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1568445768495</updated>
+    </task>
+    <task id="LOCAL-00093" summary="修改赛选">
+      <created>1568446218706</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1568446218707</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="426118000" />
+    <option name="totallyTimeSpent" value="427336000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -766,8 +700,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="增加公告模块 修改问题" />
-    <MESSAGE value="修改支付" />
     <MESSAGE value="修改支付逻辑" />
     <MESSAGE value="列表调整" />
     <MESSAGE value="账单信息" />
@@ -791,18 +723,11 @@
     <MESSAGE value="市场管理修改" />
     <MESSAGE value="3. 你查询会员信息时，查询一下RIGHTS 这个值如果是“99”， 我的里面啥也不显示" />
     <MESSAGE value="bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug" />
+    <MESSAGE value="修改充值" />
+    <MESSAGE value="修改赛选" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改赛选" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/images/zd.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/yjtj.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/withdraw.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/kanjia-goods/index.wxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
@@ -873,11 +798,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/performanceStatistics/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3619" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/bulletinDetails/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
@@ -935,11 +855,6 @@
         <state relative-caret-position="228">
           <caret line="12" column="87" selection-start-line="12" selection-start-column="79" selection-end-line="12" selection-end-column="87" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/performanceStatistics/index.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-260" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/order-list/index.wxml">
@@ -1043,20 +958,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/vipList/index.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="60" lean-forward="true" selection-start-line="13" selection-start-column="60" selection-end-line="13" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/vipList/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="89" column="30" lean-forward="true" selection-start-line="89" selection-start-column="30" selection-end-line="89" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/personalInformation/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
@@ -1133,8 +1034,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/recharge/recharge.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
+        <state relative-caret-position="458">
           <caret line="181" column="9" lean-forward="true" selection-start-line="181" selection-start-column="9" selection-end-line="181" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/performanceStatistics/index.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/performanceStatistics/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="57" column="24" lean-forward="true" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/my-kanjia/index.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/my-kanjia/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="37" column="8" lean-forward="true" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/vipList/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="89" column="30" lean-forward="true" selection-start-line="89" selection-start-column="30" selection-end-line="89" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/vipList/index.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="36" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/vipList/index.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="269" column="26" selection-start-line="269" selection-start-column="26" selection-end-line="269" selection-end-column="26" />
         </state>
       </provider>
     </entry>
