@@ -4,7 +4,7 @@
                 bindchange="swiperchange" circular="circular">
             <block wx:for="{{bannerList}}" wx:key="{{item.index}}">
                 <swiper-item>
-                    <image bindtap="tapBanner" data-id="{{item.PICTURES_ID}}" src="{{item.PATH}}"
+                    <image bindtap="tapBanner" data-id="{{item.PICTURES_ID}}" src="{{url}}{{item.PATH}}"
                            class="slide-image"/>
                 </swiper-item>
             </block>

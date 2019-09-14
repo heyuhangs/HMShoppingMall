@@ -126,6 +126,7 @@ Page({
         //     });
         //     return false;
         // }
+        this.getBannerData();
         wx.showLoading({});
         //获取banner
         // wx.request({
@@ -222,7 +223,6 @@ Page({
         this.setData({
             url: app.globalData.imgUrl
         })
-        this.getBannerData();
     },
     goodsList: function(e) {
         let title = '';
@@ -271,6 +271,7 @@ Page({
             method: "GET",
             success: function(res) {
                 if (res.statusCode == 200) {
+                    debugger
                     self.setData({
                         bannerList: res.data.bannerList
                     })

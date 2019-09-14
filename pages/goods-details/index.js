@@ -25,126 +25,127 @@ Page({
         "interval": 10000,
         "duration": 500,
         commentList: [],
-        goodsDetail: {
-            "logistics": {
-                "isFree": false,
-                "feeType": 0,
-                "feeTypeStr": "按件数",
-                "details": [
-                    {
-                        "addAmount": 0,
-                        "addNumber": 1,
-                        "firstAmount": 10,
-                        "firstNumber": 1,
-                        "type": 0,
-                        "userId": 797
-                    }
-                ]
-            },
-            "extJson": {},
-            "category": {
-                "dateAdd": "2018-04-04 12:47:47",
-                "icon": "https://cdn.it120.cc/apifactory/2018/05/24/772862baa0197b71c5eee745542c956f.png",
-                "id": 10451,
-                "isUse": true,
-                "key": "2",
-                "name": "床品",
-                "paixu": 2,
-                "pid": 10450,
-                "type": "",
-                "userId": 797
-            },
-            "pics": [
-                {
-                    "goodsId": 36888,
-                    type: 1,
-                    "id": 380476,
-                    "pic": "http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400",
-                    "userId": 797
-                },
-                {
-                    "goodsId": 36888,
-                    type: 0,
-                    "id": 380476,
-                    "pic": "https://cdn.it120.cc/apifactory/2018/04/02/0eaf91e4696b51e326313efaec5e9b11.jpg",
-                    "userId": 797
-                },
-                {
-                    "goodsId": 36888,
-                    type: 0,
-                    "id": 380476,
-                    "pic": "https://cdn.it120.cc/apifactory/2018/04/02/0eaf91e4696b51e326313efaec5e9b11.jpg",
-                    "userId": 797
-                },
-                {
-                    "goodsId": 36888,
-                    type: 0,
-                    "id": 380477,
-                    "pic": "https://cdn.it120.cc/apifactory/2018/04/02/2b3810a35d854c5bb77ff85dc79e8200.jpg",
-                    "userId": 797
-                },
-                {
-                    "goodsId": 36888,
-                    type: 0,
-                    "id": 380478,
-                    "pic": "https://cdn.it120.cc/apifactory/2018/04/02/78cc21576a6c0392afb390e839b393ee.jpg",
-                    "userId": 797
-                },
-                {
-                    "goodsId": 36888,
-                    type: 0,
-                    "id": 380479,
-                    "pic": "https://cdn.it120.cc/apifactory/2018/04/02/8eaf570fac1d2b33bad15c037c2de531.jpg",
-                    "userId": 797
-                },
-                {
-                    "goodsId": 36888,
-                    type: 0,
-                    "id": 380480,
-                    "pic": "https://cdn.it120.cc/apifactory/2018/04/02/35a55d0b5c3424c4de67f6f86abdb39c.jpg",
-                    "userId": 797
-                }
-            ],
-            "content": "<p><img src=\"https://cdn.it120.cc/apifactory/2018/04/02/fca25a56fdcf817fa9ebabeaadece67c.jpg\" title=\"apifactory/2018/04/02/fca25a56fdcf817fa9ebabeaadece67c.jpg\" alt=\"6.jpg\"/></p>",
-            "basicInfo": {
-                "barCode": "",
-                "categoryId": 10451,
-                "characteristic": "100%全棉，椰林自然设计",
-                "commission": 10,
-                "commissionType": 1,
-                "dateAdd": "2018-04-04 00:00:00",
-                "dateStart": "2018-04-04 00:00:00",
-                "dateUpdate": "2019-05-21 02:52:10",
-                "gotScore": 0,
-                "gotScoreType": 0,
-                "id": 36888,
-                "kanjia": false,
-                "kanjiaPrice": 0,
-                "logisticsId": 2065,
-                "minPrice": 299,
-                "minScore": 0,
-                "name": "唤自然 仲夏椰香四件套",
-                "numberFav": 120,
-                "numberGoodReputation": 8,
-                "numberOrders": 138,
-                "numberSells": 7,
-                "originalPrice": 399,
-                "paixu": 1,
-                "pic": "https://cdn.it120.cc/apifactory/2018/04/02/0eaf91e4696b51e326313efaec5e9b11.jpg",
-                "pingtuan": false,
-                "pingtuanPrice": 99,
-                "recommendStatus": 1,
-                "recommendStatusStr": "推荐",
-                "shopId": 755,
-                "status": 0,
-                "statusStr": "上架",
-                "stores": 31,
-                "userId": 797,
-                "videoId": "",
-                "views": 16020,
-                "weight": 0
-            }
-        },
+        goodsDetail: {},
+        // goodsDetail: {
+        //     "logistics": {
+        //         "isFree": false,
+        //         "feeType": 0,
+        //         "feeTypeStr": "按件数",
+        //         "details": [
+        //             {
+        //                 "addAmount": 0,
+        //                 "addNumber": 1,
+        //                 "firstAmount": 10,
+        //                 "firstNumber": 1,
+        //                 "type": 0,
+        //                 "userId": 797
+        //             }
+        //         ]
+        //     },
+        //     "extJson": {},
+        //     "category": {
+        //         "dateAdd": "2018-04-04 12:47:47",
+        //         "icon": "https://cdn.it120.cc/apifactory/2018/05/24/772862baa0197b71c5eee745542c956f.png",
+        //         "id": 10451,
+        //         "isUse": true,
+        //         "key": "2",
+        //         "name": "床品",
+        //         "paixu": 2,
+        //         "pid": 10450,
+        //         "type": "",
+        //         "userId": 797
+        //     },
+        //     "pics": [
+        //         {
+        //             "goodsId": 36888,
+        //             type: 1,
+        //             "id": 380476,
+        //             "pic": "http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400",
+        //             "userId": 797
+        //         },
+        //         {
+        //             "goodsId": 36888,
+        //             type: 0,
+        //             "id": 380476,
+        //             "pic": "https://cdn.it120.cc/apifactory/2018/04/02/0eaf91e4696b51e326313efaec5e9b11.jpg",
+        //             "userId": 797
+        //         },
+        //         {
+        //             "goodsId": 36888,
+        //             type: 0,
+        //             "id": 380476,
+        //             "pic": "https://cdn.it120.cc/apifactory/2018/04/02/0eaf91e4696b51e326313efaec5e9b11.jpg",
+        //             "userId": 797
+        //         },
+        //         {
+        //             "goodsId": 36888,
+        //             type: 0,
+        //             "id": 380477,
+        //             "pic": "https://cdn.it120.cc/apifactory/2018/04/02/2b3810a35d854c5bb77ff85dc79e8200.jpg",
+        //             "userId": 797
+        //         },
+        //         {
+        //             "goodsId": 36888,
+        //             type: 0,
+        //             "id": 380478,
+        //             "pic": "https://cdn.it120.cc/apifactory/2018/04/02/78cc21576a6c0392afb390e839b393ee.jpg",
+        //             "userId": 797
+        //         },
+        //         {
+        //             "goodsId": 36888,
+        //             type: 0,
+        //             "id": 380479,
+        //             "pic": "https://cdn.it120.cc/apifactory/2018/04/02/8eaf570fac1d2b33bad15c037c2de531.jpg",
+        //             "userId": 797
+        //         },
+        //         {
+        //             "goodsId": 36888,
+        //             type: 0,
+        //             "id": 380480,
+        //             "pic": "https://cdn.it120.cc/apifactory/2018/04/02/35a55d0b5c3424c4de67f6f86abdb39c.jpg",
+        //             "userId": 797
+        //         }
+        //     ],
+        //     "content": "<p><img src=\"https://cdn.it120.cc/apifactory/2018/04/02/fca25a56fdcf817fa9ebabeaadece67c.jpg\" title=\"apifactory/2018/04/02/fca25a56fdcf817fa9ebabeaadece67c.jpg\" alt=\"6.jpg\"/></p>",
+        //     "basicInfo": {
+        //         "barCode": "",
+        //         "categoryId": 10451,
+        //         "characteristic": "100%全棉，椰林自然设计",
+        //         "commission": 10,
+        //         "commissionType": 1,
+        //         "dateAdd": "2018-04-04 00:00:00",
+        //         "dateStart": "2018-04-04 00:00:00",
+        //         "dateUpdate": "2019-05-21 02:52:10",
+        //         "gotScore": 0,
+        //         "gotScoreType": 0,
+        //         "id": 36888,
+        //         "kanjia": false,
+        //         "kanjiaPrice": 0,
+        //         "logisticsId": 2065,
+        //         "minPrice": 299,
+        //         "minScore": 0,
+        //         "name": "唤自然 仲夏椰香四件套",
+        //         "numberFav": 120,
+        //         "numberGoodReputation": 8,
+        //         "numberOrders": 138,
+        //         "numberSells": 7,
+        //         "originalPrice": 399,
+        //         "paixu": 1,
+        //         "pic": "https://cdn.it120.cc/apifactory/2018/04/02/0eaf91e4696b51e326313efaec5e9b11.jpg",
+        //         "pingtuan": false,
+        //         "pingtuanPrice": 99,
+        //         "recommendStatus": 1,
+        //         "recommendStatusStr": "推荐",
+        //         "shopId": 755,
+        //         "status": 0,
+        //         "statusStr": "上架",
+        //         "stores": 31,
+        //         "userId": 797,
+        //         "videoId": "",
+        //         "views": 16020,
+        //         "weight": 0
+        //     }
+        // },
         "swiperCurrent": 0,
         "hasMoreSelect": false,
         "selectSize": "选择规格：",
