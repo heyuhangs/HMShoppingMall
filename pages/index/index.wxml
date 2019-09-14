@@ -137,3 +137,6 @@
         <button open-type="getUserInfo" bindgetuserinfo="userlogin">允许</button>
     </view>
 </view>
+<modal hidden="{{isMemberShipStatus}}" title="消息" no-cancel="true" confirm-text="确定" bindconfirm="confirmMemberShip">
+    新用户需要补全信息。
+</modal>

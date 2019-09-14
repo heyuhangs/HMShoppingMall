@@ -8,7 +8,7 @@ Page({
     data: {
         PHONE: '', // 电话
         PHONEErr: false,
-        PASSWORD: '', //  密码
+        PASSWORD: '111111', //  密码
         NAME: '',  // 姓名
         BANKCODE: '',  //银行卡号
         BANKNAME: '', //  开户人
@@ -127,11 +127,11 @@ Page({
             url: app.globalData.url + `/userImpl/getUserByPhone?PHONE=${id}`,
             method: "get",
             success: function (res) {
-                wx.showToast({
-                    title: '进入',
-                    icon: 'none',
-                    duration: 2000
-                });
+                // wx.showToast({
+                //     title: '进入',
+                //     icon: 'none',
+                //     duration: 2000
+                // });
                 if (res.data.result == 'error') {
                     self.setData({
                         PAR_NAME: '无推荐人',

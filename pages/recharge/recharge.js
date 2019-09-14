@@ -19,7 +19,7 @@ Page({
         user: null,
         PHONE: '',
         ajxtrue: false,
-        PAR_NAME: ''
+        PAR_NAME: '123'
     },
     'onLoad': function() {
         const self = this;
@@ -72,7 +72,6 @@ Page({
         // });
     },
     phoneChange: function(e) {
-        debugger
         this.setData({
             PHONE: e.detail.detail.value
         })
@@ -109,11 +108,6 @@ Page({
             url: app.globalData.url + `/userImpl/getUserByPhone?PHONE=${phone}`,
             method: "get",
             success: function(res) {
-                wx.showToast({
-                    title: '进入',
-                    icon: 'none',
-                    duration: 2000
-                });
                 if (res.data.result == 'error') {
                     self.setData({
                         PAR_NAME: '无推荐人',
@@ -126,7 +120,6 @@ Page({
                     });
                     return false;
                 }
-                debugger
                 if (res.statusCode == 200) {
                     self.setData({
                         PAR_NAME: res.data.user.NAME,

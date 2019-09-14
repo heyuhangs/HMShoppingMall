@@ -16,6 +16,7 @@ const app = getApp();
 var wanzikun_0x459368 = getApp();
 Page({
     'data': {
+        isMemberShipStatus: true,
         goods: [{
             "barCode": "",
             "categoryId": 10450,
@@ -574,7 +575,7 @@ Page({
     },
     goodsList: function(e) {
         let title = '';
-        let url ='';
+        let url = '';
         switch (e.currentTarget.dataset.id) {
             case 'vipGoods1':
                 title = '快乐天使';
@@ -1646,7 +1647,33 @@ Page({
             url: '/pages/bulletinList/index'
         })
     },
+    // isMemberShipStatus
+    isMembership: function() {
+        const self = this;
+        return new Promise(function(resolve, reject) {
+            if (app.globalData.userInfo.PHONE == '' || app.globalData.userInfo.PHONE == null) {
+                // wx.showToast({
+                //     title: '补全信息后可邀请',
+                //     icon: 'none',
+                //     duration: 2000,
+                //     mask: true
+                // })
+                self.setData({
+                    isMemberShipStatus: false
+                })
+                resolve(200)
+            } else {
+                resolve(400)
+            }
+        })
+    },
     onShareAppMessage: function(ops) {
+        const self = this;
+        self.isMembership().then(res => {
+            if (res == 200) {
+                return false;
+            }
+        });
         if (ops.from === 'button') {
             // 来自页面内转发按钮
             console.log(ops.target)

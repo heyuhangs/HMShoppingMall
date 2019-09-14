@@ -12,7 +12,7 @@
                 <open-data class="i-cell-rightTrxt userinfo-avatar" type="userAvatarUrl" lang="zh_CN"></open-data>
             </i-cell>
             <i-cell class="list-text">
-                <text class="i-cell-text i-cell-leftTrxt">名字</text>
+                <text class="i-cell-text i-cell-leftTrxt">微信名称</text>
                 <open-data class="i-cell-text i-cell-rightTrxt userinfo-nickname" type="userNickName"></open-data>
             </i-cell>
             <i-cell class="list-text">
@@ -20,7 +20,7 @@
                 <text class="i-cell-text i-cell-rightTrxt">{{parUser.NAME}}</text>
             </i-cell>
             <i-cell class="list-text">
-                <text class="i-cell-text i-cell-leftTrxt">姓名</text>
+                <text class="i-cell-text i-cell-leftTrxt">注册姓名</text>
                 <text class="i-cell-text i-cell-rightTrxt">{{user.NAME}}</text>
             </i-cell>
             <i-cell class="list-text" bindtap="inputVal" data-id="BANKCODE">

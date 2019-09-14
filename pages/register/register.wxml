@@ -10,7 +10,7 @@
             <view style="display: inline-block;" bindtap="handIcon"><i-icon type="brush_fill" size="28" color="#80848f"/></view>
             <view wx:if="{{PAR_ID == 2}}" class="zhu">注：您当前的领导默认设置为公司。您有且仅有一次机会更换为其它领导人，本次补充保存后，不可更改推荐人及电话号</view>
             <i-input maxlength="5" bind:change="nameChange" type="text" value="{{ NAME }}" title="真实姓名" autofocus placeholder="请输入真实姓名"/>
-            <i-input maxlength="40" bind:change="passwordChange" value="{{ PASSWORD }}" type="password" title="密码" placeholder="请输入密码"/>
+<!--            <i-input maxlength="40" bind:change="passwordChange" value="{{ PASSWORD }}" type="password" title="密码" placeholder="请输入密码"/>-->
             <i-input maxlength="40" bind:change="bankCodeChange" value="{{ BANKCODE }}" type="number" title="银行卡" placeholder="请输入银行卡号"/>
             <i-input maxlength="40" bind:change="bankNameChange" value="{{ BANKNAME }}" title="开户人姓名" placeholder="请输入开户人姓名"/>
             <i-input maxlength="11" bind:change="phoneChange" error="{{PHONEErr}}" bind:focus="changePhone" bind:blur="phoneValData" value="{{ PHONE }}" title="手机号"
