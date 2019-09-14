@@ -75,7 +75,6 @@ Page({
                             mask: true
                         })
                     }
-                    wx.hideLoading({});
                 }
             });
         // } else {

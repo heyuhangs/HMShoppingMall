@@ -180,8 +180,11 @@ Page({
             data: data,
             success: function(res) {
                 if (res.data.code == 200) {
-                    self.setData({
-                        visible: true
+                    wx.showLoading({
+                        title: '转账成功',
+                        icon: 'success',
+                        duration: 2000,
+                        mask: true
                     })
                 } else {
                     wx.showToast({

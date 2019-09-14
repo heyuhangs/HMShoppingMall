@@ -103,10 +103,13 @@ Page({
             data: data,
             success: function(res) {
                 wx.hideLoading();
-                if (res.data.code == 200) {
-                    self.setData({
-                        visible: true
-                    })
+                if (res.data.msg == 'success') {
+                    wx.showToast({
+                        title: '提现成功',
+                        icon: 'success',
+                        duration: 1000,
+                        mask: true
+                    });
                 } else {
                     wx.showToast({
                         title: res.data.msg,

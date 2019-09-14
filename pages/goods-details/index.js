@@ -579,6 +579,7 @@ Page({
                         canBuy: res.data.canBuy,
                         qxVal: res.data.canBuy == 1 ? true : false
                     });
+                    console.log('canBuy', res.data.canBuy);
                     if (res.data.canBuy == 1) {
                         wx.showToast({
                             title: '需要升级会员才可购买',
@@ -687,7 +688,7 @@ Page({
         });
     },
     tobuy: function() {
-        if (this.data.canBuy == 1){
+        if (this.data.canBuy == 1) {
             return false;
         }
         // if (this.data.canBuy == 1) {
@@ -709,6 +710,9 @@ Page({
     },
     buyNow: function() {
         const self = this;
+        if (this.data.canBuy == 1) {
+            return false;
+        }
         this.isMembership().then(res => {
             if (res == 200) {
                 return false;
@@ -783,7 +787,7 @@ Page({
     },
     'toAddShopCar': function() {
         const self = this
-        if (this.data.canBuy == 1){
+        if (this.data.canBuy == 1) {
             return false;
         }
         // if (this.data.canBuy == 1) {
