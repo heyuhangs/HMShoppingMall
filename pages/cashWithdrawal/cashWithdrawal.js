@@ -17,7 +17,7 @@ const app = getApp();
 Page({
     'data': {
         'balance': 0x0,
-        je: 100,
+        je: '',
         visible: false,
         actions: [
             {

@@ -271,7 +271,6 @@ Page({
             method: "GET",
             success: function(res) {
                 if (res.statusCode == 200) {
-                    debugger
                     self.setData({
                         bannerList: res.data.bannerList
                     })

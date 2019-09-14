@@ -7,8 +7,8 @@
   <view class="tixian-bg">
     <image class="tixian-img" src="../../images/withdraw.png"></image>
     <view class="tixian-name">
-      <text class="money">¥{{user.JJB}}</text>
-      <text class="tips">付款时优先选择余额进行支付</text>
+      <text class="money">¥{{user.JJB || 0}}</text>
+      <text class="tips"></text>
     </view>
   </view>
   <i-cell-group>
