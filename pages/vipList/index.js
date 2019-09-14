@@ -43,6 +43,9 @@ Page({
     getData: function() {
         const self = this
         wx.showLoading({});
+        self.setData({
+            list: []
+        })
         wx.request({
             url: app.globalData.url + `/userImpl/childUser?USER_ID=${app.globalData.userInfo.USER_ID}&LEVEL=&keywords=`,
             method: "get",
@@ -59,7 +62,32 @@ Page({
                         duration: 2000
                     })
                 }
-            },complete(res) {
+            }, complete(res) {
+            }
+        })
+    },
+    getVipList: function(e) {
+        const self = this;
+        wx.showLoading({
+            mask: true
+        })
+        wx.request({
+            url: app.globalData.url + `/userImpl/childUser?USER_ID=${e.currentTarget.dataset.id}&LEVEL=&keywords=`,
+            method: "get",
+            success: function(res) {
+                if (res.data.result != 'error') {
+                    self.setData({
+                        list: res.data.childList
+                    })
+                    wx.hideLoading({});
+                } else {
+                    wx.showToast({
+                        title: '系统繁忙',
+                        icon: 'none',
+                        duration: 2000
+                    })
+                }
+            }, complete(res) {
             }
         })
     },

@@ -5,7 +5,7 @@
         </navigator>
         <view class="header-name">市场管理</view>
     </view>
-    <view class="goods-box" wx:for-items="{{list}}" wx:key="{{index}}">
+    <view class="goods-box" wx:for-items="{{list}}" wx:key="{{index}}" bindtap="getVipList" data-id="{{item.USER_ID}}">
         <view class="goods-title">
             <view>{{item.NAME}}</view>
         </view>
