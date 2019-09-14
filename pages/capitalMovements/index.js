@@ -36,21 +36,29 @@ Page({
         const self = this;
         self.getData()
     },
-    getData:function(){
+    getData: function() {
         const self = this;
         wx.showLoading({});
         wx.request({
-            url: app.globalData.url + `moneyImpl/moneyChangeList?JJB_TYPE=&REASON_TYPE=&MONEY_TYPE=1&DS_ROLE=&USER_ID=${app.globalData.userInfo.USER_ID}&page=${this.data.page}`,
+            url: app.globalData.url + `moneyImpl/moneyChangeList?JJB_TYPE=&REASON_TYPE=&MONEY_TYPE=1&DS_ROLE=&USER_ID=${app.globalData.userInfo.USER_ID}&page=${this.data.page}&START_TIME=`,
             method: "get",
             success: function(res) {
-                if (res.statusCode == 200) {
+                if (res.data.result != 'error') {
+                    debugger
                     const list = res.data.list;
                     const data = list.concat(self.data.list);
                     self.setData({
                         list: data,
                         totalCount: res.data.totalCount
                     })
+                } else {
+                    wx.showToast({
+                        title: '系统繁忙',
+                        icon: 'none',
+                        duration: 2000
+                    })
                 }
+            },complete(res) {
                 wx.hideLoading({});
             }
         })
