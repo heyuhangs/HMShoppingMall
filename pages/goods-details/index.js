@@ -687,19 +687,22 @@ Page({
         });
     },
     tobuy: function() {
-        if (this.data.canBuy == 1) {
-            wx.showToast({
-                title: '需要升级会员才可购买',
-                icon: 'none',
-                duration: 2000
-            })
-            setTimeout(function() {
-                wx.navigateTo({
-                    url: '/pages/newcoupons/index'
-                })
-            }, 1800)
+        if (this.data.canBuy == 1){
             return false;
         }
+        // if (this.data.canBuy == 1) {
+        //     wx.showToast({
+        //         title: '需要升级会员才可购买',
+        //         icon: 'none',
+        //         duration: 2000
+        //     })
+        //     setTimeout(function() {
+        //         wx.navigateTo({
+        //             url: '/pages/newcoupons/index'
+        //         })
+        //     }, 1800)
+        //     return false;
+        // }
         this.setData({
             isShoping: true
         })
@@ -780,19 +783,22 @@ Page({
     },
     'toAddShopCar': function() {
         const self = this
-        if (this.data.canBuy == 1) {
-            wx.showToast({
-                title: '需要升级会员才可购买',
-                icon: 'none',
-                duration: 2000
-            })
-            setTimeout(function() {
-                wx.navigateTo({
-                    url: '/pages/newcoupons/index'
-                })
-            }, 1800)
+        if (this.data.canBuy == 1){
             return false;
         }
+        // if (this.data.canBuy == 1) {
+        //     wx.showToast({
+        //         title: '需要升级会员才可购买',
+        //         icon: 'none',
+        //         duration: 2000
+        //     })
+        //     setTimeout(function() {
+        //         wx.navigateTo({
+        //             url: '/pages/newcoupons/index'
+        //         })
+        //     }, 1800)
+        //     return false;
+        // }
         var _0x250276 = {
             'GMqaX': wanzikun_0x446e('0x2')
         };
