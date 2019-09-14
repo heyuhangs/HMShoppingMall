@@ -26,9 +26,21 @@ Page({
         url: ''
     },
     'statusTap': function(e) {
+        let s = 0;
+        switch (e.currentTarget.dataset.index) {
+            case 1:
+                s = 1;
+                break;
+            case 2:
+                s = 3;
+                break;
+            case 3:
+                s = 2;
+                break;
+        }
         this.setData({
             currentType: e.currentTarget.dataset.index,
-            currentInd: parseInt(e.currentTarget.dataset.index) + 1
+            currentInd: s
         })
         this.getData();
     },
@@ -36,7 +48,7 @@ Page({
         this.setData({
             url: app.globalData.imgUrl
         })
-        if (e.currentType) {
+        if (e.currentType && e.currentType != 0) {
             let status = 0;
             switch (e.currentType) {
                 case "1":
@@ -50,7 +62,7 @@ Page({
                     break;
             }
             this.setData({
-                status: status,
+                status: e.status,
                 currentType: e.currentType,
                 currentInd: status
             })
@@ -69,7 +81,7 @@ Page({
         if (this.data.currentInd == 0) {
             url = app.globalData.url + `/orderImpl/orderList?USER_ID=${app.globalData.userInfo.USER_ID}&PAY_STATUS=1&ORDER_STATUS=`
         } else {
-            url = app.globalData.url + `/orderImpl/orderList?USER_ID=${app.globalData.userInfo.USER_ID}&ORDER_STATUS=${this.data.currentInd}&PAY_STATUS=0`
+            url = app.globalData.url + `/orderImpl/orderList?USER_ID=${app.globalData.userInfo.USER_ID}&ORDER_STATUS=${this.data.currentInd}&PAY_STATUS=`
         }
         wx.request({
             url: url,
