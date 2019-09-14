@@ -99,8 +99,8 @@
 				},
 				{
 					"id": 7,
-					"name": "卡卷",
-					"pathName": "pages/newcoupons/index",
+					"name": "转账",
+					"pathName": "pages/recharge/recharge",
 					"query": "",
 					"scene": null
 				},

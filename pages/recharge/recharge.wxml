@@ -14,10 +14,10 @@
     <form bindsubmit="bindSave">
         <view class="form-box">
             <view class="row-wrap">
-                <view class="lable-text">{{PAR_NAME}}</view>
-            </view>
-            <view class="row-wrap">
                 <view class="label">转账人手机号</view>
+                <view class="label-title">
+                     <text>姓名：</text> {{PAR_NAME}}
+                </view>
                 <view class="label-right">
                     <i-input i-class="input" type="number" maxlength="11" bind:change="phoneChange" error="{{PHONEErr}}"
                              bind:blur="phoneValData" value="{{ PHONE }}" title="手机号"

@@ -19,7 +19,7 @@ Page({
         user: null,
         PHONE: '',
         ajxtrue: false,
-        PAR_NAME: '123'
+        PAR_NAME: '请输入手机号'
     },
     'onLoad': function() {
         const self = this;

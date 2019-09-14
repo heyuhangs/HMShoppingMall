@@ -39,6 +39,7 @@ form{
     line-height:88rpx;
     font-size:28rpx;
     margin-left:20px;
+    margin-top: 30rpx;
 }
 .row-wrap .label{
     width:100%;
@@ -111,6 +112,15 @@ button[type="default"]{
     margin:auto 0 auto 0;
     width: 160rpx;
     color: #000
+}
+.label-title{
+    margin:auto 0 auto 0;
+    width: 100%;
+    color: #000;
+    margin-left: 6%;
+}
+.label-title text{
+
 }
 .addr-details textarea{
     box-sizing: border-box;
