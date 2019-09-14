@@ -19,7 +19,8 @@ Page({
         user: null,
         PHONE: '',
         ajxtrue: false,
-        PAR_NAME: '请输入手机号'
+        PAR_NAME: '请输入手机号',
+        par_status: true
     },
     'onLoad': function() {
         const self = this;
@@ -110,11 +111,12 @@ Page({
             success: function(res) {
                 if (res.data.result == 'error') {
                     self.setData({
-                        PAR_NAME: '无推荐人',
-                        PAR_PHONE: '无推荐人'
+                        PAR_NAME: '收款人不正确',
+                        PAR_PHONE: '收款人不正确',
+                        par_status: false
                     })
                     wx.showToast({
-                        title: '无此推荐人!',
+                        title: '收款人不正确!',
                         icon: 'none',
                         duration: 2000
                     });
@@ -123,26 +125,60 @@ Page({
                 if (res.statusCode == 200) {
                     self.setData({
                         PAR_NAME: res.data.user.NAME,
-                        PAR_PHONE: res.data.user.PHONE
+                        PAR_PHONE: res.data.user.PHONE,
+                        PAR_ID: res.data.user.USER_ID
                     })
                 }
                 wx.hideLoading({});
             }
         });
     },
-    bindSaveSub: function() {
+    bindSave: function(e) {
         const self = this;
         wx.showLoading({});
+        if (!this.data.ajxtrue) {
+            wx.showToast({
+                title: '手机号错误',
+                icon: 'none',
+                duration: 2000
+            })
+            return false;
+        }
+        if (self.data.PAR_ID == app.globalData.userInfo.USER_ID) {
+            wx.showToast({
+                title: '转账人不能是自己',
+                icon: 'none',
+                duration: 2000
+            })
+            return false;
+        }
+        if (!this.data.par_status) {
+            wx.showToast({
+                title: '收款人不正确',
+                icon: 'none',
+                duration: 2000
+            })
+            return false;
+        }
+        if (self.data.je < 0) {
+            wx.showToast({
+                title: '转账金额不能为0',
+                icon: 'none',
+                duration: 2000
+            })
+            return false
+        }
         const data = {
-            userId: app.globalData.userInfo.USER_ID,
-            oneMoney: self.data.je
+            remitterId: app.globalData.userInfo.USER_ID,
+            payeeId: self.data.PAR_ID,
+            oneMoney: e.detail.value.amount,
+            MoneyTransferType: 2
         };
         wx.request({
             url: app.globalData.url + `/moneyImpl/transfer`,
             method: "POST",
             data: data,
             success: function(res) {
-                wx.hideLoading();
                 if (res.data.code == 200) {
                     self.setData({
                         visible: true
@@ -155,6 +191,8 @@ Page({
                         mask: true
                     });
                 }
+            }, complete(res) {
+                wx.hideLoading();
             }
         })
     },
@@ -209,7 +247,7 @@ Page({
     'bindCancel': function() {
         wx[wanzikun_0xfabc('0x15')]({});
     },
-    'bindSave': function(_0x480b89) {
-
-    }
+    // 'bindSave': function(_0x480b89) {
+    //
+    // }
 });

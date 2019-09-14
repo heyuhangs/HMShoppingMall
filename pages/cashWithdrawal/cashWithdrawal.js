@@ -50,7 +50,7 @@ Page({
                 ajxtrue: false
             })
             wx.showToast({
-                title: '请输入整数',
+                title: '请输入正确金额',
                 icon: 'none',
                 duration: 2000
             })

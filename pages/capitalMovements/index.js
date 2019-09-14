@@ -44,7 +44,6 @@ Page({
             method: "get",
             success: function(res) {
                 if (res.data.result != 'error') {
-                    debugger
                     const list = res.data.list;
                     const data = list.concat(self.data.list);
                     self.setData({
