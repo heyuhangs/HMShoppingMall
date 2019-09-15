@@ -192,8 +192,8 @@ Page({
             method: "POST",
             data: data,
             success: function(res) {
-                if (res.data.result == 'success') {
-                    wx.showLoading({
+                if (res.data.msg == 'success') {
+                    wx.showToast({
                         title: '转账成功',
                         icon: 'success',
                         duration: 2000,

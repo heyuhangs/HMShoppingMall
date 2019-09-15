@@ -27,7 +27,7 @@ page {
 }
 
 .type-header-menu-con{
-  height: 180rpx !important;
+  /*height: 180rpx !important;*/
 }
 .type-search-con{
   margin-top: 100rpx !important;

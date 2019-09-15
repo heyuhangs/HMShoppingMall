@@ -18,14 +18,15 @@ Page({
     'data': {
         loadingMoreHidden: true,
         childList: [],
-        date: ''
-        // childList: []
+        date: '',
+        USER_ID: ''
     },
     onLoad: function() {
         const self = this;
         const date = self.doHandleDate();
         self.setData({
-            date: date
+            date: date,
+            USER_ID: app.globalData.userInfo.USER_ID
         })
         this.getData();
     },
@@ -44,7 +45,7 @@ Page({
         const self = this;
         wx.showLoading({});
         wx.request({
-            url: app.globalData.url + `userImpl/childDLUser?USER_ID=${app.globalData.userInfo.USER_ID}&SALE_MONTH=${self.data.date}`,
+            url: app.globalData.url + `userImpl/childDLUser?USER_ID=${self.data.USER_ID}&SALE_MONTH=${self.data.date}`,
             method: "GET",
             success: function(res) {
                 if (res.data.result != 'error') {
@@ -71,7 +72,10 @@ Page({
         this.getData();
     },
     toDetailsTap: function(e) {
-
+        this.setData({
+            USER_ID: e.currentTarget.dataset.id
+        })
+        this.getData();
     },
     'home': function() {
         wx[wanzikun_0x13c4('0x5')]({
