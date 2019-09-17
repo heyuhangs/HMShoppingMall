@@ -11,14 +11,14 @@
       <view class="goods-box" wx:for="{{hostGoodsList}}" wx:key="{{index}}" bindtap="toDetailsTap" data-id="{{item.USER_ID}}">
         <view class="img-box">
           <image src="{{url}}{{item.PATH}}" class="image" />
-          <view class="goods-characteristic">
-            <text>{{item.DETAIL}}</text>
-          </view>
+<!--          <view class="goods-characteristic">-->
+<!--            <text>{{item.DETAIL}}</text>-->
+<!--          </view>-->
         </view>
         <view class="goods-title">{{item.NAME}}</view>
         <view style='display:flex;'>
           <view class="goods-price">Ұ{{item.PRICE}}</view>
-          <view class="goods-price-naver">已售{{item.SUM_SALES}}</view>
+<!--          <view class="goods-price-naver">已售{{item.SUM_SALES}}</view>-->
         </view>
       </view>
     </view>

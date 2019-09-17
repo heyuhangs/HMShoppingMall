@@ -688,6 +688,7 @@ Page({
         });
     },
     tobuy: function() {
+        debugger
         if (this.data.canBuy == 1) {
             return false;
         }
@@ -812,6 +813,9 @@ Page({
         this[wanzikun_0x446e('0x47')]();
     },
     'tobuy': function() {
+        if (this.data.canBuy == 1) {
+            return false;
+        }
         var _0x389cec = {
             'ZMefH': 'tobuy'
         };

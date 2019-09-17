@@ -19,7 +19,7 @@
     <view class="menu-container">
         <view class="menu-list" bindtap="onBulletin">
             <button class="ImgBtn ImgBtn2"></button>
-            <button>公告</button>
+            <button>平台咨询</button>
         </view>
         <view class="menu-list">
             <button class="ImgBtn ImgBtn0" bindtap="onShareAppMessage" open-type="share"></button>
@@ -39,7 +39,7 @@
 <!--  商品  -->
     <view wx:if="{{vipGoods4}}" class="goods-container">
         <view class="goods-title" bindtap="goodsList" data-id="vipGoods4">
-            <text>热销商品</text>
+            <text>👇 乐享购物专区 👇</text>
             <image src="../../images/home_more.png" />
         </view>
         <view class="goods-list" wx:for-items="{{vipGoods4}}" wx:key="{{index}}" bindtap="toDetailsTap"
@@ -52,7 +52,7 @@
     </view>
     <view wx:if="{{topkan}}" class="goods-container">
         <view class="goods-title" bindtap="goodsList" data-id="vipGoods1">
-            <text>快乐天使商品</text>
+            <text>快乐天使专区</text>
             <image src="../../images/home_more.png" />
         </view>
         <view class="goods-list" wx:for-items="{{vipGoods1}}" wx:key="{{index}}" bindtap="toDetailsTap"
@@ -65,7 +65,7 @@
     </view>
     <view wx:if="{{vipGoods2}}" class="goods-container">
         <view class="goods-title" bindtap="goodsList" data-id="vipGoods2">
-            <text>光明天使商品</text>
+            <text>光明天使专区</text>
             <image src="../../images/home_more.png" />
         </view>
         <view class="goods-list" wx:for-items="{{vipGoods2}}" wx:key="{{index}}" bindtap="toDetailsTap"
@@ -78,7 +78,7 @@
     </view>
     <view wx:if="{{vipGoods3}}" class="goods-container">
         <view class="goods-title" bindtap="goodsList" data-id="vipGoods3">
-            <text>爱心天使商品</text>
+            <text>爱心天使专区</text>
             <image src="../../images/home_more.png" />
         </view>
         <view class="goods-list" wx:for-items="{{vipGoods3}}" wx:key="{{index}}" bindtap="toDetailsTap"

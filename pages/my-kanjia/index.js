@@ -26,7 +26,7 @@ Page({
         'kjhelp': [],
         'pics': {},
         'helps': {},
-        'statusType': ['会员奖金', '代理奖金'],
+        'statusType': ['会员收入', '代理收入'],
         currentType: 0,
         page: 1,
         date: '2019-09',

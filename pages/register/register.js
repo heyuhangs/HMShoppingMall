@@ -278,8 +278,8 @@ Page({
             PHONE: this.data.PHONE,
             PASSWORD: this.data.PASSWORD,
             NAME: this.data.NAME,
-            BANKCODE: this.data.BANKCODE,
-            BANKNAME: this.data.BANKNAME,
+            // BANKCODE: this.data.BANKCODE,
+            // BANKNAME: this.data.BANKNAME,
             PAR_ID: this.data.PAR_ID,
             WX_NICKNAME: app.globalData.userInfo.WX_NICKNAME,
             WX_IMG: app.globalData.userInfo.WX_IMG
