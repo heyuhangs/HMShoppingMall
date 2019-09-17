@@ -23,37 +23,37 @@ Page({
         PAR_PHONE: '',
         isAutoPhone: false
     },
-    parPhoneChange: function (event) {
+    parPhoneChange: function(event) {
         this.setData({
             PAR_PHONE: event.detail.detail.value
         })
     },
-    nameChange: function (event) {
+    nameChange: function(event) {
         this.setData({
             NAME: event.detail.detail.value
         })
     },
-    passwordChange: function (event) {
+    passwordChange: function(event) {
         this.setData({
             PASSWORD: event.detail.detail.value
         })
     },
-    bankCodeChange: function (event) {
+    bankCodeChange: function(event) {
         this.setData({
             BANKCODE: event.detail.detail.value
         })
     },
-    bankNameChange: function (event) {
+    bankNameChange: function(event) {
         this.setData({
             BANKNAME: event.detail.detail.value
         })
     },
-    phoneChange: function (event) {
+    phoneChange: function(event) {
         this.setData({
             PHONE: event.detail.detail.value
         })
     },
-    yzmValChange: function (event) {
+    yzmValChange: function(event) {
         this.setData({
             yzmVal: event.detail.detail.value
         })
@@ -61,7 +61,7 @@ Page({
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function (options) {
+    onLoad: function(options) {
         const self = this;
         // this.getUserByPhone('13111111111');
         // this.getUserByPhone('15524444266');
@@ -78,27 +78,22 @@ Page({
             wx.hideLoading({});
         }
     },
-    onShow: function () {
+    onShow: function() {
         wx.showToast({
             title: '请补全个人信息!',
             icon: 'none',
             duration: 2000
         });
     },
-    changeParPhone: function () {
+    changeParPhone: function() {
         this.getUserByPhone(this.data.PAR_PHONE);
     },
-    findByUserInfo: function (id) {
+    findByUserInfo: function(id) {
         const self = this;
         wx.request({
             url: app.globalData.url + `userImpl/userInfo?USER_ID=${id}`,
             method: "get",
-            success: function (res) {
-                // wx.showToast({
-                //     title: '进入',
-                //     icon: 'none',
-                //     duration: 2000
-                // });
+            success: function(res) {
                 if (res.data.result == 'error') {
                     self.setData({
                         PAR_NAME: '无推荐人',
@@ -113,6 +108,7 @@ Page({
                 }
                 if (res.statusCode == 200) {
                     self.setData({
+                        PAR_ID: res.data.user.USER_ID,
                         PAR_NAME: res.data.user.NAME,
                         PAR_PHONE: res.data.user.PHONE
                     })
@@ -121,17 +117,12 @@ Page({
             }
         });
     },
-    getUserByPhone: function (id) {
+    getUserByPhone: function(id) {
         const self = this;
         wx.request({
             url: app.globalData.url + `/userImpl/getUserByPhone?PHONE=${id}`,
             method: "get",
-            success: function (res) {
-                // wx.showToast({
-                //     title: '进入',
-                //     icon: 'none',
-                //     duration: 2000
-                // });
+            success: function(res) {
                 if (res.data.result == 'error') {
                     self.setData({
                         PAR_NAME: '无推荐人',
@@ -146,6 +137,7 @@ Page({
                 }
                 if (res.statusCode == 200) {
                     self.setData({
+                        PAR_ID: res.data.user.USER_ID,
                         PAR_NAME: res.data.user.NAME,
                         PAR_PHONE: res.data.user.PHONE
                     })
@@ -154,26 +146,27 @@ Page({
             }
         });
     },
-    changePhone: function () {
+    changePhone: function() {
         this.setData({
             PHONEErr: false
         })
     },
-    handIcon: function () {
+    handIcon: function() {
         this.setData({
             isdbPhone: false,
             isAutoPhone: true,
             PAR_PHONE: '',
-            PAR_NAME: ''
+            PAR_NAME: '',
+            PAR_ID: ''
         })
     },
-    phoneValData: function () {
+    phoneValData: function() {
         const self = this;
-        return new Promise(function (resolve, reject) {
+        return new Promise(function(resolve, reject) {
             wx.request({
                 url: app.globalData.url + `userImpl/checkPhone?PHONE=${self.data.PHONE}`,
                 method: "get",
-                success: function (res) {
+                success: function(res) {
                     if (res.data.result == 'no') {
                         resolve({
                             code: 200
@@ -195,7 +188,7 @@ Page({
             })
         })
     },
-    getCAPTCHA: function () {
+    getCAPTCHA: function() {
         const self = this;
         if (this.data.PHONE == '' || !this.data.PHONE) {
             wx.showToast({
@@ -225,7 +218,7 @@ Page({
             wx.request({
                 url: app.globalData.url + `userImpl/getCAPTCHA?PHONE=${self.data.PHONE}`,
                 method: "get",
-                success: function (res) {
+                success: function(res) {
                     if (res.statusCode == 200) {
                         self.setData({
                             yzmMsg: res.data.msg
@@ -246,7 +239,7 @@ Page({
                     }
                 }
             })
-            const timer = setInterval(function () {
+            const timer = setInterval(function() {
                 if (self.data.count == 0) {
                     clearInterval(this);
                     self.setData({
@@ -264,7 +257,7 @@ Page({
             }, 1000)
         })
     },
-    handleClick: function () {
+    handleClick: function() {
         if (this.data.yzmVal != this.data.yzmMsg) {
             wx.showToast({
                 title: '验证码错误!',
@@ -289,13 +282,13 @@ Page({
             url: app.globalData.url + `userImpl/editUser`,
             method: "POST",
             data: obj,
-            success: function (res) {
+            success: function(res) {
                 if (res.statusCode == 200) {
                     app.globalData.userInfo = res.data.userInfo;
                     wx.setStorage({
                         key: 'userInfo',
                         data: res.data.userInfo,
-                        success: function (res) {
+                        success: function(res) {
                         }
                     });
                     wx.showToast({
@@ -303,7 +296,7 @@ Page({
                         icon: 'success',
                         duration: 2000
                     })
-                    setTimeout(function () {
+                    setTimeout(function() {
 
                     }, 1500);
                     wx.reLaunch({
@@ -316,49 +309,49 @@ Page({
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
-    onReady: function () {
+    onReady: function() {
 
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow: function () {
+    onShow: function() {
 
     },
 
     /**
      * 生命周期函数--监听页面隐藏
      */
-    onHide: function () {
+    onHide: function() {
 
     },
 
     /**
      * 生命周期函数--监听页面卸载
      */
-    onUnload: function () {
+    onUnload: function() {
 
     },
 
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
-    onPullDownRefresh: function () {
+    onPullDownRefresh: function() {
 
     },
 
     /**
      * 页面上拉触底事件的处理函数
      */
-    onReachBottom: function () {
+    onReachBottom: function() {
 
     },
 
     /**
      * 用户点击右上角分享
      */
-    onShareAppMessage: function () {
+    onShareAppMessage: function() {
 
     }
 })
