@@ -1098,8 +1098,8 @@ Page({
             console.log(ops.target)
         }
         return {
-            title: '快来.....啦',
-            imageUrl: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=4075680052,587526839&fm=27&gp=0.jpg',//图片地址
+            title: '',
+            imageUrl: '../../images/yqxr.jpg',//图片地址
             path: `/pages/start/start?PAR_ID=${app.globalData.userInfo.USER_ID}`,// 用户点击首先进入的当前页面
             success: function(res) {
                 // 转发成功

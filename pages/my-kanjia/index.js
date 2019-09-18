@@ -32,25 +32,25 @@ Page({
         date: '2019-09',
         fruit: [{
             id: 1,
-            name: '推荐奖',
+            name: '分享提层',
         }, {
             id: 2,
-            name: '重消奖'
+            name: '重消提层'
         }, {
             id: 3,
-            name: '团队奖'
+            name: '管理分红'
         }, {
             id: 4,
-            name: '辖区分红奖',
+            name: '辖区业绩提层',
         }, {
             id: 5,
-            name: '月年代理返利',
+            name: '代理商提层',
         }, {
             id: 6,
-            name: '会员分红',
+            name: '爱心分红',
         }, {
             id: 7,
-            name: '招募代理商奖',
+            name: '招商提层',
         }],
         current: '',
         position: 'left',
