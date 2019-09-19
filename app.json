@@ -39,7 +39,8 @@
                 "pages/goods-list/index",
                 "pages/personalInformation/index",
                 "pages/inputInfo/index",
-                "pages/bulletinDetails/index"
+                "pages/bulletinDetails/index",
+                "pages/xy/index"
         ],
         "window": {
                 "backgroundTextStyle": "light",

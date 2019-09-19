@@ -19,6 +19,11 @@
                 只是为了给您提供更好的服务
             </view>
         </view>
-        <button open-type="getUserInfo" bindgetuserinfo="userlogin">允  许</button>
+        <button disabled="{{!checked}}" open-type="getUserInfo" bindgetuserinfo="userlogin">允 许</button>
+        <view class="xy">
+            <i-radio color="#04be01" i-class="radio" checked="{{checked}}" bindchange="handleStatusChange"/>
+            我已认真阅读，理解并同意
+            <text bindtap="xy">《用户协议及隐私政策》</text>
+        </view>
     </view>
 </view>

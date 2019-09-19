@@ -9,7 +9,28 @@
     /*background-color: rgba(0, 0, 0, 0.3);*/
     /*z-index: 99999999999;*/
 }
-
+.xya{
+    opacity: 0.3;
+}
+.radio{
+    display: inline-block;
+    /*padding: 0;*/
+    /*width: 50rpx;*/
+    /*height: 50rpx;*/
+}
+.radio .i-cell {
+    padding: 0;
+}
+.xy{
+    color: #999;
+    margin: 35rpx 0;
+    font-size: 26rpx;
+}
+.xy text{
+    text-decoration: underline;
+    color: #999;
+    font-size: 26rpx;
+}
 .show-container .show-box {
     width: 80%;
     margin: 0 auto;

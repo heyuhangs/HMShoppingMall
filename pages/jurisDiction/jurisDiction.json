@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "i-radio": "../../dist/radio/index"
+  }
 }
