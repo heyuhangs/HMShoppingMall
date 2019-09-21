@@ -1,19 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="728786a9-b381-4290-92f9-790acc559dcd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pages/xy/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/xy/index.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/xy/index.wxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/xy/index.wxss" afterDir="false" />
+    <list default="true" id="728786a9-b381-4290-92f9-790acc559dcd" name="Default Changelist" comment="修改">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/cell/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/dist/cell/index.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/jurisDiction/jurisDiction.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/jurisDiction/jurisDiction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/jurisDiction/jurisDiction.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/jurisDiction/jurisDiction.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/jurisDiction/jurisDiction.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/jurisDiction/jurisDiction.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/jurisDiction/jurisDiction.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/jurisDiction/jurisDiction.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/fav-list/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/fav-list/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/start/start.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/start/start.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -105,14 +96,11 @@
       <workItem from="1568786118095" duration="649000" />
       <workItem from="1568792547662" duration="623000" />
       <workItem from="1568810776337" duration="5727000" />
-      <workItem from="1568877479515" duration="4337000" />
-    </task>
-    <task id="LOCAL-00052" summary="修改支付订单问题">
-      <created>1565759529995</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1565759529995</updated>
+      <workItem from="1568877479515" duration="4622000" />
+      <workItem from="1568889551418" duration="4917000" />
+      <workItem from="1568945394930" duration="4000" />
+      <workItem from="1568945663126" duration="14000" />
+      <workItem from="1568961333538" duration="5694000" />
     </task>
     <task id="LOCAL-00053" summary="修改订单支付问题，显示支付状态">
       <created>1565759879808</created>
@@ -450,7 +438,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568793965388</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="修改">
+      <created>1568884895202</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1568884895203</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="TodoView">

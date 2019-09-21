@@ -71,6 +71,7 @@ Page({
         })
         this.getData();
     },
+
     toDetailsTap: function(e) {
         this.setData({
             USER_ID: e.currentTarget.dataset.id
