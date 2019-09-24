@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="728786a9-b381-4290-92f9-790acc559dcd" name="Default Changelist" comment="修改">
+    <list default="true" id="728786a9-b381-4290-92f9-790acc559dcd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/images/logo.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/weChatRegistration/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/weChatRegistration/index.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/weChatRegistration/index.wxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/weChatRegistration/index.wxss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/fav-list/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/fav-list/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/cell/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/dist/cell/index.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/jurisDiction/jurisDiction.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/jurisDiction/jurisDiction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/jurisDiction/jurisDiction.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/jurisDiction/jurisDiction.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/index.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/index.wxss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/start/start.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/start/start.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/withdraw/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/withdraw/index.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/withdraw/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/withdraw/index.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.config.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -100,14 +115,8 @@
       <workItem from="1568889551418" duration="4917000" />
       <workItem from="1568945394930" duration="4000" />
       <workItem from="1568945663126" duration="14000" />
-      <workItem from="1568961333538" duration="5694000" />
-    </task>
-    <task id="LOCAL-00053" summary="修改订单支付问题，显示支付状态">
-      <created>1565759879808</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1565759879809</updated>
+      <workItem from="1568961333538" duration="11376000" />
+      <workItem from="1569313567616" duration="6105000" />
     </task>
     <task id="LOCAL-00054" summary="增加奖金">
       <created>1565767171161</created>
@@ -445,7 +454,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568884895203</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="修改问题">
+      <created>1569072845840</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1569072845840</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TodoView">
@@ -499,7 +515,6 @@
     <MESSAGE value="订单支付成功后跳转的位置" />
     <MESSAGE value="修改bug" />
     <MESSAGE value="增加转账" />
-    <MESSAGE value="修改问题" />
     <MESSAGE value="完善提现问题" />
     <MESSAGE value="增加权限验证" />
     <MESSAGE value="修改会员购买商品问题" />
@@ -513,7 +528,8 @@
     <MESSAGE value="第二波修改百分之90" />
     <MESSAGE value="修改绑定问题" />
     <MESSAGE value="修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改" />
+    <MESSAGE value="修改问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改问题" />
   </component>
   <component name="masterDetails">
     <states>

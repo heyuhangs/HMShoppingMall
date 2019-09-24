@@ -34,12 +34,12 @@ function wanzikun_0x4a9cec(_0x16ae00) {
     var _0x41f282 = _0x16ae00[wanzikun_0x3fe9('0x1')][wanzikun_0x3fe9('0x2')];
     if (_0x41f282 == 0x0) {
         if (_0x2751c4[wanzikun_0x3fe9('0x3')](_0x13ba76, 0x0)) {
-            if (!app.globalData.userInfo || app.globalData.userInfo == '') {
-                wx.redirectTo({
-                    url: '/pages/jurisDiction/jurisDiction'
-                })
-                return false;
-            }
+            // if (!app.globalData.userInfo || app.globalData.userInfo == '') {
+            //     wx.redirectTo({
+            //         url: '/pages/jurisDiction/jurisDiction'
+            //     })
+            //     return false;
+            // }
             if (_0x2751c4[wanzikun_0x3fe9('0x4')](_0x2751c4[wanzikun_0x3fe9('0x5')], _0x2751c4['zZRlu'])) {
                 wx[wanzikun_0x3fe9('0x6')]({
                     'url': _0x2751c4['TKDhz']
@@ -88,20 +88,27 @@ Page({
         this[wanzikun_0x3fe9('0x8')]({
             'home': 0x1
         });
-        if (!app.globalData.userInfo || app.globalData.userInfo == '') {
-            wx.redirectTo({
-                url: '/pages/jurisDiction/jurisDiction'
-            })
-            return false;
-        } else {
-            wx['switchTab']({
-                'url': wanzikun_0x3fe9('0x9')
-            });
-        }
+        // if (!app.globalData.userInfo || app.globalData.userInfo == '') {
+        //     wx.redirectTo({
+        //         url: '/pages/jurisDiction/jurisDiction'
+        //     })
+        //     return false;
+        // } else {
+        //     wx['switchTab']({
+        //         'url': wanzikun_0x3fe9('0x9')
+        //     });
+        // }
+        wx['switchTab']({
+            'url': wanzikun_0x3fe9('0x9')
+        });
 
     },
     onLoad: function(options) {
         const self = this;
+        //获取推荐人信息
+        if (options.PAR_ID) {
+            app.globalData.payId = options.PAR_ID;
+        }
         const userKey = wx.getStorageSync('userKey');
         if (userKey) {
             wx.request({
@@ -135,10 +142,6 @@ Page({
                     isGo: true
                 })
             });
-        }
-        //获取推荐人信息
-        if (options.PAR_ID) {
-            app.globalData.payId = options.PAR_ID;
         }
         var _0x19fa02 = {
             'JefPz': function(_0x404048, _0x1a0c63) {

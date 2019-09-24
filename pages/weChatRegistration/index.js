@@ -7,7 +7,7 @@ Page({
    */
   data: {
     disabled: false,
-    checked: true
+    checked: false
   },
 
   /**
@@ -28,7 +28,7 @@ Page({
   },
   zc() {
     wx.navigateTo({
-      url: '/pages/weChatRegistration/index'
+      url: '/pages/xy/index'
     })
   },
   /**

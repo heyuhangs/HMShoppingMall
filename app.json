@@ -40,7 +40,8 @@
                 "pages/personalInformation/index",
                 "pages/inputInfo/index",
                 "pages/bulletinDetails/index",
-                "pages/xy/index"
+                "pages/xy/index",
+                "pages/weChatRegistration/index"
         ],
         "window": {
                 "backgroundTextStyle": "light",

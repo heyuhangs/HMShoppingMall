@@ -50,15 +50,15 @@
 			"list": [
 				{
 					"id": 0,
-					"name": "pages/personalInformation/index",
-					"pathName": "pages/personalInformation/index",
+					"name": "注册",
+					"pathName": "pages/weChatRegistration/index",
 					"query": "userId=18",
 					"scene": null
 				},
 				{
 					"id": 1,
 					"name": "我的收益",
-					"pathName": "pages/my-kanjia/index",
+					"pathName": "pages/my/index",
 					"query": "",
 					"scene": null
 				},

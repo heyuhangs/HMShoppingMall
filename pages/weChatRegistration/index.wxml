@@ -1,0 +1,21 @@
+<view class="show-container">
+    <view class="show-box">
+        <view class="show-logo-box">
+            <image src="../../images/logo.jpeg" />
+            <view class="show-mall-name"></view>
+        </view>
+        <view class="show-main">
+            <p class="show-main-title">微信授权</p>
+            <p class="show-main-con">请允许我们获得您的公开资讯,我们不会公布您的这些信息。</p>
+        </view>
+        <button disabled="{{!checked}}" open-type="getUserInfo" bindgetuserinfo="userlogin">获取</button>
+<!--        <button bindtap="zc">立即注册</button>-->
+        <view class="xy">
+            <i-radio color="#04be01" i-class="radios" checked="{{checked}}" bindchange="handleStatusChange"/>
+            <view class="radtxt">
+            我已认真阅读，理解并同意
+            <text class="a" bindtap="xy">《用户协议及隐私政策》</text>
+            </view>
+        </view>
+    </view>
+</view>

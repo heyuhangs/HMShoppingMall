@@ -20,6 +20,9 @@ page{
 .tixian-names{
     left: 50%;
 }
+.i-cells{
+    padding: 12px 15px;
+}
 .tixian-name .money{
   display:block;
   font-size:60rpx;

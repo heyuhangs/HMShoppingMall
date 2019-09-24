@@ -12,10 +12,10 @@
     </view>
   </view>
   <i-cell-group>
-    <i-cell title="提现" is-link url="/pages/cashWithdrawal/cashWithdrawal">
+    <i-cell i-class="i-cells" title="提现" is-link url="/pages/cashWithdrawal/cashWithdrawal">
       <view slot="icon"><i-icon type="barrage_fill" size="30" color="#B22222"/></view>
     </i-cell>
-    <i-cell title="转账" is-link url="/pages/recharge/recharge">
+    <i-cell i-class="i-cells" title="转账" is-link url="/pages/recharge/recharge">
       <view slot="icon"><i-icon type="transaction_fill" size="30" color="#B22222"/></view>
     </i-cell>
   </i-cell-group>
