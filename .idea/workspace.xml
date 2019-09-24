@@ -2,24 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="728786a9-b381-4290-92f9-790acc559dcd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/images/logo.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/weChatRegistration/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/weChatRegistration/index.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/weChatRegistration/index.wxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/weChatRegistration/index.wxss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/cell/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/dist/cell/index.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/jurisDiction/jurisDiction.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/jurisDiction/jurisDiction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/jurisDiction/jurisDiction.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/jurisDiction/jurisDiction.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/goods-details/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/goods-details/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.wxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/my/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/my/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/index.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/start/start.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/start/start.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/withdraw/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/withdraw/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/withdraw/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/withdraw/index.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/register/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/register/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/shop-cart/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/shop-cart/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -116,14 +106,8 @@
       <workItem from="1568945394930" duration="4000" />
       <workItem from="1568945663126" duration="14000" />
       <workItem from="1568961333538" duration="11376000" />
-      <workItem from="1569313567616" duration="6105000" />
-    </task>
-    <task id="LOCAL-00054" summary="增加奖金">
-      <created>1565767171161</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1565767171161</updated>
+      <workItem from="1569313567616" duration="10025000" />
+      <workItem from="1569328829699" duration="393000" />
     </task>
     <task id="LOCAL-00055" summary="修改跳转方式">
       <created>1565779807729</created>
@@ -461,7 +445,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569072845840</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="增加登录">
+      <created>1569323112912</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1569323112913</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="TodoView">
@@ -504,7 +495,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="上传小程序" />
     <MESSAGE value="修改错误" />
     <MESSAGE value="修改问题 增加个人信息" />
     <MESSAGE value="修改个人信息问题" />
@@ -529,7 +519,8 @@
     <MESSAGE value="修改绑定问题" />
     <MESSAGE value="修改" />
     <MESSAGE value="修改问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改问题" />
+    <MESSAGE value="增加登录" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加登录" />
   </component>
   <component name="masterDetails">
     <states>

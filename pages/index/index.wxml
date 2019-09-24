@@ -19,7 +19,7 @@
     <view class="menu-container">
         <view class="menu-list" bindtap="onBulletin">
             <button class="ImgBtn ImgBtn2"></button>
-            <button>平台咨询</button>
+            <button>平台资讯</button>
         </view>
         <view class="menu-list">
             <button class="ImgBtn ImgBtn0" bindtap="onShareAppMessage" open-type="share"></button>

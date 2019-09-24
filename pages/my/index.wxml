@@ -1,19 +1,19 @@
 <view class="container">
-    <view class="userinfo" wx:if="{{!isMemberShipStatus}}">
+    <view class="userinfo" wx:if="{{isLoginUser}}">
         <view bindtap="geren">
-            <image class="userinfo-avatar" src="../../images/user.png" />
-<!--            <open-data class="userinfo-avatar" type="userAvatarUrl"></open-data>-->
+            <image class="userinfo-avatar" src="../../images/user.png"/>
+            <!--            <open-data class="userinfo-avatar" type="userAvatarUrl"></open-data>-->
         </view>
         <view class="iser-info-box">
-            <button class="login-re">登录/注册</button>
-<!--            <p>点击</p>-->
-<!--            <open-data class="userinfo-nickname" type="userNickName"></open-data>-->
-<!--            <text wx:if="{{user.VIP_TYPE == 2}}" class="userinfo-score userinfo-vipTar">光明天使</text>-->
-<!--            <text wx:elif="{{user.VIP_TYPE == 3}}" class="userinfo-score userinfo-vipTar">爱心天使</text>-->
-<!--            <text wx:else class="userinfo-score userinfo-vipTar" bindtap="clickVip">快乐天使</text>-->
-<!--            <view>-->
-<!--                <text class="userinfo-score-day">个人业绩：{{salepd.SELF_SALE || 0}}</text>-->
-<!--            </view>-->
+            <button class="login-re" open-type="getUserInfo" bindgetuserinfo="userlogin">登录/注册</button>
+            <!--            <p>点击</p>-->
+            <!--            <open-data class="userinfo-nickname" type="userNickName"></open-data>-->
+            <!--            <text wx:if="{{user.VIP_TYPE == 2}}" class="userinfo-score userinfo-vipTar">光明天使</text>-->
+            <!--            <text wx:elif="{{user.VIP_TYPE == 3}}" class="userinfo-score userinfo-vipTar">爱心天使</text>-->
+            <!--            <text wx:else class="userinfo-score userinfo-vipTar" bindtap="clickVip">快乐天使</text>-->
+            <!--            <view>-->
+            <!--                <text class="userinfo-score-day">个人业绩：{{salepd.SELF_SALE || 0}}</text>-->
+            <!--            </view>-->
         </view>
     </view>
     <view class="userinfo" wx:else>
@@ -121,6 +121,6 @@
     <!--    光光科技v1.0-->
     <!--  </view>-->
 </view>
-<!--<modal hidden="{{isMemberShipStatus}}" title="消息" no-cancel="true" confirm-text="确定" bindconfirm="confirmMemberShip">-->
-<!--    新用户需要补全信息。-->
-<!--</modal>-->
+<modal hidden="{{isMemberShipStatus}}" title="消息" no-cancel="true" confirm-text="确定" bindconfirm="confirmMemberShip">
+    新用户需要补全信息。
+</modal>
