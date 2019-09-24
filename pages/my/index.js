@@ -112,6 +112,9 @@ Page({
           isLoginUser: res
         })
       } else {
+        self.setData({
+          isLoginUser: true
+        })
         self.isMembership().then(res => {
           if (res == 200) {
             return false;
@@ -142,7 +145,6 @@ Page({
       }
     })
   },
-  // isMemberShipStatus
   isMembership: function() {
     const self = this;
     return new Promise(function(resolve, reject) {

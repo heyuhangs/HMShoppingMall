@@ -1,5 +1,5 @@
 <view class="container">
-    <view class="userinfo" wx:if="{{isLoginUser}}">
+    <view class="userinfo" wx:if="{{!isLoginUser}}">
         <view bindtap="geren">
             <image class="userinfo-avatar" src="../../images/user.png"/>
             <!--            <open-data class="userinfo-avatar" type="userAvatarUrl"></open-data>-->

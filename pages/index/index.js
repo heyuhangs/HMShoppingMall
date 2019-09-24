@@ -1122,36 +1122,36 @@ Page({
         return false
       } else {
         self.isMembership().then(res => {
+          debugger
           if (res == 200) {
-            return false;
-          } else {
             wx.showToast({
               title: '请补全信息后邀请',
               icon: 'none',
               duration: 1500,
               mask: true
             })
+            return false;
+          } else {
+            if (ops.from === 'button') {
+              // 来自页面内转发按钮
+              console.log(ops.target)
+            }
+            return {
+              title: '',
+              imageUrl: '../../images/yqxr.jpg',//图片地址
+              path: `/pages/start/start?PAR_ID=${app.globalData.userInfo.USER_ID}`,// 用户点击首先进入的当前页面
+              success: function(res) {
+                // 转发成功
+                console.log("转发成功:");
+              },
+              fail: function(res) {
+                // 转发失败
+                console.log("转发失败:");
+              }
+            }
           }
         });
       }
     })
-    if (ops.from === 'button') {
-      // 来自页面内转发按钮
-      console.log(ops.target)
-    }
-    return {
-      title: '',
-      imageUrl: '../../images/yqxr.jpg',//图片地址
-      path: `/pages/start/start?PAR_ID=${app.globalData.userInfo.USER_ID}`,// 用户点击首先进入的当前页面
-      success: function(res) {
-        // 转发成功
-        console.log("转发成功:");
-      },
-      fail: function(res) {
-        // 转发失败
-        console.log("转发失败:");
-      }
-    }
-
   }
 });
