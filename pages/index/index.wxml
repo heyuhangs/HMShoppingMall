@@ -21,9 +21,17 @@
             <button class="ImgBtn ImgBtn2"></button>
             <button>平台资讯</button>
         </view>
-        <view class="menu-list">
+<!--        <view class="menu-list">-->
+<!--            <button class="ImgBtn ImgBtn0" bindtap="onShareAppMessage" open-type="share"></button>-->
+<!--            <button bindtap="onShareAppMessage" open-type="share">邀请新人</button>-->
+<!--        </view>-->
+        <view class="menu-list" wx:if="{{state}}">
             <button class="ImgBtn ImgBtn0" bindtap="onShareAppMessage" open-type="share"></button>
             <button bindtap="onShareAppMessage" open-type="share">邀请新人</button>
+        </view>
+        <view class="menu-list" wx:else>
+            <button class="ImgBtn ImgBtn0" bindtap="onShareAppMessageError"></button>
+            <button bindtap="onShareAppMessageError">邀请新人</button>
         </view>
         <view class="menu-list">
             <button class="ImgBtn ImgBtn3" bindtap="toPayVip"></button>

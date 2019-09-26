@@ -126,20 +126,14 @@ Page({
     //     });
     //     return false;
     // }
+    app.isLoginUser().then(res => {
+      self.setData({
+        state: res
+      })
+    })
     this.getBannerData();
     wx.showLoading({});
     //获取banner
-    // wx.request({
-    //     url: app.globalData.url + `/goodImpl/goodListByType?USER_ID=${app.globalData.userInfo.USER_ID}&TYPE_ONE_ID=&TYPE_TWO_ID=&keywords=`,
-    //     method: "GET",
-    //     success: function(res) {
-    //         if (res.statusCode == 200) {
-    //             self.setData({
-    //                 goods: res.data.goodList
-    //             })
-    //         }
-    //     }
-    // })
     //获取商品
     wx.request({
       url: app.globalData.url + `/goodImpl/goodListByType?USER_ID=${app.globalData.userInfo.USER_ID}&TYPE_ONE_ID=&TYPE_TWO_ID=&keywords=`,
@@ -306,11 +300,6 @@ Page({
   },
   tapBanner: function() {
 
-  },
-  toPayVip: function() {
-    wx.navigateTo({
-      url: '/pages/newcoupons/index'
-    })
   },
   'kanjiaTap': function(_0x5c89aa) {
     var _0x4ca6a7 = {
@@ -1056,6 +1045,22 @@ Page({
       });
     }
   },
+  toPayVip: function() {
+    app.isLoginUser().then(res => {
+      if (res) {
+        wx.navigateTo({
+          url: '/pages/newcoupons/index'
+        })
+      } else {
+        wx.showToast({
+          title: '登录后可查看！',
+          icon: 'none',
+          duration: 1500,
+          mask: true
+        })
+      }
+    })
+  },
   onjiangjin: function() {
     app.isLoginUser().then(res => {
       if (res) {
@@ -1109,49 +1114,32 @@ Page({
       }
     })
   },
+  onShareAppMessageError() {
+    wx.showToast({
+      title: '您还不是正式会员，无法邀请!',
+      icon: 'none',
+      duration: 2000
+    })
+    return false
+  },
   onShareAppMessage: function(ops) {
     const self = this;
-    app.isLoginUser().then(res => {
-      if (!res) {
-        wx.showToast({
-          title: '登录后可邀请',
-          icon: 'none',
-          duration: 1500,
-          mask: true
-        })
-        return false
-      } else {
-        self.isMembership().then(res => {
-          debugger
-          if (res == 200) {
-            wx.showToast({
-              title: '请补全信息后邀请',
-              icon: 'none',
-              duration: 1500,
-              mask: true
-            })
-            return false;
-          } else {
-            if (ops.from === 'button') {
-              // 来自页面内转发按钮
-              console.log(ops.target)
-            }
-            return {
-              title: '',
-              imageUrl: '../../images/yqxr.jpg',//图片地址
-              path: `/pages/start/start?PAR_ID=${app.globalData.userInfo.USER_ID}`,// 用户点击首先进入的当前页面
-              success: function(res) {
-                // 转发成功
-                console.log("转发成功:");
-              },
-              fail: function(res) {
-                // 转发失败
-                console.log("转发失败:");
-              }
-            }
-          }
-        });
+    if (ops.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(ops.target)
+    }
+    return {
+      title: '',
+      imageUrl: '../../images/yqxr.jpg',//图片地址
+      path: `/pages/start/start?PAR_ID=${app.globalData.userInfo.USER_ID}`,// 用户点击首先进入的当前页面
+      success: function(res) {
+        // 转发成功
+        console.log("转发成功:");
+      },
+      fail: function(res) {
+        // 转发失败
+        console.log("转发失败:");
       }
-    })
+    }
   }
 });

@@ -225,7 +225,8 @@ Page({
             method: "POST",
             data: obj,
             success: function(res) {
-                if (res.errMsg == "request:ok") {
+                //修改当后台逻辑错误 爆出
+                if (res.data.result != "error") {
                     self.clearShopCar();
                     if (status == 1) {
                         self.pay('商品购买', res.data.order_code);

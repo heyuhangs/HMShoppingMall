@@ -286,6 +286,7 @@ Page({
       } else {
         //判断信息
         self.isMembership().then(res => {
+          debugger
           if (res == 200) {
             return false;
           } else {
@@ -293,6 +294,19 @@ Page({
             self.goPayOrder();
           }
         })
+      }
+    })
+  },
+  isMembership: function() {
+    const self = this;
+    return new Promise(function(resolve, reject) {
+      if (!app.globalData.userInfo.PHONE || app.globalData.userInfo.PHONE == '') {
+        self.setData({
+          isMemberShipStatus: false
+        })
+        resolve(200)
+      } else {
+        resolve(400)
       }
     })
   },
@@ -315,12 +329,6 @@ Page({
         return false;
       }
     }
-    wx.showToast({
-      title: '您还没有选择商品哦!',
-      icon: 'none',
-      duration: 1000,
-      mask: true
-    })
   },
   selectTap: function(e) {
     // const key = `this.data.goodsList[0].active`;
