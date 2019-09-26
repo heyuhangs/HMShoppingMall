@@ -15,7 +15,9 @@ var wanzikun_0x27de = function(_0x5e252a, _0x402780) {
 var wanzikun_0x569d7d = getApp();
 const app = getApp();
 Page({
-    'data': {},
+    'data': {
+        url: ''
+    },
     'onLoad': function() {
         this.setData({
             url: app.globalData.imgUrl

@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="728786a9-b381-4290-92f9-790acc559dcd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/shop-cart/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/shop-cart/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/template-cart/template-cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/template-cart/template-cart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/template-cart/template-cart.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/template-cart/template-cart.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/to-pay-order/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/to-pay-order/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -110,14 +107,7 @@
       <workItem from="1569391514079" duration="4000" />
       <workItem from="1569423054962" duration="3854000" />
       <workItem from="1569481878936" duration="106000" />
-      <workItem from="1569482529681" duration="1383000" />
-    </task>
-    <task id="LOCAL-00057" summary="修改问题">
-      <created>1565958238076</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1565958238076</updated>
+      <workItem from="1569482529681" duration="2593000" />
     </task>
     <task id="LOCAL-00058" summary="修改支付">
       <created>1566109006756</created>
@@ -455,7 +445,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569329733542</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="修改在第一个项目中出现的问题">
+      <created>1569485377302</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1569485377302</updated>
+    </task>
+    <option name="localTasksCounter" value="107" />
     <servers />
   </component>
   <component name="TodoView">
@@ -498,7 +495,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="修改问题 增加个人信息" />
     <MESSAGE value="修改个人信息问题" />
     <MESSAGE value="我的收益修改" />
     <MESSAGE value="整理" />
@@ -523,7 +519,8 @@
     <MESSAGE value="增加登录" />
     <MESSAGE value="登录问题" />
     <MESSAGE value="修改问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改问题" />
+    <MESSAGE value="修改在第一个项目中出现的问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改在第一个项目中出现的问题" />
   </component>
   <component name="masterDetails">
     <states>

@@ -16,7 +16,7 @@
             <view class="a-goods-conts " bindtap="selectTap" bindtouchstart="touchS" data-index="{{index}}" style="{{item.left}}">
                 <view class="goods-info">
                     <view class="img-box">
-                        <image src="{{url}}{{item.goodsDetail.IMAGES_LIST[0].PATH}}" class="img"/>
+                        <image src="https://www.hmgm999.com/{{item.goodsDetail.PATH}}" class="img"/>
                     </view>
                     <view class="text-box">
                         <view class="goods-title">{{item.goodsDetail.NAME}}</view>
