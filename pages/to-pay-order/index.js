@@ -305,11 +305,13 @@ Page({
                                 if (res.errMsg === 'requestPayment:ok') {
                                     console.log('支付成功')
                                 } else if (res.errMsg === 'requestPayment:fail cancel') {
-                                    wx.showToast({
-                                        title: '支付已取消!',
-                                        icon: 'none',
-                                        duration: 2000
-                                    })
+                                    self.closeOreder()
+                                    console.log('支付已取消')
+                                    // wx.showToast({
+                                    //     title: '支付已取消!',
+                                    //     icon: 'none',
+                                    //     duration: 2000
+                                    // })
                                 }
                             }
                         })
@@ -683,5 +685,28 @@ Page({
             'youhuijine': this[wanzikun_0x1432('0x6')][wanzikun_0x1432('0x9e')][_0x2aceac]['money'],
             'curCoupon': this['data'][wanzikun_0x1432('0x9e')][_0x2aceac]
         });
-    }
+    },
+    // 'closeOreder': function () {
+        // var _0x1aa24b = {
+        //     'WVEqh': wanzikun_0x1691('0x32'),
+        //     'fKyjp': '#999999',
+        //     'eeHch': '我在想想',
+        //     'VEQYF': '#b5272d'
+        // };
+        // wx[wanzikun_0x1691('0x33')]({
+        //     'title': '',
+        //     'content': _0x1aa24b[wanzikun_0x1691('0x34')],
+        //     'cancelText': wanzikun_0x1691('0x35'),
+        //     'cancelColor': _0x1aa24b[wanzikun_0x1691('0x36')],
+        //     'confirmText': _0x1aa24b[wanzikun_0x1691('0x37')],
+        //     'confirmColor': _0x1aa24b[wanzikun_0x1691('0x38')],
+        //     'success': function (_0x1d3817) {
+        //         if (_0x1d3817[wanzikun_0x1691('0x39')]) {
+        //             wx[wanzikun_0x1691('0x2b')]({
+        //                 'url': wanzikun_0x1691('0x3a')
+        //             });
+        //         }
+        //     }
+        // });
+    // }
 });
