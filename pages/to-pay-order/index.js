@@ -305,13 +305,13 @@ Page({
                                 if (res.errMsg === 'requestPayment:ok') {
                                     console.log('支付成功')
                                 } else if (res.errMsg === 'requestPayment:fail cancel') {
-                                    self.closeOreder()
-                                    console.log('支付已取消')
-                                    // wx.showToast({
-                                    //     title: '支付已取消!',
-                                    //     icon: 'none',
-                                    //     duration: 2000
-                                    // })
+                                    // self.closeOreder()
+                                    // console.log('支付已取消')
+                                    wx.showToast({
+                                        title: '支付已取消!',
+                                        icon: 'none',
+                                        duration: 2000
+                                    })
                                 }
                             }
                         })

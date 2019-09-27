@@ -28,6 +28,11 @@ img-box.container {
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 }
+.img-box-image{
+  display: inline-block !important;
+  width: 340rpx !important;
+  height: 340rpx !important;
+}
 
 .img-box {
   width: 100%;
