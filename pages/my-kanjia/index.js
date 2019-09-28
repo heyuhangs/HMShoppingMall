@@ -32,25 +32,25 @@ Page({
         date: '2019-09',
         fruit: [{
             id: 1,
-            name: '分享提层',
+            name: '分享提成',
         }, {
             id: 2,
-            name: '重消提层'
+            name: '重消提成'
         }, {
             id: 3,
             name: '管理分红'
         }, {
             id: 4,
-            name: '辖区业绩提层',
+            name: '辖区业绩提成',
         }, {
             id: 5,
-            name: '代理商提层',
+            name: '代理商提成',
         }, {
             id: 6,
             name: '爱心分红',
         }, {
             id: 7,
-            name: '招商提层',
+            name: '招商提成',
         }],
         current: '',
         position: 'left',
@@ -75,10 +75,16 @@ Page({
             method: "get",
             success: function(res) {
                 if (res.data.result != 'error') {
+                    const list = res.data.list
                     self.setData({
-                        list: res.data.list,
+                        list: list,
                         status: status
                     })
+                    if (list.length){
+                        self.setData({
+                            TOTAL_PRIZE: list[0].TOTAL_PRIZE
+                        })
+                    }
                     wx.hideLoading({});
                 } else {
                     wx.showToast({

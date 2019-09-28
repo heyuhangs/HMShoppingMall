@@ -6,7 +6,7 @@
         <view class="header-name">确认订单</view>
     </view>
     <form bindsubmit="createOrder" report-submit="true">
-        <view class="address-box">
+        <view class="address-box" wx:if="{{!isPayVip}}">
             <view class="add-address" wx:if="{{!isAddress}}">
                 <view class="title" bindtap="addAddress">新增收货地址</view>
             </view>

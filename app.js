@@ -59,6 +59,34 @@ App({
     }
     return str
   },
+  getUserInfoLogin(u) {
+    const self = this;
+    return new Promise(function(resolve, reject) {
+      wx.request({
+        url: self.globalData.url + `userImpl/userInfo?USER_ID=${u}`,
+        method: "get",
+        success: function(res) {
+          if (res.data.result != 'error') {
+            self.globalData.userInfo = res.data.user;
+            self.globalData.wxUser = {
+              WX_IMG: res.data.user.WX_IMG,
+              WX_NICKNAME: res.data.user.WX_NICKNAME,
+              openid: res.data.user.OPEN_ID
+            }
+            resolve(res.data.user);
+          } else {
+            wx.showToast({
+              title: '获取失败无法登陆!',
+              icon: 'none',
+              duration: 2000
+            })
+            reject(false)
+            return false
+          }
+        }
+      })
+    })
+  },
   getUserInfo() {
     const self = this;
     return new Promise(function(resolve, reject) {

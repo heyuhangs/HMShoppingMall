@@ -2,11 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="728786a9-b381-4290-92f9-790acc559dcd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/images/yqxr.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/capitalMovements/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/capitalMovements/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/menu-list/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/menu-list/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/menu-list/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/menu-list/index.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/default_avatar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/gonggao.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/goods_collect.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/goods_collect_checked.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/more/title8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/pay_coupon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/search_empty.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/yqxr.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/bulletinDetails/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/bulletinDetails/index.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/bulletinDetails/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/bulletinDetails/index.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my-kanjia/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-kanjia/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my-kanjia/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-kanjia/index.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my-kanjia/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-kanjia/index.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/index.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/newcoupons/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/newcoupons/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/to-pay-order/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/to-pay-order/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/to-pay-order/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/to-pay-order/index.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/to-pay-order/success/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/to-pay-order/success/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/to-pay-order/success/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/to-pay-order/success/index.wxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -111,14 +129,8 @@
       <workItem from="1569481878936" duration="106000" />
       <workItem from="1569482529681" duration="3613000" />
       <workItem from="1569508897094" duration="296000" />
-      <workItem from="1569547805569" duration="2701000" />
-    </task>
-    <task id="LOCAL-00060" summary="修改问题">
-      <created>1566125001128</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1566125001128</updated>
+      <workItem from="1569547805569" duration="2786000" />
+      <workItem from="1569650804177" duration="6513000" />
     </task>
     <task id="LOCAL-00061" summary="修改问题">
       <created>1566125958239</created>
@@ -456,7 +468,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569487584435</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL-00109" summary="修改问题">
+      <created>1569567593341</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1569567593342</updated>
+    </task>
+    <option name="localTasksCounter" value="110" />
     <servers />
   </component>
   <component name="TodoView">
@@ -520,11 +539,11 @@
     <MESSAGE value="修改" />
     <MESSAGE value="增加登录" />
     <MESSAGE value="登录问题" />
-    <MESSAGE value="修改问题" />
     <MESSAGE value="修改在第一个项目中出现的问题" />
     <MESSAGE value="修改购物车商品显示问题" />
     <MESSAGE value="订单内支付" />
-    <option name="LAST_COMMIT_MESSAGE" value="订单内支付" />
+    <MESSAGE value="修改问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改问题" />
   </component>
   <component name="masterDetails">
     <states>

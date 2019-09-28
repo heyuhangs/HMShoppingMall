@@ -1,4 +1,10 @@
-<view class="list-con">
+<view class="list-con iphone">
+    <view class="header-container">
+        <navigator open-type="navigateBack" delta="1" hover-class="navigator-hover">
+            <image class="goback" src="../../images/goback.png"/>
+        </navigator>
+        <view class="header-name">公告信息</view>
+    </view>
     <view class="list-con-title">{{obj.TITLE}}</view>
     <view class="list-con-date">{{obj.INSERT_DATE}}</view>
     <view class="list-con-main">{{obj.CONTENT}}</view>

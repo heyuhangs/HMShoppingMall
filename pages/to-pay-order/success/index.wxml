@@ -12,7 +12,7 @@
             <view class="order-number">订单号：{{orderCode}}</view>
         </view>
     </view>
-    <view class="adds-box order-box">
+    <view class="adds-box order-box" wx:if="{{!isPayVip}}">
         <image src="../../../images/profile_address.png"/>
         <view class="adds-info">
             <view class="name-tel">{{addressObj.NAME}} {{addressObj.TEL}}</view>

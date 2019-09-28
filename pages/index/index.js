@@ -1130,7 +1130,7 @@ Page({
     }
     return {
       title: '',
-      imageUrl: '../../images/yqxr.jpg',//图片地址
+      imageUrl: '../../images/yqxr.jpeg',//图片地址
       path: `/pages/start/start?PAR_ID=${app.globalData.userInfo.USER_ID}`,// 用户点击首先进入的当前页面
       success: function(res) {
         // 转发成功

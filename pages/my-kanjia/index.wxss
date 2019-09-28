@@ -7,7 +7,32 @@
   height: 100%;
   margin-top: 130rpx;
 }
-
+.tixian-bg,.tixian-img{
+  width: 100%;
+  height: 240rpx;
+}
+.tixian-name{
+  position:absolute;
+  text-align:center;
+  width:100%;
+  top:210rpx;
+  color:#fff;
+  font-size:30rpx;
+}
+.tixian-names{
+  /*left: 50%;*/
+}
+.tixian-name .money{
+  display:block;
+  font-size:60rpx;
+  margin-top:15px;
+}
+.tixian-name .tips{
+  font-size:24rpx;
+  margin-top:70rpx;
+  display:block;
+  color:rgba(255,255,255,.5);
+}
 .status-box {
   width: 100%;
   height: 75rpx;
