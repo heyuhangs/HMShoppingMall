@@ -21,7 +21,8 @@ Page({
             success: function(res) {
                 if (res.data.result != 'error') {
                     self.setData({
-                        obj: res.data.noticeInfo
+                        obj: res.data.noticeInfo,
+                        url: app.globalData.imgUrl
                     })
                 } else {
                     wx.showToast({

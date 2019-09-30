@@ -7,5 +7,7 @@
     </view>
     <view class="list-con-title">{{obj.TITLE}}</view>
     <view class="list-con-date">{{obj.INSERT_DATE}}</view>
-    <view class="list-con-main">{{obj.CONTENT}}</view>
+    <!--    <view class="list-con-main">-->
+    <image class="img" mode="widthFix" src="{{url}}{{obj.PATH}}"/>
+    <!--    </view>-->
 </view>

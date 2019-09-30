@@ -97,30 +97,39 @@ App({
               url: self.globalData.url + `userImpl/getWxInfo?code=${res.code}`,
               method: "get",
               success: function(res) {
-                wx.showToast({
-                  title: res.statusCode,
-                  icon: 'none',
-                  duration: 2000
-                })
+                // wx.showToast({
+                //   title: res.statusCode,
+                //   icon: 'none',
+                //   duration: 2000
+                // })
                 if (res.statusCode == 200) {
-                  self.globalData.wxUser = res.data.wxInfo;
-                  self.globalData.userInfo = res.data.userInfo;
-                  if (res.data.userInfo) {
-                    wx.setStorage({
-                      key: 'userKey',
-                      data: res.data.userInfo.USER_ID,
-                      success: function(res) {
-                      }
-                    });
+                  if (res.data.wxInfo.openid && res.data.wxInfo.openid != undefined && res.data.wxInfo.openid != null) {
+                    self.globalData.wxUser = res.data.wxInfo;
+                    self.globalData.userInfo = res.data.userInfo;
+                    if (res.data.userInfo) {
+                      wx.setStorage({
+                        key: 'userKey',
+                        data: res.data.userInfo.USER_ID,
+                        success: function(res) {
+                        }
+                      });
+                    }
+                  } else {
+                    wx.showToast({
+                      title: 'openId获取失败无法登陆，请联系管理员!',
+                      icon: 'none',
+                      duration: 2000
+                    })
+                    reject('后台取OpenID失败，无法登陆，请联系管理员!')
                   }
                   resolve(res.data);
                 } else {
                   wx.showToast({
-                    title: 'openId获取失败无法登陆，请联系管理员!',
+                    title: '注册失败，请联系管理员!',
                     icon: 'none',
                     duration: 2000
                   })
-                  reject('后台取OpenID失败，无法登陆，请联系管理员!')
+                  reject('注册失败，无法登陆，请联系管理员!')
                 }
               },
               fail: function() {

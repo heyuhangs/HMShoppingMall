@@ -240,7 +240,7 @@ Page({
             self.pay('商品购买', res.data.order_code);
             return false;
           }
-          if (!res.data.order_code && res.data.order_code != null && res.data.order_code != '' && res.data.order_code != undefined) {
+          if (res.data.order_code && res.data.order_code != null && res.data.order_code != '' && res.data.order_code != undefined) {
             wx.navigateTo({
               url: `/pages/to-pay-order/success/index?orderCode=${res.data.order_code}&addressId=${obj.addressId}&count=${self.data.countPay}&status=${status}`
             })
@@ -382,7 +382,7 @@ Page({
             self.pay('会员购买', res.data.order_code);
             return false;
           }
-          if (!res.data.order_code && res.data.order_code != null && res.data.order_code != '' && res.data.order_code != undefined) {
+          if (res.data.order_code && res.data.order_code != null && res.data.order_code != '' && res.data.order_code != undefined) {
             wx.navigateTo({
               url: `/pages/to-pay-order/success/index?orderCode=${res.data.order_code}&count=${self.data.countPay}&status=${res.data.pay_type}&isPayVip=${self.data.isPayVip}`
             })
