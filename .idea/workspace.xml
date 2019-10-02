@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="728786a9-b381-4290-92f9-790acc559dcd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/images/gm.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/pay_coupon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/bulletinDetails/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/bulletinDetails/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/bulletinDetails/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/bulletinDetails/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/bulletinDetails/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/bulletinDetails/index.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/cashWithdrawal/cashWithdrawal.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/cashWithdrawal/cashWithdrawal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/inputInfo/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/inputInfo/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/inputInfo/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/inputInfo/index.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/personalInformation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/personalInformation/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/personalInformation/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/personalInformation/index.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/shop-cart/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/shop-cart/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/to-pay-order/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/to-pay-order/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.config.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -117,13 +117,7 @@
       <workItem from="1569508897094" duration="296000" />
       <workItem from="1569547805569" duration="2786000" />
       <workItem from="1569650804177" duration="9617000" />
-    </task>
-    <task id="LOCAL-00062" summary="列表调整">
-      <created>1567310687769</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1567310687770</updated>
+      <workItem from="1569809534245" duration="5313000" />
     </task>
     <task id="LOCAL-00063" summary="账单信息">
       <created>1567316348232</created>
@@ -461,7 +455,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569675025563</updated>
     </task>
-    <option name="localTasksCounter" value="111" />
+    <task id="LOCAL-00111" summary="修改问题">
+      <created>1569809576512</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1569809576512</updated>
+    </task>
+    <option name="localTasksCounter" value="112" />
     <servers />
   </component>
   <component name="TodoView">

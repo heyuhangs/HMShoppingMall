@@ -265,7 +265,7 @@ Page({
     let countPay = 0;
     for (const item of this.data.goodsList) {
       if (item.active) {
-        countPay += item.buyNumber * item.goodsDetail.PRICE
+        countPay = app.accMul(item.buyNumber,item.goodsDetail.PRICE)
       }
     }
     this.setData({

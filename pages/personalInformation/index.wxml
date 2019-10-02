@@ -1,8 +1,8 @@
 <view class="container iphone">
     <view class="header-container">
-        <navigator open-type="navigateBack" delta="1" hover-class="navigator-hover">
+        <view hover-class="navigator-hover" bindtap="goMy">
             <image class="goback" src="../../images/goback.png"/>
-        </navigator>
+        </view>
         <view class="header-name">个人信息</view>
     </view>
     <view class="tab-container" wx:if="{{!valiData}}">
@@ -19,17 +19,47 @@
                 <text class="i-cell-text i-cell-leftTrxt">推荐人姓名</text>
                 <text class="i-cell-text i-cell-rightTrxt">{{parUser.NAME}}</text>
             </i-cell>
-            <i-cell class="list-text">
+            <!--            <i-cell class="list-text">-->
+            <!--                <text class="i-cell-text i-cell-leftTrxt">注册姓名</text>-->
+            <!--                <text class="i-cell-text i-cell-rightTrxt">{{user.NAME}}</text>-->
+            <!--            </i-cell>-->
+            <i-cell class="list-text" bindtap="inputVal" data-id="0">
                 <text class="i-cell-text i-cell-leftTrxt">注册姓名</text>
-                <text class="i-cell-text i-cell-rightTrxt">{{user.NAME}}</text>
+                <view class="i-cell-text i-cell-rightTrxt">{{user.NAME}} <i>
+                    <image src="../../images/more.png"></image>
+                </i></view>
             </i-cell>
-            <i-cell class="list-text" bindtap="inputVal" data-id="BANKCODE">
+            <i-cell class="list-text" bindtap="inputVal" data-id="1">
+                <text class="i-cell-text i-cell-leftTrxt">银行名称</text>
+                <view class="i-cell-text i-cell-rightTrxt">{{user.BANKNAME}} <i>
+                    <image src="../../images/more.png"></image>
+                </i></view>
+            </i-cell>
+            <i-cell class="list-text" bindtap="inputVal" data-id="2">
+                <text class="i-cell-text i-cell-leftTrxt">开户行地址</text>
+                <view class="i-cell-text i-cell-rightTrxt">{{user.BANK_ADD}} <i>
+                    <image src="../../images/more.png"></image>
+                </i></view>
+            </i-cell>
+            <i-cell class="list-text" bindtap="inputVal" data-id="3">
+                <text class="i-cell-text i-cell-leftTrxt">开户人姓名</text>
+                <view class="i-cell-text i-cell-rightTrxt">{{user.BANK_USERNAME}} <i>
+                    <image src="../../images/more.png"></image>
+                </i></view>
+            </i-cell>
+            <i-cell class="list-text" bindtap="inputVal" data-id="4">
                 <text class="i-cell-text i-cell-leftTrxt">银行卡号</text>
                 <view class="i-cell-text i-cell-rightTrxt">{{user.BANKCODE}} <i>
                     <image src="../../images/more.png"></image>
                 </i></view>
             </i-cell>
-            <i-cell class="list-text" bindtap="inputVal" data-id="PHONE">
+            <i-cell class="list-text" bindtap="inputVal" data-id="5">
+                <text class="i-cell-text i-cell-leftTrxt">支付宝账号</text>
+                <view class="i-cell-text i-cell-rightTrxt">{{user.ZFB_CODE}} <i>
+                    <image src="../../images/more.png"></image>
+                </i></view>
+            </i-cell>
+            <i-cell class="list-text" bindtap="inputVal" data-id="6">
                 <text class="i-cell-text i-cell-leftTrxt">电话</text>
                 <view class="i-cell-text i-cell-rightTrxt">{{user.PHONE}} <i>
                     <image src="../../images/more.png"></image>

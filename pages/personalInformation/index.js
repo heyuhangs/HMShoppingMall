@@ -54,6 +54,11 @@ Page({
             }
         });
     },
+    goMy() {
+        wx.reLaunch({
+            url: `/pages/my/index`
+        })
+    },
     getParData: function() {
         const self = this;
         wx.request({
@@ -72,14 +77,37 @@ Page({
         let title = ''
         let status = 0
         let val = ''
-        if (e.currentTarget.dataset.id == 'BANKCODE') {
-            title = '更换银行卡号'
-            val = this.data.user.BANKCODE
-        } else {
-            title = '更换手机号'
-            status = 1
-            val = this.data.user.PHONE
+        switch (e.currentTarget.dataset.id) {
+            case '0':
+                title = '注册姓名';
+                val = this.data.user.NAME || '';
+                break;
+            case '1':
+                title = '银行名称';
+                val = this.data.user.BANKNAME;
+                break;
+            case '2':
+                title = '开户行地址';
+                val = this.data.user.BANK_ADD;
+                break;
+            case '3':
+                title = '开户人姓名';
+                val = this.data.user.BANK_USERNAME;
+                break;
+            case '4':
+                title = '银行卡号';
+                val = this.data.user.BANKCODE;
+                break;
+            case '5':
+                title = '支付宝账号';
+                val = this.data.user.ZFB_CODE;
+                break;
+            case '6':
+                title = '电话';
+                val = this.data.user.PHONE;
+                break;
         }
+        status = e.currentTarget.dataset.id;
         wx.navigateTo({
             url: `/pages/inputInfo/index?title=${title}&status=${status}&val=${val}`
         })

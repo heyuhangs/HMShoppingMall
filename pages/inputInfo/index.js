@@ -7,24 +7,33 @@ Page({
         yzmMsg: '',
         ajxtrue: false,
         PHONE: '',
-        BANKCODE: '',
+        val: '',
         count: 60,
         isyzm: false,
-        yzmVal: ''
+        yzmVal: '',
+        type: '',
+        inputType: 'text'
     },
     onLoad: function(e) {
         const self = this
-        self.setData({
-            title: e.title,
-            status: e.status,
-        })
-        if (e.status == 1) {
+        if (e.status == '6') {
             self.setData({
-                PHONE: e.val
+                status: 1,
+                PHONE: e.val,
+                title: e.title,
+                type: e.status
             })
         } else {
             self.setData({
-                BANKCODE: e.val
+                status: 2,
+                val: e.val,
+                title: e.title,
+                type: e.status
+            })
+        }
+        if (e.status == '4' || e.status == '5') {
+            this.setData({
+                inputType: 'number'
             })
         }
     },
@@ -32,25 +41,44 @@ Page({
         const self = this
         let obj = {}
         obj.USER_ID = app.globalData.userInfo.USER_ID
-        if (!this.data.ajxtrue) {
-            wx.showToast({
-                title: '输入有错误!',
-                icon: 'none',
-                duration: 2000
-            });
-        }
         if (self.data.status == 1) {
+            if (!this.data.ajxtrue) {
+                wx.showToast({
+                    title: '输入有错误!',
+                    icon: 'none',
+                    duration: 2000
+                });
+            }
+            if (this.data.yzmVal != this.data.yzmMsg) {
+                wx.showToast({
+                    title: '验证码错误!',
+                    icon: 'none',
+                    duration: 2000
+                });
+                return false;
+            }
             obj.PHONE = self.data.PHONE
         } else {
-            obj.BANKCODE = self.data.BANKCODE
-        }
-        if (this.data.yzmVal != this.data.yzmMsg) {
-            wx.showToast({
-                title: '验证码错误!',
-                icon: 'none',
-                duration: 2000
-            });
-            return false;
+            switch (self.data.type) {
+                case '0':
+                    obj.NAME = self.data.val;
+                    break;
+                case '1':
+                    obj.BANKNAME = self.data.val;
+                    break;
+                case '2':
+                    obj.BANK_ADD = self.data.val;
+                    break;
+                case '3':
+                    obj.BANK_USERNAME = self.data.val;
+                    break;
+                case '4':
+                    obj.BANKCODE = self.data.val;
+                    break;
+                case '5':
+                    obj.ZFB_CODE = self.data.val;
+                    break;
+            }
         }
         wx.request({
             url: app.globalData.url + `/userImpl/editUser`,
@@ -92,7 +120,7 @@ Page({
     },
     changBankCode: function(e) {
         this.setData({
-            BANKCODE: e.detail.detail.value
+            val: e.detail.detail.value
         })
     },
     phoneValData: function() {

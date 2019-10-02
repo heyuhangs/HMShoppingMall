@@ -17,7 +17,7 @@
             </view>
         </i-panel>
         <i-panel wx:else>
-            <i-input maxlength="40" bind:change="changBankCode" value="{{ BANKCODE }}" type="number" title="银行卡" placeholder="请输入银行卡号"/>
+            <i-input maxlength="40" bind:change="changBankCode" value="{{ val }}" type="{{inputType}}" title="{{title}}" placeholder="请输入{{title}}"/>
         </i-panel>
         <i-button i-class='formbtn' bind:click="handleClick">确定</i-button>
     </view>
