@@ -97,15 +97,20 @@
 
 .list-info-title {
     display: inline-block;
-    font-weight: 500;
     width: 80%;
     /*float: ledt;*/
     text-overflow: ellipsis;
-    font-size: 37rpx;
+    font-size: 34rpx;
     white-space: nowrap;
     overflow: hidden;
     text-overflow:ellipsis;
     /*background: goldenrod;*/
+    white-space: nowrap;
+}
+.list-info-title{
+    font-weight: 500;
+    /*text-overflow: ellipsis;*/
+    font-size: 34rpx;
     white-space: nowrap;
 }
 .list-info-detail{

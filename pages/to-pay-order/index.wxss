@@ -20,6 +20,16 @@
   background-color: #fff;
   margin: 20rpx 0;
 }
+.inputText{
+  display: inline-block;
+  height: 200rpx;
+}
+.inputText textarea{
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 20rpx 5rpx !important;
+  height: 200rpx !important;
+}
 
 .add-addres {
   width: 100%;

@@ -16,12 +16,12 @@
             <view class="tab-item-list-info" bindtap="gokj" data-id="{{item.USER_ID}}">
                 <view class="list-info">
                     <view class="list-info-title">
-                        <view wx:if="{{item.REASON_TYPE == 1}}">充值</view>
-                        <view wx:if="{{item.REASON_TYPE == 2}}">奖金</view>
-                        <view wx:if="{{item.REASON_TYPE == 4}}">购物</view>
-                        <view wx:if="{{item.REASON_TYPE == 5}}">转账</view>
-                        <view wx:if="{{item.REASON_TYPE == 6}}">提现</view>
-                        <view wx:if="{{item.REASON_TYPE == 7}}">升级代理商</view>
+                        <text wx:if="{{item.REASON_TYPE == 1}}">充值</text>
+                        <text wx:if="{{item.REASON_TYPE == 2}}">奖金</text>
+                        <text wx:if="{{item.REASON_TYPE == 4}}">购物</text>
+                        <text wx:if="{{item.REASON_TYPE == 5}}">转账<text>-对方:{{item.ZC_NAME}}</text></text>
+                        <text wx:if="{{item.REASON_TYPE == 6}}">提现</text>
+                        <text wx:if="{{item.REASON_TYPE == 7}}">升级代理商</text>
                     </view>
                     <view class="list-info-detail">
                         <text wx:if="{{item.TYPE == 1}}">+{{item.ONE_MONEY}}</text>

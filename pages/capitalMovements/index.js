@@ -62,19 +62,23 @@ Page({
       method: "get",
       success: function(res) {
         if (res.data.result != 'error') {
-          let listTem = self.data.list;
-          const list = res.data.list;
-          if (that.data.page == 1) {
-              listTem = []
+          let contentlistTem = self.data.list;
+          if (self.data.page == 1) {
+            contentlistTem = [];
           }
-          // if (){
-          //
-          // }
-          self.setData({
-            list: listTem.concat(list),
-            totalCount: res.data.totalCount,
-            hasMoreData: false
-          })
+          const contentlist = res.data.list;
+          if (res.data.totalCount <= (self.data.page * 10)) {
+            self.setData({
+              list: contentlistTem.concat(contentlist),
+              hasMoreData: false
+            })
+          } else {
+            self.setData({
+              list: contentlistTem.concat(contentlist),
+              hasMoreData: true,
+              page: self.data.page + 1
+            })
+          }
         } else {
           wx.showToast({
             title: '系统繁忙',
@@ -87,12 +91,18 @@ Page({
       }
     })
   },
+  onReachBottom: function() {
+    if (this.data.hasMoreData) {
+      this.getData('加载更多数据')
+    } else {
+      wx.showToast({
+        title: '没有更多数据',
+      })
+    }
+  },
   //页面相关事件处理函数--监听用户下拉动作
   onPullDownRefresh: function() {
 
-  },
-  //页面上拉触底事件的处理函数
-  onReachBottom: function() {
   },
   toggleRight: function() {
     this.setData({

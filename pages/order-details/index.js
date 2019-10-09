@@ -18,12 +18,14 @@ Page({
     'data': {
         'orderId': 0x0,
         'goodsList': [],
-        'yunPrice': wanzikun_0x56ae('0x0')
+        'yunPrice': wanzikun_0x56ae('0x0'),
+        url: ''
     },
     onLoad:function (e) {
         const self = this;
         self.setData({
-            currentType: e.currentType
+            currentType: e.currentType,
+            url: app.globalData.imgUrl
         })
         wx.showLoading({});
         wx.request({

@@ -4,13 +4,23 @@
     <list default="true" id="728786a9-b381-4290-92f9-790acc559dcd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/cashWithdrawal/cashWithdrawal.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/cashWithdrawal/cashWithdrawal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/inputInfo/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/inputInfo/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/inputInfo/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/inputInfo/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/personalInformation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/personalInformation/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/personalInformation/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/personalInformation/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/shop-cart/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/shop-cart/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/capitalMovements/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/capitalMovements/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/capitalMovements/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/capitalMovements/index.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/capitalMovements/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/capitalMovements/index.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/fav-list/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/fav-list/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/fav-list/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/fav-list/index.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/fav-list/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/fav-list/index.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my-kanjia/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-kanjia/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my-kanjia/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-kanjia/index.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/order-details/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order-details/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/order-details/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order-details/index.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/order-details/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order-details/index.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/register/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/register/register.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/to-pay-order/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/to-pay-order/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/to-pay-order/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/to-pay-order/index.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/to-pay-order/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/to-pay-order/index.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/to-pay-order/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/to-pay-order/index.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.config.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -117,14 +127,15 @@
       <workItem from="1569508897094" duration="296000" />
       <workItem from="1569547805569" duration="2786000" />
       <workItem from="1569650804177" duration="9617000" />
-      <workItem from="1569809534245" duration="5313000" />
-    </task>
-    <task id="LOCAL-00063" summary="账单信息">
-      <created>1567316348232</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1567316348232</updated>
+      <workItem from="1569809534245" duration="11139000" />
+      <workItem from="1570537768511" duration="3526000" />
+      <workItem from="1570584361026" duration="82000" />
+      <workItem from="1570584668597" duration="30000" />
+      <workItem from="1570586729015" duration="109000" />
+      <workItem from="1570586913158" duration="357000" />
+      <workItem from="1570590095268" duration="85000" />
+      <workItem from="1570590269731" duration="126000" />
+      <workItem from="1570621119896" duration="652000" />
     </task>
     <task id="LOCAL-00064" summary="修改问题">
       <created>1567436148891</created>
@@ -462,17 +473,15 @@
       <option name="project" value="LOCAL" />
       <updated>1569809576512</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL-00112" summary="若干问题">
+      <created>1570007863180</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1570007863180</updated>
+    </task>
+    <option name="localTasksCounter" value="113" />
     <servers />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -505,7 +514,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="整理" />
     <MESSAGE value="完成转账功能等" />
     <MESSAGE value="订单问题 修改" />
     <MESSAGE value="订单支付成功后跳转的位置" />
@@ -530,7 +538,8 @@
     <MESSAGE value="修改购物车商品显示问题" />
     <MESSAGE value="订单内支付" />
     <MESSAGE value="修改问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改问题" />
+    <MESSAGE value="若干问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="若干问题" />
   </component>
   <component name="masterDetails">
     <states>

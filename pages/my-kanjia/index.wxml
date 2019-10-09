@@ -21,7 +21,7 @@
     </view>
     <picker mode="date" fields="month" value="{{date}}" bindchange="getDateTime">
         <view class="selectDate">
-            {{date}}
+            {{date || '选择日期'}}
         </view>
     </picker>
     <view class="status-box">

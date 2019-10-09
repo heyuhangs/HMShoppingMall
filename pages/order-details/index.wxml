@@ -14,7 +14,7 @@
             <block wx:for-items="{{orderInfo.orderMiddleList}}" wx:key="{{index}}">
                 <view class="a-goods">
                     <view class="img-box">
-                        <image src="{{item.PATH}}" class="img"/>
+                        <image src="{{url}}{{item.PATH}}" class="img"/>
                     </view>
                     <view class="text-box">
                         <view class="arow arow01">
@@ -89,6 +89,10 @@
         <view class="row-box">
             <view class="row-label">应付总额</view>
             <view class="right-text">¥ {{orderInfo.TOTAL}}</view>
+        </view>
+        <view class="row-boxs">
+            <view class="row-label">备注</view>
+            <view class="right-text">点点滴滴点点滴滴点点滴滴点点滴滴点点滴滴点点滴滴点点滴滴点点滴滴点点滴滴点点滴滴点点滴滴点点滴滴点点滴滴点点滴滴点点滴滴点点滴滴</view>
         </view>
     </view>
 </view>

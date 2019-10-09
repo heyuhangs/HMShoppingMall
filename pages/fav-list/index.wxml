@@ -7,7 +7,7 @@
     </view>
     <picker mode="date" fields="month" value="{{date}}" bindchange="getDateTime">
         <view class="selectDate">
-            {{date}}
+            {{date || '选择日期'}}
         </view>
     </picker>
     <view class="goods-box" wx:for-items="{{childList}}" wx:key="{{index}}" bindtap="toDetailsTap"

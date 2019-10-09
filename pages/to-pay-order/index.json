@@ -2,6 +2,7 @@
     "navigationBarTitleText":  "待付款订单",
     "usingComponents": {
         "i-radio-group": "../../../dist/radio-group/index",
-        "i-radio": "../../../dist/radio/index"
+        "i-radio": "../../../dist/radio/index",
+        "i-input": "../../dist/input/index"
     }
 }

@@ -21,7 +21,8 @@ Page({
     isdbName: true,
     isdbPhone: true,
     PAR_PHONE: '',
-    isAutoPhone: false
+    isAutoPhone: false,
+    isYzm: false
   },
   parPhoneChange: function(event) {
     this.setData({
@@ -222,7 +223,8 @@ Page({
         success: function(res) {
           if (res.statusCode == 200) {
             self.setData({
-              yzmMsg: res.data.msg
+              yzmMsg: res.data.msg,
+              isYzm: true
               // yzmVal: res.data.msg
             })
             wx.showToast({
@@ -259,6 +261,30 @@ Page({
     })
   },
   handleClick: function() {
+    if (!this.data.NAME.length > 0) {
+      wx.showToast({
+        title: '请填写姓名!',
+        icon: 'none',
+        duration: 2000
+      });
+      return false;
+    }
+    if (!this.data.PHONE.length > 0) {
+      wx.showToast({
+        title: '请填写手机!',
+        icon: 'none',
+        duration: 2000
+      });
+      return false;
+    }
+    if (!this.data.isYzm) {
+      wx.showToast({
+        title: '请获取验证码!',
+        icon: 'none',
+        duration: 2000
+      });
+      return false;
+    }
     if (this.data.yzmVal != this.data.yzmMsg) {
       wx.showToast({
         title: '验证码错误!',
@@ -267,16 +293,17 @@ Page({
       });
       return false;
     }
+    wx.showLoading({
+      mask: true
+    })
     const obj = {
       USER_ID: app.globalData.userInfo.USER_ID,
       PHONE: this.data.PHONE,
       PASSWORD: this.data.PASSWORD,
       NAME: this.data.NAME,
-      // BANKCODE: this.data.BANKCODE,
-      // BANKNAME: this.data.BANKNAME,
       PAR_ID: this.data.PAR_ID,
-      WX_NICKNAME: app.globalData.userInfo.WX_NICKNAME,
-      WX_IMG: app.globalData.userInfo.WX_IMG
+      WX_NICKNAME: app.globalData.userInfo.WX_NICKNAME || '',
+      WX_IMG: app.globalData.userInfo.WX_IMG || ''
     }
     wx.request({
       // url: app.globalData.url + `userImpl/editUser?USER_ID=${obj.USER_ID}&PHONE=${obj.PHONE}&PASSWORD=${obj.PASSWORD}&NAME=${obj.NAME}&BANKCODE=${obj.BANKCODE}&BANKNAME=${obj.BANKNAME}&PAR_ID=${obj.PAR_ID}&WX_NICKNAME=${obj.WX_NICKNAME}&WX_IMG=${obj.WX_IMG}`,
@@ -298,10 +325,16 @@ Page({
             duration: 2000
           })
           setTimeout(function() {
-
+            wx.reLaunch({
+              url: '/pages/index/index'
+            })
           }, 1500);
-          wx.reLaunch({
-            url: '/pages/index/index'
+        } else {
+          wx.hideLoading({});
+          wx.showToast({
+            title: '注册失败，请联系管理员!',
+            icon: 'success',
+            duration: 2000
           })
         }
       }

@@ -219,7 +219,7 @@ App({
     userInfo: '',
     Urls: {},
     // imgUrl: 'http://f22t435363.imwork.net/',
-    // url: 'http://localhost:8888/HM_war_exploded/'
+    // url: 'http://localhost:8888/HM_war_exploded/',
     // url: 'http://f22t435363.imwork.net/HM/'
     imgUrl: 'https://www.hmgm999.com/',
     url: 'https://www.hmgm999.com/'

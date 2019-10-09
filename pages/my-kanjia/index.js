@@ -23,13 +23,14 @@ Page({
         kjgoods: [
             {}
         ],
+        list: [],
         'kjhelp': [],
         'pics': {},
         'helps': {},
         'statusType': ['会员收入', '代理收入'],
         currentType: 0,
         page: 1,
-        date: '2019-09',
+        date: '',
         fruit: [{
             id: 1,
             name: '分享提成',
@@ -60,12 +61,6 @@ Page({
     onLoad: function() {
         const status = this.data.currentType;
         this.getData(status)
-        //默认时间
-        // const date = self.doHandleDate();
-        // self.setData({
-        //     date: date
-        // });
-
     },
     getData: function(status) {
         const self = this
@@ -75,17 +70,31 @@ Page({
             method: "get",
             success: function(res) {
                 if (res.data.result != 'error') {
-                    const list = res.data.list
-                    self.setData({
-                        list: list,
-                        status: status
-                    })
-                    if (list.length){
+                    let contentlistTem = self.data.list;
+                    if (contentlistTem.length){
                         self.setData({
-                            TOTAL_PRIZE: list[0].TOTAL_PRIZE
+                            TOTAL_PRIZE: contentlistTem[0].TOTAL_PRIZE
                         })
                     }
-                    wx.hideLoading({});
+                    if (self.data.page == 1) {
+                        contentlistTem = [];
+                    }
+                    const contentlist = res.data.list;
+                    if (res.data.totalCount <= (self.data.page * 10)) {
+                        self.setData({
+                            list: contentlistTem.concat(contentlist),
+                            hasMoreData: false,
+                            status: status
+                        })
+                    } else {
+                        self.setData({
+                            list: contentlistTem.concat(contentlist),
+                            hasMoreData: true,
+                            page: self.data.page + 1,
+                            status: status
+                        })
+                    }
+                    wx.hideLoading({})
                 } else {
                     wx.showToast({
                         title: '系统繁忙',
@@ -96,6 +105,15 @@ Page({
             }, complete(res) {
             }
         })
+    },
+    onReachBottom: function() {
+        if (this.data.hasMoreData) {
+            this.getData(this.data.status)
+        } else {
+            wx.showToast({
+                title: '没有更多数据',
+            })
+        }
     },
     // doHandleDate: function() {
     //     var myDate = new Date();
@@ -148,9 +166,15 @@ Page({
     'statusTap': function(e) {
         // console.log(e.currentTarget.dataset.index)
         // if()
+        wx.showLoading({
+            mask: true
+        })
         this.setData({
             currentType: e.currentTarget.dataset.index,
-            status: e.currentTarget.dataset.index
+            status: e.currentTarget.dataset.index,
+            list: [],
+            page: 1,
+            TOTAL_PRIZE: 0
         })
         this.onLoad();
     },

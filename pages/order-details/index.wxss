@@ -17,7 +17,24 @@ page {
 .iphone {
   margin-top: 180rpx;
 }
-
+.row-boxs{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 24rpx 30rpx 12rpx 30rpx;
+  font-size: 28rpx;
+  color: #000;
+}
+.row-boxs .row-label{
+  width: 30% !important;
+}
+.row-boxs .right-text{
+  display: inline-block;
+  width: 60% !important;
+  height: auto !important;
+}
 .sec-wrap {
   background-color: #fff;
   margin-top: 20rpx;

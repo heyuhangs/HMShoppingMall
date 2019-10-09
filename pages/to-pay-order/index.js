@@ -17,6 +17,7 @@ const app = getApp();
 Page({
   'data': {
     zffs: '在线支付',
+    beizhu: '',
     isRunOnShow: false,
     goodsList: [],
     'isNeedLogistics': 0x0,
@@ -149,7 +150,7 @@ Page({
     let countPay = 0;
     for (const item of this.data.goodsList) {
       if (item.active) {
-        countPay = app.accMul(item.buyNumber,item.goodsDetail.PRICE);
+        countPay = app.accMul(item.buyNumber, item.goodsDetail.PRICE);
       }
     }
     this.setData({
@@ -176,6 +177,11 @@ Page({
       zffs: detail.value
     })
   },
+  bzChange: function(e) {
+    this.setData({
+      beizhu: e.detail.detail.value
+    })
+  },
   createOrder: function() {
     let status = 1;
     const self = this;
@@ -195,7 +201,8 @@ Page({
       self.createVipOrder();
       return false;
     }
-    if (self.data.isPayVip) {
+    //不是会员购买，不验证
+    if (!self.data.isPayVip) {
       if (!this.data.addressList || !this.data.addressList.USER_ID) {
         wx.showToast({
           title: '请选择收货人地址!',
@@ -226,7 +233,8 @@ Page({
       userId: app.globalData.userInfo.USER_ID,
       addressId: this.data.addressList.USER_ID,
       payType: status,
-      orderGoodList: orderGoodsList
+      orderGoodList: orderGoodsList,
+      remarks: this.data.beizhu
     }
     wx.request({
       url: app.globalData.url + `orderImpl/beforePayCheck`,

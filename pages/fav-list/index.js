@@ -23,11 +23,11 @@ Page({
     },
     onLoad: function() {
         const self = this;
-        const date = self.doHandleDate();
-        self.setData({
-            date: date,
-            USER_ID: app.globalData.userInfo.USER_ID
-        })
+        // const date = self.doHandleDate();
+        // self.setData({
+        //     date: date,
+        //     USER_ID: app.globalData.userInfo.USER_ID
+        // })
         this.getData();
     },
     doHandleDate: function() {
@@ -43,9 +43,11 @@ Page({
     },
     getData: function() {
         const self = this;
-        wx.showLoading({});
+        wx.showLoading({
+            mask: true
+        });
         wx.request({
-            url: app.globalData.url + `userImpl/childDLUser?USER_ID=${self.data.USER_ID}&SALE_MONTH=${self.data.date}`,
+            url: app.globalData.url + `userImpl/childDLUser?USER_ID=${app.globalData.userInfo.USER_ID}&SALE_MONTH=${self.data.date}`,
             method: "GET",
             success: function(res) {
                 if (res.data.result != 'error') {

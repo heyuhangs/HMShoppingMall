@@ -49,6 +49,17 @@
                 </i-panel>
             </view>
         </view>
+        <view class="peisong-way">
+            <i-input i-class="inputText" value="{{ beizhu }}"  bind:change="bzChange" type="textarea" title="备注" placeholder="请输入备注(最多50字)" maxlength="50" />
+            <!--            <view class="row-box">-->
+<!--                <i-panel i-class="dd">-->
+<!--                    <i-radio-group current="{{zffs}}" bindchange="handleFruitChange">-->
+<!--                        <i-radio wx:key="1" value="在线支付"></i-radio>-->
+<!--                        <i-radio wx:key="2" value="奖金支付"></i-radio>-->
+<!--                    </i-radio-group>-->
+<!--                </i-panel>-->
+<!--            </view>-->
+        </view>
         <view class="goods-info">
             <view class="row-box">
                 <view class="row-label">商品金额</view>
