@@ -22,7 +22,8 @@ Page({
     isdbPhone: true,
     PAR_PHONE: '',
     isAutoPhone: false,
-    isYzm: false
+    isYzm: false,
+    user: null,
   },
   parPhoneChange: function(event) {
     this.setData({
@@ -64,21 +65,29 @@ Page({
    */
   onLoad: function(options) {
     const self = this;
-    // this.getUserByPhone('13111111111');
-    // this.getUserByPhone('15524444266');
-
-    // wx.showLoading({});
-    const PAR_ID = wx.getStorageSync('PAR_ID');
-    if (PAR_ID != '' || PAR_ID) {
-      this.data.PAR_ID = PAR_ID;
-      self.findByUserInfo(PAR_ID);
-    } else {
-      self.setData({
-        PAR_NAME: '无推荐人',
-        PAR_PHONE: '无推荐人'
-      })
-      self.findByUserInfo(this.data.PAR_ID);
-    }
+    wx.showLoading({
+      mask: true
+    })
+    wx.request({
+      url: app.globalData.url + `userImpl/userInfo?USER_ID=${app.globalData.userInfo.USER_ID}`,
+      method: "get",
+      success: function(res) {
+        if (res.data.result != 'error') {
+          self.setData({
+            user: res.data.user,
+            PAR_ID: res.data.user.PAR_ID
+          });
+          self.findByUserInfo(self.data.PAR_ID);
+          wx.hideLoading({});
+        } else {
+          wx.showToast({
+            title: '获取用户信息失败!',
+            icon: 'none',
+            duration: 2000
+          });
+        }
+      }
+    });
   },
   onShow: function() {
     wx.showToast({
