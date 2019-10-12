@@ -4,22 +4,11 @@
     <list default="true" id="728786a9-b381-4290-92f9-790acc559dcd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/capitalMovements/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/capitalMovements/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/capitalMovements/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/capitalMovements/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/capitalMovements/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/capitalMovements/index.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/fav-list/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/fav-list/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/fav-list/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/fav-list/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/fav-list/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/fav-list/index.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my-kanjia/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-kanjia/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my-kanjia/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-kanjia/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/order-details/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order-details/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/order-details/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order-details/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/order-details/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order-details/index.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/order-list/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order-list/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/register/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/register/register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/to-pay-order/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/to-pay-order/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/to-pay-order/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/to-pay-order/index.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/to-pay-order/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/to-pay-order/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/to-pay-order/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/to-pay-order/index.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/register/register.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/register/register.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/start/start.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/start/start.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.config.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -135,14 +124,9 @@
       <workItem from="1570586913158" duration="357000" />
       <workItem from="1570590095268" duration="85000" />
       <workItem from="1570590269731" duration="126000" />
-      <workItem from="1570621119896" duration="652000" />
-    </task>
-    <task id="LOCAL-00064" summary="修改问题">
-      <created>1567436148891</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1567436148892</updated>
+      <workItem from="1570621119896" duration="2379000" />
+      <workItem from="1570707052538" duration="3864000" />
+      <workItem from="1570808386258" duration="3431000" />
     </task>
     <task id="LOCAL-00065" summary="修改">
       <created>1567866805058</created>
@@ -480,7 +464,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570007863180</updated>
     </task>
-    <option name="localTasksCounter" value="113" />
+    <task id="LOCAL-00113" summary="修改注册，我的账单增加收款人，订单增加备注">
+      <created>1570622001090</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1570622001090</updated>
+    </task>
+    <option name="localTasksCounter" value="114" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -514,7 +505,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="完成转账功能等" />
     <MESSAGE value="订单问题 修改" />
     <MESSAGE value="订单支付成功后跳转的位置" />
     <MESSAGE value="修改bug" />
@@ -539,7 +529,8 @@
     <MESSAGE value="订单内支付" />
     <MESSAGE value="修改问题" />
     <MESSAGE value="若干问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="若干问题" />
+    <MESSAGE value="修改注册，我的账单增加收款人，订单增加备注" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改注册，我的账单增加收款人，订单增加备注" />
   </component>
   <component name="masterDetails">
     <states>

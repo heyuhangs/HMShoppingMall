@@ -19,7 +19,7 @@ Page({
   'data': {
     isCancel: false,
     status: false,
-    'statusType': ['待付款', '已发货', '已完成', '已取消'],
+    'statusType': ['待付款', '待发货', '已完成', '已取消'],
     'currentType': 0,
     'tabClass': ['', '', '', '', ''],
     orderList: [],

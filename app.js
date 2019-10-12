@@ -109,16 +109,11 @@ App({
               url: self.globalData.url + `userImpl/getWxInfo?code=${res.code}`,
               method: "get",
               success: function(res) {
-                // wx.showToast({
-                //   title: res.statusCode,
-                //   icon: 'none',
-                //   duration: 2000
-                // })
                 if (res.statusCode == 200) {
                   if (res.data.wxInfo.openid && res.data.wxInfo.openid != undefined && res.data.wxInfo.openid != null) {
                     self.globalData.wxUser = res.data.wxInfo;
                     self.globalData.userInfo = res.data.userInfo;
-                    if (res.data.userInfo) {
+                    if (res.data.userInfo.USER_ID) {
                       wx.setStorage({
                         key: 'userKey',
                         data: res.data.userInfo.USER_ID,

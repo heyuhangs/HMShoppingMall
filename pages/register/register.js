@@ -68,16 +68,16 @@ Page({
     // this.getUserByPhone('15524444266');
 
     // wx.showLoading({});
-    if (app.globalData.payId != '' || app.globalData.payId) {
-      this.data.PAR_ID = app.globalData.payId;
-      self.findByUserInfo(app.globalData.payId);
+    const PAR_ID = wx.getStorageSync('PAR_ID');
+    if (PAR_ID != '' || PAR_ID) {
+      this.data.PAR_ID = PAR_ID;
+      self.findByUserInfo(PAR_ID);
     } else {
       self.setData({
         PAR_NAME: '无推荐人',
         PAR_PHONE: '无推荐人'
       })
       self.findByUserInfo(this.data.PAR_ID);
-      // wx.hideLoading({});
     }
   },
   onShow: function() {
