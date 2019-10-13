@@ -109,11 +109,15 @@ App({
               url: self.globalData.url + `userImpl/getWxInfo?code=${res.code}`,
               method: "get",
               success: function(res) {
+                console.log('通过code获取用户信息')
+                console.log('返回值', res)
                 if (res.statusCode == 200) {
                   if (res.data.wxInfo.openid && res.data.wxInfo.openid != undefined && res.data.wxInfo.openid != null) {
                     self.globalData.wxUser = res.data.wxInfo;
                     self.globalData.userInfo = res.data.userInfo;
+                    console.log('得到openid', res.data.wxInfo)
                     if (res.data.userInfo.USER_ID) {
+                      console.log('通过code，获取到了用户信息')
                       wx.setStorage({
                         key: 'userKey',
                         data: res.data.userInfo.USER_ID,

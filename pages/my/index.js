@@ -26,94 +26,148 @@ Page({
     salepd: {},
     isLoginUser: false
   },
+  // userlogin: function() {
+  //   const self = this;
+  //   // if (!self.data.checked) {
+  //   //   return false;
+  //   // }
+  //   wx.showLoading({
+  //     mask: true
+  //   })
+  //
+  //   app.getUserInfo().then(userRes => {
+  //     //判断是否有用户
+  //     console.log('执行注册，判断userid')
+  //     if (userRes.userInfo.USER_ID) {
+  //       console.log('得到userid', userRes.userInfo.USER_ID)
+  //       //如果有用id查询到用户信息
+  //       wx.request({
+  //         url: app.globalData.url + `userImpl/userInfo?USER_ID=${userRes.userInfo.USER_ID}`,
+  //         method: "get",
+  //         success: function(res) {
+  //           if (res.data.result != 'error') {
+  //             app.globalData.userInfo = res.data.user;
+  //             app.globalData.wxUser = {
+  //               WX_IMG: res.data.user.WX_IMG,
+  //               WX_NICKNAME: res.data.user.WX_NICKNAME,
+  //               openid: res.data.user.OPEN_ID
+  //             }
+  //             wx.hideLoading({})
+  //             self.onLoad()
+  //           } else {
+  //             wx.showToast({
+  //               title: '获取失败无法登陆!',
+  //               icon: 'none',
+  //               duration: 2000
+  //             })
+  //             return false
+  //           }
+  //         }
+  //       });
+  //     } else {
+  //     }
+  //   });
+  // },
   userlogin: function() {
-    const self = this;
-    // if (!self.data.checked) {
-    //   return false;
-    // }
-    wx.showLoading({
-      mask: true
-    })
-    app.getUserInfo().then(userRes => {
-      //判断是否有用户
-      if (userRes.userInfo.USER_ID) {
-        //如果有用id查询到用户信息
-        wx.request({
-          url: app.globalData.url + `userImpl/userInfo?USER_ID=${userRes.userInfo.USER_ID}`,
-          method: "get",
-          success: function(res) {
-            if (res.data.result != 'error') {
-              app.globalData.userInfo = res.data.user;
-              app.globalData.wxUser = {
-                WX_IMG: res.data.user.WX_IMG,
-                WX_NICKNAME: res.data.user.WX_NICKNAME,
-                openid: res.data.user.OPEN_ID
-              }
-              wx.hideLoading({})
-              self.onLoad()
-            } else {
-              wx.showToast({
-                title: '获取失败无法登陆!',
-                icon: 'none',
-                duration: 2000
-              })
-              return false
-            }
-          }
-        });
-      } else {
-        //看看有没有推荐人
-        const PAR_ID = wx.getStorageSync('PAR_ID');
-        //如果是新用户创建用户
-        wx.getUserInfo({
-          success: function(res) {
-            if (res.userInfo && app.globalData.wxUser.openid) {
-              const obj = res.userInfo
+    //看看有没有推荐人
+    const self = this
+    const PAR_ID = wx.getStorageSync('PAR_ID');
+    //如果是新用户创建用户
+    wx.getUserInfo({
+      success: function(res) {
+        if (res.userInfo) {
+          const obj = res.userInfo
+          //
+          //
+          //
+          wx.login({
+            success: function(loginRes) {
               let newObject = {
                 PAR_ID: PAR_ID || '',
-                OPEN_ID: userRes.wxInfo.openid,
-                WX_NICKNAME: obj.nickName,
-                WX_IMG: obj.avatarUrl,
+                code: loginRes.code,
+                WX_NICKNAME: obj.nickName || '',
+                WX_IMG: obj.avatarUrl || '',
               }
-              wx.request({
-                url: app.globalData.url + `/userImpl/saveUser?PAR_ID=${newObject.PAR_ID}&OPEN_ID=${newObject.OPEN_ID}&WX_NICKNAME=${newObject.WX_NICKNAME}&WX_IMG=${newObject.WX_IMG}`,
-                method: "get",
-                success: function(res) {
-                  if (res.data.result != 'error' && res.data.userInfo.USER_ID) {
-                    app.globalData.userInfo = res.data.userInfo;
-                    wx.setStorage({
-                      key: 'userKey',
-                      data: res.data.userInfo.USER_ID,
-                      success: function(res) {
+              if (loginRes.code) {
+                wx.request({
+                  url: app.globalData.url + `userImpl/getWxInfo`,
+                  method: "post",
+                  data: newObject,
+                  success: function(userRes) {
+                    if (userRes.data.result != 'error') {
+                      if (userRes.data.userInfo.USER_ID) {
+                        app.globalData.wxUser = userRes.data.wxInfo;
+                        app.globalData.userInfo = userRes.data.userInfo;
+                        wx.setStorage({
+                          key: 'userKey',
+                          data: userRes.data.userInfo.USER_ID,
+                          success: function(res) {
+                          }
+                        });
+                        wx.showToast({
+                          title: '注册成功!',
+                          icon: 'success',
+                          duration: 1500
+                        })
+                        setTimeout(function() {
+                          wx.reLaunch({
+                            url: '/pages/register/register',
+                          });
+                        }, 1800)
+                        // self.onLoad()
+                      } else {
+                        wx.showToast({
+                          title: '注册失败，请联系管理员!',
+                          icon: 'none',
+                          duration: 2000
+                        })
                       }
-                    })
-                    wx.reLaunch({
-                      url: '/pages/register/register',
-                    });
-                  } else {
+                    } else {
+                      wx.showToast({
+                        title: '注册失败，请联系管理员!',
+                        icon: 'none',
+                        duration: 2000
+                      })
+                    }
+                  },
+                  fail: function() {
                     wx.showToast({
-                      title: '信息注册失败，请联系管理员!',
+                      title: 'openId获取失败无法登陆，请联系管理员!',
                       icon: 'none',
                       duration: 2000
                     })
                   }
-                }, complete(res) {
-                  wx.hideLoading({})
-                }
-              })
-            } else {
+                })
+              } else {
+                wx.showToast({
+                  title: '后台取OpenID失败，无法登陆，请联系管理员!',
+                  icon: 'none',
+                  duration: 2000
+                })
+              }
+            },
+            fail: function() {
               wx.showToast({
-                title: '微信信息获取失败!',
+                title: '后台取OpenID失败，无法登陆，请联系管理员!',
                 icon: 'none',
                 duration: 2000
               })
             }
-          }, complete(res) {
-            wx.hideLoading({})
-          }
-        })
+          })
+          //
+          //
+          //
+        } else {
+          wx.showToast({
+            title: '微信信息获取失败!',
+            icon: 'none',
+            duration: 2000
+          })
+        }
+      }, complete(res) {
+        wx.hideLoading({})
       }
-    });
+    })
   },
   isMembership: function() {
     const self = this;

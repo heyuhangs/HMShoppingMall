@@ -116,7 +116,7 @@ Page({
       app.globalData.payId = options.PAR_ID;
     }
     const userKey = wx.getStorageSync('userKey');
-    if (userKey) {
+    if (userKey && userKey != null && userKey != undefined && userKey != '') {
       wx.request({
         url: app.globalData.url + `userImpl/userInfo?USER_ID=${userKey}`,
         method: "get",
