@@ -16,6 +16,38 @@ App({
   onLaunch: function() {
     var _0x4b3d7f = this;
     _0x4b3d7f[wanzikun_0x1f1d('0x9')]();
+    const updateManager = wx.getUpdateManager()
+    updateManager.onCheckForUpdate(function (res) {
+      // 请求完新版本信息的回调
+      console.log(res.hasUpdate)
+    })
+    // 下载新版本
+    updateManager.onUpdateReady(function () {
+      wx.showModal({
+        title: '更新提示',
+        content: '新版本已经准备好，是否重启应用？',
+        success(res) {
+          if (res.confirm) {
+            // 重启应用
+            updateManager.applyUpdate()
+          }
+        }
+      })
+    })
+    // 新版本下载失败
+    updateManager.onUpdateFailed(function (res) {
+      console.log(res)
+      wx.showToast({
+        title: '更新失败',
+        content: '请删除小程序，并重新进入',
+        success(res) {
+          if (res.confirm) {
+            // 重启应用
+            // updateManager.applyUpdate()
+          }
+        }
+      })
+    })
   },
   // pay(newObject) {
   //

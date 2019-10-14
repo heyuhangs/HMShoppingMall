@@ -197,7 +197,7 @@
 				},
 				{
 					"id": 21,
-					"name": "推荐人测试",
+					"name": "pages/start/start",
 					"pathName": "pages/start/start",
 					"query": "PAR_ID=1",
 					"scene": null
