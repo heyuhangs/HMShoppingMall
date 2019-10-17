@@ -52,6 +52,9 @@ Page({
         }, {
             id: 7,
             name: '招商提成',
+        },{
+            id: 8,
+            name: '爱心互助'
         }],
         current: '',
         position: 'left',

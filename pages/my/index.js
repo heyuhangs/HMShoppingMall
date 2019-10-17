@@ -104,17 +104,15 @@ Page({
                           success: function(res) {
                           }
                         });
-                        wx.showToast({
-                          title: '注册成功!',
-                          icon: 'success',
-                          duration: 1500
-                        })
-                        setTimeout(function() {
-                          wx.reLaunch({
-                            url: '/pages/register/register',
-                          });
-                        }, 1800)
-                        // self.onLoad()
+                        if (userRes.data.userInfo.PHONE && userRes.data.userInfo.NAME && userRes.data.userInfo.PHONE != '' && userRes.data.userInfo.NAME != '') {
+                          self.onLoad()
+                        } else {
+                          setTimeout(function() {
+                            wx.reLaunch({
+                              url: '/pages/register/register',
+                            });
+                          }, 500)
+                        }
                       } else {
                         wx.showToast({
                           title: '注册失败，请联系管理员!',

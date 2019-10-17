@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="728786a9-b381-4290-92f9-790acc559dcd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my-kanjia/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-kanjia/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my-kanjia/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-kanjia/index.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/my/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -124,14 +125,11 @@
       <workItem from="1570808386258" duration="5990000" />
       <workItem from="1570880972828" duration="3181000" />
       <workItem from="1570960108628" duration="103000" />
-      <workItem from="1571021996987" duration="1149000" />
-    </task>
-    <task id="LOCAL-00068" summary="上传小程序">
-      <created>1567877823919</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1567877823921</updated>
+      <workItem from="1571021996987" duration="1536000" />
+      <workItem from="1571104599535" duration="483000" />
+      <workItem from="1571193423427" duration="848000" />
+      <workItem from="1571204361661" duration="14000" />
+      <workItem from="1571232325636" duration="412000" />
     </task>
     <task id="LOCAL-00069" summary="修改问题">
       <created>1567879275416</created>
@@ -469,7 +467,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570937849891</updated>
     </task>
-    <option name="localTasksCounter" value="117" />
+    <task id="LOCAL-00117" summary="更新版本提示">
+      <created>1571030868056</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1571030868057</updated>
+    </task>
+    <option name="localTasksCounter" value="118" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -503,7 +508,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="订单支付成功后跳转的位置" />
     <MESSAGE value="修改bug" />
     <MESSAGE value="增加转账" />
     <MESSAGE value="完善提现问题" />
@@ -528,7 +532,8 @@
     <MESSAGE value="修改注册，我的账单增加收款人，订单增加备注" />
     <MESSAGE value="修改问题" />
     <MESSAGE value="1.修改用户信息获取。&#10;2.优化补全信息问题。" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.修改用户信息获取。&#10;2.优化补全信息问题。" />
+    <MESSAGE value="更新版本提示" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新版本提示" />
   </component>
   <component name="masterDetails">
     <states>

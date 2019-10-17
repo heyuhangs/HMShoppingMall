@@ -43,6 +43,7 @@
                         <view wx:if="{{item.JJB_TYPE == 5}}">代理商提成</view>
                         <view wx:if="{{item.JJB_TYPE == 6}}">爱心分红</view>
                         <view wx:if="{{item.JJB_TYPE == 7}}">招商提成</view>
+                        <view wx:if="{{item.JJB_TYPE == 8}}">爱心互助</view>
                     </view>
                     <view class="list-info-detail">
                         <text wx:if="{{item.TYPE == 1}}">+{{item.ONE_MONEY}}</text>
