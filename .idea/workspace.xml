@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="728786a9-b381-4290-92f9-790acc559dcd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my-kanjia/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-kanjia/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my-kanjia/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my-kanjia/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/videoicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/address-add/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/address-add/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/goods-details/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/goods-details/index.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -129,14 +130,10 @@
       <workItem from="1571104599535" duration="483000" />
       <workItem from="1571193423427" duration="848000" />
       <workItem from="1571204361661" duration="14000" />
-      <workItem from="1571232325636" duration="412000" />
-    </task>
-    <task id="LOCAL-00069" summary="修改问题">
-      <created>1567879275416</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1567879275417</updated>
+      <workItem from="1571232325636" duration="1067000" />
+      <workItem from="1571279665606" duration="33000" />
+      <workItem from="1571280021926" duration="3000" />
+      <workItem from="1571281180768" duration="1205000" />
     </task>
     <task id="LOCAL-00070" summary="修改错误">
       <created>1567910837863</created>
@@ -474,7 +471,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571030868057</updated>
     </task>
-    <option name="localTasksCounter" value="118" />
+    <task id="LOCAL-00118" summary="完成">
+      <created>1571275603933</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1571275603934</updated>
+    </task>
+    <option name="localTasksCounter" value="119" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -508,7 +512,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="修改bug" />
     <MESSAGE value="增加转账" />
     <MESSAGE value="完善提现问题" />
     <MESSAGE value="增加权限验证" />
@@ -533,7 +536,8 @@
     <MESSAGE value="修改问题" />
     <MESSAGE value="1.修改用户信息获取。&#10;2.优化补全信息问题。" />
     <MESSAGE value="更新版本提示" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新版本提示" />
+    <MESSAGE value="完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成" />
   </component>
   <component name="masterDetails">
     <states>

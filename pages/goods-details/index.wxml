@@ -13,10 +13,6 @@
         <swiper class="swiper_box" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"
                 bindchange="swiperchange">
             <block wx:for="{{goodsDetail.IMAGES_LIST}}" wx:for-index="idx" wx:key="PICTURES_ID">
-                <!--                <swiper-item wx:if="{{item.isVideo}}" class="videoImg" bindtap="videorequestFullScreen">-->
-                <!--                    <image class="icon" src="../../images/videoicon.png"></image>-->
-                <!--                    <image src="{{item.PATH}}" class="slide-image" lazy-load="true"/>-->
-                <!--                </swiper-item>-->
                 <swiper-item>
                     <image src="{{url}}{{item.PATH}}" class="slide-image" lazy-load="true"/>
                 </swiper-item>

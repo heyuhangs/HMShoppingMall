@@ -127,9 +127,15 @@ Page({
     //     return false;
     // }
     app.isLoginUser().then(res => {
-      self.setData({
-        state: res
-      })
+      if (app.globalData.userInfo.PHONE && app.globalData.userInfo.PHONE != '') {
+        self.setData({
+          state: res
+        })
+      } else {
+        self.setData({
+          state: false
+        })
+      }
     })
     this.getBannerData();
     wx.showLoading({});

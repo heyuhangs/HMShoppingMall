@@ -71,6 +71,38 @@ Page({
     },
     bindSave: function (e) {
         const self = this;
+        if (!e.detail.value.linkMan && e.detail.value.linkMan == ''){
+            wx.showToast({
+                title: '请填写联系人!',
+                icon: 'none',
+                duration: 2000
+            })
+            return false;
+        }
+        if (!e.detail.value.mobile && e.detail.value.mobile == ''){
+            wx.showToast({
+                title: '请填写手机号码!',
+                icon: 'none',
+                duration: 2000
+            })
+            return false;
+        }
+        if (self.data.selProvince == "请选择" || self.data.selCity == "请选择"){
+            wx.showToast({
+                title: '请选择地区!',
+                icon: 'none',
+                duration: 2000
+            })
+            return false;
+        }
+        if (!e.detail.value.address && e.detail.value.address == ''){
+            wx.showToast({
+                title: '请填写详细地址!',
+                icon: 'none',
+                duration: 2000
+            })
+            return false;
+        }
         let status = '0';
         let url = '/userImpl/addAddress';
         if (self.data.more) {
