@@ -104,7 +104,7 @@ Page({
                           success: function(res) {
                           }
                         });
-                        if (userRes.data.userInfo.PHONE && userRes.data.userInfo.NAME && userRes.data.userInfo.PHONE != '' && userRes.data.userInfo.NAME != '') {
+                        if (userRes.data.userInfo.PHONE && userRes.data.userInfo.PHONE != '') {
                           self.onLoad()
                         } else {
                           setTimeout(function() {

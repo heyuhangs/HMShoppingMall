@@ -33,7 +33,7 @@
         <view class="type-level-box" wx:for-items="{{categorieslist}}" wx:key="id">
           <view id="{{item.id}}" class="type-level-item " bindtap="levelClick" data-id="{{item.USER_ID}}">
             <image class="type-img" src="{{item.ICON}}"></image>
-            <text>{{item.NAME}}</text>
+            <text class="text-con">{{item.NAME}}</text>
           </view>
         </view>
       </view>
