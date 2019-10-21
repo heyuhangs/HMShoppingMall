@@ -112,7 +112,7 @@ Page({
           });
           setTimeout(function() {
             wx.navigateTo({
-              url: '/pages/capitalMovements/index'
+              url: '/pages/capitalMovements/index?navigatorStatus=true'
             })
           }, 1800)
         } else if (res.data.code == 50001) {

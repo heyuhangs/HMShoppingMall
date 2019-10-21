@@ -1,6 +1,9 @@
 <view class="container iphone">
     <view class="header-container">
-        <navigator open-type="navigateBack" delta="1" hover-class="navigator-hover">
+        <navigator wx:if="{{navigatorStatus}}" open-type="switchTab" url="/pages/index/index" hover-class="navigator-hover">
+            <image class="goback" src="../../images/gohome.png"/>
+        </navigator>
+        <navigator wx:else open-type="navigateBack" delta="1" hover-class="navigator-hover">
             <image class="goback" src="../../images/goback.png"/>
         </navigator>
         <view class="header-name">我的收益</view>
